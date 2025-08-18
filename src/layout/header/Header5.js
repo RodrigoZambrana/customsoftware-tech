@@ -5,6 +5,7 @@ import NavSearch from "./NavSearch";
 const Header5 = ({ singleMenu, dark }) => {
   return (
     <header className="main-header menu-absolute header-two">
+      <div className="header-upper">
       <div className="header-top bgc-primary">
         <div className="container container-1620">
           <div className="row align-items-center">
@@ -49,7 +50,6 @@ const Header5 = ({ singleMenu, dark }) => {
         </div>
       </div>
       {/*Header-Upper*/}
-      <div className="header-upper">
         <div className="container container-1620 clearfix">
           <div className="header-inner rpy-10 rel d-flex align-items-center">
             <div className="logo-outer">

@@ -1,0 +1,68 @@
+{
+  "seoTitle": "CustomSoftware-Tech | Professional Websites, SEO & Digital Marketing",
+  "seoDescription": "We build fast, secure, SEO-optimized websites. SEM and social strategies to grow your business online.",
+  "heroTitle": "Professional Websites that Convert",
+  "heroHighlight": "Websites",
+  "heroItalic": "that Convert",
+  "heroDescription": "We build fast, secure, SEO-optimized websites. We boost your business with SEM campaigns and social marketing.",
+  "heroCtaText": "Request proposal",
+  "aboutSubtitle": "About us",
+  "aboutTitle": "We grow your online presence with measurable results",
+  "aboutText": "At CustomSoftware-Tech we design and build modern, fast and secure websites. We improve your visibility with SEO and acquire qualified leads through SEM and social strategies.",
+  "aboutCtaText": "Learn more",
+  "whatSubtitle": "What we do",
+  "whatTitle": "Solutions to grow online",
+  "whatItems": [
+    { "number": "01", "title": "Web Design & Development", "text": "Fast, responsive, conversion-oriented websites.", "href": "/service-details", "cta": "See more" },
+    { "number": "02", "title": "SEO & SEM", "text": "Organic visibility and Google Ads campaigns.", "href": "/service-details", "cta": "See more" },
+    { "number": "03", "title": "Digital Marketing & Social", "text": "Performance-focused strategies with clear metrics.", "href": "/service-details", "cta": "See more" }
+  ],
+  "stats": [
+    { "value": 5, "label": "Years experience" },
+    { "value": 50, "label": "Projects delivered" },
+    { "value": 8, "label": "Specialists" },
+    { "value": 100, "label": "% quality focus" }
+  ],
+  "servicesSubtitle": "Services",
+  "servicesTitle": "Digital solutions for your business",
+  "services": [
+    { "title": "Corporate Websites", "text": "A solid, professional presence ready to convert.", "href": "/service-details" },
+    { "title": "Online Stores", "text": "Agile, secure e-commerce that’s easy to manage.", "href": "/service-details" },
+    { "title": "SEO & SEM", "text": "More visibility on Google and qualified leads.", "href": "/service-details" },
+    { "title": "Custom Software", "text": "Tailored developments for your operations.", "href": "/service-details" }
+  ],
+  "pricingSubtitle": "Plans",
+  "pricingTitle": "Choose the plan that fits your business",
+  "pricingBannerTitle": "Flexible solutions to grow online",
+  "pricingBannerCta": "See details",
+  "pricingPlans": [
+    {
+      "name": "Monthly Plan",
+      "desc": "Perfect to start: website + basic SEO + support.",
+      "features": ["Landing or corporate site", "On-page SEO", "Analytics", "Monthly support"],
+      "priceNote": "Custom",
+      "href": "/pricing"
+    },
+    {
+      "name": "Annual Plan",
+      "desc": "Sustained growth: ongoing improvements, SEO and performance.",
+      "features": ["Content strategy", "Quarterly tech SEO", "Speed optimization", "Continuous evolution"],
+      "priceNote": "Custom",
+      "href": "/pricing"
+    }
+  ],
+  "whySubtitle": "Why choose us",
+  "whyTitle": "Measurable results and close support",
+  "whyItems": [
+    { "title": "Tailored solutions", "text": "Each project is designed to your goals and processes.", "href": "/service-details" },
+    { "title": "Transparency & metrics", "text": "Data-driven decisions with clear reports.", "href": "/service-details" },
+    { "title": "Continuous evolution", "text": "Support and improvements to keep growing.", "href": "/service-details" }
+  ],
+  "blogSubtitle": "Blog & News",
+  "blogTitle": "Learn about SEO, Web and Marketing",
+  "blogItems": [
+    { "date": "August 10, 2025", "title": "SEO 2025: what Google prioritizes this year", "href": "/blog-details" },
+    { "date": "August 02, 2025", "title": "Turn website visits into customers", "href": "/blog-details" },
+    { "date": "July 28, 2025", "title": "Social media: performance tactics", "href": "/blog-details" }
+  ]
+}
