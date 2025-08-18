@@ -19,7 +19,7 @@ const Header = ({ header, singleMenu, dark }) => {
       return <Header5 singleMenu={singleMenu} dark={dark} />;
 
     default:
-      return <DefaultHeader singleMenu={singleMenu} dark={dark} />;
+      return <Header5 singleMenu={singleMenu} dark={dark} />;
   }
 };
 export default Header;
