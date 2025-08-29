@@ -3,6 +3,7 @@ import Layout from "@/src/layout/Layout";
 import { sliderProps } from "@/src/sliderProps";
 import dynamic from "next/dynamic";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
 
 const Counter = dynamic(() => import("@/src/components/Counter"), {
   ssr: false,
@@ -16,59 +17,23 @@ const index5OnePage = () => {
       <div className="client-logo-area pt-120 pb-90 rpt-100 rpb-70">
         <div className="container">
           <div className="client-logo-wrap">
-            <Link
-              className="client-logo-item wow fadeInUp delay-0-2s"
-              href="contact"
-            >
-              <img
-                src="assets/images/client-logos/client-logo1.png"
-                alt="Client Logo"
-              />
+            <Link className="client-logo-item wow fadeInUp delay-0-2s" href="contact">
+              <img src="assets/images/client-logos/client-logo1.png" alt="Client Logo" />
             </Link>
-            <Link
-              className="client-logo-item wow fadeInUp delay-0-3s"
-              href="contact"
-            >
-              <img
-                src="assets/images/client-logos/client-logo2.png"
-                alt="Client Logo"
-              />
+            <Link className="client-logo-item wow fadeInUp delay-0-3s" href="contact">
+              <img src="assets/images/client-logos/client-logo2.png" alt="Client Logo" />
             </Link>
-            <Link
-              className="client-logo-item wow fadeInUp delay-0-4s"
-              href="contact"
-            >
-              <img
-                src="assets/images/client-logos/client-logo3.png"
-                alt="Client Logo"
-              />
+            <Link className="client-logo-item wow fadeInUp delay-0-4s" href="contact">
+              <img src="assets/images/client-logos/client-logo3.png" alt="Client Logo" />
             </Link>
-            <Link
-              className="client-logo-item wow fadeInUp delay-0-5s"
-              href="contact"
-            >
-              <img
-                src="assets/images/client-logos/client-logo4.png"
-                alt="Client Logo"
-              />
+            <Link className="client-logo-item wow fadeInUp delay-0-5s" href="contact">
+              <img src="assets/images/client-logos/client-logo4.png" alt="Client Logo" />
             </Link>
-            <Link
-              className="client-logo-item wow fadeInUp delay-0-6s"
-              href="contact"
-            >
-              <img
-                src="assets/images/client-logos/client-logo5.png"
-                alt="Client Logo"
-              />
+            <Link className="client-logo-item wow fadeInUp delay-0-6s" href="contact">
+              <img src="assets/images/client-logos/client-logo5.png" alt="Client Logo" />
             </Link>
-            <Link
-              className="client-logo-item wow fadeInUp delay-0-7s"
-              href="contact"
-            >
-              <img
-                src="assets/images/client-logos/client-logo6.png"
-                alt="Client Logo"
-              />
+            <Link className="client-logo-item wow fadeInUp delay-0-7s" href="contact">
+              <img src="assets/images/client-logos/client-logo6.png" alt="Client Logo" />
             </Link>
           </div>
         </div>
@@ -131,9 +96,7 @@ const index5OnePage = () => {
                 </div>
                 <div className="number">04</div>
                 <h4>
-                  <Link href="service-details">
-                    Digital Product Development
-                  </Link>
+                  <Link href="service-details">Digital Product Development</Link>
                 </h4>
                 <Link href="service-details" className="more">
                   <i className="far fa-arrow-right" />
@@ -155,9 +118,7 @@ const index5OnePage = () => {
                   <h2>The World Class Digital Marketing Agency</h2>
                 </div>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error voluptatem
-                  accusantium doloremque laudantium, totam reme aperiam eaque
-                  quae abillo inventorey veritatis quasi architecto beatae vitae
+                  Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam reme aperiam eaque quae abillo inventorey veritatis quasi architecto beatae vitae
                   dicta sunt explicabo.
                 </p>
                 <div className="authors-text mt-45 pt-50">
@@ -175,22 +136,13 @@ const index5OnePage = () => {
             <div className="col-xl-5 col-lg-6">
               <div className="about-five-images rmt-50 wow fadeInRight delay-0-2s">
                 <div className="image-one">
-                  <img
-                    src="assets/images/about/about-five1.jpg"
-                    alt="About Image"
-                  />
+                  <img src="assets/images/about/about-five1.jpg" alt="About Image" />
                 </div>
                 <div className="about-five-shape">
-                  <img
-                    src="assets/images/about/about-five-bg.png"
-                    alt="About Five Shape"
-                  />
+                  <img src="assets/images/about/about-five-bg.png" alt="About Five Shape" />
                 </div>
                 <div className="image-two mt-30">
-                  <img
-                    src="assets/images/about/about-five2.jpg"
-                    alt="About Image"
-                  />
+                  <img src="assets/images/about/about-five2.jpg" alt="About Image" />
                 </div>
               </div>
             </div>
@@ -211,17 +163,11 @@ const index5OnePage = () => {
           </div>
         </div>
         <div className="container-fluid">
-          <Swiper
-            {...sliderProps.galleryFiveActive}
-            className="gallery-five-active"
-          >
+          <Swiper {...sliderProps.galleryFiveActive} className="gallery-five-active">
             <SwiperSlide>
               <div className="project-item style-five wow fadeInUp delay-0-2s">
                 <div className="image">
-                  <img
-                    src="assets/images/projects/project-five1.jpg"
-                    alt="Work Gallery"
-                  />
+                  <img src="assets/images/projects/project-five1.jpg" alt="Work Gallery" />
                   <Link href="project-details" className="project-btn">
                     <i className="far fa-arrow-right" />
                   </Link>
@@ -239,10 +185,7 @@ const index5OnePage = () => {
             <SwiperSlide>
               <div className="project-item style-five wow fadeInUp delay-0-4s">
                 <div className="image">
-                  <img
-                    src="assets/images/projects/project-five2.jpg"
-                    alt="Work Gallery"
-                  />
+                  <img src="assets/images/projects/project-five2.jpg" alt="Work Gallery" />
                   <Link href="project-details" className="project-btn">
                     <i className="far fa-arrow-right" />
                   </Link>
@@ -260,10 +203,7 @@ const index5OnePage = () => {
             <SwiperSlide>
               <div className="project-item style-five wow fadeInUp delay-0-6s">
                 <div className="image">
-                  <img
-                    src="assets/images/projects/project-five3.jpg"
-                    alt="Work Gallery"
-                  />
+                  <img src="assets/images/projects/project-five3.jpg" alt="Work Gallery" />
                   <Link href="project-details" className="project-btn">
                     <i className="far fa-arrow-right" />
                   </Link>
@@ -281,10 +221,7 @@ const index5OnePage = () => {
             <SwiperSlide>
               <div className="project-item style-five wow fadeInUp delay-0-8s">
                 <div className="image">
-                  <img
-                    src="assets/images/projects/project-five4.jpg"
-                    alt="Work Gallery"
-                  />
+                  <img src="assets/images/projects/project-five4.jpg" alt="Work Gallery" />
                   <Link href="project-details" className="project-btn">
                     <i className="far fa-arrow-right" />
                   </Link>
@@ -302,10 +239,7 @@ const index5OnePage = () => {
             <SwiperSlide>
               <div className="project-item style-five wow fadeInUp delay-0-2s">
                 <div className="image">
-                  <img
-                    src="assets/images/projects/project-five1.jpg"
-                    alt="Work Gallery"
-                  />
+                  <img src="assets/images/projects/project-five1.jpg" alt="Work Gallery" />
                   <Link href="project-details" className="project-btn">
                     <i className="far fa-arrow-right" />
                   </Link>
@@ -323,10 +257,7 @@ const index5OnePage = () => {
             <SwiperSlide>
               <div className="project-item style-five wow fadeInUp delay-0-2s">
                 <div className="image">
-                  <img
-                    src="assets/images/projects/project-five2.jpg"
-                    alt="Work Gallery"
-                  />
+                  <img src="assets/images/projects/project-five2.jpg" alt="Work Gallery" />
                   <Link href="project-details" className="project-btn">
                     <i className="far fa-arrow-right" />
                   </Link>
@@ -344,10 +275,7 @@ const index5OnePage = () => {
             <SwiperSlide>
               <div className="project-item style-five wow fadeInUp delay-0-2s">
                 <div className="image">
-                  <img
-                    src="assets/images/projects/project-five3.jpg"
-                    alt="Work Gallery"
-                  />
+                  <img src="assets/images/projects/project-five3.jpg" alt="Work Gallery" />
                   <Link href="project-details" className="project-btn">
                     <i className="far fa-arrow-right" />
                   </Link>
@@ -365,10 +293,7 @@ const index5OnePage = () => {
             <SwiperSlide>
               <div className="project-item style-five wow fadeInUp delay-0-2s">
                 <div className="image">
-                  <img
-                    src="assets/images/projects/project-five4.jpg"
-                    alt="Work Gallery"
-                  />
+                  <img src="assets/images/projects/project-five4.jpg" alt="Work Gallery" />
                   <Link href="project-details" className="project-btn">
                     <i className="far fa-arrow-right" />
                   </Link>
@@ -430,10 +355,7 @@ const index5OnePage = () => {
         <div className="container container-1290">
           <div className="video-part style-three wow fadeInUp delay-0-2s">
             <img src="assets/images/video/video-five-bg.jpg" alt="Video" />
-            <a
-              href="https://www.youtube.com/watch?v=9Y7ma241N8k"
-              className="mfp-iframe video-play"
-            >
+            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k" className="mfp-iframe video-play">
               <i className="fas fa-play" />
             </a>
           </div>
@@ -457,10 +379,7 @@ const index5OnePage = () => {
             <div className="col-xl-3 col-lg-4 col-sm-6">
               <div className="team-member style-three wow fadeInUp delay-0-2s">
                 <div className="image">
-                  <img
-                    src="assets/images/team/member-three1.jpg"
-                    alt="Team Member"
-                  />
+                  <img src="assets/images/team/member-three1.jpg" alt="Team Member" />
                   <div className="social-style-two">
                     <a href="#">
                       <i className="fab fa-facebook-f" />
@@ -485,10 +404,7 @@ const index5OnePage = () => {
             <div className="col-xl-3 col-lg-4 col-sm-6">
               <div className="team-member style-three wow fadeInUp delay-0-4s">
                 <div className="image">
-                  <img
-                    src="assets/images/team/member-three2.jpg"
-                    alt="Team Member"
-                  />
+                  <img src="assets/images/team/member-three2.jpg" alt="Team Member" />
                   <div className="social-style-two">
                     <a href="#">
                       <i className="fab fa-facebook-f" />
@@ -513,10 +429,7 @@ const index5OnePage = () => {
             <div className="col-xl-3 col-lg-4 col-sm-6">
               <div className="team-member style-three wow fadeInUp delay-0-6s">
                 <div className="image">
-                  <img
-                    src="assets/images/team/member-three3.jpg"
-                    alt="Team Member"
-                  />
+                  <img src="assets/images/team/member-three3.jpg" alt="Team Member" />
                   <div className="social-style-two">
                     <a href="#">
                       <i className="fab fa-facebook-f" />
@@ -541,10 +454,7 @@ const index5OnePage = () => {
             <div className="col-xl-3 col-lg-4 col-sm-6">
               <div className="team-member style-three wow fadeInUp delay-0-8s">
                 <div className="image">
-                  <img
-                    src="assets/images/team/member-three4.jpg"
-                    alt="Team Member"
-                  />
+                  <img src="assets/images/team/member-three4.jpg" alt="Team Member" />
                   <div className="social-style-two">
                     <a href="#">
                       <i className="fab fa-facebook-f" />
@@ -589,11 +499,7 @@ const index5OnePage = () => {
                   <h4>Research</h4>
                 </div>
                 <div className="content">
-                  <p>
-                    Sed ut perspiciatis unde omnis iste natus error voluptatem
-                    accusantium doloremque laudantium totam reme aperiam eaque
-                    quae abillo
-                  </p>
+                  <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium totam reme aperiam eaque quae abillo</p>
                   <Link className="read-more" href="service-details">
                     Learn More <i className="far fa-arrow-right" />
                   </Link>
@@ -607,11 +513,7 @@ const index5OnePage = () => {
                   <h4>Target &amp; Analysis</h4>
                 </div>
                 <div className="content">
-                  <p>
-                    Quis autem vel eum iure reprehenderit qui in ea voluptate
-                    velit esse quae molestiae consequatur vel illum qui dolorem
-                    eum fugiat voluptas
-                  </p>
+                  <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quae molestiae consequatur vel illum qui dolorem eum fugiat voluptas</p>
                   <Link className="read-more" href="service-details">
                     Learn More <i className="far fa-arrow-right" />
                   </Link>
@@ -625,11 +527,7 @@ const index5OnePage = () => {
                   <h4>Got Results</h4>
                 </div>
                 <div className="content">
-                  <p>
-                    At vero eos et accusamus et iusto dignissimos ducimus
-                    blanditiis praesentium voluptat delenite atque corrupti quos
-                    dolores molestias
-                  </p>
+                  <p>At vero eos et accusamus et iusto dignissimos ducimus blanditiis praesentium voluptat delenite atque corrupti quos dolores molestias</p>
                   <Link className="read-more" href="service-details">
                     Learn More <i className="far fa-arrow-right" />
                   </Link>
@@ -651,10 +549,7 @@ const index5OnePage = () => {
               </div>
             </div>
             <div className="col-lg-4 text-lg-end">
-              <Link
-                className="theme-btn style-two mb-30 wow fadeInRight delay-0-2s"
-                href="services"
-              >
+              <Link className="theme-btn style-two mb-30 wow fadeInRight delay-0-2s" href="services">
                 View More News <i className="fas fa-arrow-right" />
               </Link>
             </div>
@@ -670,15 +565,10 @@ const index5OnePage = () => {
                     </li>
                   </ul>
                   <h5>
-                    <Link href="blog-details">
-                      Skills Google Assistant And Amazon Alexa
-                    </Link>
+                    <Link href="blog-details">Skills Google Assistant And Amazon Alexa</Link>
                   </h5>
                   <div className="author">
-                    <img
-                      src="assets/images/blog/blog-author1.jpg"
-                      alt="Author"
-                    />
+                    <img src="assets/images/blog/blog-author1.jpg" alt="Author" />
                     <span className="name">Bernard R. Kay</span>
                   </div>
                 </div>
@@ -697,15 +587,10 @@ const index5OnePage = () => {
                     </li>
                   </ul>
                   <h5>
-                    <Link href="blog-details">
-                      Fine-Grained Handling Level Security
-                    </Link>
+                    <Link href="blog-details">Fine-Grained Handling Level Security</Link>
                   </h5>
                   <div className="author">
-                    <img
-                      src="assets/images/blog/blog-author2.jpg"
-                      alt="Author"
-                    />
+                    <img src="assets/images/blog/blog-author2.jpg" alt="Author" />
                     <span className="name">Bernard R. Kay</span>
                   </div>
                 </div>
@@ -724,15 +609,10 @@ const index5OnePage = () => {
                     </li>
                   </ul>
                   <h5>
-                    <Link href="blog-details">
-                      Overcoming Challenges Of Content Creation
-                    </Link>
+                    <Link href="blog-details">Overcoming Challenges Of Content Creation</Link>
                   </h5>
                   <div className="author">
-                    <img
-                      src="assets/images/blog/blog-author3.jpg"
-                      alt="Author"
-                    />
+                    <img src="assets/images/blog/blog-author3.jpg" alt="Author" />
                     <span className="name">Bernard R. Kay</span>
                   </div>
                 </div>
@@ -751,15 +631,10 @@ const index5OnePage = () => {
                     </li>
                   </ul>
                   <h5>
-                    <Link href="blog-details">
-                      Full Stack GraphQL With Next.js, Neo4j AuraDB
-                    </Link>
+                    <Link href="blog-details">Full Stack GraphQL With Next.js, Neo4j AuraDB</Link>
                   </h5>
                   <div className="author">
-                    <img
-                      src="assets/images/blog/blog-author1.jpg"
-                      alt="Author"
-                    />
+                    <img src="assets/images/blog/blog-author1.jpg" alt="Author" />
                     <span className="name">Bernard R. Kay</span>
                   </div>
                 </div>
@@ -785,19 +660,14 @@ const index5OnePage = () => {
               <div
                 className="work-with-content"
                 style={{
-                  backgroundImage:
-                    "url(assets/images/about/work-with-us-bg.jpg)",
+                  backgroundImage: "url(assets/images/about/work-with-us-bg.jpg)",
                 }}
               >
                 <div className="section-title mb-10">
                   <span className="sub-title mb-15">Work With Us</span>
                   <h2>Have Any Projects On Minds! Contact Us</h2>
                 </div>
-                <p>
-                  Sed ut perspiciatis unde omnis iste natus voluptatem
-                  accusantium doloremque laudantium reme aperiam eaque quae
-                  abillo
-                </p>
+                <p>Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium reme aperiam eaque quae abillo</p>
                 <Link href="contact" className="theme-btn mt-15">
                   Let’s Work Together <i className="far fa-arrow-right" />
                 </Link>

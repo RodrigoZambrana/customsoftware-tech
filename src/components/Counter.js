@@ -1,26 +1,24 @@
+// src/components/Counter.jsx
 import CountUp from "react-countup";
-import ReactVisibilitySensor from "react-visibility-sensor";
-const Counter = ({ end, decimals, extraClass }) => {
+
+export default function Counter({ end = 100, decimals = 0, extraClass = "" }) {
   return (
     <CountUp
-      end={end ? end : 100}
+      end={end}
       duration={3}
-      decimals={decimals ? decimals : 0}
+      decimals={decimals}
+      enableScrollSpy
+      scrollSpyOnce
     >
-      {({ countUpRef, start }) => (
-        <ReactVisibilitySensor onChange={start} delayedCall>
-          <span
-            className={`count-text ${extraClass}`}
-            data-from="0"
-            data-to={end}
-            ref={countUpRef}
-          >
-            count
-          </span>
-        </ReactVisibilitySensor>
+      {({ countUpRef }) => (
+        <span
+          className={`count-text ${extraClass}`}
+          data-from="0"
+          data-to={end}
+          ref={countUpRef}
+        />
       )}
     </CountUp>
   );
-};
+}
 
-export default Counter;

@@ -1,0 +1,42 @@
+{
+  "brandName": "CustomSoftware-Tech",
+  "brandAlt": "CustomSoftware-Tech Logo",
+  "letsWorkAlt": "Let's Work",
+  "letsWork": "Let’s Work Together",
+  "contacts": {
+    "email": "hello@customsoftware-tech.com",
+    "phoneDisplay": "+598 123 456",
+    "phoneDial": "+598123456"
+  },
+  "social": [
+    { "label": "Facebook", "href": "#", "icon": "fab fa-facebook-f" },
+    { "label": "Twitter",  "href": "#", "icon": "fab fa-twitter" },
+    { "label": "Dribbble", "href": "#", "icon": "fab fa-dribbble" },
+    { "label": "Behance",  "href": "#", "icon": "fab fa-behance" }
+  ],
+  "quickLinksTitle": "Quick Links",
+  "quickLinksCol1": [
+    { "label": "Home",          "href": "/" },
+    { "label": "Services",      "href": "/services" },
+    { "label": "Team",          "href": "/team" },
+    { "label": "Blog",          "href": "/blog" },
+    { "label": "Contact",       "href": "/contact" }
+  ],
+  "quickLinksCol2": [
+    { "label": "UI/UX Design",  "href": "/index" },
+    { "label": "Development",   "href": "/index2" },
+    { "label": "Marketing",     "href": "/index3" },
+    { "label": "Careers",       "href": "/contact" },
+    { "label": "FAQs",          "href": "/faqs" }
+  ],
+  "bottomMenu": [
+    { "label": "About",         "href": "/about" },
+    { "label": "Services",      "href": "/services" },
+    { "label": "FAQs",          "href": "/faqs" },
+    { "label": "How It Works",  "href": "/services" }
+  ],
+  "copyright": {
+    "prefix": "Copyright ©2025,",
+    "suffix": "All Rights Reserved"
+  }
+}

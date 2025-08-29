@@ -6,7 +6,7 @@ import { sliderProps } from "@/src/sliderProps";
 
 const Counter = dynamic(() => import("@/src/components/Counter"), { ssr: false });
 
-export default function HomePage({ t, locale = "es" }) {
+export default function HomePage({ t, locale }) {
   const isEn = locale === "en";
 
   return (

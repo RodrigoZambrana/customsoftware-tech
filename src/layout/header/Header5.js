@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LanguageSelect from "./LanguageSelect";
 import Nav from "./Nav";
 import NavSearch from "./NavSearch";
 
@@ -22,14 +23,7 @@ const Header5 = ({ singleMenu, dark }) => {
             </div>
             <div className="col-lg-5">
               <div className="top-right">
-                <div className="lang-select">
-                  <select name="language" id="language">
-                    <option value="English">English</option>
-                    <option value="Arabic">Arabic</option>
-                    <option value="Bangla">Bangla</option>
-                    <option value="Hindi">Hindi</option>
-                  </select>
-                </div>
+              <LanguageSelect />
                 <div className="social-style-two">
                   <a href="#">
                     <i className="fab fa-twitter" />
