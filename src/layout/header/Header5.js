@@ -10,32 +10,15 @@ const Header5 = ({ singleMenu, dark }) => {
       <div className="header-top bgc-primary">
         <div className="container container-1620">
           <div className="row align-items-center">
-            <div className="col-lg-7">
-              <ul className="top-left">
-                <li>
-                  <i className="far fa-map-marker-alt" /> 963 main Street,
-                  Melbourne, Australia
-                </li>
-                <li>
-                  <i className="far fa-clock" /> Monday - Friday, 10am - 5pm
-                </li>
-              </ul>
-            </div>
-            <div className="col-lg-5">
+            <div className="col-lg-12">
               <div className="top-right">
               <LanguageSelect />
                 <div className="social-style-two">
-                  <a href="#">
-                    <i className="fab fa-twitter" />
-                  </a>
                   <a href="#">
                     <i className="fab fa-facebook-f" />
                   </a>
                   <a href="#">
                     <i className="fab fa-instagram" />
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-pinterest-p" />
                   </a>
                 </div>
               </div>
@@ -53,8 +36,8 @@ const Header5 = ({ singleMenu, dark }) => {
                     <img
                       src={
                         dark
-                          ? "assets/images/logos/logo-white.png"
-                          : "assets/images/logos/logo.png"
+                          ? "/assets/images/logos/logo-white.png"
+                          : "/assets/images/logos/logo.png"
                       }
                       alt="Logo"
                       title="Logo"
@@ -88,7 +71,7 @@ const Header5 = ({ singleMenu, dark }) => {
               <div className="menu-sidebar">
                 <button>
                   <img
-                    src="assets/images/icons/toggler-white.svg"
+                    src="/assets/images/icons/toggler-white.svg"
                     alt="Toggler"
                   />
                 </button>

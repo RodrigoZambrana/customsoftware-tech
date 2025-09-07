@@ -1,0 +1,101 @@
+{
+    "pageBanner": "Custom Website Development",
+    "about": {
+      "subtitle": "What We Offer",
+      "title": "We build professional, scalable and optimized websites",
+      "featuresCol1": [
+        "Responsive web design",
+        "Technical SEO optimization",
+        "CMS & E-commerce integration",
+        "Content strategy"
+      ],
+      "featuresCol2": [
+        "Multi-device compatibility",
+        "Performance optimization",
+        "User experience (UX/UI)"
+      ],
+      "imageAlt": "Web Development"
+    },
+    "whatWeDo": {
+      "subtitle": "How We Work",
+      "title": "Tailor-made solutions for your web project",
+      "text": "We design and develop unique websites adapted to each client. From landing pages to full ecommerce, integrating digital campaigns and social media."
+    },
+    "pricingSection": {
+      "subtitle": "Web Packages",
+      "title": "Options for every kind of business",
+      "plans": [
+        {
+          "name": "Basic Site",
+          "price": "500",
+          "unit": "USD one-time",
+          "features": [
+            "Landing Page",
+            "Responsive design",
+            "Initial SEO optimization",
+            "Basic support"
+          ],
+          "cta": "Choose Package"
+        },
+        {
+          "name": "Site + Campaigns",
+          "badge": "Most Popular",
+          "price": "900",
+          "unit": "USD",
+          "features": [
+            "Complete Website",
+            "SEO + SEM",
+            "Google & Meta campaigns",
+            "Advanced support"
+          ],
+          "cta": "Choose Package"
+        },
+        {
+          "name": "Site + Campaigns + Social",
+          "price": "1300",
+          "unit": "USD",
+          "features": [
+            "Complete Website",
+            "Advanced SEO",
+            "Google + Meta campaigns",
+            "Social media management",
+            "Premium support"
+          ],
+          "cta": "Choose Package"
+        }
+      ]
+    },
+    
+      "faqs": {
+        "subtitle": "FAQs",
+        "title": "Most common questions",
+        "image": "/assets/images/faqs/faq-two.jpg",
+        "imageAlt": "Frequently asked questions section",
+        "items": [
+          {
+            "q": "How long does a custom website take?",
+            "a": "It depends on scope. A basic site takes 2–4 weeks; ecommerce or integrations may require 6–10 weeks."
+          },
+          {
+            "q": "Is SEO included in every plan?",
+            "a": "Yes. We include initial technical SEO (metadata, performance, indexing). Advanced SEO can be added on demand."
+          },
+          {
+            "q": "Do you provide post-launch maintenance?",
+            "a": "Yes. We offer support and maintenance plans for updates, security and continuous improvements."
+          },
+          {
+            "q": "Can you manage Google and Meta campaigns?",
+            "a": "Yes. We have combined packages (site + campaigns) including setup, tracking and monthly optimization."
+          }
+        ]
+      },
+    
+    "workWithUs": {
+      "subtitle": "Work With Us",
+      "title": "Have a project in mind? Contact us",
+      "cta": "Explore more",
+      "bigText": "Let’s Work Together"
+    }
+  }
+  

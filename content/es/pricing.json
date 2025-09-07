@@ -1,0 +1,90 @@
+{
+    "pageBanner": "Planes de Precios",
+    "whyChoose": {
+      "subtitle": "Por qué elegirnos",
+      "title": "Beneficios de trabajar con nosotros",
+      "missionTitle": "Nuestra Misión",
+      "missionText": "Ayudar a empresas y emprendedores a tener presencia digital profesional, accesible y escalable.",
+      "visionTitle": "Nuestra Visión",
+      "visionText": "Ser tu aliado estratégico en desarrollo web, SEO y marketing digital, garantizando resultados medibles.",
+      "cta": "Conocer más"
+    },
+    "services": [
+      {
+        "icon": "fal fa-bezier-curve",
+        "title": "Reuniones a tiempo con expertos",
+        "text": "Nuestro equipo responde con agilidad para impulsar tus proyectos."
+      },
+      {
+        "icon": "fal fa-cogs",
+        "title": "Control de calidad por especialistas",
+        "text": "Validamos cada entrega para asegurar estándares profesionales."
+      },
+      {
+        "icon": "fal fa-chart-pie",
+        "title": "Reportes detallados",
+        "text": "Transparencia total en el avance de cada fase del proyecto."
+      },
+      {
+        "icon": "fal fa-shield-cross",
+        "title": "Selección de proyectos adecuados",
+        "text": "Priorizamos estrategias de alto impacto y eficiencia."
+      }
+    ],
+    "pricingSection": {
+      "subtitle": "Paquetes de Precios",
+      "title": "Opciones para todo tipo de proyectos web",
+      "plans": [
+        {
+          "name": "Paquete Básico",
+          "price": "18.3",
+          "unit": "/por mes",
+          "features": [
+            "Landing Page",
+            "Desarrollo Web",
+            "Optimización SEO",
+            "Diseño Responsivo",
+            "Garantía de Calidad",
+            "Soporte Básico"
+          ],
+          "cta": "Elegir Paquete"
+        },
+        {
+          "name": "Paquete Plata",
+          "badge": "Paquete Popular",
+          "price": "49.3",
+          "unit": "/por mes",
+          "features": [
+            "Landing Page + Blog",
+            "Desarrollo Web",
+            "SEO & SEM",
+            "Aplicaciones móviles básicas",
+            "Garantía de Calidad",
+            "Soporte Avanzado"
+          ],
+          "cta": "Elegir Paquete"
+        },
+        {
+          "name": "Paquete Oro",
+          "price": "98.3",
+          "unit": "/por mes",
+          "features": [
+            "Sitio Completo + Ecommerce",
+            "Desarrollo Web",
+            "SEO avanzado",
+            "Aplicaciones móviles",
+            "Garantía de Calidad",
+            "Soporte Premium"
+          ],
+          "cta": "Elegir Paquete"
+        }
+      ]
+    },
+    "workWithUs": {
+      "subtitle": "Trabaja con Nosotros",
+      "title": "¿Tenés un proyecto en mente? Contáctanos.",
+      "cta": "Explorar más",
+      "bigText": "Trabajemos Juntos"
+    }
+  }
+  

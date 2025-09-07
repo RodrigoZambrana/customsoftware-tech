@@ -1,0 +1,11 @@
+{
+    "title": "OOPS!",
+    "subtitle": "This page can’t be found",
+    "cta": "Go to Home",
+    "social": [
+      { "label": "Facebook", "icon": "fab fa-facebook-f", "href": "#" },
+      { "label": "Twitter", "icon": "fab fa-twitter", "href": "#" },
+      { "label": "Dribbble", "icon": "fab fa-dribbble", "href": "#" }
+    ]
+  }
+  

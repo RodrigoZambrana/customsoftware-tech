@@ -15,8 +15,8 @@ const Header2 = ({ singleMenu, dark }) => {
                     <img
                       src={
                         dark
-                          ? "assets/images/logos/logo-white.png"
-                          : "assets/images/logos/logo.png"
+                          ? "/assets/images/logos/logo-white.png"
+                          : "/assets/images/logos/logo.png"
                       }
                       alt="Logo"
                       title="Logo"
@@ -43,7 +43,7 @@ const Header2 = ({ singleMenu, dark }) => {
               <div className="menu-sidebar">
                 <button className="bg-transparent">
                   <img
-                    src="assets/images/icons/toggler-white.svg"
+                    src="/assets/images/icons/toggler-white.svg"
                     alt="Toggler"
                   />
                 </button>

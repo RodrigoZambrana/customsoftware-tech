@@ -1,0 +1,53 @@
+{
+    "pageBanner": "Servicios",
+    "ctaReadMore": "Ver detalle",
+    "items": [
+      {
+        "category": "Diseño",
+        "titlePrefix": "Diseño",
+        "titleEmphasis": "& Desarrollo Web",
+        "title": "Diseño & Desarrollo Web",
+        "description": "Sitios rápidos, responsivos y pensados para convertir. Integramos diseño UX/UI, performance y accesibilidad desde el primer día.",
+        "href": "/web-development",
+        "image": "/assets/images/projects/project-list1.jpg",
+        "imageAlt": "Diseño y Desarrollo Web"
+      },
+      {
+        "category": "Desarrollo",
+        "titlePrefix": "Soluciones de Software",
+        "titleEmphasis": "a Medida",
+        "title": "Desarrollo de soluciones de software a medida",
+        "description": "Aplicaciones y herramientas específicas para tu negocio. Escalables, seguras y preparadas para integraciones.",
+        "href": "/custom-software",
+        "image": "/assets/images/projects/project-list2.jpg",
+        "imageAlt": "Software a medida"
+      },
+      {
+        "category": "Marketing",
+        "titlePrefix": "Marketing Digital",
+        "titleEmphasis": "& Redes Sociales",
+        "title": "Marketing Digital & Redes Sociales",
+        "description": "Campañas de alto impacto en Google y Meta, contenidos y gestión de comunidades orientadas a objetivos.",
+        "href": "/marketing-social",
+        "image": "/assets/images/projects/project-list3.jpg",
+        "imageAlt": "Marketing digital y redes"
+      },
+      {
+        "category": "Posicionamiento",
+        "titlePrefix": "SEO Técnico",
+        "titleEmphasis": "& SEM de Alto Rendimiento",
+        "title": "SEO & SEM (Optimización y Campañas)",
+        "description": "Mejoramos tu visibilidad orgánica y ejecutamos campañas rentables en buscadores con métricas claras.",
+        "href": "/seo-sem",
+        "image": "/assets/images/projects/project-list4.jpg",
+        "imageAlt": "SEO y SEM"
+      }
+    ],
+    "workWithUs": {
+      "subtitle": "Trabaja con Nosotros",
+      "title": "¿Tenés un proyecto? Hablemos.",
+      "cta": "Explorar más",
+      "bigText": "Trabajemos Juntos"
+    }
+  }
+  

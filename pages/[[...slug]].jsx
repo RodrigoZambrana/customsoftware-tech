@@ -2,18 +2,26 @@ import fs from "fs";
 import path from "path";
 import Layout from "@/src/layout/Layout";
 import HomePage from "@/src/components/pages/HomePage";
+import PricingPage from "@/src/components/pages/PricingPage";
+import WebDevelopmentPage from "@/src/components/pages/WebDevelopmentPage";
+import ServicesPage from "@/src/components/pages/ServicesPage";
 
 export default function CatchAll({ page, locale, t }) {
-  // Por ahora sólo "home". Podés rutear más páginas aquí según "page".
-  if (page === "home") {
-    return (
-      <Layout dark locale={locale}>
-        <HomePage t={t} locale={locale} />
-      </Layout>
-    );
-  }
-  // Si quisieras, podrías renderizar un 404 custom aquí.
-  return null;
+  return (
+    <Layout dark locale={locale}>
+      {page === "home" && <HomePage t={t} locale={locale} />}
+      {page === "pricing" && <PricingPage t={t} locale={locale} />}
+      {page === "web-development" && <WebDevelopmentPage t={t} locale={locale} />}
+      {page === "services" && <ServicesPage t={t} locale={locale} />}
+
+      {/* TODO: más páginas
+         {page === "contact" && <ContactPage t={t} locale={locale} />}
+         {page === "services" && <ServicesPage t={t} locale={locale} />}
+      */}
+      {/* Fallback simple si no matchea */}
+      {!(page === "home" || page === "pricing") && null}
+    </Layout>
+  );
 }
 
 export async function getStaticPaths() {
@@ -22,30 +30,48 @@ export async function getStaticPaths() {
     paths: [
       { params: { slug: [] } }, // /
       { params: { slug: ["en"] } }, // /en
+      { params: { slug: ["pricing"] } }, // /pricing
+      { params: { slug: ["en", "pricing"] } }, // /en/pricing
+      { params: { slug: ["web-development"] } }, // /web-development
+      { params: { slug: ["en", "web-development"] } }, // /en/web-development
+      { params: { slug: ["services"] } }, // /services
+      { params: { slug: ["en", "services"] } }, // /en/services
     ],
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
-  // params.slug puede ser undefined (para "/") o ["en"] (para "/en")
   const segments = params?.slug ?? [];
   const first = segments[0];
 
-  // Detectamos idioma por el primer segmento
+  // Idioma
   const locale = first === "en" ? "en" : "es";
   const routeRemainder = first === "en" ? segments.slice(1) : segments;
 
-  // Simple enrutado: si no hay más segmentos => Home
+  // Página
   let page = "home";
+  if (routeRemainder.length > 0) {
+    // ej: /pricing o /en/pricing
+    const slug = routeRemainder[0];
+    if (slug === "pricing") page = "pricing";
+    if (slug === "contacto" || slug === "contact") page = "contact";
+    if (slug === "servicios" || slug === "services") page = "services";
+    if (slug === "web-development") page = "web-development";
+    if (slug === "services") page = "services";
 
-  // En el futuro, podrías mapear: contacto/contact -> page="contact"
-  // if (routeRemainder[0] === "contacto" || routeRemainder[0] === "contact") page = "contact";
+    // …aquí podés ir agregando más rutas
+  }
 
-  // Cargamos el JSON correspondiente
+  // JSON de contenido
   const contentPath = path.join(process.cwd(), "content", locale, `${page}.json`);
-  const raw = fs.readFileSync(contentPath, "utf8");
-  const t = JSON.parse(raw);
+  let t = {};
+  try {
+    const raw = fs.readFileSync(contentPath, "utf8");
+    t = JSON.parse(raw);
+  } catch (err) {
+    console.warn(`No existe JSON para ${page} (${locale}):`, contentPath);
+  }
 
   return {
     props: { page, locale, t },

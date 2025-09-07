@@ -22,7 +22,7 @@ const DefaultFooter = ({ dark, locale, t }) => {
   return (
     <footer
       className="main-footer rel z-1"
-      style={{ backgroundImage: "url(assets/images/footer/footer-bg-shape.png)" }}
+      style={{ backgroundImage: "url(/assets/images/footer/footer-bg-shape.png)" }}
     >
       <div className="container container-1290">
         {/* Top */}
@@ -35,8 +35,8 @@ const DefaultFooter = ({ dark, locale, t }) => {
                     <img
                       src={
                         dark
-                          ? "assets/images/logos/footer-logo-white.png"
-                          : "assets/images/logos/footer-logo.png"
+                          ? "/assets/images/logos/footer-logo-white.png"
+                          : "/assets/images/logos/footer-logo.png"
                       }
                       alt={t.brandAlt}
                     />
@@ -61,7 +61,7 @@ const DefaultFooter = ({ dark, locale, t }) => {
           <div className="col-lg-8">
             <div className="footer-left-content pt-80">
               <div className="lets-work mb-50 wow fadeInUp delay-0-2s">
-                <img src="assets/images/footer/lets-work.png" alt={t.letsWorkAlt} />
+                <img src="/assets/images/footer/lets-work.png" alt={t.letsWorkAlt} />
                 <span>{t.letsWork}</span>
               </div>
               <div className="footer-contact-info wow fadeInUp delay-0-3s">

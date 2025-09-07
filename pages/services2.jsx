@@ -6,20 +6,13 @@ const Services = () => {
   return (
     <Layout dark>
       {/* Page Banner Section Start */}
-      <section
-        className="page-banner pt-210 rpt-150 pb-45 rpb-50 rel z-1"
-        style={{ backgroundImage: "url(assets/images/hero/hero-two-bg.png)" }}
-      >
+      <section className="page-banner pt-210 rpt-150 pb-45 rpb-50 rel z-1" style={{ backgroundImage: "url(assets/images/hero/hero-two-bg.png)" }}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <h1 className="hero-title mb-100 rmb-50 wow fadeInUp delay-0-2s">
                 Digital Services
-                <img
-                  className="mxw-10 leaf"
-                  src="assets/images/banner/leaf.png"
-                  alt="Leaf"
-                />
+                <img className="mxw-10 leaf" src="assets/images/banner/leaf.png" alt="Leaf" />
                 For Web Design &amp; Development
               </h1>
             </div>
@@ -47,10 +40,7 @@ const Services = () => {
                       <a>Web Development</a>
                     </Link>
                   </h4>
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    quie blanditiis praesentium voluptatum delenit corruptie
-                  </p>
+                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus quie blanditiis praesentium voluptatum delenit corruptie</p>
                 </div>
               </div>
             </div>
@@ -67,36 +57,10 @@ const Services = () => {
                 <div className="content">
                   <h4>
                     <Link legacyBehavior href="/service-details">
-                      Application Development
+                      Custom software Development and Digital Product Design
                     </Link>
                   </h4>
-                  <p>
-                    Quis autem vel eum iure reprehenderit qui in ea voluptate
-                    velit esse quam nihil molestiae consequatur, vel illum quie
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="feature-item-three wow fadeInUp delay-0-2s">
-                <div className="top-part">
-                  <span className="serial-number">03</span>
-                  <Link legacyBehavior href="/service-details">
-                    <a className="details-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </Link>
-                </div>
-                <div className="content">
-                  <h4>
-                    <Link legacyBehavior href="/service-details">
-                      Digital Product Design
-                    </Link>
-                  </h4>
-                  <p>
-                    Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                    corporis suscipit laboriosam, nisi ut aliquid commodie{" "}
-                  </p>
+                  <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum quie</p>
                 </div>
               </div>
             </div>
@@ -116,79 +80,7 @@ const Services = () => {
                       SEO Optimization
                     </Link>
                   </h4>
-                  <p>
-                    We denounce with righteous indignation and dislike men who
-                    are so beguiled and demoralized by the charms of pleasure
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="feature-item-three wow fadeInUp delay-0-2s">
-                <div className="top-part">
-                  <span className="serial-number">05</span>
-                  <Link legacyBehavior href="/service-details">
-                    <a className="details-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </Link>
-                </div>
-                <div className="content">
-                  <h4>
-                    <Link legacyBehavior href="/service-details">
-                      <a>Design &amp; Branding</a>
-                    </Link>
-                  </h4>
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    quie blanditiis praesentium voluptatum delenit corruptie
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="feature-item-three wow fadeInUp delay-0-4s">
-                <div className="top-part">
-                  <span className="serial-number">06</span>
-                  <Link legacyBehavior href="/service-details">
-                    <a className="details-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </Link>
-                </div>
-                <div className="content">
-                  <h4>
-                    <Link legacyBehavior href="/service-details">
-                      IT Consulting
-                    </Link>
-                  </h4>
-                  <p>
-                    Quis autem vel eum iure reprehenderit qui in ea voluptate
-                    velit esse quam nihil molestiae consequatur, vel illum quie
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="feature-item-three wow fadeInUp delay-0-2s">
-                <div className="top-part">
-                  <span className="serial-number">07</span>
-                  <Link legacyBehavior href="/service-details">
-                    <a className="details-btn">
-                      <i className="far fa-arrow-right" />
-                    </a>
-                  </Link>
-                </div>
-                <div className="content">
-                  <h4>
-                    <Link legacyBehavior href="/service-details">
-                      Business Development
-                    </Link>
-                  </h4>
-                  <p>
-                    Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                    corporis suscipit laboriosam, nisi ut aliquid commodie{" "}
-                  </p>
+                  <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure</p>
                 </div>
               </div>
             </div>
@@ -205,13 +97,30 @@ const Services = () => {
                 <div className="content">
                   <h4>
                     <Link legacyBehavior href="/service-details">
-                      eCommerce Development
+                      Digital Marketing and Social Media Managment
                     </Link>
                   </h4>
-                  <p>
-                    We denounce with righteous indignation and dislike men who
-                    are so beguiled and demoralized by the charms of pleasure
-                  </p>
+                  <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="feature-item-three wow fadeInUp delay-0-4s">
+                <div className="top-part">
+                  <span className="serial-number">08</span>
+                  <Link legacyBehavior href="/service-details">
+                    <a className="details-btn">
+                      <i className="far fa-arrow-right" />
+                    </a>
+                  </Link>
+                </div>
+                <div className="content">
+                  <h4>
+                    <Link legacyBehavior href="/service-details">
+                      eCommerce Solutions
+                    </Link>
+                  </h4>
+                  <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure</p>
                 </div>
               </div>
             </div>
@@ -307,10 +216,7 @@ const Services = () => {
             </div>
           </div>
           <div className="bg-line-shape">
-            <img
-              src="assets/images/shapes/work-process-line.png"
-              alt="Work Process Line"
-            />
+            <img src="assets/images/shapes/work-process-line.png" alt="Work Process Line" />
           </div>
         </div>
       </section>
@@ -321,38 +227,24 @@ const Services = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="image-border-shape rmb-20 wow fadeInRight delay-0-2s">
-                <img
-                  src="assets/images/testimonials/testimonials-four.jpg"
-                  alt="Testimonial Left Image"
-                />
+                <img src="assets/images/testimonials/testimonials-four.jpg" alt="Testimonial Left Image" />
                 <div className="bottom-border" />
               </div>
             </div>
             <div className="col-lg-6">
               <div className="testimonial-one-right-part wow fadeInLeft delay-0-2s">
-                <Swiper
-                  {...sliderProps.testimonialsActiveSwiper}
-                  className="testimonials-active"
-                >
+                <Swiper {...sliderProps.testimonialsActiveSwiper} className="testimonials-active">
                   <SwiperSlide className="testimonial-item">
                     <div className="author-speech">
                       <p>
-                        <span className="quote">“</span> On the other hand we
-                        denounce with see righteous indignation and dislike men
-                        who are beguiled and demoralized by the charms offset
-                        pleasure moments line desire that they cannot foresee
-                        pain and trouble that are bound ensue and equal blame
-                        belongs their duty{" "}
-                        <span className="quote right-quote">“</span>
+                        <span className="quote">“</span> On the other hand we denounce with see righteous indignation and dislike men who are beguiled and demoralized by the charms offset pleasure
+                        moments line desire that they cannot foresee pain and trouble that are bound ensue and equal blame belongs their duty <span className="quote right-quote">“</span>
                       </p>
                     </div>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         <div className="author-image">
-                          <img
-                            src="assets/images/testimonials/author1.png"
-                            alt="Author Image"
-                          />
+                          <img src="assets/images/testimonials/author1.png" alt="Author Image" />
                         </div>
                         <div className="author-info">
                           <h4>James N. Johnson</h4>
@@ -371,22 +263,14 @@ const Services = () => {
                   <SwiperSlide className="testimonial-item">
                     <div className="author-speech">
                       <p>
-                        <span className="quote">“</span> On the other hand we
-                        denounce with see righteous indignation and dislike men
-                        who are beguiled and demoralized by the charms offset
-                        pleasure moments line desire that they cannot foresee
-                        pain and trouble that are bound ensue and equal blame
-                        belongs their duty{" "}
-                        <span className="quote right-quote">“</span>
+                        <span className="quote">“</span> On the other hand we denounce with see righteous indignation and dislike men who are beguiled and demoralized by the charms offset pleasure
+                        moments line desire that they cannot foresee pain and trouble that are bound ensue and equal blame belongs their duty <span className="quote right-quote">“</span>
                       </p>
                     </div>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         <div className="author-image">
-                          <img
-                            src="assets/images/testimonials/author1.png"
-                            alt="Author Image"
-                          />
+                          <img src="assets/images/testimonials/author1.png" alt="Author Image" />
                         </div>
                         <div className="author-info">
                           <h4>James N. Johnson</h4>
@@ -405,22 +289,14 @@ const Services = () => {
                   <SwiperSlide className="testimonial-item">
                     <div className="author-speech">
                       <p>
-                        <span className="quote">“</span> On the other hand we
-                        denounce with see righteous indignation and dislike men
-                        who are beguiled and demoralized by the charms offset
-                        pleasure moments line desire that they cannot foresee
-                        pain and trouble that are bound ensue and equal blame
-                        belongs their duty{" "}
-                        <span className="quote right-quote">“</span>
+                        <span className="quote">“</span> On the other hand we denounce with see righteous indignation and dislike men who are beguiled and demoralized by the charms offset pleasure
+                        moments line desire that they cannot foresee pain and trouble that are bound ensue and equal blame belongs their duty <span className="quote right-quote">“</span>
                       </p>
                     </div>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         <div className="author-image">
-                          <img
-                            src="assets/images/testimonials/author1.png"
-                            alt="Author Image"
-                          />
+                          <img src="assets/images/testimonials/author1.png" alt="Author Image" />
                         </div>
                         <div className="author-info">
                           <h4>James N. Johnson</h4>
@@ -439,22 +315,14 @@ const Services = () => {
                   <SwiperSlide className="testimonial-item">
                     <div className="author-speech">
                       <p>
-                        <span className="quote">“</span> On the other hand we
-                        denounce with see righteous indignation and dislike men
-                        who are beguiled and demoralized by the charms offset
-                        pleasure moments line desire that they cannot foresee
-                        pain and trouble that are bound ensue and equal blame
-                        belongs their duty{" "}
-                        <span className="quote right-quote">“</span>
+                        <span className="quote">“</span> On the other hand we denounce with see righteous indignation and dislike men who are beguiled and demoralized by the charms offset pleasure
+                        moments line desire that they cannot foresee pain and trouble that are bound ensue and equal blame belongs their duty <span className="quote right-quote">“</span>
                       </p>
                     </div>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         <div className="author-image">
-                          <img
-                            src="assets/images/testimonials/author1.png"
-                            alt="Author Image"
-                          />
+                          <img src="assets/images/testimonials/author1.png" alt="Author Image" />
                         </div>
                         <div className="author-info">
                           <h4>James N. Johnson</h4>

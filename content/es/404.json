@@ -1,0 +1,11 @@
+{
+    "title": "¡UPS!",
+    "subtitle": "Esta página no se pudo encontrar",
+    "cta": "Ir al Inicio",
+    "social": [
+      { "label": "Facebook", "icon": "fab fa-facebook-f", "href": "#" },
+      { "label": "Twitter", "icon": "fab fa-twitter", "href": "#" },
+      { "label": "Dribbble", "icon": "fab fa-dribbble", "href": "#" }
+    ]
+  }
+  

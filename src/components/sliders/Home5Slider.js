@@ -27,7 +27,7 @@ export default class Home5Slider extends Component {
             <div
               className="slider-item"
               style={{
-                backgroundImage: "url(assets/images/slider/slide1.jpg)",
+                backgroundImage: "url(/assets/images/slider/slide1.jpg)",
               }}
             >
               <div className="container">
@@ -64,7 +64,7 @@ export default class Home5Slider extends Component {
             <div
               className="slider-item"
               style={{
-                backgroundImage: "url(assets/images/slider/slide2.jpg)",
+                backgroundImage: "url(/assets/images/slider/slide2.jpg)",
               }}
             >
               <div className="container">

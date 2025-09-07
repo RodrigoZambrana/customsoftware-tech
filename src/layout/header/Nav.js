@@ -11,7 +11,7 @@ const Nav = ({ singleMenu }) => {
             <Link legacyBehavior href="/">
               <a>
                 <img
-                  src="assets/images/logos/logo.png"
+                  src="/assets/images/logos/logo.png"
                   alt="Logo"
                   title="Logo"
                 />

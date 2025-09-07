@@ -1,0 +1,90 @@
+{
+    "pageBanner": "Pricing Plans",
+    "whyChoose": {
+      "subtitle": "Why Choose Us",
+      "title": "Benefits of Working With Us",
+      "missionTitle": "Our Mission",
+      "missionText": "We help companies and entrepreneurs build a professional, scalable digital presence.",
+      "visionTitle": "Our Vision",
+      "visionText": "To be your strategic partner in web development, SEO and digital marketing with measurable results.",
+      "cta": "Learn More"
+    },
+    "services": [
+      {
+        "icon": "fal fa-bezier-curve",
+        "title": "On-time meetings with experts",
+        "text": "Our team responds quickly to keep your projects moving forward."
+      },
+      {
+        "icon": "fal fa-cogs",
+        "title": "Quality checks by specialists",
+        "text": "We validate every delivery to ensure professional standards."
+      },
+      {
+        "icon": "fal fa-chart-pie",
+        "title": "Detailed reports",
+        "text": "Full transparency on progress at every stage of the project."
+      },
+      {
+        "icon": "fal fa-shield-cross",
+        "title": "Project filtering",
+        "text": "We prioritize strategies that ensure high impact and efficiency."
+      }
+    ],
+    "pricingSection": {
+      "subtitle": "Pricing Packages",
+      "title": "Options for every type of web project",
+      "plans": [
+        {
+          "name": "Basic Package",
+          "price": "18.3",
+          "unit": "/per month",
+          "features": [
+            "Landing Page",
+            "Web Development",
+            "SEO Optimization",
+            "Responsive Design",
+            "Quality Assurance",
+            "Basic Support"
+          ],
+          "cta": "Choose Package"
+        },
+        {
+          "name": "Silver Package",
+          "badge": "Popular Package",
+          "price": "49.3",
+          "unit": "/per month",
+          "features": [
+            "Landing Page + Blog",
+            "Web Development",
+            "SEO & SEM",
+            "Basic Mobile Apps",
+            "Quality Assurance",
+            "Advanced Support"
+          ],
+          "cta": "Choose Package"
+        },
+        {
+          "name": "Gold Package",
+          "price": "98.3",
+          "unit": "/per month",
+          "features": [
+            "Full Website + Ecommerce",
+            "Web Development",
+            "Advanced SEO",
+            "Mobile Applications",
+            "Quality Assurance",
+            "Premium Support"
+          ],
+          "cta": "Choose Package"
+        }
+      ]
+    },
+    "workWithUs": {
+      "subtitle": "Work With Us",
+      "title": "Have a project in mind? Feel free to contact us.",
+      "cta": "Explore more",
+      "bigText": "Let’s Work Together"
+    }
+  }
+  

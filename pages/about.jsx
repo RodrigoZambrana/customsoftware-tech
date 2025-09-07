@@ -11,32 +11,17 @@ const About = () => {
   return (
     <Layout dark>
       {/* Page Banner Section Start */}
-      <section
-        className="page-banner pt-210 rpt-150 pb-45 rpb-50 rel z-1"
-        style={{ backgroundImage: "url(assets/images/hero/hero-two-bg.png)" }}
-      >
+      <section className="page-banner pt-210 rpt-150 pb-45 rpb-50 rel z-1" style={{ backgroundImage: "url(/assets/images/hero/hero-two-bg.png)" }}>
         <div className="container">
           <div className="row">
             <div className="col-xl-10 col-lg-11">
               <h1 className="hero-title mb-100 rmb-50 wow fadeInUp delay-0-2s">
                 We’re Digital Web
-                <img
-                  className="mxw-20"
-                  src="assets/images/banner/inside-title1.png"
-                  alt="title"
-                />
-                <img
-                  className="mxw-40"
-                  src="assets/images/banner/inside-title2.png"
-                  alt="title"
-                />
+                <img className="mxw-20" src="/assets/images/banner/inside-title1.png" alt="title" />
+                <img className="mxw-40" src="/assets/images/banner/inside-title2.png" alt="title" />
                 Development Agency
                 <span className="arrow">
-                  <img
-                    className="wow fadeInLeft delay-0-6s"
-                    src="assets/images/hero/title-arrow.png"
-                    alt="Arrow"
-                  />
+                  <img className="wow fadeInLeft delay-0-6s" src="/assets/images/hero/title-arrow.png" alt="Arrow" />
                 </span>
               </h1>
             </div>
@@ -49,11 +34,8 @@ const About = () => {
       <div className="video-area-two rel z-1">
         <div className="container-fluid">
           <div className="video-part style-two mb-40 wow fadeInUp delay-0-2s">
-            <img src="assets/images/video/video-two-bg.jpg" alt="Video" />
-            <a
-              href="https://www.youtube.com/watch?v=9Y7ma241N8k"
-              className="mfp-iframe video-play"
-            >
+            <img src="/assets/images/video/video-two-bg.jpg" alt="Video" />
+            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k" className="mfp-iframe video-play">
               <i className="fas fa-play" />
             </a>
           </div>
@@ -62,35 +44,24 @@ const About = () => {
           <div className="row">
             <div className="col-lg-6 wow fadeInLeft delay-0-2s">
               <div className="client-text text-lg-start text-center mt-40 pb-50">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptat
-                emey accusantium doloremque laudantium totam aperiam eaque
-                quabillo inventore veritatisey quasi architecto beatae dictasunt
+                Sed ut perspiciatis unde omnis iste natus error sit voluptat emey accusantium doloremque laudantium totam aperiam eaque quabillo inventore veritatisey quasi architecto beatae dictasunt
               </div>
               <div className="row">
                 <div className="col-xl-10">
                   <div className="client-logo-wrap">
                     <Link legacyBehavior href="/contact">
                       <a className="client-logo-item">
-                        <img
-                          src="assets/images/client-logos/client-logo-two1.png"
-                          alt="Client Logo"
-                        />
+                        <img src="/assets/images/client-logos/client-logo-two1.png" alt="Client Logo" />
                       </a>
                     </Link>
                     <Link legacyBehavior href="/contact">
                       <a className="client-logo-item">
-                        <img
-                          src="assets/images/client-logos/client-logo-two2.png"
-                          alt="Client Logo"
-                        />
+                        <img src="/assets/images/client-logos/client-logo-two2.png" alt="Client Logo" />
                       </a>
                     </Link>
                     <Link legacyBehavior href="/contact">
                       <a className="client-logo-item">
-                        <img
-                          src="assets/images/client-logos/client-logo-two3.png"
-                          alt="Client Logo"
-                        />
+                        <img src="/assets/images/client-logos/client-logo-two3.png" alt="Client Logo" />
                       </a>
                     </Link>
                   </div>
@@ -100,11 +71,7 @@ const About = () => {
             <div className="col-lg-6 wow fadeInRight delay-0-2s">
               <div className="video-year text-lg-end text-center rel">
                 1980
-                <img
-                  className="leaf-shape"
-                  src="assets/images/video/leaf.png"
-                  alt="Leaf"
-                />
+                <img className="leaf-shape" src="/assets/images/video/leaf.png" alt="Leaf" />
               </div>
             </div>
           </div>
@@ -129,10 +96,7 @@ const About = () => {
                   <i className="flaticon-creativity" />
                   <h5>Customize your site</h5>
                 </div>
-                <p>
-                  At vero eos et accusamus iusto dignissim ducimuse blanditiis
-                  praesentiue
-                </p>
+                <p>At vero eos et accusamus iusto dignissim ducimuse blanditiis praesentiue</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
@@ -141,10 +105,7 @@ const About = () => {
                   <i className="flaticon-mobile-banking" />
                   <h5>Edit your mobile view</h5>
                 </div>
-                <p>
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                  corporis suscipit
-                </p>
+                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
@@ -153,10 +114,7 @@ const About = () => {
                   <i className="flaticon-optimization-1" />
                   <h5>Optimize search engines</h5>
                 </div>
-                <p>
-                  Quis autem vel eum iure reprehenderi qui ea voluptate velit
-                  esse quam nihile
-                </p>
+                <p>Quis autem vel eum iure reprehenderi qui ea voluptate velit esse quam nihile</p>
               </div>
             </div>
           </div>
@@ -216,7 +174,7 @@ const About = () => {
             <div className="col">
               <div className="team-member wow fadeInUp delay-0-2s">
                 <div className="image">
-                  <img src="assets/images/team/member6.jpg" alt="Team Member" />
+                  <img src="/assets/images/team/member6.jpg" alt="Team Member" />
                 </div>
                 <div className="content">
                   <h4>Patrick V. Schroeder</h4>
@@ -230,8 +188,7 @@ const About = () => {
                 <div className="btn-social">
                   <Link legacyBehavior href="/team-details">
                     <a className="read-more">
-                      <span>View Details</span>{" "}
-                      <i className="far fa-arrow-right" />
+                      <span>View Details</span> <i className="far fa-arrow-right" />
                     </a>
                   </Link>
                   <div className="social-style-two">
@@ -254,7 +211,7 @@ const About = () => {
             <div className="col">
               <div className="team-member wow fadeInUp delay-0-3s">
                 <div className="image">
-                  <img src="assets/images/team/member7.jpg" alt="Team Member" />
+                  <img src="/assets/images/team/member7.jpg" alt="Team Member" />
                 </div>
                 <div className="content">
                   <h4>Michael A. Braun</h4>
@@ -268,8 +225,7 @@ const About = () => {
                 <div className="btn-social">
                   <Link legacyBehavior href="/team-details">
                     <a className="read-more">
-                      <span>View Details</span>{" "}
-                      <i className="far fa-arrow-right" />
+                      <span>View Details</span> <i className="far fa-arrow-right" />
                     </a>
                   </Link>
                   <div className="social-style-two">
@@ -306,8 +262,7 @@ const About = () => {
                 <div className="btn-social">
                   <Link legacyBehavior href="/team-details">
                     <a className="read-more">
-                      <span>View Details</span>{" "}
-                      <i className="far fa-arrow-right" />
+                      <span>View Details</span> <i className="far fa-arrow-right" />
                     </a>
                   </Link>
                   <div className="social-style-two">
@@ -344,8 +299,7 @@ const About = () => {
                 <div className="btn-social">
                   <Link legacyBehavior href="/team-details">
                     <a className="read-more">
-                      <span>View Details</span>{" "}
-                      <i className="far fa-arrow-right" />
+                      <span>View Details</span> <i className="far fa-arrow-right" />
                     </a>
                   </Link>
                   <div className="social-style-two">
@@ -368,10 +322,7 @@ const About = () => {
             <div className="col">
               <div className="team-member wow fadeInUp delay-0-6s">
                 <div className="image">
-                  <img
-                    src="assets/images/team/member10.jpg"
-                    alt="Team Member"
-                  />
+                  <img src="assets/images/team/member10.jpg" alt="Team Member" />
                 </div>
                 <div className="content">
                   <h4>Michael A. Braun</h4>
@@ -385,8 +336,7 @@ const About = () => {
                 <div className="btn-social">
                   <Link legacyBehavior href="/team-details">
                     <a className="read-more">
-                      <span>View Details</span>{" "}
-                      <i className="far fa-arrow-right" />
+                      <span>View Details</span> <i className="far fa-arrow-right" />
                     </a>
                   </Link>
                   <div className="social-style-two">
@@ -411,10 +361,7 @@ const About = () => {
       </section>
       {/* Team Area end */}
       {/* Statistics Area start */}
-      <div
-        className="statistics-area pt-100 rpt-70 rel z-1"
-        style={{ backgroundImage: "url(assets/images/hero/hero-two-bg.png)" }}
-      >
+      <div className="statistics-area pt-100 rpt-70 rel z-1" style={{ backgroundImage: "url(assets/images/hero/hero-two-bg.png)" }}>
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-xl-2 col-lg-3 col-6">
@@ -455,38 +402,24 @@ const About = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="image-border-shape rmb-20 wow fadeInRight delay-0-2s">
-                <img
-                  src="assets/images/testimonials/testimonials-four.jpg"
-                  alt="Testimonial Left Image"
-                />
+                <img src="assets/images/testimonials/testimonials-four.jpg" alt="Testimonial Left Image" />
                 <div className="bottom-border" />
               </div>
             </div>
             <div className="col-lg-6">
               <div className="testimonial-one-right-part wow fadeInLeft delay-0-2s">
-                <Swiper
-                  {...sliderProps.testimonialsActiveSwiper}
-                  className="testimonials-active"
-                >
+                <Swiper {...sliderProps.testimonialsActiveSwiper} className="testimonials-active">
                   <SwiperSlide className="testimonial-item">
                     <div className="author-speech">
                       <p>
-                        <span className="quote">“</span> On the other hand we
-                        denounce with see righteous indignation and dislike men
-                        who are beguiled and demoralized by the charms offset
-                        pleasure moments line desire that they cannot foresee
-                        pain and trouble that are bound ensue and equal blame
-                        belongs their duty{" "}
-                        <span className="quote right-quote">“</span>
+                        <span className="quote">“</span> On the other hand we denounce with see righteous indignation and dislike men who are beguiled and demoralized by the charms offset pleasure
+                        moments line desire that they cannot foresee pain and trouble that are bound ensue and equal blame belongs their duty <span className="quote right-quote">“</span>
                       </p>
                     </div>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         <div className="author-image">
-                          <img
-                            src="assets/images/testimonials/author1.png"
-                            alt="Author Image"
-                          />
+                          <img src="assets/images/testimonials/author1.png" alt="Author Image" />
                         </div>
                         <div className="author-info">
                           <h4>James N. Johnson</h4>
@@ -505,22 +438,14 @@ const About = () => {
                   <SwiperSlide className="testimonial-item">
                     <div className="author-speech">
                       <p>
-                        <span className="quote">“</span> On the other hand we
-                        denounce with see righteous indignation and dislike men
-                        who are beguiled and demoralized by the charms offset
-                        pleasure moments line desire that they cannot foresee
-                        pain and trouble that are bound ensue and equal blame
-                        belongs their duty{" "}
-                        <span className="quote right-quote">“</span>
+                        <span className="quote">“</span> On the other hand we denounce with see righteous indignation and dislike men who are beguiled and demoralized by the charms offset pleasure
+                        moments line desire that they cannot foresee pain and trouble that are bound ensue and equal blame belongs their duty <span className="quote right-quote">“</span>
                       </p>
                     </div>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         <div className="author-image">
-                          <img
-                            src="assets/images/testimonials/author1.png"
-                            alt="Author Image"
-                          />
+                          <img src="assets/images/testimonials/author1.png" alt="Author Image" />
                         </div>
                         <div className="author-info">
                           <h4>James N. Johnson</h4>
@@ -539,22 +464,14 @@ const About = () => {
                   <SwiperSlide className="testimonial-item">
                     <div className="author-speech">
                       <p>
-                        <span className="quote">“</span> On the other hand we
-                        denounce with see righteous indignation and dislike men
-                        who are beguiled and demoralized by the charms offset
-                        pleasure moments line desire that they cannot foresee
-                        pain and trouble that are bound ensue and equal blame
-                        belongs their duty{" "}
-                        <span className="quote right-quote">“</span>
+                        <span className="quote">“</span> On the other hand we denounce with see righteous indignation and dislike men who are beguiled and demoralized by the charms offset pleasure
+                        moments line desire that they cannot foresee pain and trouble that are bound ensue and equal blame belongs their duty <span className="quote right-quote">“</span>
                       </p>
                     </div>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         <div className="author-image">
-                          <img
-                            src="assets/images/testimonials/author1.png"
-                            alt="Author Image"
-                          />
+                          <img src="assets/images/testimonials/author1.png" alt="Author Image" />
                         </div>
                         <div className="author-info">
                           <h4>James N. Johnson</h4>
@@ -573,22 +490,14 @@ const About = () => {
                   <SwiperSlide className="testimonial-item">
                     <div className="author-speech">
                       <p>
-                        <span className="quote">“</span> On the other hand we
-                        denounce with see righteous indignation and dislike men
-                        who are beguiled and demoralized by the charms offset
-                        pleasure moments line desire that they cannot foresee
-                        pain and trouble that are bound ensue and equal blame
-                        belongs their duty{" "}
-                        <span className="quote right-quote">“</span>
+                        <span className="quote">“</span> On the other hand we denounce with see righteous indignation and dislike men who are beguiled and demoralized by the charms offset pleasure
+                        moments line desire that they cannot foresee pain and trouble that are bound ensue and equal blame belongs their duty <span className="quote right-quote">“</span>
                       </p>
                     </div>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         <div className="author-image">
-                          <img
-                            src="assets/images/testimonials/author1.png"
-                            alt="Author Image"
-                          />
+                          <img src="assets/images/testimonials/author1.png" alt="Author Image" />
                         </div>
                         <div className="author-info">
                           <h4>James N. Johnson</h4>
@@ -631,50 +540,32 @@ const About = () => {
           <div className="client-logo-wrap">
             <Link legacyBehavior href="/contact">
               <a className="client-logo-item wow fadeInUp delay-0-2s">
-                <img
-                  src="assets/images/client-logos/client-logo1.png"
-                  alt="Client Logo"
-                />
+                <img src="assets/images/client-logos/client-logo1.png" alt="Client Logo" />
               </a>
             </Link>
             <Link legacyBehavior href="/contact">
               <a className="client-logo-item wow fadeInUp delay-0-3s">
-                <img
-                  src="assets/images/client-logos/client-logo2.png"
-                  alt="Client Logo"
-                />
+                <img src="assets/images/client-logos/client-logo2.png" alt="Client Logo" />
               </a>
             </Link>
             <Link legacyBehavior href="/contact">
               <a className="client-logo-item wow fadeInUp delay-0-4s">
-                <img
-                  src="assets/images/client-logos/client-logo3.png"
-                  alt="Client Logo"
-                />
+                <img src="assets/images/client-logos/client-logo3.png" alt="Client Logo" />
               </a>
             </Link>
             <Link legacyBehavior href="/contact">
               <a className="client-logo-item wow fadeInUp delay-0-5s">
-                <img
-                  src="assets/images/client-logos/client-logo4.png"
-                  alt="Client Logo"
-                />
+                <img src="assets/images/client-logos/client-logo4.png" alt="Client Logo" />
               </a>
             </Link>
             <Link legacyBehavior href="/contact">
               <a className="client-logo-item wow fadeInUp delay-0-6s">
-                <img
-                  src="assets/images/client-logos/client-logo5.png"
-                  alt="Client Logo"
-                />
+                <img src="assets/images/client-logos/client-logo5.png" alt="Client Logo" />
               </a>
             </Link>
             <Link legacyBehavior href="/contact">
               <a className="client-logo-item wow fadeInUp delay-0-7s">
-                <img
-                  src="assets/images/client-logos/client-logo6.png"
-                  alt="Client Logo"
-                />
+                <img src="assets/images/client-logos/client-logo6.png" alt="Client Logo" />
               </a>
             </Link>
           </div>

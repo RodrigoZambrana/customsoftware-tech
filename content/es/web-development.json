@@ -1,0 +1,98 @@
+{
+  "pageBanner": "Desarrollo de Sitios Web a Medida",
+  "about": {
+    "subtitle": "Qué Ofrecemos",
+    "title": "Creamos sitios web profesionales, escalables y optimizados",
+    "featuresCol1": [
+      "Diseño web responsivo",
+      "Optimización SEO técnica",
+      "Integración CMS y E-commerce",
+      "Estrategia de contenido"
+    ],
+    "featuresCol2": [
+      "Compatibilidad multi-dispositivo",
+      "Optimización de velocidad",
+      "Experiencia de usuario (UX/UI)"
+    ],
+    "imageAlt": "Desarrollo Web"
+  },
+  "whatWeDo": {
+    "subtitle": "Cómo lo hacemos",
+    "title": "Soluciones a medida para tu proyecto web",
+    "text": "Diseñamos y desarrollamos sitios únicos, adaptados a cada cliente. Desde landing pages hasta ecommerce completos, integrando campañas digitales y redes sociales."
+  },
+  "pricingSection": {
+    "subtitle": "Paquetes Web",
+    "title": "Opciones para todo tipo de negocios",
+    "plans": [
+      {
+        "name": "Sitio Básico",
+        "price": "500",
+        "unit": "USD único",
+        "features": [
+          "Landing Page",
+          "Diseño responsivo",
+          "Optimización SEO inicial",
+          "Soporte básico"
+        ],
+        "cta": "Elegir Paquete"
+      },
+      {
+        "name": "Sitio + Campañas",
+        "badge": "Más Popular",
+        "price": "900",
+        "unit": "USD",
+        "features": [
+          "Sitio Web Completo",
+          "SEO + SEM",
+          "Campañas en Google y Meta",
+          "Soporte avanzado"
+        ],
+        "cta": "Elegir Paquete"
+      },
+      {
+        "name": "Sitio + Campañas + Redes",
+        "price": "1300",
+        "unit": "USD",
+        "features": [
+          "Sitio Web Completo",
+          "SEO Avanzado",
+          "Campañas Google + Meta",
+          "Gestión de redes sociales",
+          "Soporte premium"
+        ],
+        "cta": "Elegir Paquete"
+      }
+    ]
+  },
+    "faqs": {
+      "subtitle": "Preguntas Frecuentes",
+      "title": "Lo que más nos consultan",
+      "image": "/assets/images/faqs/faq-two.jpg",
+      "imageAlt": "Sección de preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Cuánto tarda en desarrollarse un sitio web a medida?",
+          "a": "Depende del alcance. Un sitio básico toma 2–4 semanas; proyectos con ecommerce o integraciones pueden requerir 6–10 semanas."
+        },
+        {
+          "q": "¿Incluyen optimización SEO en todos los planes?",
+          "a": "Sí. Incluimos SEO técnico inicial (metadatos, performance, indexación). Podemos sumar SEO avanzado bajo demanda."
+        },
+        {
+          "q": "¿Ofrecen mantenimiento posterior al lanzamiento?",
+          "a": "Sí. Contamos con planes de soporte y mantenimiento para actualizaciones, seguridad y mejoras continuas."
+        },
+        {
+          "q": "¿Pueden gestionar campañas en Google y Meta?",
+          "a": "Sí. Tenemos paquetes combinados de sitio + campañas. Incluyen configuración, seguimiento y optimización mensual."
+        }
+      ]
+    },
+  "workWithUs": {
+    "subtitle": "Trabaja con Nosotros",
+    "title": "¿Tenés un proyecto en mente? Contáctanos",
+    "cta": "Explorar más",
+    "bigText": "Trabajemos Juntos"
+  }
+}
