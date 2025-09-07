@@ -1,7 +1,9 @@
 import PageBanner from "@/src/components/PageBanner";
 import Link from "next/link";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import YgencyAccordionLite from "@/src/components/YgencyAccordionLite";
+import { NextSeo, BreadcrumbJsonLd, FAQPageJsonLd, ProductJsonLd } from "next-seo";
+import DefaultSEO from "@/next-seo.config";
 
 export default function WebDevelopmentPage({ t, locale = "es" }) {
   const isEn = locale === "en";
@@ -14,10 +16,86 @@ export default function WebDevelopmentPage({ t, locale = "es" }) {
 
   const planIcons = ["flaticon-abstract", "flaticon-liquid", "flaticon-petals"];
 
+  // SEO helpers
+  const siteBase = useMemo(() => {
+    const c = DefaultSEO?.canonical || "https://customsoftware-tech.com/";
+    return c.endsWith("/") ? c : `${c}/`;
+  }, []);
+
+  const path = "/web-development";
+  const canonicalPath = isEn ? `/en${path}` : path;
+  const canonicalUrl = `${siteBase.replace(/\/$/, "")}${canonicalPath}`;
+  const altEsUrl = `${siteBase.replace(/\/$/, "")}${path}`;
+  const altEnUrl = `${siteBase.replace(/\/$/, "")}/en${path}`;
+
+  const seoTitle = t?.seo?.title || (isEn ? "Custom Website Development | SEO-Optimized" : "Desarrollo de Sitios Web | SEO Optimizado");
+  const seoDesc = t?.seo?.description || t?.whatWeDo?.text || (isEn
+    ? "We build fast, secure, SEO-optimized websites. SEM and social strategies to grow your business online."
+    : "Creamos sitios web rápidos y optimizados para buscadores. SEO, SEM y marketing digital para hacer crecer tu negocio online.");
+  const ogLocale = isEn ? "en_US" : "es_ES";
+
+  const faqItems = (t?.faqs?.items || []).map((q) => ({
+    questionName: q.q,
+    acceptedAnswerText: q.a,
+  }));
+
+  const offers = (t?.pricingSection?.plans || []).map((p) => ({
+    price: `${p.price}`,
+    priceCurrency: "USD",
+    itemCondition: "https://schema.org/NewCondition",
+    availability: "https://schema.org/InStock",
+    url: canonicalUrl,
+    seller: { name: "CustomSoftware-Tech" },
+  }));
+
   return (
     <>
+      <NextSeo
+        title={seoTitle}
+        description={seoDesc}
+        canonical={canonicalUrl}
+        additionalLinkTags={[
+          { rel: "alternate", hrefLang: "es", href: altEsUrl },
+          { rel: "alternate", hrefLang: "en", href: altEnUrl },
+          { rel: "alternate", hrefLang: "x-default", href: altEsUrl },
+        ]}
+        openGraph={{
+          url: canonicalUrl,
+          title: seoTitle,
+          description: seoDesc,
+          locale: ogLocale,
+          siteName: "CustomSoftware-Tech",
+          images: DefaultSEO?.openGraph?.images || [],
+        }}
+        languageAlternates={[
+          { hrefLang: "es", href: altEsUrl },
+          { hrefLang: "en", href: altEnUrl },
+        ]}
+      />
+
+      <BreadcrumbJsonLd
+        itemListElements={[
+          { position: 1, name: isEn ? "Home" : "Inicio", item: `${siteBase}` },
+          { position: 2, name: isEn ? "Services" : "Servicios", item: `${siteBase}${isEn ? "en/services" : "services"}` },
+          { position: 3, name: isEn ? "Web Development" : "Desarrollo Web", item: canonicalUrl },
+        ]}
+      />
+
+      {faqItems?.length > 0 && (
+        <FAQPageJsonLd mainEntity={faqItems} />
+      )}
+
+      {offers?.length > 0 && (
+        <ProductJsonLd
+          productName={isEn ? "Custom Website Development" : "Desarrollo de Sitios Web a Medida"}
+          description={seoDesc}
+          brand={{ name: "CustomSoftware-Tech" }}
+          offers={offers}
+        />
+      )}
+
       {/* Banner */}
-      <PageBanner pageName={t.pageBanner} />
+      <PageBanner pageName={t.pageBanner} homeLabel={isEn ? "Home" : "Inicio"} homeHref={withLang("/")} />
 
       {/* About / Qué ofrecemos */}
       <section className="why-choose-area pt-130 rpt-100 pb-100 rpb-70">
@@ -65,7 +143,7 @@ export default function WebDevelopmentPage({ t, locale = "es" }) {
               <div className="row">
                 <div className="col-12">
                   <div className="image wow zoomIn delay-0-2s text-center">
-                    <img src="/assets/images/banner/banner-bg.jpg" alt={t.about?.imageAlt || "Web Development"} style={{ maxWidth: "100%", height: "auto" }} />
+                    <img src="/assets/images/banner/banner-bg.jpg" alt={t.about?.imageAlt || (isEn ? "Web Development" : "Desarrollo Web")} style={{ maxWidth: "100%", height: "auto" }} />
                   </div>
                 </div>
               </div>
