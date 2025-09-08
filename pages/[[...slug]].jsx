@@ -3,15 +3,18 @@ import path from "path";
 import Layout from "@/src/layout/Layout";
 import HomePage from "@/src/components/pages/HomePage";
 import PricingPage from "@/src/components/pages/PricingPage";
-import WebDevelopmentPage from "@/src/components/pages/WebDevelopmentPage";
 import ServicesPage from "@/src/components/pages/ServicesPage";
+import ServiceDetailPage from "@/src/components/pages/ServiceDetailPage";
 
 export default function CatchAll({ page, locale, t }) {
   return (
     <Layout dark locale={locale}>
       {page === "home" && <HomePage t={t} locale={locale} />}
       {page === "pricing" && <PricingPage t={t} locale={locale} />}
-      {page === "web-development" && <WebDevelopmentPage t={t} locale={locale} />}
+      {page === "web-development" && <ServiceDetailPage t={t} locale={locale} slug="web-development" />}
+      {page === "custom-software" && <ServiceDetailPage t={t} locale={locale} slug="custom-software" />}
+      {page === "marketing-social" && <ServiceDetailPage t={t} locale={locale} slug="marketing-social" />}
+      {page === "seo-sem" && <ServiceDetailPage t={t} locale={locale} slug="seo-sem" />}
       {page === "services" && <ServicesPage t={t} locale={locale} />}
 
       {/* TODO: más páginas
@@ -34,6 +37,12 @@ export async function getStaticPaths() {
       { params: { slug: ["en", "pricing"] } }, // /en/pricing
       { params: { slug: ["web-development"] } }, // /web-development
       { params: { slug: ["en", "web-development"] } }, // /en/web-development
+      { params: { slug: ["custom-software"] } }, // /custom-software
+      { params: { slug: ["en", "custom-software"] } }, // /en/custom-software
+      { params: { slug: ["marketing-social"] } }, // /marketing-social
+      { params: { slug: ["en", "marketing-social"] } }, // /en/marketing-social
+      { params: { slug: ["seo-sem"] } }, // /seo-sem
+      { params: { slug: ["en", "seo-sem"] } }, // /en/seo-sem
       { params: { slug: ["services"] } }, // /services
       { params: { slug: ["en", "services"] } }, // /en/services
     ],
@@ -58,7 +67,9 @@ export async function getStaticProps({ params }) {
     if (slug === "contacto" || slug === "contact") page = "contact";
     if (slug === "servicios" || slug === "services") page = "services";
     if (slug === "web-development") page = "web-development";
-    if (slug === "services") page = "services";
+    if (slug === "custom-software") page = "custom-software";
+    if (slug === "marketing-social") page = "marketing-social";
+    if (slug === "seo-sem") page = "seo-sem";
 
     // …aquí podés ir agregando más rutas
   }

@@ -3,6 +3,8 @@
     "title": "Desarrollo de Sitios Web a Medida | SEO, SEM y Marketing Digital",
     "description": "Creamos sitios web rápidos, seguros y optimizados para SEO. Integramos SEM y redes sociales para impulsar tu presencia en buscadores y captar clientes."
   },
+  "ctaPrimary": "Hablar con un especialista",
+  "ctaSecondary": "Ver planes",
   "pageBanner": "Desarrollo de Sitios Web a Medida",
   "about": {
     "subtitle": "Qué Ofrecemos",
@@ -39,7 +41,7 @@
           "Optimización SEO inicial",
           "Soporte básico"
         ],
-        "cta": "Elegir Paquete"
+        "cta": "Hablar con un especialista"
       },
       {
         "name": "Sitio + Campañas",
@@ -52,7 +54,7 @@
           "Campañas en Google y Meta",
           "Soporte avanzado"
         ],
-        "cta": "Elegir Paquete"
+        "cta": "Hablar con un especialista"
       },
       {
         "name": "Sitio + Campañas + Redes",
@@ -65,7 +67,7 @@
           "Gestión de redes sociales",
           "Soporte premium"
         ],
-        "cta": "Elegir Paquete"
+        "cta": "Hablar con un especialista"
       }
     ]
   },

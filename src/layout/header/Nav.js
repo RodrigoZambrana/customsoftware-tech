@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Accordion } from "react-bootstrap";
 import Menu from "./Menu";
 
-const Nav = ({ singleMenu }) => {
+const Nav = ({ singleMenu, variant, locale }) => {
   return (
     <nav className="main-menu navbar-expand-lg">
       <Accordion>
@@ -11,7 +11,7 @@ const Nav = ({ singleMenu }) => {
             <Link legacyBehavior href="/">
               <a>
                 <img
-                  src="/assets/images/logos/logo.png"
+                  src="/assets/images/logos/noBgColor.png"
                   alt="Logo"
                   title="Logo"
                 />
@@ -33,7 +33,7 @@ const Nav = ({ singleMenu }) => {
           eventKey="navbar-collapse"
           className="navbar-collapse clearfix"
         >
-          <Menu singleMenu={singleMenu} />
+          <Menu singleMenu={singleMenu} variant={variant} locale={locale} />
         </Accordion.Collapse>
       </Accordion>
 

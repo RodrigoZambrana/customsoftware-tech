@@ -3,6 +3,8 @@
       "title": "Custom Website Development | SEO, SEM & Digital Marketing",
       "description": "We build fast, secure, SEO-optimized websites. We integrate SEM and social to boost your search presence and acquire customers."
     },
+    "ctaPrimary": "Talk to a specialist",
+    "ctaSecondary": "View plans",
     "pageBanner": "Custom Website Development",
     "about": {
       "subtitle": "What We Offer",
@@ -39,11 +41,11 @@
             "Initial SEO optimization",
             "Basic support"
           ],
-          "cta": "Choose Package"
-        },
-        {
-          "name": "Site + Campaigns",
-          "badge": "Most Popular",
+        "cta": "Talk to a specialist"
+      },
+      {
+        "name": "Site + Campaigns",
+        "badge": "Most Popular",
           "price": "900",
           "unit": "USD",
           "features": [
@@ -52,10 +54,10 @@
             "Google & Meta campaigns",
             "Advanced support"
           ],
-          "cta": "Choose Package"
-        },
-        {
-          "name": "Site + Campaigns + Social",
+        "cta": "Talk to a specialist"
+      },
+      {
+        "name": "Site + Campaigns + Social",
           "price": "1300",
           "unit": "USD",
           "features": [
@@ -65,8 +67,8 @@
             "Social media management",
             "Premium support"
           ],
-          "cta": "Choose Package"
-        }
+        "cta": "Talk to a specialist"
+      }
       ]
     },
     

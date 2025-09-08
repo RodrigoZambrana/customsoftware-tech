@@ -14,13 +14,13 @@ export default function HomePage({ t, locale }) {
       <NextSeo
         title={t.seoTitle}
         description={t.seoDescription}
-        canonical={isEn ? "https://customsoftware-tech.com/en/" : "https://customsoftware-tech.com/"}
+        canonical={isEn ? "https://www.software-strategy.com/en/" : "https://www.software-strategy.com/"}
         openGraph={{
           type: "website",
           locale: isEn ? "en_US" : "es_ES",
-          url: isEn ? "https://customsoftware-tech.com/en/" : "https://customsoftware-tech.com/",
+          url: isEn ? "https://www.software-strategy.com/en/" : "https://www.software-strategy.com/",
           siteName: "CustomSoftware-Tech",
-          images: [{ url: "https://customsoftware-tech.com/og-image.jpg", width: 1200, height: 630, alt: "CustomSoftware-Tech" }],
+          images: [{ url: "https://www.software-strategy.com/og-image.jpg", width: 1200, height: 630, alt: "CustomSoftware-Tech" }],
         }}
       />
 

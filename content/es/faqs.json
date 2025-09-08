@@ -1,0 +1,25 @@
+{
+  "seo": {
+    "title": "Preguntas Frecuentes | CustomSoftware-Tech",
+    "description": "Respuestas sobre desarrollo web, software a medida, SEO/SEM y marketing digital: tiempos, precios, procesos y soporte."
+  },
+  "pageBanner": "Preguntas Frecuentes",
+  "subtitle": "Resuelve tus dudas",
+  "title": "Todo lo que necesitas saber",
+  "image": "/assets/images/faqs/faq-two.jpg",
+  "imageAlt": "Preguntas frecuentes",
+  "items": [
+    { "q": "¿Cuánto tarda un sitio web?", "a": "Un sitio básico suele tomar 2–4 semanas. Proyectos con ecommerce o integraciones requieren 6–10 semanas, según alcance." },
+    { "q": "¿Trabajan SEO desde el inicio?", "a": "Sí. Implementamos SEO técnico (metadatos, indexación, performance) y estructura de contenidos. Podemos sumar SEO avanzado." },
+    { "q": "¿Pueden gestionar campañas en Google y Meta?", "a": "Sí. Configuramos, medimos y optimizamos campañas orientadas a resultados, con reportes periódicos." },
+    { "q": "¿Cómo presupuestan software a medida?", "a": "Hacemos un discovery, definimos alcance y estimamos por módulos. Proponemos MVPs para validar rápido y reducir riesgos." },
+    { "q": "¿Ofrecen mantenimiento y soporte?", "a": "Sí. Planes de soporte con mejoras, seguridad y monitoreo. También soporte on-demand." }
+  ],
+  "cta": {
+    "subtitle": "¿Aún con dudas?",
+    "title": "Hablemos sobre tu proyecto y el mejor camino para avanzar",
+    "linkLabel": "Hablar con un especialista",
+    "bigText": "Estamos Para Ayudarte"
+  }
+}
+

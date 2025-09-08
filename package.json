@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sitemap": "next-sitemap",
+    "postexport": "next-sitemap"
   },
   "dependencies": {
     "@next/font": "13.3.0",
@@ -15,6 +17,7 @@
     "next": "13.3.0",
     "next-i18next": "^15.4.2",
     "next-seo": "^6.8.0",
+    "next-sitemap": "^4.2.3",
     "react": "18.2.0",
     "react-bootstrap": "^1.6.1",
     "react-circular-progressbar": "^2.1.0",

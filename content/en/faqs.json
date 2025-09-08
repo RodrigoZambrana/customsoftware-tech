@@ -1,0 +1,25 @@
+{
+  "seo": {
+    "title": "FAQs | CustomSoftware-Tech",
+    "description": "Answers about web development, custom software, SEO/SEM and digital marketing: timelines, pricing, process and support."
+  },
+  "pageBanner": "Frequently Asked Questions",
+  "subtitle": "Get clarity",
+  "title": "Everything you need to know",
+  "image": "/assets/images/faqs/faq-two.jpg",
+  "imageAlt": "Frequently asked questions",
+  "items": [
+    { "q": "How long does a website take?", "a": "A basic site usually takes 2–4 weeks. Ecommerce or integrations take 6–10 weeks depending on scope." },
+    { "q": "Do you work on SEO from day one?", "a": "Yes. We implement technical SEO (metadata, indexing, performance) and content structure. Advanced SEO can be added." },
+    { "q": "Can you manage Google and Meta campaigns?", "a": "Yes. We set up, measure and optimize results-driven campaigns with periodic reports." },
+    { "q": "How do you price custom software?", "a": "We run discovery, define scope and estimate by modules. We propose MVPs to validate quickly and reduce risk." },
+    { "q": "Do you offer maintenance and support?", "a": "Yes. Support plans with improvements, security and monitoring. Also on-demand support." }
+  ],
+  "cta": {
+    "subtitle": "Still have questions?",
+    "title": "Let’s talk about your project and the best path forward",
+    "linkLabel": "Talk to a specialist",
+    "bigText": "We’re Here To Help"
+  }
+}
+

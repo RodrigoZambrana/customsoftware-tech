@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const PageBanner = ({ pageName, homeLabel = "Home", homeHref = "/" }) => {
+const PageBanner = ({ pageName, homeLabel = "Home", homeHref = "/", parentLabel, parentHref }) => {
   return (
     <section
       className="page-banner-area overlay pt-220 rpt-150 pb-170 rpb-100 rel z-1 bgs-cover text-center"
@@ -16,6 +16,13 @@ const PageBanner = ({ pageName, homeLabel = "Home", homeHref = "/" }) => {
                   <a>{homeLabel}</a>
                 </Link>
               </li>
+              {parentLabel && parentHref && (
+                <li className="breadcrumb-item">
+                  <Link legacyBehavior href={parentHref}>
+                    <a>{parentLabel}</a>
+                  </Link>
+                </li>
+              )}
               <li className="breadcrumb-item active">{pageName}</li>
             </ol>
           </nav>

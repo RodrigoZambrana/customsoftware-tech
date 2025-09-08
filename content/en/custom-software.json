@@ -1,0 +1,88 @@
+{
+  "seo": {
+    "title": "Custom Software Development | Integrations, APIs & Automation",
+    "description": "We build custom software solutions: integrations, APIs, backoffice and process automation with scalability and security in mind."
+  },
+  "pageBanner": "Custom Software Development",
+  "ctaPrimary": "Talk to a specialist",
+  "ctaSecondary": "See options",
+  "about": {
+    "subtitle": "What We Offer",
+    "title": "Applications and tools tailored to your business",
+    "featuresCol1": [
+      "APIs and microservices",
+      "Integrations (ERP/CRM/Payments)",
+      "Process automation",
+      "Dashboards and backoffice"
+    ],
+    "featuresCol2": [
+      "Scalable architecture",
+      "Security and compliance",
+      "DevOps and CI/CD"
+    ],
+    "imageAlt": "Custom software"
+  },
+  "whatWeDo": {
+    "subtitle": "How We Work",
+    "title": "Robust, secure and scalable solutions",
+    "text": "We analyze your operation and design tailored software to remove bottlenecks. We prioritize quality, performance and maintainability."
+  },
+  "pricingSection": {
+    "subtitle": "Packages",
+    "title": "Custom development options",
+    "hidePrices": true,
+    "plans": [
+      {
+        "name": "MVP",
+        "price": "",
+        "unit": "",
+        "features": [
+          "Focused scope",
+          "Fast delivery",
+          "Solid technical base"
+        ],
+        "cta": "Request a quote"
+      },
+      {
+        "name": "Business",
+        "badge": "Most Popular",
+        "price": "",
+        "unit": "",
+        "features": [
+          "Core modules",
+          "External integrations",
+          "CI/CD + QA"
+        ],
+        "cta": "Request a quote"
+      },
+      {
+        "name": "Enterprise",
+        "price": "",
+        "unit": "",
+        "features": [
+          "High availability",
+          "Advanced security",
+          "Premium support"
+        ],
+        "cta": "Request a quote"
+      }
+    ]
+  },
+  "faqs": {
+    "subtitle": "FAQs",
+    "title": "Common questions",
+    "image": "/assets/images/faqs/faq-two.jpg",
+    "imageAlt": "Frequently asked questions",
+    "items": [
+      { "q": "How do you define project scope?", "a": "We run workshops and requirements documentation to agree deliverables, budget and timeline." },
+      { "q": "Do you use agile methodologies?", "a": "Yes, we work with short iterations, regular demos and a transparent board." },
+      { "q": "What tech stack do you use?", "a": "We select the stack per use case. We always prioritize standards, testing and security." }
+    ]
+  },
+  "workWithUs": {
+    "subtitle": "Work With Us",
+    "title": "Need custom software?",
+    "cta": "Explore more",
+    "bigText": "Build Together"
+  }
+}

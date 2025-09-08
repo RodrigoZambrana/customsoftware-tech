@@ -1,0 +1,87 @@
+{
+  "seo": {
+    "title": "SEO & SEM | Optimización Técnica y Campañas en Buscadores",
+    "description": "Mejoramos tu visibilidad orgánica con SEO técnico y de contenidos. Ejecutamos campañas SEM rentables con seguimiento y optimización continua."
+  },
+  "pageBanner": "SEO & SEM (Optimización y Campañas)",
+  "ctaPrimary": "Hablar con un especialista",
+  "ctaSecondary": "Ver planes",
+  "about": {
+    "subtitle": "Qué Ofrecemos",
+    "title": "Posicionamiento orgánico y campañas de alto rendimiento",
+    "featuresCol1": [
+      "SEO técnico (Core Web Vitals)",
+      "Arquitectura e indexación",
+      "Investigación de keywords",
+      "On-page y contenidos"
+    ],
+    "featuresCol2": [
+      "Google Ads (Search/Display)",
+      "Tracking y conversiones",
+      "Optimización de landing pages"
+    ],
+    "imageAlt": "SEO y SEM"
+  },
+  "whatWeDo": {
+    "subtitle": "Cómo lo hacemos",
+    "title": "Diagnóstico, plan y ejecución",
+    "text": "Auditamos tu sitio, priorizamos quick wins y plan de mediano plazo. Configuramos campañas con medición clara y optimizamos para ROI."
+  },
+  "pricingSection": {
+    "subtitle": "Planes",
+    "title": "Opciones para tu estrategia",
+    "plans": [
+      {
+        "name": "SEO Básico",
+        "price": "400",
+        "unit": "USD/mes",
+        "features": [
+          "Auditoría + on-page",
+          "Metadatos y performance",
+          "Reporte mensual"
+        ],
+        "cta": "Hablar con un especialista"
+      },
+      {
+        "name": "SEO + SEM",
+        "badge": "Más Popular",
+        "price": "900",
+        "unit": "USD/mes",
+        "features": [
+          "SEO técnico + contenidos",
+          "Campañas Google Ads",
+          "Optimización continua"
+        ],
+        "cta": "Hablar con un especialista"
+      },
+      {
+        "name": "SEO Avanzado + SEM",
+        "price": "1500",
+        "unit": "USD/mes",
+        "features": [
+          "Estrategia full",
+          "A/B testing",
+          "Automatizaciones y BI"
+        ],
+        "cta": "Hablar con un especialista"
+      }
+    ]
+  },
+  "faqs": {
+    "subtitle": "Preguntas Frecuentes",
+    "title": "Dudas habituales",
+    "image": "/assets/images/faqs/faq-two.jpg",
+    "imageAlt": "Sección de preguntas frecuentes",
+    "items": [
+      { "q": "¿Cuándo se ven resultados en SEO?", "a": "Depende del punto de partida. Suelen verse mejoras entre 2 y 3 meses; consolidación en 6+ meses." },
+      { "q": "¿Cómo definen el presupuesto de SEM?", "a": "Según objetivos, mercado y CPC estimado. Recomendamos iniciar con un mínimo para validar performance." },
+      { "q": "¿Qué miden?", "a": "Ranking, tráfico orgánico, CTR, conversiones y costo por adquisición, entre otros KPIs clave." }
+    ]
+  },
+  "workWithUs": {
+    "subtitle": "Trabaja con Nosotros",
+    "title": "¿Listo para mejorar tu posicionamiento?",
+    "cta": "Explorar más",
+    "bigText": "Crezcamos en Buscadores"
+  }
+}

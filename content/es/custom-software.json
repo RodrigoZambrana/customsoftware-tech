@@ -1,0 +1,88 @@
+{
+  "seo": {
+    "title": "Software a Medida | Integraciones, APIs y Automatización",
+    "description": "Desarrollamos soluciones de software a medida: integraciones, APIs, backoffice y automatización de procesos con foco en escalabilidad y seguridad."
+  },
+  "pageBanner": "Desarrollo de Software a Medida",
+  "ctaPrimary": "Hablar con un especialista",
+  "ctaSecondary": "Ver opciones",
+  "about": {
+    "subtitle": "Qué Ofrecemos",
+    "title": "Aplicaciones y herramientas hechas a tu medida",
+    "featuresCol1": [
+      "APIs y microservicios",
+      "Integraciones (ERP/CRM/Pagos)",
+      "Automatización de procesos",
+      "Dashboards y backoffice"
+    ],
+    "featuresCol2": [
+      "Arquitectura escalable",
+      "Seguridad y compliance",
+      "DevOps y CI/CD"
+    ],
+    "imageAlt": "Software a medida"
+  },
+  "whatWeDo": {
+    "subtitle": "Cómo lo hacemos",
+    "title": "Soluciones robustas, seguras y escalables",
+    "text": "Analizamos tu operación y diseñamos software a medida para resolver cuellos de botella. Priorizamos calidad, performance y mantenibilidad."
+  },
+  "pricingSection": {
+    "subtitle": "Paquetes",
+    "title": "Opciones de desarrollo a medida",
+    "hidePrices": true,
+    "plans": [
+      {
+        "name": "MVP",
+        "price": "",
+        "unit": "",
+        "features": [
+          "Alcance acotado",
+          "Entrega rápida",
+          "Base técnica sólida"
+        ],
+        "cta": "Solicitar cotización"
+      },
+      {
+        "name": "Business",
+        "badge": "Más Popular",
+        "price": "",
+        "unit": "",
+        "features": [
+          "Módulos clave",
+          "Integraciones externas",
+          "CI/CD + QA"
+        ],
+        "cta": "Solicitar cotización"
+      },
+      {
+        "name": "Enterprise",
+        "price": "",
+        "unit": "",
+        "features": [
+          "Alta disponibilidad",
+          "Seguridad avanzada",
+          "Soporte premium"
+        ],
+        "cta": "Solicitar cotización"
+      }
+    ]
+  },
+  "faqs": {
+    "subtitle": "Preguntas Frecuentes",
+    "title": "Dudas habituales",
+    "image": "/assets/images/faqs/faq-two.jpg",
+    "imageAlt": "Sección de preguntas frecuentes",
+    "items": [
+      { "q": "¿Cómo definen el alcance del proyecto?", "a": "Realizamos workshops y documentación de requerimientos para acordar entregables, costos y cronograma." },
+      { "q": "¿Utilizan metodologías ágiles?", "a": "Sí, trabajamos con iteraciones cortas, demos periódicas y seguimiento en tablero." },
+      { "q": "¿Qué stack utilizan?", "a": "Seleccionamos el stack según el caso de uso. Siempre priorizamos estándares, pruebas y seguridad." }
+    ]
+  },
+  "workWithUs": {
+    "subtitle": "Trabaja con Nosotros",
+    "title": "¿Necesitas software a medida?",
+    "cta": "Explorar más",
+    "bigText": "Construyamos Juntos"
+  }
+}

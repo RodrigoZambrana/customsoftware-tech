@@ -34,7 +34,7 @@ useEffect(() => {
       <VideoPopup />
       <ImageView />
       <div className="page-wrapper">
-        <Header header={header} singleMenu={singleMenu} dark={dark} />
+        <Header header={header} singleMenu={singleMenu} dark={dark} locale={locale} />
         <SideBar />
         {children}
         <Footer footer={footer} dark={dark} locale={locale} t={t} />

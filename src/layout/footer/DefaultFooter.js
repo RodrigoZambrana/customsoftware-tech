@@ -35,8 +35,8 @@ const DefaultFooter = ({ dark, locale, t }) => {
                     <img
                       src={
                         dark
-                          ? "/assets/images/logos/footer-logo-white.png"
-                          : "/assets/images/logos/footer-logo.png"
+                          ? "/assets/images/logos/noBgColor.png"
+                          : "/assets/images/logos/noBgColor.png"
                       }
                       alt={t.brandAlt}
                     />

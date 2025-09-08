@@ -1,9 +1,9 @@
 import Link from "next/link";
 import LanguageSelect from "./LanguageSelect";
-import Nav from "./Nav";
+import Nav from "./Nav"; // navBarOriginal (referencia)
 import NavSearch from "./NavSearch";
 
-const Header5 = ({ singleMenu, dark }) => {
+const Header5 = ({ singleMenu, dark, locale }) => {
   return (
     <header className="main-header menu-absolute header-two">
       <div className="header-upper">
@@ -36,8 +36,8 @@ const Header5 = ({ singleMenu, dark }) => {
                     <img
                       src={
                         dark
-                          ? "/assets/images/logos/logo-white.png"
-                          : "/assets/images/logos/logo.png"
+                          ? "/assets/images/logos/noBgColor.png"
+                          : "/assets/images/logos/noBgColor.png"
                       }
                       alt="Logo"
                       title="Logo"
@@ -47,9 +47,8 @@ const Header5 = ({ singleMenu, dark }) => {
               </div>
             </div>
             <div className="nav-outer mx-lg-auto clearfix">
-              {/* Main Menu */}
-              <Nav singleMenu={singleMenu} />
-              {/* Main Menu End*/}
+              {/* Main Menu - original style */}
+              <Nav singleMenu={singleMenu} locale={locale} />
             </div>
             {/* Nav Search */}
             <NavSearch />
