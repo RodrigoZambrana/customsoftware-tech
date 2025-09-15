@@ -1,25 +1,21 @@
 {
-    "brandName": "CustomSoftware-Tech",
+    "brandName": "Software Srategy",
     "brandAlt": "software strategy logo",
     "letsWorkAlt": "Trabajemos",
     "letsWork": "¡Trabajemos juntos!",
     "contacts": {
-      "email": "hola@customsoftware-tech.com",
-      "phoneDisplay": "+598 123 456",
-      "phoneDial": "+598123456"
+      "email": "info@software-strategy.com",
+      "phoneDisplay": "+598 912 58 107",
+      "phoneDial": "+59891258107"
     },
     "social": [
-      { "label": "Facebook", "href": "#", "icon": "fab fa-facebook-f" },
-      { "label": "Twitter",  "href": "#", "icon": "fab fa-twitter" },
-      { "label": "Dribbble", "href": "#", "icon": "fab fa-dribbble" },
-      { "label": "Behance",  "href": "#", "icon": "fab fa-behance" }
+      { "label": "Facebook",  "href": "https://www.facebook.com/software.strategy/",  "icon": "fab fa-facebook-f" },
+      { "label": "Instagram", "href": "https://www.instagram.com/software.strategy/", "icon": "fab fa-instagram" }
     ],
     "quickLinksTitle": "Enlaces rápidos",
     "quickLinksCol1": [
       { "label": "Inicio",          "href": "/" },
       { "label": "Servicios",       "href": "/services" },
-      { "label": "Equipo",          "href": "/team" },
-      { "label": "Blog",            "href": "/blog" },
       { "label": "Contacto",        "href": "/contact" }
     ],
     "quickLinksCol2": [

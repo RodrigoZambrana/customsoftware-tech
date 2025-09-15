@@ -8,7 +8,7 @@
         "titleEmphasis": "& Web Development",
         "title": "Design & Web Development",
         "description": "Fast, responsive websites built to convert. We integrate UX/UI, performance and accessibility from day one.",
-        "href": "/web-development",
+        "href": "/services/web-development",
         "image": "/assets/images/projects/project-list1.jpg",
         "imageAlt": "Design and Web Development"
       },
@@ -18,17 +18,17 @@
         "titleEmphasis": "Software Solutions",
         "title": "Custom Software Development",
         "description": "Business-specific applications and tools. Scalable, secure, and ready for integrations.",
-        "href": "/custom-software",
+        "href": "/services/custom-software",
         "image": "/assets/images/projects/project-list2.jpg",
         "imageAlt": "Custom software"
       },
       {
         "category": "Marketing",
-        "titlePrefix": "Digital Marketing",
-        "titleEmphasis": "& Social Media",
-        "title": "Digital Marketing & Social Media",
+        "titlePrefix": "Digital",
+        "titleEmphasis": "Marketing",
+        "title": "Digital Marketing",
         "description": "High-impact campaigns on Google and Meta, content strategy and community management focused on results.",
-        "href": "/marketing-social",
+        "href": "/services/digital-marketing",
         "image": "/assets/images/projects/project-list3.jpg",
         "imageAlt": "Digital marketing and social"
       },
@@ -38,7 +38,7 @@
         "titleEmphasis": "& High-Performance SEM",
         "title": "SEO & SEM (Optimization & Campaigns)",
         "description": "Boost your organic visibility and run profitable search campaigns with clear metrics.",
-        "href": "/seo-sem",
+        "href": "/services/seo-sem",
         "image": "/assets/images/projects/project-list4.jpg",
         "imageAlt": "SEO and SEM"
       }

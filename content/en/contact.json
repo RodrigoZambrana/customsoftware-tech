@@ -1,0 +1,22 @@
+{
+  "pageName": "Contact",
+  "subTitle": "Contact us",
+  "heroTitle": "Ready to work on your next project",
+  "contactHeading": "Contact",
+  "contactDescription": "Write to us or send a WhatsApp:",
+  "email": "info@software-strategy.com",
+  "whatsappDisplay": "+598 912 58 107",
+  "whatsappDial": "59891258107",
+  "followUs": "Follow us",
+  "form": {
+    "subtitle": "Get a quote",
+    "title": "Drop us a message",
+    "namePlaceholder": "Full name",
+    "phonePlaceholder": "Phone",
+    "emailPlaceholder": "Email address",
+    "messagePlaceholder": "Message",
+    "send": "Send message",
+    "sending": "Sending…",
+    "success": "Message sent successfully!"
+  }
+}

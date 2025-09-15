@@ -5,22 +5,21 @@ import HomePage from "@/src/components/pages/HomePage";
 import PricingPage from "@/src/components/pages/PricingPage";
 import ServicesPage from "@/src/components/pages/ServicesPage";
 import ServiceDetailPage from "@/src/components/pages/ServiceDetailPage";
+import MarketingPage from "@/src/components/pages/MarketingPage";
+import ContactPage from "@/src/components/pages/ContactPage";
 
 export default function CatchAll({ page, locale, t }) {
   return (
-    <Layout dark locale={locale}>
+    <Layout dark locale={locale} footer={page === "contact" ? 6 : undefined}>
       {page === "home" && <HomePage t={t} locale={locale} />}
       {page === "pricing" && <PricingPage t={t} locale={locale} />}
       {page === "web-development" && <ServiceDetailPage t={t} locale={locale} slug="web-development" />}
       {page === "custom-software" && <ServiceDetailPage t={t} locale={locale} slug="custom-software" />}
-      {page === "marketing-social" && <ServiceDetailPage t={t} locale={locale} slug="marketing-social" />}
+      {page === "digital-marketing" && <MarketingPage t={t} locale={locale} />}
       {page === "seo-sem" && <ServiceDetailPage t={t} locale={locale} slug="seo-sem" />}
       {page === "services" && <ServicesPage t={t} locale={locale} />}
 
-      {/* TODO: más páginas
-         {page === "contact" && <ContactPage t={t} locale={locale} />}
-         {page === "services" && <ServicesPage t={t} locale={locale} />}
-      */}
+      {page === "contact" && <ContactPage t={t} locale={locale} />}
       {/* Fallback simple si no matchea */}
       {!(page === "home" || page === "pricing") && null}
     </Layout>
@@ -35,6 +34,21 @@ export async function getStaticPaths() {
       { params: { slug: ["en"] } }, // /en
       { params: { slug: ["pricing"] } }, // /pricing
       { params: { slug: ["en", "pricing"] } }, // /en/pricing
+      { params: { slug: ["contact"] } }, // /contact (ES)
+      { params: { slug: ["contacto"] } }, // /contacto (ES alias)
+      { params: { slug: ["en", "contact"] } }, // /en/contact
+      { params: { slug: ["services"] } }, // /services
+      { params: { slug: ["en", "services"] } }, // /en/services
+      // Service details under /services/{slug}
+      { params: { slug: ["services", "web-development"] } }, // /services/web-development
+      { params: { slug: ["en", "services", "web-development"] } }, // /en/services/web-development
+      { params: { slug: ["services", "custom-software"] } }, // /services/custom-software
+      { params: { slug: ["en", "services", "custom-software"] } }, // /en/services/custom-software
+      { params: { slug: ["services", "digital-marketing"] } }, // /services/digital-marketing
+      { params: { slug: ["en", "services", "digital-marketing"] } }, // /en/services/digital-marketing
+      { params: { slug: ["services", "seo-sem"] } }, // /services/seo-sem
+      { params: { slug: ["en", "services", "seo-sem"] } }, // /en/services/seo-sem
+      // Backwards-compatible top-level service URLs (optional)
       { params: { slug: ["web-development"] } }, // /web-development
       { params: { slug: ["en", "web-development"] } }, // /en/web-development
       { params: { slug: ["custom-software"] } }, // /custom-software
@@ -43,8 +57,6 @@ export async function getStaticPaths() {
       { params: { slug: ["en", "marketing-social"] } }, // /en/marketing-social
       { params: { slug: ["seo-sem"] } }, // /seo-sem
       { params: { slug: ["en", "seo-sem"] } }, // /en/seo-sem
-      { params: { slug: ["services"] } }, // /services
-      { params: { slug: ["en", "services"] } }, // /en/services
     ],
     fallback: false,
   };
@@ -61,17 +73,27 @@ export async function getStaticProps({ params }) {
   // Página
   let page = "home";
   if (routeRemainder.length > 0) {
-    // ej: /pricing o /en/pricing
-    const slug = routeRemainder[0];
-    if (slug === "pricing") page = "pricing";
-    if (slug === "contacto" || slug === "contact") page = "contact";
-    if (slug === "servicios" || slug === "services") page = "services";
-    if (slug === "web-development") page = "web-development";
-    if (slug === "custom-software") page = "custom-software";
-    if (slug === "marketing-social") page = "marketing-social";
-    if (slug === "seo-sem") page = "seo-sem";
+    // Rutas de primer nivel y secciones
+    const a = routeRemainder[0];
+    const b = routeRemainder[1];
 
-    // …aquí podés ir agregando más rutas
+    if (a === "pricing") page = "pricing";
+    if (a === "contacto" || a === "contact") page = "contact";
+
+    // Listado de servicios
+    if (a === "servicios" || a === "services") page = "services";
+
+    // Detalles de servicios: /services/{slug}
+    if ((a === "services" || a === "servicios") && b) {
+      if (["web-development", "custom-software", "marketing-social", "digital-marketing", "seo-sem"].includes(b)) {
+        page = (b === "marketing-social") ? "digital-marketing" : b;
+      }
+    }
+
+    // URLs anteriores de nivel raíz (compatibilidad)
+    if (["web-development", "custom-software", "marketing-social", "digital-marketing", "seo-sem"].includes(a)) {
+      page = (a === "marketing-social") ? "digital-marketing" : a;
+    }
   }
 
   // JSON de contenido

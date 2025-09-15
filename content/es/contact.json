@@ -1,0 +1,22 @@
+{
+  "pageName": "Contacto",
+  "subTitle": "Contáctanos",
+  "heroTitle": "Listos para trabajar en tu próximo proyecto",
+  "contactHeading": "Contacto",
+  "contactDescription": "Escríbenos o envíanos un WhatsApp:",
+  "email": "info@software-strategy.com",
+  "whatsappDisplay": "+598 912 58 107",
+  "whatsappDial": "59891258107",
+  "followUs": "Síguenos",
+  "form": {
+    "subtitle": "Solicitá una cotización",
+    "title": "Envíanos un mensaje",
+    "namePlaceholder": "Nombre completo",
+    "phonePlaceholder": "Teléfono",
+    "emailPlaceholder": "Correo electrónico",
+    "messagePlaceholder": "Mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando…",
+    "success": "¡Mensaje enviado con éxito!"
+  }
+}

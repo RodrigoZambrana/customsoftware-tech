@@ -1,5 +1,7 @@
 // src/components/pages/PricingPage.jsx
 import PageBanner from "@/src/components/PageBanner";
+import { NextSeo } from "next-seo";
+import DefaultSEO from "@/next-seo.config";
 import Link from "next/link";
 import esPricing from "@/content/es/pricing.json";
 import enPricing from "@/content/en/pricing.json";
@@ -18,6 +20,11 @@ export default function PricingPage({ t, locale = "es" }) {
 
   return (
     <>
+      <NextSeo
+        title={t?.seo?.title || (isEn ? "Pricing" : "Precios")}
+        description={t?.seo?.description || (isEn ? "Plans and pricing for web development, SEO/SEM and marketing services." : "Planes y precios para desarrollo web, SEO/SEM y marketing.")}
+        canonical={`${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}${isEn ? "/en/pricing" : "/pricing"}`}
+      />
       {/* Page Banner */}
       <PageBanner pageName={t.pageBanner} />
 

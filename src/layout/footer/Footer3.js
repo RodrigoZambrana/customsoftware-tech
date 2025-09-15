@@ -29,10 +29,8 @@ const Footer3 = ({ dark }) => {
             </div>
             <div className="col-lg-8 text-lg-end">
               <div className="social-style-four mb-20 wow fadeInLeft delay-0-2s">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Dribbble</a>
-                <a href="#">Behance</a>
+                <a href="https://www.facebook.com/software.strategy/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.instagram.com/software.strategy/" target="_blank" rel="noopener noreferrer">Instagram</a>
               </div>
             </div>
           </div>
@@ -45,7 +43,7 @@ const Footer3 = ({ dark }) => {
                 <p>55 Main Street, 2nd block Malborne, Australia</p>
                 <a href="mailto:support@gmail.com">support@gmail.com</a>
                 <br />
-                <a href="callto:+000(123)45688">+000 (123) 456 88</a>
+                <a href="callto:+59891258107">+598 912 58 107</a>
               </div>
             </div>
           </div>

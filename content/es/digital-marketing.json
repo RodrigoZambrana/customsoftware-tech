@@ -1,0 +1,171 @@
+{
+  "seo": {
+    "title": "Marketing Digital y Redes Sociales | Contenidos y Campañas",
+    "description": "Estrategia, contenidos y campañas en Google y Meta. Gestión de redes y optimización basada en métricas para crecer tu audiencia y ventas."
+  },
+  "pageBanner": "Marketing Digital",
+  "ctaPrimary": "Hablar con un especialista",
+  "ctaSecondary": "Ver planes",
+  "about": {
+    "subtitle": "Qué Ofrecemos",
+    "title": "Estrategias de marketing orientadas a resultados",
+    "featuresCol1": [
+      "Calendario y producción de contenidos",
+      "Gestión de comunidades",
+      "Anuncios en Meta (FB/IG)",
+      "Email marketing"
+    ],
+    "featuresCol2": [
+      "Google Ads (Search/Display)",
+      "Medición y analítica",
+      "Optimización continua (CRO)"
+    ],
+    "imageAlt": "Marketing digital"
+  },
+  "whatWeDo": {
+    "subtitle": "Cómo lo hacemos",
+    "title": "Contenido + campañas + análisis",
+    "text": "Definimos objetivos claros, creamos contenidos coherentes con tu marca y ejecutamos campañas de alto impacto, midiendo y optimizando cada etapa."
+  },
+  "pricingSection": {
+    "subtitle": "Planes",
+    "title": "Opciones para cada etapa",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "500",
+        "unit": "USD/mes",
+        "features": [
+          "Setup + 1 red",
+          "Calendario básico",
+          "Campañas iniciales"
+        ],
+        "cta": "Hablar con un especialista"
+      },
+      {
+        "name": "Performance",
+        "badge": "Más Popular",
+        "price": "900",
+        "unit": "USD/mes",
+        "features": [
+          "2-3 redes",
+          "Creatividades + copys",
+          "Campañas Google + Meta"
+        ],
+        "cta": "Hablar con un especialista"
+      },
+      {
+        "name": "Full-Funnel",
+        "price": "1400",
+        "unit": "USD/mes",
+        "features": [
+          "Embudo completo",
+          "Automatizaciones",
+          "Optimización avanzada"
+        ],
+        "cta": "Hablar con un especialista"
+      }
+    ]
+  },
+  "faqs": {
+    "subtitle": "Preguntas Frecuentes",
+    "title": "Dudas habituales",
+    "image": "/assets/images/faqs/faq-two.jpg",
+    "imageAlt": "Sección de preguntas frecuentes",
+    "items": [
+      { "q": "¿Cuándo veo resultados?", "a": "En redes, de 2 a 4 semanas; en campañas, a partir del primer mes con optimización continua." },
+      { "q": "¿Incluyen generación de contenido?", "a": "Sí, podemos encargarnos de piezas, copys y calendario editorial." },
+      { "q": "¿Trabajan por objetivos?", "a": "Definimos KPIs y reportes periódicos con foco en crecimiento y ROI." }
+    ]
+  },
+  "workWithUs": {
+    "subtitle": "Trabaja con Nosotros",
+    "title": "¿Listo para crecer tu audiencia?",
+    "cta": "Explorar más",
+    "bigText": "Impulsemos Tu Marca"
+  },
+  "slider": {
+    "slides": [
+      {
+        "bg": "/assets/images/slider/slide1.jpg",
+        "subtitle": "Agencia de Marketing",
+        "titleHtml": "<span>Marketing Perfecto</span><br /> Para Hacer Crecer tu Negocio",
+        "ratingLabel": "Servicio de calidad",
+        "primary": { "href": "/contacto", "text": "Empezar ahora" },
+        "secondary": { "href": "/projects", "text": "Cómo trabajamos" }
+      },
+      {
+        "bg": "/assets/images/slider/slide2.jpg",
+        "subtitle": "Agencia de Marketing",
+        "titleHtml": "<span>Marketing Perfecto</span><br /> Para Hacer Crecer tu Negocio",
+        "ratingLabel": "Servicio de calidad",
+        "primary": { "href": "/contacto", "text": "Empezar ahora" },
+        "secondary": { "href": "/projects", "text": "Cómo trabajamos" }
+      }
+    ]
+  },
+  "clientLogos": [
+    "/assets/images/client-logos/client-logo1.png",
+    "/assets/images/client-logos/client-logo2.png",
+    "/assets/images/client-logos/client-logo3.png",
+    "/assets/images/client-logos/client-logo4.png",
+    "/assets/images/client-logos/client-logo5.png",
+    "/assets/images/client-logos/client-logo6.png"
+  ],
+  "offer": {
+    "subtitle": "Qué Ofrecemos",
+    "title": "Servicios destacados de marketing",
+    "items": [
+      { "icon": "flaticon-ux", "number": "01", "title": "Posicionamiento en buscadores (SEO)", "href": "/services/seo-sem" },
+      { "icon": "flaticon-engineering", "number": "02", "title": "Marketing en redes sociales", "href": "/services/digital-marketing" },
+      { "icon": "flaticon-optimization-1", "number": "03", "title": "Estrategia de marketing online", "href": "/services/digital-marketing" },
+      { "icon": "flaticon-ai", "number": "04", "title": "Desarrollo de producto digital", "href": "/services/custom-software" }
+    ]
+  },
+  "about5": {
+    "subtitle": "Sobre la Empresa",
+    "title": "Agencia de marketing digital de clase mundial",
+    "text": "Diseñamos y ejecutamos estrategias que combinan contenido, pauta y analítica para lograr crecimiento medible.",
+    "authorsText": "Contamos con <span>5k+ clientes</span> en todo el mundo",
+    "authorsImages": [
+      "/assets/images/about/author1.jpg",
+      "/assets/images/about/author2.jpg",
+      "/assets/images/about/author3.jpg",
+      "/assets/images/about/author4.jpg",
+      "/assets/images/about/author5.jpg"
+    ],
+    "image1": "/assets/images/about/about-five1.jpg",
+    "image2": "/assets/images/about/about-five2.jpg",
+    "bg": "/assets/images/about/about-five-bg.png",
+    "imageAlt": "Sobre nosotros"
+  },
+  "gallery": {
+    "subtitle": "Galería de trabajos recientes",
+    "title": "Mirá nuestro trabajo",
+    "items": [
+      { "image": "/assets/images/projects/project-five1.jpg", "title": "Marketing en redes sociales", "category": "Marketing, Branding", "href": "/projects" },
+      { "image": "/assets/images/projects/project-five2.jpg", "title": "Marketing en redes sociales", "category": "Marketing, Branding", "href": "/projects" },
+      { "image": "/assets/images/projects/project-five3.jpg", "title": "Marketing en redes sociales", "category": "Marketing, Branding", "href": "/projects" },
+      { "image": "/assets/images/projects/project-five4.jpg", "title": "Marketing en redes sociales", "category": "Marketing, Branding", "href": "/projects" }
+    ]
+  },
+  "process": {
+    "subtitle": "Nuestro proceso de trabajo",
+    "title": "De la investigación a resultados medibles",
+    "items": [
+      { "icon": "flaticon-optimization-1", "title": "Investigación y estrategia", "text": "Entendemos tu marca, audiencia y objetivos para definir canales y tácticas.", "href": "/services/digital-marketing" },
+      { "icon": "flaticon-mobile-banking", "title": "Target & análisis", "text": "Segmentación precisa, testeo creativo y medición continua.", "href": "/services/digital-marketing" },
+      { "icon": "flaticon-optimization", "title": "Resultados", "text": "Optimizamos semanalmente para maximizar ROI y crecimiento.", "href": "/services/digital-marketing" }
+    ]
+  }
+  ,
+  "plans": {
+    "subtitle": "Planes",
+    "title": "Paquetes a medida de tus objetivos",
+    "items": [
+      { "name": "Starter", "price": "500", "unit": "USD/mes", "features": ["1 red", "Calendario básico", "Campañas iniciales"], "cta": "Empezar" },
+      { "name": "Growth", "badge": "Más Popular", "price": "900", "unit": "USD/mes", "features": ["2–3 redes", "Creatividades + copys", "Google + Meta"], "cta": "Empezar" },
+      { "name": "Pro", "price": "1400", "unit": "USD/mes", "features": ["Embudo completo", "Automatizaciones", "Optimización avanzada"], "cta": "Empezar" }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "seoTitle": "CustomSoftware-Tech | Professional Websites, SEO & Digital Marketing",
+  "seoTitle": "Professional Websites, SEO & Digital Marketing",
   "seoDescription": "We build fast, secure, SEO-optimized websites. SEM and social strategies to grow your business online.",
   "heroTitle": "Professional",
   "heroHighlight": "Websites",
@@ -8,14 +8,14 @@
   "heroCtaText": "Request proposal",
   "aboutSubtitle": "About us",
   "aboutTitle": "We grow your online presence with measurable results",
-  "aboutText": "At CustomSoftware-Tech we design and build modern, fast and secure websites. We improve your visibility with SEO and acquire qualified leads through SEM and social strategies.",
+  "aboutText": "At Software Srategy we design and build modern, fast and secure websites. We improve your visibility with SEO and acquire qualified leads through SEM and social strategies.",
   "aboutCtaText": "Learn more",
   "whatSubtitle": "What we do",
   "whatTitle": "Solutions to grow online",
   "whatItems": [
-    { "number": "01", "title": "Web Design & Development", "text": "Fast, responsive, conversion-oriented websites.", "href": "/service-details", "cta": "See more" },
-    { "number": "02", "title": "SEO & SEM", "text": "Organic visibility and Google Ads campaigns.", "href": "/service-details", "cta": "See more" },
-    { "number": "03", "title": "Digital Marketing & Social", "text": "Performance-focused strategies with clear metrics.", "href": "/service-details", "cta": "See more" }
+    { "number": "01", "title": "Web Design & Development", "text": "Fast, responsive, conversion-oriented websites.", "href": "/services/web-development", "cta": "See more" },
+    { "number": "02", "title": "Organic positioning & Google Ads campaigns", "text": "SEO and SEM to increase visibility and results: we optimize your site and content for organic rankings, and manage Google Ads to drive qualified traffic and convert into customers.", "href": "/services/seo-sem", "cta": "See more" },
+    { "number": "03", "title": "Digital Marketing", "text": "Performance-focused strategies with clear metrics.", "href": "/services/digital-marketing", "cta": "See more" }
   ],
   "stats": [
     { "value": 5, "label": "Years experience" },
@@ -24,11 +24,11 @@
     { "value": 100, "label": "% quality focus" }
   ],
   "servicesSubtitle": "Services",
-  "servicesTitle": "Digital solutions for your business",
+  "servicesTitle": "Software solutions for your business",
   "services": [
     { "title": "Corporate Websites", "text": "A solid, professional presence ready to convert.", "href": "/service-details" },
     { "title": "Online Stores", "text": "Agile, secure e-commerce that’s easy to manage.", "href": "/service-details" },
-    { "title": "SEO & SEM", "text": "More visibility on Google and qualified leads.", "href": "/service-details" },
+    { "title": "Customer Management Software (CRM) & Dashboards", "text": "Centralize customers, deals and follow-ups with tailored CRM and admin dashboards. Metrics, automations and integrations to inform decisions and scale.", "href": "/service-details" },
     { "title": "Custom Software", "text": "Tailored developments for your operations.", "href": "/service-details" }
   ],
   "pricingSubtitle": "Plans",

@@ -34,7 +34,7 @@ const Footer5 = ({ dark }) => {
                 </li>
                 <li>
                   <i className="far fa-phone" />{" "}
-                  <a href="callto:+000(123)45688">+000 (123) 456 88</a>
+                  <a href="callto:+59891258107">+598 912 58 107</a>
                 </li>
                 <li>
                   <i className="far fa-clock" />{" "}

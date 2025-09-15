@@ -48,22 +48,22 @@ const DaskTopMenu = ({ locale }) => {
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('web-development')}>
+            <Link legacyBehavior href={withLang('services/web-development')}>
               {isEn ? 'Web Development' : 'Desarrollo Web'}
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('custom-software')}>
+            <Link legacyBehavior href={withLang('services/custom-software')}>
               {isEn ? 'Custom Software' : 'Software a medida'}
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('marketing-social')}>
-              {isEn ? 'Digital Marketing & Social' : 'Marketing Digital & Redes'}
+            <Link legacyBehavior href={withLang('services/digital-marketing')}>
+              {isEn ? 'Digital Marketing' : 'Marketing Digital'}
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('seo-sem')}>
+            <Link legacyBehavior href={withLang('services/seo-sem')}>
               {isEn ? 'SEO & SEM' : 'SEO & SEM'}
             </Link>
           </li>
@@ -276,22 +276,22 @@ const MobileMenu = ({ locale }) => {
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('web-development')}>
+            <Link legacyBehavior href={withLang('services/web-development')}>
               {isEn ? 'Web Development' : 'Desarrollo Web'}
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('custom-software')}>
+            <Link legacyBehavior href={withLang('services/custom-software')}>
               {isEn ? 'Custom Software' : 'Software a medida'}
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('marketing-social')}>
-              {isEn ? 'Digital Marketing & Social' : 'Marketing Digital & Redes'}
+            <Link legacyBehavior href={withLang('services/digital-marketing')}>
+              {isEn ? 'Digital Marketing' : 'Marketing Digital'}
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('seo-sem')}>
+            <Link legacyBehavior href={withLang('services/seo-sem')}>
               {isEn ? 'SEO & SEM' : 'SEO & SEM'}
             </Link>
           </li>
@@ -400,22 +400,22 @@ const MobileMenuSimple = ({ locale }) => {
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('web-development')}>
+            <Link legacyBehavior href={withLang('services/web-development')}>
               {isEn ? 'Web Development' : 'Desarrollo Web'}
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('custom-software')}>
+            <Link legacyBehavior href={withLang('services/custom-software')}>
               {isEn ? 'Custom Software' : 'Software a medida'}
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('marketing-social')}>
-              {isEn ? 'Digital Marketing & Social' : 'Marketing Digital & Redes'}
+            <Link legacyBehavior href={withLang('services/digital-marketing')}>
+              {isEn ? 'Digital Marketing' : 'Marketing Digital'}
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('seo-sem')}>
+            <Link legacyBehavior href={withLang('services/seo-sem')}>
               {isEn ? 'SEO & SEM' : 'SEO & SEM'}
             </Link>
           </li>

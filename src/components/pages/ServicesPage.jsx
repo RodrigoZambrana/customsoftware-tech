@@ -1,4 +1,6 @@
 import PageBanner from "@/src/components/PageBanner";
+import { NextSeo } from "next-seo";
+import DefaultSEO from "@/next-seo.config";
 import Link from "next/link";
 
 export default function ServicesPage({ t, locale = "es" }) {
@@ -12,6 +14,11 @@ export default function ServicesPage({ t, locale = "es" }) {
 
   return (
     <>
+      <NextSeo
+        title={t?.seo?.title || (isEn ? "Services" : "Servicios")}
+        description={t?.seo?.description || (isEn ? "Explore our services: web development, custom software, SEO/SEM and digital marketing." : "Conocé nuestros servicios: desarrollo web, software a medida, SEO/SEM y marketing digital.")}
+        canonical={`${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}${isEn ? "/en/services" : "/services"}`}
+      />
       {/* Page Banner */}
       <PageBanner pageName={t.pageBanner} />
 

@@ -48,16 +48,10 @@ const Footer4 = ({ dark }) => {
               <div className="footer-widget widget_nav_menu">
                 <ul className="list-style-two">
                   <li>
-                    <a href="#">Facebook</a>
+                    <a href="https://www.facebook.com/software.strategy/" target="_blank" rel="noopener noreferrer">Facebook</a>
                   </li>
                   <li>
-                    <a href="#">Twitter</a>
-                  </li>
-                  <li>
-                    <a href="#">Instagram</a>
-                  </li>
-                  <li>
-                    <a href="#">LinkedIn</a>
+                    <a href="https://www.instagram.com/software.strategy/" target="_blank" rel="noopener noreferrer">Instagram</a>
                   </li>
                 </ul>
               </div>

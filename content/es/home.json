@@ -1,5 +1,5 @@
 {
-  "seoTitle": "CustomSoftware-Tech | Desarrollo de Sitios Web, SEO y Marketing Digital",
+  "seoTitle": "Desarrollo de Sitios Web, SEO y Marketing Digital",
   "seoDescription": "Creamos sitios web rápidos y optimizados para buscadores. SEO, SEM y estrategias de marketing para hacer crecer tu negocio online.",
   "heroTitle": "Tu sitio web",
   "heroHighlight": "a medida",
@@ -7,7 +7,7 @@
   "heroCtaText": "Solicitar propuesta",
   "aboutSubtitle": "Sobre la empresa",
   "aboutTitle": "Impulsamos tu presencia digital con foco en resultados",
-  "aboutText": "En CustomSoftware-Tech diseñamos y desarrollamos sitios web modernos, rápidos y seguros. Te ayudamos a posicionarte en buscadores con SEO y a captar clientes con campañas SEM y estrategias de marketing digital.",
+  "aboutText": "En Software Srategy diseñamos y desarrollamos sitios web modernos, rápidos y seguros. Te ayudamos a posicionarte en buscadores con SEO y a captar clientes con campañas SEM y estrategias de marketing digital.",
   "aboutCtaText": "Conócenos más",
   "whatSubtitle": "¿Qué hacemos?",
   "whatTitle": "Soluciones para crecer en la web",
@@ -16,21 +16,21 @@
       "number": "01",
       "title": "Diseño & Desarrollo Web",
       "text": "Sitios rápidos, responsivos y orientados a conversión.",
-      "href": "/web-development",
+      "href": "/services/web-development",
       "cta": "Ver más"
     },
     {
       "number": "02",
-      "title": "SEO & SEM",
-      "text": "Posicionamiento orgánico y campañas en Google Ads.",
-      "href": "/service-details",
+      "title": "Posicionamiento orgánico y campañas en Google Ads",
+      "text": "SEO y SEM para aumentar visibilidad y resultados: optimizamos tu sitio y contenidos para posicionar orgánicamente, y gestionamos campañas en Google Ads para atraer tráfico calificado y convertir en clientes.",
+      "href": "/services/seo-sem",
       "cta": "Ver más"
     },
     {
       "number": "03",
-      "title": "Marketing Digital & Redes Sociales",
+      "title": "Marketing Digital",
       "text": "Estrategias con foco en performance y medición.",
-      "href": "/service-details",
+      "href": "/services/digital-marketing",
       "cta": "Ver más"
     }
   ],
@@ -41,12 +41,14 @@
     { "value": 100, "label": "% enfoque en calidad" }
   ],
   "servicesSubtitle": "Servicios",
-  "servicesTitle": "Soluciones digitales para tu negocio",
+  "servicesTitle": "Soluciones de software para tu negocio",
   "services": [
     { "title": "Sitios Web Corporativos", "text": "Presencia sólida y profesional, preparada para convertir.", "href": "/service-details" },
     { "title": "Tiendas Online", "text": "E-commerce ágil, seguro y fácil de gestionar.", "href": "/service-details" },
-    { "title": "SEO & Campañas SEM", "text": "Más visibilidad en Google y más leads calificados.", "href": "/service-details" },
+    { "title": "Software de Gestión de Clientes (CRM) & Dashboards", "text": "Centraliza clientes, oportunidades y seguimiento con CRM y paneles administrativos a medida. Métricas, automatizaciones e integraciones para tomar decisiones y escalar.", "href": "/service-details" },   
     { "title": "Software a Medida", "text": "Desarrollos personalizados para tu operación.", "href": "/service-details" }
+
+    
   ],
   "pricingSubtitle": "Planes",
   "pricingTitle": "Elige el plan que mejor se adapta a tu negocio",

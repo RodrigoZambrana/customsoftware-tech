@@ -16,87 +16,64 @@ export default class Home5Slider extends Component {
   }
 
   render() {
+    const { slides } = this.props || {};
     return (
       <section className="main-slider-area rel z-1">
-        <Slider
-          ref={(c) => (this.slider = c)}
-          {...sliderProps.mainSlider}
-          className="main-slider"
-        >
-          <div>
-            <div
-              className="slider-item"
-              style={{
-                backgroundImage: "url(/assets/images/slider/slide1.jpg)",
-              }}
-            >
-              <div className="container">
-                <div className="slide-content">
-                  <span className="sub-title">Marketing Agency</span>
-                  <h2>
-                    <span>Perfect Marketing</span>
-                    <br /> For Growth Your Dream Business
-                  </h2>
-                  <hr />
-                  <div className="ratting-btns">
-                    <div className="quyality-ratting">
-                      <span>Quality Service</span>
-                      <div className="ratting">
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                      </div>
+        <Slider ref={(c) => (this.slider = c)} {...sliderProps.mainSlider} className="main-slider">
+          {(slides && slides.length ? slides : [
+            {
+              bg: "/assets/images/slider/slide1.jpg",
+              subtitle: "Marketing Agency",
+              titleHtml: '<span>Perfect Marketing</span><br /> For Growth Your Dream Business',
+              ratingLabel: "Quality Service",
+              primary: { href: "/contact", text: "Get Started Now" },
+              secondary: { href: "/projects", text: "How We Works" },
+            },
+            {
+              bg: "/assets/images/slider/slide2.jpg",
+              subtitle: "Marketing Agency",
+              titleHtml: '<span>Perfect Marketing</span><br /> For Growth Your Dream Business',
+              ratingLabel: "Quality Service",
+              primary: { href: "/contact", text: "Get Started Now" },
+              secondary: { href: "/projects", text: "How We Works" },
+            },
+          ]).map((s, i) => (
+            <div key={`slide-${i}`}>
+              <div className="slider-item" style={{ backgroundImage: `url(${s.bg})` }}>
+                <div className="container">
+                  <div className="slide-content">
+                    {s.subtitle && <span className="sub-title">{s.subtitle}</span>}
+                    {s.titleHtml && <h2 dangerouslySetInnerHTML={{ __html: s.titleHtml }} />}
+                    <hr />
+                    <div className="ratting-btns">
+                      {s.ratingLabel && (
+                        <div className="quyality-ratting">
+                          <span>{s.ratingLabel}</span>
+                          <div className="ratting">
+                            <i className="fas fa-star" />
+                            <i className="fas fa-star" />
+                            <i className="fas fa-star" />
+                            <i className="fas fa-star" />
+                            <i className="fas fa-star" />
+                          </div>
+                        </div>
+                      )}
+                      {s.primary && (
+                        <Link href={s.primary.href} className="theme-btn style-two">
+                          {s.primary.text} <i className="far fa-arrow-right" />
+                        </Link>
+                      )}
+                      {s.secondary && (
+                        <Link className="read-more" href={s.secondary.href}>
+                          {s.secondary.text} <i className="far fa-arrow-right" />
+                        </Link>
+                      )}
                     </div>
-                    <Link href="contact" className="theme-btn style-two">
-                      Get Started Now <i className="far fa-arrow-right" />
-                    </Link>
-                    <Link className="read-more" href="projects">
-                      How We Works <i className="far fa-arrow-right" />
-                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <div
-              className="slider-item"
-              style={{
-                backgroundImage: "url(/assets/images/slider/slide2.jpg)",
-              }}
-            >
-              <div className="container">
-                <div className="slide-content">
-                  <span className="sub-title">Marketing Agency</span>
-                  <h2>
-                    <span>Perfect Marketing</span>
-                    <br /> For Growth Your Dream Business
-                  </h2>
-                  <hr />
-                  <div className="ratting-btns">
-                    <div className="quyality-ratting">
-                      <span>Quality Service</span>
-                      <div className="ratting">
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                      </div>
-                    </div>
-                    <Link href="contact" className="theme-btn style-two">
-                      Get Started Now <i className="far fa-arrow-right" />
-                    </Link>
-                    <Link className="read-more" href="projects">
-                      How We Works <i className="far fa-arrow-right" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </Slider>
         <div className="main-slider-controls">
           <div className="container">

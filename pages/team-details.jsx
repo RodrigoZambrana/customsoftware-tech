@@ -59,7 +59,7 @@ const TeamDetails = () => {
                   <div className="content">
                     <b className="title">Phone Us</b>
                     <span className="text">
-                      <a href="callto:+00012345688">+000 (123) 456 88</a>
+                      <a href="callto:+59891258107">+598 912 58 107</a>
                     </span>
                   </div>
                 </div>

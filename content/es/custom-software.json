@@ -84,5 +84,51 @@
     "title": "¿Necesitas software a medida?",
     "cta": "Explorar más",
     "bigText": "Construyamos Juntos"
+  },
+  "extra": {
+    "advertise": {
+      "left": {
+        "number": "150+",
+        "label": "Proyectos completados",
+        "text": "Desde MVPs hasta plataformas empresariales.",
+        "image": "/assets/images/banner/add-banner.png"
+      },
+      "right": {
+        "title": "Soluciones de software innovadoras",
+        "note": "Equipos senior, entregas iterativas y métricas claras."
+      }
+    },
+    "skills": [
+      { "image": "/assets/images/skills/skill8.png", "label": "Node.js" },
+      { "image": "/assets/images/skills/skill5.png", "label": "React" },
+      { "image": "/assets/images/skills/skill13.png", "label": "Vue.js" },
+      { "image": "/assets/images/skills/skill10.png", "label": "Angular" },
+      { "image": "/assets/images/skills/skill7.png", "label": "PHP" },
+      { "image": "/assets/images/skills/skill9.png", "label": "Sass" },
+      { "image": "/assets/images/skills/skill2.png", "label": "HTML" },
+      { "image": "/assets/images/skills/skill3.png", "label": "CSS" }
+    ],
+    "aboutCounters": {
+      "subtitle": "Nuestra Manera de Trabajar",
+      "title": "Equipo senior enfocado en resultados",
+      "text": "Planificamos, priorizamos y entregamos valor continuo con calidad y seguridad.",
+      "counters": [
+        { "value": 100, "suffix": "%", "label": "Clientes satisfechos" },
+        { "value": 93, "suffix": "%", "label": "Tasa de éxito" },
+        { "value": 35, "suffix": "+", "label": "Proyectos entregados" }
+      ],
+      "image": "/assets/images/about/about-image-shape.png",
+      "imageAlt": "Equipo y procesos"
+    },
+    "projectTimeline": {
+      "subtitle": "Casos y procesos",
+      "title": "De la idea al producto",
+      "items": [
+        { "number": "01", "title": "Diseño de arquitectura y alcance", "image": "/assets/images/projects/project-timeline-two1.jpg" },
+        { "number": "02", "title": "Integraciones y APIs seguras", "image": "/assets/images/projects/project-timeline-two1.jpg" },
+        { "number": "03", "title": "Paneles y backoffice a medida", "image": "/assets/images/projects/project-timeline-two1.jpg" },
+        { "number": "04", "title": "Automatización y CI/CD", "image": "/assets/images/projects/project-timeline-two1.jpg" }
+      ]
+    }
   }
 }

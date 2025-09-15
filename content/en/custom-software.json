@@ -84,5 +84,51 @@
     "title": "Need custom software?",
     "cta": "Explore more",
     "bigText": "Build Together"
+  },
+  "extra": {
+    "advertise": {
+      "left": {
+        "number": "150+",
+        "label": "Projects delivered",
+        "text": "From MVPs to enterprise platforms.",
+        "image": "/assets/images/banner/add-banner.png"
+      },
+      "right": {
+        "title": "Innovative software solutions",
+        "note": "Senior teams, iterative delivery and clear metrics."
+      }
+    },
+    "skills": [
+      { "image": "/assets/images/skills/skill8.png", "label": "Node.js" },
+      { "image": "/assets/images/skills/skill5.png", "label": "React" },
+      { "image": "/assets/images/skills/skill13.png", "label": "Vue.js" },
+      { "image": "/assets/images/skills/skill10.png", "label": "Angular" },
+      { "image": "/assets/images/skills/skill7.png", "label": "PHP" },
+      { "image": "/assets/images/skills/skill9.png", "label": "Sass" },
+      { "image": "/assets/images/skills/skill2.png", "label": "HTML" },
+      { "image": "/assets/images/skills/skill3.png", "label": "CSS" }
+    ],
+    "aboutCounters": {
+      "subtitle": "How We Work",
+      "title": "Senior team focused on outcomes",
+      "text": "We plan, prioritize and deliver continuous value with quality and security.",
+      "counters": [
+        { "value": 100, "suffix": "%", "label": "Client satisfaction" },
+        { "value": 93, "suffix": "%", "label": "Success rate" },
+        { "value": 35, "suffix": "+", "label": "Projects delivered" }
+      ],
+      "image": "/assets/images/about/about-image-shape.png",
+      "imageAlt": "Team and process"
+    },
+    "projectTimeline": {
+      "subtitle": "Cases & process",
+      "title": "From idea to product",
+      "items": [
+        { "number": "01", "title": "Architecture and scope design", "image": "/assets/images/projects/project-timeline-two1.jpg" },
+        { "number": "02", "title": "Secure integrations and APIs", "image": "/assets/images/projects/project-timeline-two1.jpg" },
+        { "number": "03", "title": "Custom admin panels & backoffice", "image": "/assets/images/projects/project-timeline-two1.jpg" },
+        { "number": "04", "title": "Automation and CI/CD", "image": "/assets/images/projects/project-timeline-two1.jpg" }
+      ]
+    }
   }
 }

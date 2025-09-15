@@ -8,6 +8,12 @@ const Counter = dynamic(() => import("@/src/components/Counter"), { ssr: false }
 
 export default function HomePage({ t, locale }) {
   const isEn = locale === "en";
+  const withLang = (href) => {
+    if (!href) return "/";
+    if (/^(https?:)?\/\//.test(href) || href.startsWith("mailto:") || href.startsWith("tel:")) return href;
+    const path = href.startsWith("/") ? href : `/${href}`;
+    return isEn ? `/en${path === "/en" ? "" : path}` : path;
+  };
 
   return (
     <>
@@ -19,10 +25,10 @@ export default function HomePage({ t, locale }) {
           type: "website",
           locale: isEn ? "en_US" : "es_ES",
           url: isEn ? "https://www.software-strategy.com/en/" : "https://www.software-strategy.com/",
-          siteName: "CustomSoftware-Tech",
-          images: [{ url: "https://www.software-strategy.com/og-image.jpg", width: 1200, height: 630, alt: "CustomSoftware-Tech" }],
-        }}
-      />
+          siteName: "Software Srategy",
+          images: [{ url: "https://www.software-strategy.com/og-image.jpg", width: 1200, height: 630, alt: "Software Srategy" }],
+       }}
+     />
 
       {/* Hero */}
       <section className="hero-area pt-185 rpt-150 rel z-1">
@@ -106,7 +112,7 @@ export default function HomePage({ t, locale }) {
                     <div className="content">
                       <h5>{item.title}</h5>
                       <p>{item.text}</p>
-                      <Link legacyBehavior href={item.href}>
+                      <Link legacyBehavior href={withLang(item.href)}>
                         <a className="read-more style-two">
                           <span>{item.cta}</span> <i className="far fa-arrow-right" />
                         </a>
@@ -160,7 +166,7 @@ export default function HomePage({ t, locale }) {
                 <div className={`service-three-item wow ${i % 2 ? "fadeInDown" : "fadeInUp"} delay-0-2s`}>
                   <div className="title-icon">
                     <h5>
-                      <Link legacyBehavior href={card.href}>
+                      <Link legacyBehavior href={withLang(card.href)}>
                         <a>{card.title}</a>
                       </Link>
                     </h5>
@@ -168,7 +174,7 @@ export default function HomePage({ t, locale }) {
                   </div>
                   <div className="content">
                     <p>{card.text}</p>
-                    <Link legacyBehavior href={card.href}>
+                    <Link legacyBehavior href={withLang(card.href)}>
                       <a className="read-more style-two">
                         <span>{isEn ? "Read more" : "Leer más"}</span> <i className="far fa-arrow-right" />
                       </a>
@@ -232,7 +238,7 @@ export default function HomePage({ t, locale }) {
                     <img src="/assets/images/shapes/right-arrow.png" alt="Arrow" />
                     <span className="offer-text">{plan.priceNote}</span>
                   </div>
-                  <Link legacyBehavior href={plan.href}>
+                  <Link legacyBehavior href={withLang(plan.href)}>
                     <a className="theme-btn w-100">
                       {isEn ? "See details" : "Ver detalles"} <i className="far fa-arrow-right" />
                     </a>
@@ -268,7 +274,7 @@ export default function HomePage({ t, locale }) {
                     </div>
                     <div className="content">
                       <h4>
-                        <Link legacyBehavior href={w.href}>
+                        <Link legacyBehavior href={withLang(w.href)}>
                           <a>{w.title}</a>
                         </Link>
                       </h4>

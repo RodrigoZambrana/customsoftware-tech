@@ -35,8 +35,18 @@ useEffect(() => {
       <ImageView />
       <div className="page-wrapper">
         <Header header={header} singleMenu={singleMenu} dark={dark} locale={locale} />
-        <SideBar />
+        <SideBar locale={locale} />
         {children}
+        {/* Floating WhatsApp button */}
+        <a
+          href="https://wa.me/59891258107"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp"
+          className="whatsapp-float"
+        >
+          <i className="fab fa-whatsapp" />
+        </a>
         <Footer footer={footer} dark={dark} locale={locale} t={t} />
         <ScrollTop />
       </div>

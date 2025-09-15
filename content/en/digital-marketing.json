@@ -1,0 +1,171 @@
+{
+  "seo": {
+    "title": "Digital Marketing & Social Media | Content and Campaigns",
+    "description": "Strategy, content and campaigns on Google and Meta. Social media management and metric-driven optimization to grow your audience and sales."
+  },
+  "pageBanner": "Digital Marketing",
+  "ctaPrimary": "Talk to a specialist",
+  "ctaSecondary": "View plans",
+  "about": {
+    "subtitle": "What We Offer",
+    "title": "Marketing strategies focused on results",
+    "featuresCol1": [
+      "Content calendar and production",
+      "Community management",
+      "Meta Ads (FB/IG)",
+      "Email marketing"
+    ],
+    "featuresCol2": [
+      "Google Ads (Search/Display)",
+      "Measurement and analytics",
+      "Continuous optimization (CRO)"
+    ],
+    "imageAlt": "Digital marketing"
+  },
+  "whatWeDo": {
+    "subtitle": "How We Work",
+    "title": "Content + campaigns + analysis",
+    "text": "We set clear goals, create brand-aligned content and run high-impact campaigns, measuring and optimizing every stage."
+  },
+  "pricingSection": {
+    "subtitle": "Plans",
+    "title": "Options for every stage",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "500",
+        "unit": "USD/mo",
+        "features": [
+          "Setup + 1 network",
+          "Basic calendar",
+          "Initial campaigns"
+        ],
+        "cta": "Talk to a specialist"
+      },
+      {
+        "name": "Performance",
+        "badge": "Most Popular",
+        "price": "900",
+        "unit": "USD/mo",
+        "features": [
+          "2–3 networks",
+          "Creatives + copy",
+          "Google + Meta campaigns"
+        ],
+        "cta": "Talk to a specialist"
+      },
+      {
+        "name": "Full-Funnel",
+        "price": "1400",
+        "unit": "USD/mo",
+        "features": [
+          "Full funnel",
+          "Automations",
+          "Advanced optimization"
+        ],
+        "cta": "Talk to a specialist"
+      }
+    ]
+  },
+  "faqs": {
+    "subtitle": "FAQs",
+    "title": "Common questions",
+    "image": "/assets/images/faqs/faq-two.jpg",
+    "imageAlt": "Frequently asked questions",
+    "items": [
+      { "q": "When will I see results?", "a": "On social, 2–4 weeks; for campaigns, from the first month with continuous optimization." },
+      { "q": "Do you include content production?", "a": "Yes, we can handle assets, copy and editorial calendar." },
+      { "q": "Do you work with goals?", "a": "We define KPIs and periodic reports focused on growth and ROI." }
+    ]
+  },
+  "workWithUs": {
+    "subtitle": "Work With Us",
+    "title": "Ready to grow your audience?",
+    "cta": "Explore more",
+    "bigText": "Boost Your Brand"
+  },
+  "slider": {
+    "slides": [
+      {
+        "bg": "/assets/images/slider/slide1.jpg",
+        "subtitle": "Marketing Agency",
+        "titleHtml": "<span>Perfect Marketing</span><br /> For Growth Your Dream Business",
+        "ratingLabel": "Quality Service",
+        "primary": { "href": "/contact", "text": "Get Started Now" },
+        "secondary": { "href": "/projects", "text": "How We Works" }
+      },
+      {
+        "bg": "/assets/images/slider/slide2.jpg",
+        "subtitle": "Marketing Agency",
+        "titleHtml": "<span>Perfect Marketing</span><br /> For Growth Your Dream Business",
+        "ratingLabel": "Quality Service",
+        "primary": { "href": "/contact", "text": "Get Started Now" },
+        "secondary": { "href": "/projects", "text": "How We Works" }
+      }
+    ]
+  },
+  "clientLogos": [
+    "/assets/images/client-logos/client-logo1.png",
+    "/assets/images/client-logos/client-logo2.png",
+    "/assets/images/client-logos/client-logo3.png",
+    "/assets/images/client-logos/client-logo4.png",
+    "/assets/images/client-logos/client-logo5.png",
+    "/assets/images/client-logos/client-logo6.png"
+  ],
+  "offer": {
+    "subtitle": "What We Offer",
+    "title": "Amazing Services for Marketing",
+    "items": [
+      { "icon": "flaticon-ux", "number": "01", "title": "Search Engine Optimization", "href": "/services/seo-sem" },
+      { "icon": "flaticon-engineering", "number": "02", "title": "Social Media Marketing", "href": "/services/digital-marketing" },
+      { "icon": "flaticon-optimization-1", "number": "03", "title": "Online Marketing Strategy", "href": "/services/digital-marketing" },
+      { "icon": "flaticon-ai", "number": "04", "title": "Digital Product Development", "href": "/services/custom-software" }
+    ]
+  },
+  "about5": {
+    "subtitle": "About Company",
+    "title": "World-class Digital Marketing Agency",
+    "text": "We design and execute strategies that combine content, paid media and analytics to achieve measurable growth.",
+    "authorsText": "We Have <span>5k+ Global</span> Clients Around the World",
+    "authorsImages": [
+      "/assets/images/about/author1.jpg",
+      "/assets/images/about/author2.jpg",
+      "/assets/images/about/author3.jpg",
+      "/assets/images/about/author4.jpg",
+      "/assets/images/about/author5.jpg"
+    ],
+    "image1": "/assets/images/about/about-five1.jpg",
+    "image2": "/assets/images/about/about-five2.jpg",
+    "bg": "/assets/images/about/about-five-bg.png",
+    "imageAlt": "About"
+  },
+  "gallery": {
+    "subtitle": "Recent Works Gallery",
+    "title": "A look at our work",
+    "items": [
+      { "image": "/assets/images/projects/project-five1.jpg", "title": "Social Media Marketing", "category": "Marketing, Branding", "href": "/projects" },
+      { "image": "/assets/images/projects/project-five2.jpg", "title": "Social Media Marketing", "category": "Marketing, Branding", "href": "/projects" },
+      { "image": "/assets/images/projects/project-five3.jpg", "title": "Social Media Marketing", "category": "Marketing, Branding", "href": "/projects" },
+      { "image": "/assets/images/projects/project-five4.jpg", "title": "Social Media Marketing", "category": "Marketing, Branding", "href": "/projects" }
+    ]
+  },
+  "process": {
+    "subtitle": "Our Work Process",
+    "title": "From research to measurable results",
+    "items": [
+      { "icon": "flaticon-optimization-1", "title": "Research & Strategy", "text": "We understand your brand, audience and goals to define the right channels and tactics.", "href": "/services/digital-marketing" },
+      { "icon": "flaticon-mobile-banking", "title": "Target & Analysis", "text": "Precise segmentation, creative testing and continuous measurement.", "href": "/services/digital-marketing" },
+      { "icon": "flaticon-optimization", "title": "Got Results", "text": "We optimize weekly to maximize ROI and growth.", "href": "/services/digital-marketing" }
+    ]
+  }
+  ,
+  "plans": {
+    "subtitle": "Plans",
+    "title": "Packages tailored to your needs",
+    "items": [
+      { "name": "Starter", "price": "500", "unit": "USD/mo", "features": ["1 network", "Basic calendar", "Initial campaigns"], "cta": "Get started" },
+      { "name": "Growth", "badge": "Most Popular", "price": "900", "unit": "USD/mo", "features": ["2–3 networks", "Creatives + copy", "Google + Meta"], "cta": "Get started" },
+      { "name": "Pro", "price": "1400", "unit": "USD/mo", "features": ["Full-funnel", "Automations", "Advanced optimization"], "cta": "Get started" }
+    ]
+  }
+}

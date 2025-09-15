@@ -116,7 +116,7 @@ const Footer6 = ({ dark }) => {
                 </li>
                 <li>
                   <i className="far fa-phone" />{" "}
-                  <a href="callto:+000(123)45688">+000 (123) 456 88</a>
+                  <a href="callto:+59891258107">+598 912 58 107</a>
                 </li>
               </ul>
             </div>
@@ -135,17 +135,11 @@ const Footer6 = ({ dark }) => {
             <div className="col-lg-6">
               <div className="footer-bottom-social text-lg-end wow fadeInRight delay-0-2s">
                 <div className="social-style-two">
-                  <a href="#">
+                  <a href="https://www.facebook.com/software.strategy/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <i className="fab fa-facebook-f" />
                   </a>
-                  <a href="#">
-                    <i className="fab fa-twitter" />
-                  </a>
-                  <a href="#">
+                  <a href="https://www.instagram.com/software.strategy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <i className="fab fa-instagram" />
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-pinterest-p" />
                   </a>
                 </div>
               </div>

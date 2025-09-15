@@ -1,7 +1,7 @@
 import PageBanner from "@/src/components/PageBanner";
 import Layout from "@/src/layout/Layout";
-import { Accordion } from "react-bootstrap";
-import YgencyAccordion from "@/src/components/YgencyAccordion";
+import YgencyAccordionLite from "@/src/components/YgencyAccordionLite";
+import { useState } from "react";
 import { NextSeo, BreadcrumbJsonLd, FAQPageJsonLd } from "next-seo";
 import DefaultSEO from "@/next-seo.config";
 
@@ -17,11 +17,12 @@ export default function FaqsPage({ t, locale = "es" }) {
     questionName: q.q,
     acceptedAnswerText: q.a,
   }));
+  const [openIndex, setOpenIndex] = useState(0);
 
   return (
     <Layout dark locale={locale}>
       <NextSeo
-        title={t?.seo?.title || (isEn ? "FAQs | CustomSoftware-Tech" : "Preguntas Frecuentes | CustomSoftware-Tech")}
+        title={t?.seo?.title || (isEn ? "FAQs" : "Preguntas Frecuentes")}
         description={t?.seo?.description || (isEn
           ? "Answers about web development, custom software, SEO/SEM and marketing services."
           : "Respuestas sobre desarrollo web, software a medida, SEO/SEM y marketing.")}
@@ -32,10 +33,10 @@ export default function FaqsPage({ t, locale = "es" }) {
         ]}
         openGraph={{
           url: canonicalUrl,
-          title: t?.seo?.title || (isEn ? "FAQs | CustomSoftware-Tech" : "Preguntas Frecuentes | CustomSoftware-Tech"),
+          title: t?.seo?.title || (isEn ? "FAQs" : "Preguntas Frecuentes"),
           description: t?.seo?.description || "",
           locale: isEn ? "en_US" : "es_ES",
-          siteName: "CustomSoftware-Tech",
+          siteName: "Software Srategy",
         }}
       />
 
@@ -63,17 +64,18 @@ export default function FaqsPage({ t, locale = "es" }) {
                   <span className="sub-title mb-15">{t.subtitle}</span>
                   <h2>{t.title}</h2>
                 </div>
-                <Accordion defaultActiveKey="collapse0" className="accordion" id="faq-accordion-two">
+                <div className="accordion" id="faq-accordion-two">
                   {(t.items || []).map((qa, i) => (
-                    <YgencyAccordion
-                      title={qa.q}
+                    <YgencyAccordionLite
                       key={`faq-${i}`}
-                      event={`collapse${i}`}
+                      title={qa.q}
+                      isOpen={openIndex === i}
+                      onToggle={() => setOpenIndex(openIndex === i ? -1 : i)}
                     >
                       <p>{qa.a}</p>
-                    </YgencyAccordion>
+                    </YgencyAccordionLite>
                   ))}
-                </Accordion>
+                </div>
               </div>
             </div>
           </div>

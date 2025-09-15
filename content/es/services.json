@@ -8,7 +8,7 @@
         "titleEmphasis": "& Desarrollo Web",
         "title": "Diseño & Desarrollo Web",
         "description": "Sitios rápidos, responsivos y pensados para convertir. Integramos diseño UX/UI, performance y accesibilidad desde el primer día.",
-        "href": "/web-development",
+        "href": "/services/web-development",
         "image": "/assets/images/projects/project-list1.jpg",
         "imageAlt": "Diseño y Desarrollo Web"
       },
@@ -18,17 +18,17 @@
         "titleEmphasis": "a Medida",
         "title": "Desarrollo de soluciones de software a medida",
         "description": "Aplicaciones y herramientas específicas para tu negocio. Escalables, seguras y preparadas para integraciones.",
-        "href": "/custom-software",
+        "href": "/services/custom-software",
         "image": "/assets/images/projects/project-list2.jpg",
         "imageAlt": "Software a medida"
       },
       {
         "category": "Marketing",
-        "titlePrefix": "Marketing Digital",
-        "titleEmphasis": "& Redes Sociales",
-        "title": "Marketing Digital & Redes Sociales",
+        "titlePrefix": "Marketing",
+        "titleEmphasis": "Digital",
+        "title": "Marketing Digital",
         "description": "Campañas de alto impacto en Google y Meta, contenidos y gestión de comunidades orientadas a objetivos.",
-        "href": "/marketing-social",
+        "href": "/services/digital-marketing",
         "image": "/assets/images/projects/project-list3.jpg",
         "imageAlt": "Marketing digital y redes"
       },
@@ -38,7 +38,7 @@
         "titleEmphasis": "& SEM de Alto Rendimiento",
         "title": "SEO & SEM (Optimización y Campañas)",
         "description": "Mejoramos tu visibilidad orgánica y ejecutamos campañas rentables en buscadores con métricas claras.",
-        "href": "/seo-sem",
+        "href": "/services/seo-sem",
         "image": "/assets/images/projects/project-list4.jpg",
         "imageAlt": "SEO y SEM"
       }

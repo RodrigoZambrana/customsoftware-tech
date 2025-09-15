@@ -14,10 +14,10 @@ const Header5 = ({ singleMenu, dark, locale }) => {
               <div className="top-right">
               <LanguageSelect />
                 <div className="social-style-two">
-                  <a href="#">
+                  <a href="https://www.facebook.com/software.strategy/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <i className="fab fa-facebook-f" />
                   </a>
-                  <a href="#">
+                  <a href="https://www.instagram.com/software.strategy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <i className="fab fa-instagram" />
                   </a>
                 </div>
@@ -63,7 +63,7 @@ const Header5 = ({ singleMenu, dark, locale }) => {
                 </div>
                 <div className="content">
                   <span>Call Anytime</span>
-                  <a href="callto:985236425288">98 523 642 5288</a>
+                  <a href="callto:+59891258107">+598 912 58 107</a>
                 </div>
               </div>
               {/* menu sidbar */}
