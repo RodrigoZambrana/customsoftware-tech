@@ -1,16 +1,55 @@
 {
   "seoTitle": "Desarrollo de Sitios Web, SEO y Marketing Digital",
   "seoDescription": "Creamos sitios web rápidos y optimizados para buscadores. SEO, SEM y estrategias de marketing para hacer crecer tu negocio online.",
-  "heroTitle": "Tu sitio web",
-  "heroHighlight": "a medida",
-  "heroDescription": "Creamos páginas rápidas, seguras y optimizadas para SEO. Impulsamos tu negocio con campañas SEM y marketing en redes sociales.",
+  "heroTitleHtml": "Potencia tu <span>marca digital</span> con un sitio web de alto impacto",
+  "heroParagraphHtml": "Diseñamos páginas <strong>rápidas, seguras y optimizadas para SEO</strong> que generan visibilidad real en Google. Además, impulsamos tu negocio con <strong>publicidad online de alto impacto y estrategias de marketing digital</strong> en redes sociales.",
+  "heroBenefits": [
+    "Dominio y hosting incluidos",
+    "Correo electrónico corporativo",
+    "Certificado SSL para mayor seguridad y confianza",
+    "Diseño adaptable a móviles (responsive)",
+    "Optimización SEO inicial incluida"
+  ],
   "heroCtaText": "Solicitar propuesta",
+  "heroCtaHref": "/contacto",
+  "heroRightImageAlt": "Diseño web y marketing digital",
   "aboutSubtitle": "Sobre la empresa",
   "aboutTitle": "Impulsamos tu presencia digital con foco en resultados",
   "aboutText": "En Software Srategy diseñamos y desarrollamos sitios web modernos, rápidos y seguros. Te ayudamos a posicionarte en buscadores con SEO y a captar clientes con campañas SEM y estrategias de marketing digital.",
   "aboutCtaText": "Conócenos más",
+  "aboutCustom": {
+    "subtitle": "Marketing Digital",
+    "title": "Haz crecer tu marca con estrategias que convierten",
+    "paragraphHtml": "En <strong>Software Srategy</strong> potenciamos tu negocio con <a href=\"/services/digital-marketing\">estrategias de marketing digital</a> diseñadas para aumentar tu visibilidad, atraer clientes y fortalecer tu marca en línea. Creamos campañas efectivas en <strong>Google y redes sociales</strong>, con un enfoque en resultados medibles y sostenibles.",
+    "benefits": [
+      "Gestión estratégica de <strong>redes sociales</strong> (contenido, comunidad y anuncios)",
+      "Publicidad digital en Google y Meta para captar clientes potenciales",
+      "Optimización SEO para posicionar tu marca en buscadores",
+      "Análisis de métricas y reportes claros para medir el retorno de inversión",
+      "Estrategias integrales: desde awareness hasta conversión"
+    ],
+    "badges": ["+80 campañas gestionadas", "Clientes en 10+ sectores", "Resultados medibles en 90 días"],
+    "ctas": {
+      "readMoreLabel": "Descubre más",
+      "readMoreHref": "/services/digital-marketing",
+      "primaryLabel": "Comienza tu estrategia",
+      "primaryHref": "/contacto"
+    }
+  },
   "whatSubtitle": "¿Qué hacemos?",
   "whatTitle": "Soluciones para crecer en la web",
+  "whatCustom": {
+    "subtitle": "¿Qué hacemos?",
+    "title": "Soluciones para crecer en internet",
+    "items": [
+      { "number": "01", "title": "Diseño & Desarrollo Web", "text": "Sitios rápidos, responsivos y orientados a conversión.", "href": "/services/web-development", "cta": "Ver más" },
+      { "number": "02", "title": "Posicionamiento en Google", "text": "SEO para mejorar tu visibilidad orgánica y publicidad digital en Google Ads para atraer tráfico calificado que se convierta en clientes.", "href": "/services/seo-sem", "cta": "Ver más" },
+      { "number": "03", "title": "Marketing Digital", "text": "Estrategias integrales con foco en resultados medibles y crecimiento sostenido.", "href": "/services/digital-marketing", "cta": "Ver más" },
+      { "number": "04", "title": "Software a Medida", "text": "Desarrollamos soluciones de software personalizadas que se adaptan a los procesos de tu negocio, optimizando recursos y escalando de forma eficiente.", "href": "/services/custom-software", "cta": "Ver más" }
+    ],
+    "image": "/assets/images/services/what-we-do.jpg",
+    "imageAlt": "Servicios de Software Strategy"
+  },
   "whatItems": [
     {
       "number": "01",
@@ -43,11 +82,11 @@
   "servicesSubtitle": "Servicios",
   "servicesTitle": "Soluciones de software para tu negocio",
   "services": [
-    { "title": "Sitios Web Corporativos", "text": "Presencia sólida y profesional, preparada para convertir.", "href": "/service-details" },
-    { "title": "Tiendas Online", "text": "E-commerce ágil, seguro y fácil de gestionar.", "href": "/service-details" },
-    { "title": "Software de Gestión de Clientes (CRM) & Dashboards", "text": "Centraliza clientes, oportunidades y seguimiento con CRM y paneles administrativos a medida. Métricas, automatizaciones e integraciones para tomar decisiones y escalar.", "href": "/service-details" },   
-    { "title": "Software a Medida", "text": "Desarrollos personalizados para tu operación.", "href": "/service-details" }
-
+    { "title": "Sitios Web Corporativos", "text": "Presencia sólida y profesional, preparada para convertir.", "href": "/services/web-development", "bullets": ["Rápidos y seguros", "Diseño profesional"], "ctaSecondaryText": "Solicitar propuesta", "ctaSecondaryHref": "/contacto" },
+    { "title": "Tiendas Online", "text": "E-commerce ágil, seguro y fácil de gestionar.", "href": "/services/web-development", "bullets": ["Pagos integrados", "Gestión simple"], "ctaSecondaryText": "Solicitar propuesta", "ctaSecondaryHref": "/contacto" },
+    { "title": "Software de Gestión de Clientes (CRM) & Dashboards", "text": "Centraliza clientes, oportunidades y seguimiento con CRM y paneles administrativos a medida. Métricas, automatizaciones e integraciones para tomar decisiones y escalar.", "href": "/services/custom-software", "bullets": ["Dashboards y reportes", "Automatizaciones"], "ctaSecondaryText": "Solicitar propuesta", "ctaSecondaryHref": "/contacto" },   
+    { "title": "Software a Medida", "text": "Desarrollos personalizados para tu operación.", "href": "/services/custom-software", "bullets": ["A medida", "Escalable"], "ctaSecondaryText": "Solicitar propuesta", "ctaSecondaryHref": "/contacto" }
+  
     
   ],
   "pricingSubtitle": "Planes",
@@ -56,18 +95,18 @@
   "pricingBannerCta": "Ver detalles",
   "pricingPlans": [
     {
-      "name": "Plan Mensual",
-      "desc": "Ideal para iniciar: sitio web + SEO básico + soporte.",
-      "features": ["Landing o sitio institucional", "SEO on-page", "Analítica", "Soporte mensual"],
-      "priceNote": "A medida",
-      "href": "/pricing"
+      "name": "Planes Desarrollo Web",
+      "desc": "Opciones para construir o renovar tu sitio con foco en performance y SEO.",
+      "features": ["Diseño responsivo", "SEO inicial", "Soporte"],
+      "priceNote": "Ver planes",
+      "href": "/services/web-development"
     },
     {
-      "name": "Plan Anual",
-      "desc": "Crecimiento sostenido: mejoras continuas, SEO y performance.",
-      "features": ["Contenidos", "SEO técnico trimestral", "Optimización velocidad", "Evolución continua"],
-      "priceNote": "A medida",
-      "href": "/pricing"
+      "name": "Planes Marketing Digital",
+      "desc": "Campañas en Google y redes sociales para crecer en resultados.",
+      "features": ["Google Ads", "Meta Ads", "Métricas y optimización"],
+      "priceNote": "Ver planes",
+      "href": "/services/digital-marketing"
     }
   ],
   "whySubtitle": "Por qué elegirnos",
@@ -77,6 +116,16 @@
     { "title": "Transparencia y métricas", "text": "Decisiones guiadas por datos y reportes claros.", "href": "/service-details" },
     { "title": "Evolución continua", "text": "Soporte y mejoras constantes para seguir creciendo.", "href": "/service-details" }
   ],
+  "trustBar": {
+    "subtitle": "Confianza y seguridad",
+    "title": "Incluido en todos los planes",
+    "items": [
+      { "icon": "fas fa-shield-alt", "text": "Certificado SSL y seguridad" },
+      { "icon": "fas fa-server", "text": "Hosting y dominio incluidos" },
+      { "icon": "fas fa-mobile-alt", "text": "Diseño responsive (móviles y tablets)" },
+      { "icon": "fas fa-tachometer-alt", "text": "Performance optimizada" }
+    ]
+  },
   "blogSubtitle": "Blog & Noticias",
   "blogTitle": "Aprendé sobre SEO, Web y Marketing",
   "blogItems": [

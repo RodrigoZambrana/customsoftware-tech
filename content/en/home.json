@@ -1,17 +1,55 @@
 {
   "seoTitle": "Professional Websites, SEO & Digital Marketing",
   "seoDescription": "We build fast, secure, SEO-optimized websites. SEM and social strategies to grow your business online.",
-  "heroTitle": "Professional",
-  "heroHighlight": "Websites",
-  "heroItalic": "that Convert",
-  "heroDescription": "We build fast, secure, SEO-optimized websites. We boost your business with SEM campaigns and social marketing.",
+  "heroTitleHtml": "Boost your <span>digital brand</span> with a high-impact website",
+  "heroParagraphHtml": "We design <strong>fast, secure, SEO-optimized pages</strong> that drive real visibility on Google. We also grow your business with <strong>high-impact online ads and digital marketing strategies</strong> across social networks.",
+  "heroBenefits": [
+    "Domain and hosting included",
+    "Corporate email",
+    "SSL certificate for security and trust",
+    "Mobile-friendly responsive design",
+    "Initial SEO optimization included"
+  ],
   "heroCtaText": "Request proposal",
+  "heroCtaHref": "/contact",
+  "heroRightImageAlt": "Web design and digital marketing",
   "aboutSubtitle": "About us",
   "aboutTitle": "We grow your online presence with measurable results",
   "aboutText": "At Software Srategy we design and build modern, fast and secure websites. We improve your visibility with SEO and acquire qualified leads through SEM and social strategies.",
   "aboutCtaText": "Learn more",
+  "aboutCustom": {
+    "subtitle": "Digital Marketing",
+    "title": "Grow your brand with strategies that convert",
+    "paragraphHtml": "At <strong>Software Srategy</strong> we boost your business with <a href=\"/services/digital-marketing\">digital marketing strategies</a> designed to increase visibility, attract clients and strengthen your online brand. We create effective campaigns on <strong>Google and social networks</strong> with a focus on measurable, sustainable results.",
+    "benefits": [
+      "Strategic <strong>social media</strong> management (content, community and ads)",
+      "Digital advertising on Google and Meta to acquire leads",
+      "SEO optimization to rank your brand in search",
+      "Metrics analysis and clear reporting to measure ROI",
+      "End‑to‑end strategies: from awareness to conversion"
+    ],
+    "badges": ["80+ campaigns managed", "Clients in 10+ industries", "Measurable results in 90 days"],
+    "ctas": {
+      "readMoreLabel": "Discover more",
+      "readMoreHref": "/services/digital-marketing",
+      "primaryLabel": "Start your strategy",
+      "primaryHref": "/contact"
+    }
+  },
   "whatSubtitle": "What we do",
   "whatTitle": "Solutions to grow online",
+  "whatCustom": {
+    "subtitle": "What we do",
+    "title": "Solutions to grow on the internet",
+    "items": [
+      { "number": "01", "title": "Web Design & Development", "text": "Fast, responsive, conversion-oriented websites.", "href": "/services/web-development", "cta": "See more" },
+      { "number": "02", "title": "Google Positioning", "text": "SEO to improve organic visibility and Google Ads to drive qualified traffic that converts into customers.", "href": "/services/seo-sem", "cta": "See more" },
+      { "number": "03", "title": "Digital Marketing", "text": "End-to-end strategies focused on measurable results and sustained growth.", "href": "/services/digital-marketing", "cta": "See more" },
+      { "number": "04", "title": "Custom Software", "text": "We build tailored software solutions that adapt to your processes, optimizing resources and scaling efficiently.", "href": "/services/custom-software", "cta": "See more" }
+    ],
+    "image": "/assets/images/services/what-we-do.jpg",
+    "imageAlt": "Software Strategy services"
+  },
   "whatItems": [
     { "number": "01", "title": "Web Design & Development", "text": "Fast, responsive, conversion-oriented websites.", "href": "/services/web-development", "cta": "See more" },
     { "number": "02", "title": "Organic positioning & Google Ads campaigns", "text": "SEO and SEM to increase visibility and results: we optimize your site and content for organic rankings, and manage Google Ads to drive qualified traffic and convert into customers.", "href": "/services/seo-sem", "cta": "See more" },
@@ -26,10 +64,10 @@
   "servicesSubtitle": "Services",
   "servicesTitle": "Software solutions for your business",
   "services": [
-    { "title": "Corporate Websites", "text": "A solid, professional presence ready to convert.", "href": "/service-details" },
-    { "title": "Online Stores", "text": "Agile, secure e-commerce that’s easy to manage.", "href": "/service-details" },
-    { "title": "Customer Management Software (CRM) & Dashboards", "text": "Centralize customers, deals and follow-ups with tailored CRM and admin dashboards. Metrics, automations and integrations to inform decisions and scale.", "href": "/service-details" },
-    { "title": "Custom Software", "text": "Tailored developments for your operations.", "href": "/service-details" }
+    { "title": "Corporate Websites", "text": "A solid, professional presence ready to convert.", "href": "/services/web-development", "bullets": ["Fast and secure", "Professional design"], "ctaSecondaryText": "Request proposal", "ctaSecondaryHref": "/contact" },
+    { "title": "Online Stores", "text": "Agile, secure e-commerce that’s easy to manage.", "href": "/services/web-development", "bullets": ["Integrated payments", "Easy management"], "ctaSecondaryText": "Request proposal", "ctaSecondaryHref": "/contact" },
+    { "title": "Customer Management Software (CRM) & Dashboards", "text": "Centralize customers, deals and follow-ups with tailored CRM and admin dashboards. Metrics, automations and integrations to inform decisions and scale.", "href": "/services/custom-software", "bullets": ["Dashboards & reports", "Automations"], "ctaSecondaryText": "Request proposal", "ctaSecondaryHref": "/contact" },
+    { "title": "Custom Software", "text": "Tailored developments for your operations.", "href": "/services/custom-software", "bullets": ["Tailored", "Scalable"], "ctaSecondaryText": "Request proposal", "ctaSecondaryHref": "/contact" }
   ],
   "pricingSubtitle": "Plans",
   "pricingTitle": "Choose the plan that fits your business",
@@ -37,18 +75,18 @@
   "pricingBannerCta": "See details",
   "pricingPlans": [
     {
-      "name": "Monthly Plan",
-      "desc": "Perfect to start: website + basic SEO + support.",
-      "features": ["Landing or corporate site", "On-page SEO", "Analytics", "Monthly support"],
-      "priceNote": "Custom",
-      "href": "/pricing"
+      "name": "Website Plans",
+      "desc": "Options to build or refresh your site with performance and SEO focus.",
+      "features": ["Responsive design", "Initial SEO", "Support"],
+      "priceNote": "See plans",
+      "href": "/services/web-development"
     },
     {
-      "name": "Annual Plan",
-      "desc": "Sustained growth: ongoing improvements, SEO and performance.",
-      "features": ["Content strategy", "Quarterly tech SEO", "Speed optimization", "Continuous evolution"],
-      "priceNote": "Custom",
-      "href": "/pricing"
+      "name": "Digital Marketing Plans",
+      "desc": "Google and social campaigns to grow measurable results.",
+      "features": ["Google Ads", "Meta Ads", "Metrics & optimization"],
+      "priceNote": "See plans",
+      "href": "/services/digital-marketing"
     }
   ],
   "whySubtitle": "Why choose us",
@@ -58,6 +96,16 @@
     { "title": "Transparency & metrics", "text": "Data-driven decisions with clear reports.", "href": "/service-details" },
     { "title": "Continuous evolution", "text": "Support and improvements to keep growing.", "href": "/service-details" }
   ],
+  "trustBar": {
+    "subtitle": "Trust & reliability",
+    "title": "Included in every plan",
+    "items": [
+      { "icon": "fas fa-shield-alt", "text": "SSL certificate & security" },
+      { "icon": "fas fa-server", "text": "Hosting and domain included" },
+      { "icon": "fas fa-mobile-alt", "text": "Responsive design (mobile & tablets)" },
+      { "icon": "fas fa-tachometer-alt", "text": "Optimized performance" }
+    ]
+  },
   "blogSubtitle": "Blog & News",
   "blogTitle": "Learn about SEO, Web and Marketing",
   "blogItems": [

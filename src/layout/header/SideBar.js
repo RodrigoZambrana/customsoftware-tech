@@ -1,4 +1,5 @@
 import { Fragment, useState } from "react";
+import MobileSlideMenu from "@/src/layout/header/MobileSlideMenu";
 const SideBar = ({ locale = "es" }) => {
   const isEn = locale === "en";
   const [name, setName] = useState("");
@@ -51,11 +52,16 @@ const SideBar = ({ locale = "es" }) => {
           <div className="cross-icon">
             <span className="fa fa-times" />
           </div>
-          <div className="title">
-            <h4>{isEn ? "Get Appointment" : "Agendar una cita"}</h4>
+          {/* Mobile slide navigation (visible on tablets/mobiles) */}
+          <div className="d-lg-none">
+            <MobileSlideMenu locale={locale} />
           </div>
-          {/*Appointment Form*/}
-          <div className="appointment-form">
+
+          {/* Appointment Form (visible on desktop) */}
+          <div className="appointment-form d-none d-lg-block">
+            <div className="title">
+              <h4>{isEn ? "Get Appointment" : "Agendar una cita"}</h4>
+            </div>
             <form onSubmit={onSubmit}>
               <div className="form-group">
                 <input

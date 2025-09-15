@@ -36,20 +36,40 @@ export default function HomePage({ t, locale }) {
           <div className="row">
             <div className="col-lg-8">
               <div className="hero-content wow fadeInLeft delay-0-2s">
-                <h1>
-                  {t.heroTitle} <span>{t.heroHighlight}</span> <i>{t.heroItalic}</i>
-                </h1>
-                <p className="mt-25">{t.heroDescription}</p>
-                <Link legacyBehavior href={isEn ? "/en/contact" : "/contacto"}>
-                  <a className="theme-btn mt-25">
+                <h1
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      t.heroTitleHtml ||
+                      `${t.heroTitle || ""} ${t.heroHighlight ? `<span>${t.heroHighlight}</span>` : ""} ${t.heroItalic ? `<i>${t.heroItalic}</i>` : ""}`.trim(),
+                  }}
+                />
+                {t.heroParagraphHtml ? (
+                  <p className="mt-25" dangerouslySetInnerHTML={{ __html: t.heroParagraphHtml }} />
+                ) : (
+                  <p className="mt-25">{t.heroDescription}</p>
+                )}
+                {Array.isArray(t.heroBenefits) && t.heroBenefits.length > 0 && (
+                  <ul className="list-style-one mt-10">
+                    {t.heroBenefits.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
+                  </ul>
+                )}
+                <Link legacyBehavior href={withLang(t.heroCtaHref || (isEn ? "/contact" : "/contacto"))}>
+                  <a className="theme-btn mt-25" id="cta-hero-contact" data-cta="hero">
                     {t.heroCtaText} <i className="far fa-arrow-right" />
+                  </a>
+                </Link>
+                <Link legacyBehavior href={withLang(isEn ? "/services" : "/services")}>
+                  <a className="read-more mt-15" id="cta-hero-services" data-cta="hero-secondary">
+                    {isEn ? "View services" : "Ver servicios"} <i className="far fa-arrow-right" />
                   </a>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="hero-right-image mt-20 wow fadeInUp delay-0-4s">
-                <img src="/assets/images/hero/hero-right.png" alt="Hero" />
+                <img src="/assets/images/hero/hero-right.png" alt={t.heroRightImageAlt || (isEn ? "Web design and digital marketing" : "Diseño web y marketing digital")} />
               </div>
             </div>
           </div>
@@ -64,6 +84,41 @@ export default function HomePage({ t, locale }) {
         </div>
       </section>
 
+      {/* Trust Bar */}
+      {t.trustBar?.items?.length > 0 && (
+        <section className="pt-20 rpb-40 rel z-1">
+          <div className="container">
+            {(t.trustBar.subtitle || t.trustBar.title) && (
+              <div className="row justify-content-center">
+                <div className="col-lg-8">
+                  <div className="section-title text-center mb-30 wow fadeInUp delay-0-2s">
+                    {t.trustBar.subtitle && (
+                      <span className="sub-title mb-15">{t.trustBar.subtitle}</span>
+                    )}
+                    {t.trustBar.title && <h3>{t.trustBar.title}</h3>}
+                  </div>
+                </div>
+              </div>
+            )}
+            <div className="row justify-content-center">
+              {t.trustBar.items.map((it, i) => (
+                <div className="col-sm-6 col-lg-3" key={`${it.text}-${i}`}>
+                  <div className={`why-choose-item-two text-center wow fadeInUp delay-0-${2 + i}`}> 
+                    <div className="icon">
+                      <i className={it.icon || "fas fa-check"} />
+                      <span className="icon-bottom-shape" />
+                    </div>
+                    <div className="content">
+                      <h5>{it.text}</h5>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* About */}
       <section className="about-area pt-130 rpt-100 rel z-1">
         <div className="container">
@@ -75,18 +130,71 @@ export default function HomePage({ t, locale }) {
             </div>
             <div className="col-xl-7 col-lg-9">
               <div className="about-content wow fadeInUp delay-0-4s">
-                <div className="section-title mb-40">
-                  <span className="sub-title mb-15">{t.aboutSubtitle}</span>
-                  <h2>{t.aboutTitle}</h2>
-                </div>
-                <div className="content">
-                  <p>{t.aboutText}</p>
-                  <Link legacyBehavior href="/about">
-                    <a className="read-more mt-10">
-                      {t.aboutCtaText} <i className="far fa-arrow-right" />
-                    </a>
-                  </Link>
-                </div>
+                {t.aboutCustom ? (
+                  <>
+                    <div className="section-title mb-40">
+                      {t.aboutCustom.subtitle && (
+                        <span className="sub-title mb-15">{t.aboutCustom.subtitle}</span>
+                      )}
+                      <h2>{t.aboutCustom.title}</h2>
+                    </div>
+                    <div className="content">
+                      {t.aboutCustom.paragraphHtml ? (
+                        <p
+                          dangerouslySetInnerHTML={{ __html: t.aboutCustom.paragraphHtml }}
+                        />
+                      ) : (
+                        <p>{t.aboutText}</p>
+                      )}
+
+                      {Array.isArray(t.aboutCustom.benefits) && t.aboutCustom.benefits.length > 0 && (
+                        <ul className="list-style-one mt-10">
+                          {t.aboutCustom.benefits.map((b) => (
+                            <li key={b}>
+                              <span dangerouslySetInnerHTML={{ __html: b }} />
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {Array.isArray(t.aboutCustom.badges) && t.aboutCustom.badges.length > 0 && (
+                        <div className="mt-15 d-flex gap-3 flex-wrap">
+                          {t.aboutCustom.badges.map((txt) => (
+                            <div key={txt} className="badge rounded-pill trust-badge px-3 py-2">{txt}</div>
+                          ))}
+                        </div>
+                      )}
+
+                      <div className="mt-20">
+                        <Link legacyBehavior href={withLang(t.aboutCustom.ctas?.readMoreHref || (isEn ? '/services/digital-marketing' : '/services/digital-marketing'))}>
+                          <a className="read-more mt-10" id="cta-about-readmore" data-cta="about-readmore">
+                            {t.aboutCustom.ctas?.readMoreLabel || (isEn ? 'Discover more' : 'Descubre más')} <i className="far fa-arrow-right"></i>
+                          </a>
+                        </Link>
+                        <Link legacyBehavior href={withLang(t.aboutCustom.ctas?.primaryHref || (isEn ? '/contact' : '/contacto'))}>
+                          <a className="theme-btn mt-10 ms-3" id="cta-about-primary" data-cta="about-primary">
+                            {t.aboutCustom.ctas?.primaryLabel || (isEn ? 'Start your strategy' : 'Comienza tu estrategia')} <i className="far fa-arrow-right"></i>
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="section-title mb-40">
+                      <span className="sub-title mb-15">{t.aboutSubtitle}</span>
+                      <h2>{t.aboutTitle}</h2>
+                    </div>
+                    <div className="content">
+                      <p>{t.aboutText}</p>
+                      <Link legacyBehavior href="/about">
+                        <a className="read-more mt-10">
+                          {t.aboutCtaText} <i className="far fa-arrow-right" />
+                        </a>
+                      </Link>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -100,23 +208,25 @@ export default function HomePage({ t, locale }) {
             <div className="col-xl-5 col-lg-8">
               <div className="what-we-do-content mb-55">
                 <div className="section-title mb-60 wow fadeInUp delay-0-2s">
-                  <span className="sub-title mb-15">{t.whatSubtitle}</span>
-                  <h2>{t.whatTitle}</h2>
+                  <span className="sub-title mb-15">{t.whatCustom?.subtitle || t.whatSubtitle}</span>
+                  <h2>{t.whatCustom?.title || t.whatTitle}</h2>
                 </div>
 
-                {t.whatItems.map((item, idx) => (
-                  <div className={`what-we-do-item wow fadeInUp delay-0-${3 + idx * 2}s`} key={item.title}>
+                {(t.whatCustom?.items || t.whatItems || []).map((item, idx) => (
+                  <div className={`what-we-do-item wow fadeInUp delay-0-${3 + idx * 2}s`} key={item.title || idx}>
                     <div className="number">
-                      <span>{item.number}</span>
+                      <span>{item.number || `${(idx + 1).toString().padStart(2, '0')}`}</span>
                     </div>
                     <div className="content">
                       <h5>{item.title}</h5>
                       <p>{item.text}</p>
-                      <Link legacyBehavior href={withLang(item.href)}>
-                        <a className="read-more style-two">
-                          <span>{item.cta}</span> <i className="far fa-arrow-right" />
-                        </a>
-                      </Link>
+                      {(item.href || item.cta) && (
+                        <Link legacyBehavior href={withLang(item.href || '#')}>
+                          <a className="read-more style-two" data-cta="what-item" data-item={item.href || ''}>
+                            <span>{item.cta || (isEn ? 'Read more' : 'Ver más')}</span> <i className="far fa-arrow-right" />
+                          </a>
+                        </Link>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -124,7 +234,7 @@ export default function HomePage({ t, locale }) {
             </div>
             <div className="col-xl-6">
               <div className="what-we-do-image mb-55 wow fadeInRight delay-0-2s">
-                <img src="/assets/images/services/what-we-do.jpg" alt="What We Do" />
+                <img src={t.whatCustom?.image || "/assets/images/services/what-we-do.jpg"} alt={t.whatCustom?.imageAlt || (isEn ? "What We Do" : "Qué hacemos")} />
               </div>
             </div>
           </div>
@@ -167,16 +277,28 @@ export default function HomePage({ t, locale }) {
                   <div className="title-icon">
                     <h5>
                       <Link legacyBehavior href={withLang(card.href)}>
-                        <a>{card.title}</a>
+                        <a data-cta="services-grid-title" data-service={card.href}>{card.title}</a>
                       </Link>
                     </h5>
                     <img src="/assets/images/services/icon1.png" alt="Icon" />
                   </div>
                   <div className="content">
                     <p>{card.text}</p>
+                    {Array.isArray(card.bullets) && card.bullets.length > 0 && (
+                      <ul className="list-style-one mt-10">
+                        {card.bullets.map((b) => (
+                          <li key={b}>{b}</li>
+                        ))}
+                      </ul>
+                    )}
                     <Link legacyBehavior href={withLang(card.href)}>
-                      <a className="read-more style-two">
+                      <a className="read-more style-two" id={`cta-services-grid-${i}-more`} data-cta="services-grid" data-service={card.href}>
                         <span>{isEn ? "Read more" : "Leer más"}</span> <i className="far fa-arrow-right" />
+                      </a>
+                    </Link>
+                    <Link legacyBehavior href={withLang(card.ctaSecondaryHref || (isEn ? "/contact" : "/contacto"))}>
+                      <a className="read-more mt-10" id={`cta-services-grid-${i}-contact`} data-cta="services-grid-contact" data-service={card.href}>
+                        {card.ctaSecondaryText || (isEn ? "Request proposal" : "Solicitar propuesta")} <i className="far fa-arrow-right" />
                       </a>
                     </Link>
                   </div>
@@ -205,7 +327,7 @@ export default function HomePage({ t, locale }) {
                 <span className="join-us">{isEn ? "Work with us" : "Trabajemos juntos"}</span>
                 <h4>{t.pricingBannerTitle}</h4>
                 <Link legacyBehavior href="/pricing">
-                  <a className="details-btn">
+                  <a className="details-btn" id="cta-pricing-banner" data-cta="pricing-banner">
                     <i className="far fa-arrow-right" />
                   </a>
                 </Link>
@@ -230,16 +352,20 @@ export default function HomePage({ t, locale }) {
                       <li key={f}>{f}</li>
                     ))}
                   </ul>
-                  <div className="price-offer">
-                    <span className="price-text">
-                      <span className="before">$</span>
-                      <span className="price">—</span>
-                    </span>
-                    <img src="/assets/images/shapes/right-arrow.png" alt="Arrow" />
-                    <span className="offer-text">{plan.priceNote}</span>
-                  </div>
+                  {plan.price && (
+                    <div className="price-offer">
+                      <span className="price-text">
+                        <span className="before">$</span>
+                        <span className="price">{plan.price}</span>
+                      </span>
+                      <img src="/assets/images/shapes/right-arrow.png" alt="Arrow" />
+                      {plan.priceNote && (
+                        <span className="offer-text">{plan.priceNote}</span>
+                      )}
+                    </div>
+                  )}
                   <Link legacyBehavior href={withLang(plan.href)}>
-                    <a className="theme-btn w-100">
+                    <a className="theme-btn w-100" id={`cta-pricing-plan-${idx}`} data-cta="pricing-plan" data-plan={plan.name}>
                       {isEn ? "See details" : "Ver detalles"} <i className="far fa-arrow-right" />
                     </a>
                   </Link>

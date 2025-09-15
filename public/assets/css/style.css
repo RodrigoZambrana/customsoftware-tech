@@ -841,7 +841,18 @@ a.theme-btn {
   z-index: 99999;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
+.hidden-bar .slide-panel-menu .primary-menu > li { border-bottom: 1px solid var(--ygency-border-color); }
+.hidden-bar .slide-panel-menu .primary-menu > li:last-child { border-bottom: none; }
+.hidden-bar .slide-panel-menu .primary-menu a { color: white; }
+.hidden-bar .slide-panel-menu .submenu-toggler i { transition: transform .2s ease; }
 .whatsapp-float:hover { transform: translateY(-1px); }
+
+/* Trust badges (About section) */
+.trust-badge {
+  background: var(--ygency-primary-color) !important;
+  color: #0A1019 !important;
+  font-weight: 600;
+}
 
 .slider-arrow .slick-arrow {
   border: 1px solid var(--ygency-border-color); }
@@ -3913,22 +3924,27 @@ h6, .h6 {
   text-transform: uppercase; }
   @media only screen and (max-width: 1399px) {
     .hero-content h1 {
-      font-size: 150px; } }
+      font-size: 100px;
+      margin-top: 100px; } }
   @media only screen and (max-width: 991px) {
     .hero-content h1 {
-      font-size: 115px; } }
+      font-size: 80px;
+      margin-top: 80px; } }
   @media only screen and (max-width: 767px) {
     .hero-content h1 {
-      font-size: 85px;
+      font-size: 56px;
+      margin-top: 60px;
       margin-bottom: -30px; } }
   @media only screen and (max-width: 479px) {
     .hero-content h1 {
-      font-size: 50px; } }
+      font-size: 36px;
+      margin-top: 40px; } }
   @media only screen and (max-width: 375px) {
     .hero-content h1 {
-      font-size: 50px;
+      font-size: 32px;
       max-width: 250px;
-    padding-top: 10px; } }
+      margin-top: 30px;
+      padding-top: 10px; } }
   .hero-content h1 span {
     color: transparent;
     -webkit-text-stroke: 1px;
@@ -3941,6 +3957,12 @@ h6, .h6 {
     right: 3%;
     top: 5%;
     max-width: 30%; } }
+
+/* Reduce hero content paragraph size slightly for readability */
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
 
 .hero-bottom-image {
   display: -webkit-box;
@@ -5315,9 +5337,9 @@ h6, .h6 {
   flex-direction: column;
   padding: 35px 35px 30px;
   height: calc(100% - 30px);
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
   @media only screen and (max-width: 375px) {
     .service-three-item {
       padding-left: 25px;
@@ -5326,7 +5348,7 @@ h6, .h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -9572,7 +9594,7 @@ blockquote {
 
 .lets-work span {
   color: white;
-  font-size: 85px;
+  font-size: 45px;
   font-weight: 600;
   line-height: 1.1; }
   @media only screen and (max-width: 1199px) {
@@ -9889,3 +9911,12 @@ blockquote {
           font-size: 20px;
           line-height: 60px;
           left: calc(50% - 30px); } }
+
+/* Global hero titles override */
+.hero-content h1,
+.hero-three-content h1,
+.hero-four-content h1,
+.hero-six-wrapper .hero-six-content h1 {
+  font-size: 36px !important;
+  margin-bottom: 20px !important;
+}

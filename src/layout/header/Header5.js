@@ -4,6 +4,7 @@ import Nav from "./Nav"; // navBarOriginal (referencia)
 import NavSearch from "./NavSearch";
 
 const Header5 = ({ singleMenu, dark, locale }) => {
+  const isEn = locale === 'en';
   return (
     <header className="main-header menu-absolute header-two">
       <div className="header-upper">
@@ -62,7 +63,7 @@ const Header5 = ({ singleMenu, dark, locale }) => {
                   <i className="fas fa-comments-alt" />
                 </div>
                 <div className="content">
-                  <span>Call Anytime</span>
+                  <span>{isEn ? 'Call Anytime' : 'Llámanos'}</span>
                   <a href="callto:+59891258107">+598 912 58 107</a>
                 </div>
               </div>
