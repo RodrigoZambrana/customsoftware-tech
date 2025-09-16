@@ -67,13 +67,13 @@ const Header5 = ({ singleMenu, dark, locale }) => {
                   <a href="callto:+59891258107">+598 912 58 107</a>
                 </div>
               </div>
-              {/* menu sidbar */}
-              <div className="menu-sidebar">
-                <button>
-                  <img
-                    src="/assets/images/icons/toggler-white.svg"
-                    alt="Toggler"
-                  />
+              {/* menu sidebar */}
+              <div className="menu-sidebar" title="menù">
+                <span className="menu-label">menù</span>
+                <button className="navbar-toggle" type="button" aria-label="Abrir menú" title="Abrir menú">
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
                 </button>
               </div>
             </div>

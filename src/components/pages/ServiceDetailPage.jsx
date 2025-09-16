@@ -346,6 +346,30 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
                 <span className="sub-title mb-15">{t.whatWeDo?.subtitle}</span>
                 <h2>{t.whatWeDo?.title}</h2>
                 <p className="mt-20">{t.whatWeDo?.text}</p>
+                {Array.isArray(t.whatWeDo?.bullets) && t.whatWeDo.bullets.length > 0 && (
+                  <ul className="list-style-one mt-15">
+                    {t.whatWeDo.bullets.map((b, i) => (
+                      <li key={`wwd-b-${i}`}>{b}</li>
+                    ))}
+                  </ul>
+                )}
+                {Array.isArray(t.whatWeDo?.ads) && t.whatWeDo.ads.length > 0 && (
+                  <>
+                    <h5 className="mt-25">{isEn ? 'Ready for Google Ads' : 'Preparados para Google Ads'}</h5>
+                    <ul className="list-style-one mt-10">
+                      {t.whatWeDo.ads.map((a, i) => (
+                        <li key={`wwd-ads-${i}`}>{a}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+                {t.whatWeDo?.ctaHref && (
+                  <Link legacyBehavior href={withLang(t.whatWeDo.ctaHref)}>
+                    <a className="theme-btn mt-25">
+                      {t.whatWeDo?.ctaText || (isEn ? 'Request proposal' : 'Solicitar propuesta')} <i className="far fa-arrow-right" />
+                    </a>
+                  </Link>
+                )}
               </div>
             </div>
             <div className="col-xl-4 text-xl-end mt-25 rmt-15">
@@ -391,13 +415,16 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
       )}
 
       {/* Pricing dentro del servicio */}
-      <section className="pricing-area-three pb-85 rpb-55" style={{ backgroundImage: "url(/assets/images/background/pricing-bg-dot-shape.png)" }}>
+      <section className="pricing-area-three pb-85 rpb-55" style={{ backgroundImage: "url(/assets/images/background/pricing-bg-dot-shape.png)" }} aria-label={isEn ? "Web development packages" : "Paquetes de desarrollo web y marketing"}>
         <div className="container container-1290">
           <div className="row justify-content-center">
             <div className="col-xl-8 col-lg-10">
               <div className="section-title text-center mb-60 wow fadeInUp delay-0-2s">
                 <span className="sub-title mb-20">{t.pricingSection?.subtitle}</span>
                 <h2>{t.pricingSection?.title}</h2>
+                {t.pricingSection?.description && (
+                  <p className="mt-10">{t.pricingSection.description}</p>
+                )}
               </div>
             </div>
           </div>
@@ -405,7 +432,8 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
           <div className="row">
             {t.pricingSection?.plans?.slice(0, 3).map((plan, i) => (
               <div className="col-xl-4 col-md-6" key={plan.name}>
-                <div className={`pricing-plan-item wow fadeInUp delay-0-${2 + i * 2}s ${i === 1 ? "style-two" : ""}`}>
+                <article className={`pricing-plan-item wow fadeInUp delay-0-${2 + i * 2}s ${i === 1 ? "style-two" : ""}`} itemScope itemType="https://schema.org/Product">
+                  {plan.category && <meta itemProp="category" content={plan.category} />}
                   {plan.badge && (
                     <span className="badge">
                       <i className="fas fa-star-of-life" />
@@ -421,33 +449,76 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
                       <i className={planIcons[i % planIcons.length]} />
                     </div>
                     <div className={i === 1 ? "right-part" : ""}>
-                      <h5>{plan.name}</h5>
+                      <h5 itemProp="name">{plan.name}</h5>
                       {!hidePrices && (
-                        <span className="price-text">
+                        <span className="price-text" itemProp="offers" itemScope itemType="https://schema.org/Offer">
+                          <meta itemProp="priceCurrency" content="USD" />
                           <span className="before">$</span>
-                          <span className="price">{plan.price}</span> <span className="after">{plan.unit}</span>
+                          <span className="price" itemProp="price">{plan.price}</span> <span className="after">{plan.unit}</span>
+                          <link itemProp="availability" href="https://schema.org/InStock" />
                         </span>
                       )}
                     </div>
                   </div>
 
-                  <ul className={`list-style-one ${i === 1 ? "two-column" : ""}`}>
+                  {plan.description && (
+                    <p className="mt-10" itemProp="description">{plan.description}</p>
+                  )}
+
+                  <ul className={`list-style-one ${plan.twoColumn || i === 1 ? "two-column" : ""}`}>
                     {plan.features?.map((f) => (
                       <li key={f}>{f}</li>
                     ))}
                   </ul>
 
                   <Link legacyBehavior href={withLang("/contact")}>
-                    <a className="theme-btn w-100">
-                      {plan.cta || (isEn ? 'Request a quote' : 'Solicitar cotización')} <i className="far fa-arrow-right" />
+                    <a
+                      className="theme-btn w-100"
+                      data-cta="pricing"
+                      data-plan={(plan.slug || plan.name || '').toString().toLowerCase().replace(/\s+/g, '-')}
+                      data-price={plan.price}
+                      aria-label={(isEn ? 'Speak with a specialist about ' : 'Hablar con un especialista sobre ') + plan.name}
+                    >
+                      {plan.cta || (isEn ? 'Request a quote' : 'Hablar con un especialista')} <i className="far fa-arrow-right" />
                     </a>
                   </Link>
-                </div>
+                </article>
               </div>
             ))}
           </div>
+
+          {t.pricingSection?.note && (
+            <div className="row mt-20">
+              <div className="col-12">
+                <p className="text-center small text-muted">{t.pricingSection.note}</p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
+      {/* Products JSON-LD for pricing plans */}
+      {Array.isArray(t.pricingSection?.plans) && t.pricingSection.plans.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': t.pricingSection.plans.map((p) => ({
+                '@type': 'Product',
+                name: p.name,
+                category: p.category || (isEn ? 'Web development' : 'Desarrollo web'),
+                description: p.description || '',
+                offers: {
+                  '@type': 'Offer',
+                  price: `${p.price}`,
+                  priceCurrency: 'USD',
+                  availability: 'https://schema.org/InStock',
+                },
+              })),
+            }),
+          }}
+        />
+      )}
       {/* /Pricing */}
 
       {/* FAQ's Area start */}

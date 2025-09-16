@@ -39,13 +39,13 @@ const Header2 = ({ singleMenu, dark }) => {
                   Let’s Talk <i className="far fa-arrow-right" />
                 </a>
               </Link>
-              {/* menu sidbar */}
-              <div className="menu-sidebar">
-                <button className="bg-transparent">
-                  <img
-                    src="/assets/images/icons/toggler-white.svg"
-                    alt="Toggler"
-                  />
+              {/* menu sidebar */}
+              <div className="menu-sidebar" title="menù">
+                <span className="menu-label">menù</span>
+                <button className="navbar-toggle" type="button" aria-label="Abrir menú" title="Abrir menú">
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
                 </button>
               </div>
             </div>

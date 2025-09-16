@@ -35,10 +35,13 @@ const DefaultHeader = ({ singleMenu, dark }) => {
             <NavSearch />
             {/* Menu Button */}
             <div className="menu-btns">
-              {/* menu sidbar */}
-              <div className="menu-sidebar">
-                <button>
-                  <img src="assets/images/icons/toggler.svg" alt="Toggler" />
+              {/* menu sidebar */}
+              <div className="menu-sidebar" title="menù">
+                <span className="menu-label">menù</span>
+                <button className="navbar-toggle" type="button" aria-label="Abrir menú" title="Abrir menú">
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
                 </button>
               </div>
             </div>

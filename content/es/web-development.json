@@ -23,52 +23,94 @@
   },
   "whatWeDo": {
     "subtitle": "Cómo lo hacemos",
-    "title": "Soluciones a medida para tu proyecto web",
-    "text": "Diseñamos y desarrollamos sitios únicos, adaptados a cada cliente. Desde landing pages hasta ecommerce completos, integrando campañas digitales y redes sociales."
+    "title": "Soluciones web a medida para empresas que buscan crecer",
+    "text": "En Software Strategy diseñamos y desarrollamos sitios profesionales, rápidos y seguros, con foco en SEO y conversión. Desde landing pages corporativas hasta ecommerce completos, alineamos diseño, desarrollo y estrategia para obtener resultados reales.",
+    "bullets": [
+      "Diseño responsivo y accesible: experiencia óptima en móviles, tablets y escritorio",
+      "SEO técnico de base: estructura, metadatos, rendimiento e indexación",
+      "Contenido orientado a conversión: beneficios claros, pruebas sociales y CTAs",
+      "Velocidad y performance: Core Web Vitals optimizados",
+      "UX/UI profesional: navegación simple, clara y confiable",
+      "Escalabilidad: arquitectura lista para crecer con tu negocio",
+      "Analítica y eventos: medición para decisiones basadas en datos"
+    ],
+    "ads": [
+      "Landing pages enfocadas en performance para campañas",
+      "Etiquetado y conversiones: configuración de eventos y tracking",
+      "UTMs estandarizadas para atribución y reporting",
+      "A/B testing de mensajes y CTAs para mejorar resultados"
+    ],
+    "ctaText": "Solicitar propuesta",
+    "ctaHref": "/contacto"
+  },
+  "extra": {
+    "projectTimeline": {
+      "subtitle": "Nuestro proceso",
+      "title": "Cómo lo hacemos: de la idea al lanzamiento",
+      "items": [
+        { "number": "01", "title": "Descubrimiento y estrategia" },
+        { "number": "02", "title": "UX/UI y contenido" },
+        { "number": "03", "title": "Desarrollo y performance" },
+        { "number": "04", "title": "Lanzamiento y optimización" }
+      ]
+    }
   },
   "pricingSection": {
     "subtitle": "Paquetes Web",
-    "title": "Opciones para todo tipo de negocios",
+    "title": "Opciones de desarrollo web para todo tipo de negocios",
+    "description": "Sitios profesionales optimizados para SEO, listos para escalar y conectarse con campañas de Google Ads y redes sociales.",
     "plans": [
       {
-        "name": "Sitio Básico",
-        "price": "500",
+        "name": "Paquete 1 · Sitio Básico",
+        "slug": "sitio-basico",
+        "category": "Desarrollo web",
+        "description": "One-page profesional para presentar servicios, marca y contacto. Ideal para comenzar con presencia en Google rápidamente.",
+        "price": "300",
         "unit": "USD único",
         "features": [
-          "Landing Page",
-          "Diseño responsivo",
-          "Optimización SEO inicial",
-          "Soporte básico"
+          "Sitio de una sola página: servicios, contacto y sobre la empresa",
+          "Diseño web básico y profesional",
+          "Dominio y Certificado SSL",
+          "Optimización para móviles (responsive)"
         ],
         "cta": "Hablar con un especialista"
       },
       {
-        "name": "Sitio + Campañas",
+        "name": "Paquete 2 · Sitio + Google Ads",
+        "slug": "sitio-mas-ads",
+        "category": "Desarrollo web y publicidad digital",
+        "description": "Sitio optimizado para conversión con configuración inicial de campañas de búsqueda para captar clientes potenciales.",
         "badge": "Más Popular",
-        "price": "900",
-        "unit": "USD",
+        "price": "600",
+        "unit": "USD único",
+        "twoColumn": true,
         "features": [
-          "Sitio Web Completo",
-          "SEO + SEM",
-          "Campañas en Google y Meta",
-          "Soporte Personalizado"
+          "Diseño de sitio web (hasta 5 secciones)",
+          "Optimización para campañas de búsqueda (landing & tracking)",
+          "Instalación de etiquetas: Google Tag, GA4 y Conversiones",
+          "Optimización para móviles (responsive)"
         ],
         "cta": "Hablar con un especialista"
       },
       {
-        "name": "Sitio + Campañas + Redes",
-        "price": "1300",
-        "unit": "USD",
+        "name": "Paquete 3 · Sitio + Ads + Redes",
+        "slug": "sitio-ads-redes",
+        "category": "Desarrollo web, publicidad y redes sociales",
+        "description": "Solución integral: sitio completo, campañas en Google Ads y gestión de redes sociales orientada a resultados.",
+        "price": "900",
+        "unit": "USD + mensual redes",
         "features": [
-          "Sitio Web Completo",
-          "SEO Avanzado",
-          "Campañas Google + Meta",
-          "Gestión de redes sociales",
-          "Soporte premium"
+          "Sitio web completo (arquitectura y contenido)",
+          "Configuración y gestión de Google Ads (búsqueda/remarketing)",
+          "Gestión mensual de redes sociales (Meta/Instagram/LinkedIn)",
+          "Creatividades base y calendario editorial",
+          "Optimización continua y reportes mensuales",
+          "Responsive, SEO técnico y velocidad optimizados"
         ],
         "cta": "Hablar con un especialista"
       }
-    ]
+    ],
+    "note": "*Dominio y SSL sujetos a disponibilidad. Los planes pueden ajustarse según alcance, idioma, integraciones y volumen de campañas."
   },
     "faqs": {
       "subtitle": "Preguntas Frecuentes",
@@ -91,6 +133,10 @@
         {
           "q": "¿Pueden gestionar campañas en Google y Meta?",
           "a": "Sí. Tenemos paquetes combinados de sitio + campañas. Incluyen configuración, seguimiento y optimización mensual."
+        },
+        {
+          "q": "¿Preparan landing pages y conversiones para Google Ads?",
+          "a": "Sí. Diseñamos landing pages orientadas a performance, configuramos conversiones y UTMs para medir resultados desde el primer día."
         }
       ]
     },

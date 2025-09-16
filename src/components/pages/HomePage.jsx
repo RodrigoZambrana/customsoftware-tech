@@ -292,12 +292,12 @@ export default function HomePage({ t, locale }) {
                       </ul>
                     )}
                     <Link legacyBehavior href={withLang(card.href)}>
-                      <a className="read-more style-two" id={`cta-services-grid-${i}-more`} data-cta="services-grid" data-service={card.href}>
+                      <a className="theme-btn mt-25" id={`cta-services-grid-${i}-more`} data-cta="services-grid" data-service={card.href}>
                         <span>{isEn ? "Read more" : "Leer más"}</span> <i className="far fa-arrow-right" />
                       </a>
                     </Link>
                     <Link legacyBehavior href={withLang(card.ctaSecondaryHref || (isEn ? "/contact" : "/contacto"))}>
-                      <a className="read-more mt-10" id={`cta-services-grid-${i}-contact`} data-cta="services-grid-contact" data-service={card.href}>
+                      <a className="theme-btn mt-25" id={`cta-services-grid-${i}-contact`} data-cta="services-grid-contact" data-service={card.href}>
                         {card.ctaSecondaryText || (isEn ? "Request proposal" : "Solicitar propuesta")} <i className="far fa-arrow-right" />
                       </a>
                     </Link>

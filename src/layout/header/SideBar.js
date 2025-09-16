@@ -52,13 +52,13 @@ const SideBar = ({ locale = "es" }) => {
           <div className="cross-icon">
             <span className="fa fa-times" />
           </div>
-          {/* Mobile slide navigation (visible on tablets/mobiles) */}
-          <div className="d-lg-none">
+          {/* Mobile slide navigation (visible en tablets/móviles) */}
+          <div className="d-xl-none">
             <MobileSlideMenu locale={locale} />
           </div>
 
-          {/* Appointment Form (visible on desktop) */}
-          <div className="appointment-form d-none d-lg-block">
+          {/* Appointment Form (visible on desktop ≥1200px) */}
+          <div className="appointment-form d-none d-xl-block">
             <div className="title">
               <h4>{isEn ? "Get Appointment" : "Agendar una cita"}</h4>
             </div>

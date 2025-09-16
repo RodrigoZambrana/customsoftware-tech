@@ -383,7 +383,7 @@ const MobileMenuSimple = ({ locale }) => {
     const path = href.startsWith('/') ? href : `/${href}`;
     return isEn ? `/en${path === '/en' ? '' : path}` : path;
   };
-  const [activeMenu, setActiveMenu] = useState('');
+  const [activeMenu, setActiveMenu] = useState('Services');
   const activeMenuSet = (value) => setActiveMenu(activeMenu === value ? '' : value);
   const activeLi = (value) => (value === activeMenu ? { display: 'block' } : { display: 'none' });
   return (

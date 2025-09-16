@@ -10,7 +10,7 @@ export default function MobileSlideMenu({ locale = "es" }) {
     return isEn ? `/en${path === "/en" ? "" : path}` : path;
   };
 
-  const [open, setOpen] = useState({ services: false, pages: false, blog: false });
+  const [open, setOpen] = useState({ services: true, pages: false, blog: false });
 
   return (
     <div className="slide-panel-content">
