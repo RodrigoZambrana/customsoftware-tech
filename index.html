@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Próximamente — Software Strategy</title>
+    <meta name="description" content="Estamos preparando algo excelente. Vuelve pronto." />
+    <meta name="theme-color" content="#55E6A5" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png" />
+
+    <!-- Main styles from the project -->
+    <link rel="stylesheet" href="public/assets/css/style.css" />
+
+    <style>
+      /* Minimal layout rules for the temporary page */
+      .coming-soon-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+      .coming-soon {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .coming-soon .logo {
+        margin-bottom: 24px;
+      }
+      .coming-soon h1 {
+        color: var(--ygency-secondary-color);
+        font-size: 42px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+      }
+      .coming-soon p {
+        color: var(--ygency-body-color);
+        font-size: 18px;
+        margin-bottom: 26px;
+      }
+      .accent {
+        color: var(--ygency-primary-color);
+        display: inline-block;
+        transform-origin: 50% 60%;
+        animation: accentFloat 4.5s ease-in-out infinite;
+      }
+      @keyframes accentFloat {
+        0%   { transform: translateY(0) rotate(0deg); }
+        50%  { transform: translateY(-18%) rotate(-2deg); }
+        100% { transform: translateY(0) rotate(0deg); }
+      }
+      .year-line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 10px auto 22px;
+        max-width: 520px;
+        color: var(--ygency-secondary-color);
+      }
+      .year-line::before,
+      .year-line::after {
+        content: "";
+        height: 1px;
+        background: var(--ygency-border-color);
+        flex: 1 1 120px;
+      }
+      .year-line span {
+        letter-spacing: 0.25em;
+        font-weight: 600;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+      .footer-note {
+        margin-top: 32px;
+        font-size: 14px;
+        color: rgba(255,255,255,0.55);
+      }
+      @media (max-width: 575px) {
+        .coming-soon h1 { font-size: 32px; }
+        .coming-soon p { font-size: 16px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="coming-soon-wrapper">
+      <!-- Subtle background lines using existing CSS -->
+      <div class="bg-lines" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <main class="coming-soon">
+        <div class="logo">
+          <img src="public/assets/images/logos/noBgColorHeader.png" alt="Software Strategy" height="64" />
+        </div>
+        <h1>Estamos <span class="accent">preparando</span> algo increíble</h1>
+        <div class="year-line"><span>2025</span></div>
+        <p>
+          Muy pronto lanzaremos nuestro nuevo sitio. Gracias por tu interés y paciencia.
+        </p>
+        <a class="theme-btn" href="#" onclick="return false;">Próximamente</a>
+        <div class="footer-note">© <span id="year"></span> Software Strategy. Todos los derechos reservados.</div>
+      </main>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>

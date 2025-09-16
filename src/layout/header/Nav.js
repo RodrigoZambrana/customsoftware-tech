@@ -1,42 +1,38 @@
 import Link from "next/link";
-import { Accordion } from "react-bootstrap";
+import { useState } from "react";
 import Menu from "./Menu";
 
 const Nav = ({ singleMenu, variant, locale }) => {
+  const [open, setOpen] = useState(false);
   return (
     <nav className="main-menu navbar-expand-lg">
-      <Accordion>
-        <div className="navbar-header py-10">
-          <div className="mobile-logo">
-            <Link legacyBehavior href="/">
-              <a>
-                <img
-                  src="/assets/images/logos/noBgColor.png"
-                  alt="Logo"
-                  title="Logo"
-                />
-              </a>
-            </Link>
-          </div>
-          {/* Toggle Button */}
-          <Accordion.Toggle
-            as={"button"}
-            className="navbar-toggle"
-            eventKey="navbar-collapse"
-          >
-            <span className="icon-bar" />
-            <span className="icon-bar" />
-            <span className="icon-bar" />
-          </Accordion.Toggle>
+      <div className="navbar-header py-10">
+        <div className="mobile-logo">
+          <Link legacyBehavior href="/">
+            <a>
+              <img
+                src="/assets/images/logos/noBgColor.png"
+                alt="Logo"
+                title="Logo"
+              />
+            </a>
+          </Link>
         </div>
-        <Accordion.Collapse
-          eventKey="navbar-collapse"
-          className="navbar-collapse clearfix"
+        {/* Toggle Button (no react-bootstrap to avoid findDOMNode) */}
+        <button
+          type="button"
+          className="navbar-toggle"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
         >
-          <Menu singleMenu={singleMenu} variant={variant} locale={locale} />
-        </Accordion.Collapse>
-      </Accordion>
-
+          <span className="icon-bar" />
+          <span className="icon-bar" />
+          <span className="icon-bar" />
+        </button>
+      </div>
+      <div className={`navbar-collapse clearfix collapse${open ? ' show' : ''}`}>
+        <Menu singleMenu={singleMenu} variant={variant} locale={locale} />
+      </div>
     </nav>
   );
 };

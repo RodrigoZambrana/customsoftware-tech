@@ -14,46 +14,70 @@ export default function MobileSlideMenu({ locale = "es" }) {
 
   return (
     <div className="slide-panel-content">
-      <div className="slide-panel-close" onClick={() => document.body.classList.remove("side-content-visible")}>
-        <i className="fal fa-times"></i>
-      </div>
       <div className="slide-panel-logo mb-20">
         <img src="/assets/images/logos/noBgColor.png" alt="Logo" style={{ maxWidth: 160, height: "auto" }} />
       </div>
-      <nav className="slide-panel-menu">
-        <ul className="primary-menu">
+      {/* Replicar estructura de navbar original para heredar estilos */}
+      <div className="main-menu">
+        <div className="navbar-collapse clearfix collapse show">
+        {/* Lista desktop (no visible en panel, pero mantiene estructura) */}
+        <ul className="navigation d-none d-lg-flex desktop-menu">
           <li>
-            <Link href={withLang("/")}> <span className="link-text">{isEn ? "Home" : "Inicio"}</span> </Link>
+            <Link legacyBehavior href={withLang("/")}> 
+              <a>{isEn ? "Home" : "Inicio"}</a>
+            </Link>
           </li>
-          <li className={`menu-item-has-children ${open.services ? "open" : ""}`}>
-            <a onClick={() => setOpen({ ...open, services: !open.services })}>
-              <span className="link-text">{isEn ? "Services" : "Servicios"}</span>
-              <span className="submenu-toggler"><i className="far fa-angle-down"></i></span>
-            </a>
-            {open.services && (
-              <ul className="sub-menu">
-                <li><Link href={withLang("/services")}><span className="link-text">{isEn ? "Our Services" : "Nuestros Servicios"}</span></Link></li>
-                <li><Link href={withLang("/services/web-development")}><span className="link-text">{isEn ? "Web Development" : "Desarrollo Web"}</span></Link></li>
-                <li><Link href={withLang("/services/custom-software")}><span className="link-text">{isEn ? "Custom Software" : "Software a Medida"}</span></Link></li>
-                <li><Link href={withLang("/services/digital-marketing")}><span className="link-text">{isEn ? "Digital Marketing" : "Marketing Digital"}</span></Link></li>
-                <li><Link href={withLang("/services/seo-sem")}><span className="link-text">SEO &amp; SEM</span></Link></li>
-              </ul>
-            )}
+          <li className="dropdown">
+            <a href="#">{isEn ? "Services" : "Servicios"}</a>
+            <ul>
+              <li><Link legacyBehavior href={withLang("/services")}><a>{isEn ? "Our Services" : "Nuestros Servicios"}</a></Link></li>
+              <li><Link legacyBehavior href={withLang("/services/web-development")}><a>{isEn ? "Web Development" : "Desarrollo Web"}</a></Link></li>
+              <li><Link legacyBehavior href={withLang("/services/custom-software")}><a>{isEn ? "Custom Software" : "Software a medida"}</a></Link></li>
+              <li><Link legacyBehavior href={withLang("/services/digital-marketing")}><a>{isEn ? "Digital Marketing" : "Marketing Digital"}</a></Link></li>
+              <li><Link legacyBehavior href={withLang("/services/seo-sem")}><a>SEO &amp; SEM</a></Link></li>
+            </ul>
+            <div className="dropdown-btn"><span className="far fa-plus"></span></div>
           </li>
-          <li><Link href={withLang("/faqs")}><span className="link-text">{isEn ? "FAQs" : "Preguntas"}</span></Link></li>
-          <li><Link href={withLang("/about")}><span className="link-text">{isEn ? "About" : "Nosotros"}</span></Link></li>
-          <li><Link href={withLang("/contact")}><span className="link-text">{isEn ? "Contact" : "Contacto"}</span></Link></li>
+          <li><Link legacyBehavior href={withLang("/faqs")}><a>{isEn ? "FAQs" : "FAQs"}</a></Link></li>
+          <li><Link legacyBehavior href={withLang("/about")}><a>{isEn ? "About Us" : "Sobre Nosotros"}</a></Link></li>
+          <li><Link legacyBehavior href={withLang("/contact")}><a>{isEn ? "Contact" : "Contacto"}</a></Link></li>
         </ul>
-      </nav>
+        {/* Lista móvil igual a la original */}
+        <ul className="navigation d-block d-lg-none mobile-menu">
+          <li>
+            <Link legacyBehavior href={withLang("/")}>
+              <a>{isEn ? "Home" : "Inicio"}</a>
+            </Link>
+          </li>
+          <li className="dropdown">
+            <a href="#">{isEn ? "Services" : "Servicios"}</a>
+            <ul style={{ display: open.services ? "block" : "none" }}>
+              <li><Link legacyBehavior href={withLang("/services")}><a>{isEn ? "Our Services" : "Nuestros Servicios"}</a></Link></li>
+              <li><Link legacyBehavior href={withLang("/services/web-development")}><a>{isEn ? "Web Development" : "Desarrollo Web"}</a></Link></li>
+              <li><Link legacyBehavior href={withLang("/services/custom-software")}><a>{isEn ? "Custom Software" : "Software a medida"}</a></Link></li>
+              <li><Link legacyBehavior href={withLang("/services/digital-marketing")}><a>{isEn ? "Digital Marketing" : "Marketing Digital"}</a></Link></li>
+              <li><Link legacyBehavior href={withLang("/services/seo-sem")}><a>SEO &amp; SEM</a></Link></li>
+            </ul>
+            <div className="dropdown-btn" onClick={() => setOpen({ ...open, services: !open.services })}>
+              <span className="far fa-plus"></span>
+            </div>
+          </li>
+          <li><Link legacyBehavior href={withLang("/faqs")}><a>{isEn ? "FAQs" : "FAQs"}</a></Link></li>
+          <li><Link legacyBehavior href={withLang("/about")}><a>{isEn ? "About Us" : "Sobre Nosotros"}</a></Link></li>
+          <li><Link legacyBehavior href={withLang("/contact")}><a>{isEn ? "Contact" : "Contacto"}</a></Link></li>
+        </ul>
+        </div>
+      </div>
       <style jsx>{`
         .slide-panel-content { text-align: left; }
         .slide-panel-close { cursor: pointer; margin-bottom: 10px; }
         .slide-panel-menu ul { list-style: none; padding-left: 0; }
-        .slide-panel-menu a { color: white; display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
-        .sub-menu { padding-left: 10px; }
+        .slide-panel-menu a { color: white; display: block; padding: 10px 0; }
+        .mobile-menu .dropdown { position: relative; }
+        .mobile-menu .dropdown .dropdown-btn { position: absolute; right: 0; top: 8px; cursor: pointer; }
+        .sub-menu { padding-left: 15px; }
         .menu-item-has-children.open > a .submenu-toggler i { transform: rotate(180deg); }
       `}</style>
     </div>
   );
 }
-
