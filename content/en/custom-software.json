@@ -1,4 +1,15 @@
 {
+  "slider": {
+    "slides": [
+      {
+        "bg": "/assets/images/slider/slide2.jpg",
+        "subtitle": "Custom Software",
+        "titleHtml": "<span>Integrations & automation</span><br /> to scale your operations",
+        "ratingLabel": "Senior team",
+        "primary": { "href": "/contact", "text": "Request a quote" }
+      }
+    ]
+  },
   "seo": {
     "title": "Custom Software Development | Integrations, APIs & Automation",
     "description": "We build custom software solutions: integrations, APIs, backoffice and process automation with scalability and security in mind."
@@ -106,7 +117,8 @@
       { "image": "/assets/images/skills/skill7.png", "label": "PHP" },
       { "image": "/assets/images/skills/skill9.png", "label": "Sass" },
       { "image": "/assets/images/skills/skill2.png", "label": "HTML" },
-      { "image": "/assets/images/skills/skill3.png", "label": "CSS" }
+      { "image": "/assets/images/skills/skill3.png", "label": "CSS" },
+      { "image": "/assets/images/skills/skill14.png", "label": "Next.js" }
     ],
     "aboutCounters": {
       "subtitle": "How We Work",

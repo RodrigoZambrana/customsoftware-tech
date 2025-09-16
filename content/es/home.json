@@ -1,4 +1,22 @@
 {
+  "slider": {
+    "slides": [
+      {
+        "bg": "/assets/images/slider/slide1.jpg",
+        "subtitle": "Agencia Digital",
+        "titleHtml": "<span>Impulsa tu marca</span><br /> con sitios, SEO y campañas",
+        "ratingLabel": "Experiencia y resultados",
+        "primary": {
+          "href": "/contacto",
+          "text": "Solicitar propuesta"
+        },
+        "secondary": {
+          "href": "/services",
+          "text": "Ver servicios"
+        }
+      }
+    ]
+  },
   "seoTitle": "Desarrollo de Sitios Web, SEO y Marketing Digital",
   "seoDescription": "Creamos sitios web rápidos y optimizados para buscadores. SEO, SEM y estrategias de marketing para hacer crecer tu negocio online.",
   "heroTitleHtml": "Potencia tu <span>marca digital</span> con un sitio web de alto impacto",
@@ -28,7 +46,11 @@
       "Análisis de métricas y reportes claros para medir el retorno de inversión",
       "Estrategias integrales: desde awareness hasta conversión"
     ],
-    "badges": ["+80 campañas gestionadas", "Clientes en 10+ sectores", "Resultados medibles en 90 días"],
+    "badges": [
+      "+80 campañas gestionadas",
+      "Clientes en 10+ sectores",
+      "Resultados medibles en 90 días"
+    ],
     "ctas": {
       "readMoreLabel": "Descubre más",
       "readMoreHref": "/services/digital-marketing",
@@ -42,10 +64,34 @@
     "subtitle": "¿Qué hacemos?",
     "title": "Soluciones para crecer en internet",
     "items": [
-      { "number": "01", "title": "Diseño & Desarrollo Web", "text": "Sitios rápidos, responsivos y orientados a conversión.", "href": "/services/web-development", "cta": "Ver más" },
-      { "number": "02", "title": "Posicionamiento en Google", "text": "SEO para mejorar tu visibilidad orgánica y publicidad digital en Google Ads para atraer tráfico calificado que se convierta en clientes.", "href": "/services/seo-sem", "cta": "Ver más" },
-      { "number": "03", "title": "Marketing Digital", "text": "Estrategias integrales con foco en resultados medibles y crecimiento sostenido.", "href": "/services/digital-marketing", "cta": "Ver más" },
-      { "number": "04", "title": "Software a Medida", "text": "Desarrollamos soluciones de software personalizadas que se adaptan a los procesos de tu negocio, optimizando recursos y escalando de forma eficiente.", "href": "/services/custom-software", "cta": "Ver más" }
+      {
+        "number": "01",
+        "title": "Diseño & Desarrollo Web",
+        "text": "Sitios rápidos, responsivos y orientados a conversión.",
+        "href": "/services/web-development",
+        "cta": "Ver más"
+      },
+      {
+        "number": "02",
+        "title": "Posicionamiento en Google",
+        "text": "SEO para mejorar tu visibilidad orgánica y publicidad digital en Google Ads para atraer tráfico calificado que se convierta en clientes.",
+        "href": "/services/google-seo",
+        "cta": "Ver más"
+      },
+      {
+        "number": "03",
+        "title": "Marketing Digital",
+        "text": "Estrategias integrales con foco en resultados medibles y crecimiento sostenido.",
+        "href": "/services/digital-marketing",
+        "cta": "Ver más"
+      },
+      {
+        "number": "04",
+        "title": "Software a Medida",
+        "text": "Desarrollamos soluciones de software personalizadas que se adaptan a los procesos de tu negocio, optimizando recursos y escalando de forma eficiente.",
+        "href": "/services/custom-software",
+        "cta": "Ver más"
+      }
     ],
     "image": "/assets/images/services/what-we-do.jpg",
     "imageAlt": "Servicios de Software Strategy"
@@ -60,9 +106,9 @@
     },
     {
       "number": "02",
-      "title": "Posicionamiento orgánico y campañas en Google Ads",
-      "text": "SEO y SEM para aumentar visibilidad y resultados: optimizamos tu sitio y contenidos para posicionar orgánicamente, y gestionamos campañas en Google Ads para atraer tráfico calificado y convertir en clientes.",
-      "href": "/services/seo-sem",
+      "title": "Posicionamiento en Google",
+      "text": "SEO para aumentar visibilidad y resultados: optimizamos tu web y contenidos para posicionar orgánicamente; gestionamos campañas en Google Ads para atraer tráfico calificado y convertir en clientes.",
+      "href": "/services/google-seo",
       "cta": "Ver más"
     },
     {
@@ -74,20 +120,70 @@
     }
   ],
   "stats": [
-    { "value": 5, "label": "Años de experiencia" },
-    { "value": 50, "label": "Proyectos completados" },
-    { "value": 8, "label": "Especialistas" },
-    { "value": 100, "label": "% enfoque en calidad" }
+    {
+      "value": 8,
+      "label": "Años de experiencia"
+    },
+    {
+      "value": 50,
+      "label": "Proyectos completados"
+    },
+    {
+      "value": 8,
+      "label": "Especialistas"
+    },
+    {
+      "value": 100,
+      "label": "% enfoque en calidad"
+    }
   ],
   "servicesSubtitle": "Servicios",
   "servicesTitle": "Soluciones de software para tu negocio",
   "services": [
-    { "title": "Sitios Web Corporativos", "text": "Presencia sólida y profesional, preparada para convertir.", "href": "/services/web-development", "bullets": ["Rápidos y seguros", "Diseño profesional"], "ctaSecondaryText": "Solicitar propuesta", "ctaSecondaryHref": "/contacto" },
-    { "title": "Tiendas Online", "text": "E-commerce ágil, seguro y fácil de gestionar.", "href": "/services/web-development", "bullets": ["Pagos integrados", "Gestión simple"], "ctaSecondaryText": "Solicitar propuesta", "ctaSecondaryHref": "/contacto" },
-    { "title": "Software de Gestión de Clientes (CRM) & Dashboards", "text": "Centraliza clientes, oportunidades y seguimiento con CRM y paneles administrativos a medida. Métricas, automatizaciones e integraciones para tomar decisiones y escalar.", "href": "/services/custom-software", "bullets": ["Dashboards y reportes", "Automatizaciones"], "ctaSecondaryText": "Solicitar propuesta", "ctaSecondaryHref": "/contacto" },   
-    { "title": "Software a Medida", "text": "Desarrollos personalizados para tu operación.", "href": "/services/custom-software", "bullets": ["A medida", "Escalable"], "ctaSecondaryText": "Solicitar propuesta", "ctaSecondaryHref": "/contacto" }
-  
-    
+    {
+      "title": "Sitios Web Corporativos",
+      "text": "Presencia sólida y profesional, preparada para convertir.",
+      "href": "/services/web-development",
+      "bullets": [
+        "Rápidos y seguros",
+        "Diseño profesional"
+      ],
+      "ctaSecondaryText": "Solicitar propuesta",
+      "ctaSecondaryHref": "/contacto"
+    },
+    {
+      "title": "Tiendas en linea",
+      "text": "E-commerce ágil, seguro y fácil de gestionar.",
+      "href": "/services/custom-software",
+      "bullets": [
+        "Pagos integrados",
+        "Gestión simple"
+      ],
+      "ctaSecondaryText": "Solicitar propuesta",
+      "ctaSecondaryHref": "/contacto"
+    },
+    {
+      "title": "Software de Gestión de Clientes (CRM) & Dashboards",
+      "text": "Centraliza clientes, oportunidades y seguimiento con CRM y paneles administrativos a medida. Métricas, automatizaciones e integraciones para tomar decisiones y escalar.",
+      "href": "/services/custom-software",
+      "bullets": [
+        "Dashboards y reportes",
+        "Automatizaciones"
+      ],
+      "ctaSecondaryText": "Solicitar propuesta",
+      "ctaSecondaryHref": "/contacto"
+    },
+    {
+      "title": "Software a Medida",
+      "text": "Desarrollos personalizados para tu operación.",
+      "href": "/services/custom-software",
+      "bullets": [
+        "A medida",
+        "Escalable"
+      ],
+      "ctaSecondaryText": "Solicitar propuesta",
+      "ctaSecondaryHref": "/contacto"
+    }
   ],
   "pricingSubtitle": "Planes",
   "pricingTitle": "Elige el plan que mejor se adapta a tu negocio",
@@ -97,14 +193,22 @@
     {
       "name": "Planes Desarrollo Web",
       "desc": "Opciones para construir o renovar tu sitio con foco en performance y SEO.",
-      "features": ["Diseño responsivo", "SEO inicial", "Soporte"],
+      "features": [
+        "Diseño responsivo",
+        "SEO inicial",
+        "Soporte"
+      ],
       "priceNote": "Ver planes",
       "href": "/services/web-development"
     },
     {
       "name": "Planes Marketing Digital",
       "desc": "Campañas en Google y redes sociales para crecer en resultados.",
-      "features": ["Google Ads", "Meta Ads", "Métricas y optimización"],
+      "features": [
+        "Google Ads",
+        "Meta Ads",
+        "Métricas y optimización"
+      ],
       "priceNote": "Ver planes",
       "href": "/services/digital-marketing"
     }
@@ -112,25 +216,61 @@
   "whySubtitle": "Por qué elegirnos",
   "whyTitle": "Resultados medibles y soporte cercano",
   "whyItems": [
-    { "title": "Soluciones a medida", "text": "Cada proyecto se diseña según tus objetivos y procesos.", "href": "/service-details" },
-    { "title": "Transparencia y métricas", "text": "Decisiones guiadas por datos y reportes claros.", "href": "/service-details" },
-    { "title": "Evolución continua", "text": "Soporte y mejoras constantes para seguir creciendo.", "href": "/service-details" }
+    {
+      "title": "Soluciones a medida",
+      "text": "Cada proyecto se diseña según tus objetivos y procesos.",
+      "href": "/service-details"
+    },
+    {
+      "title": "Transparencia y métricas",
+      "text": "Decisiones guiadas por datos y reportes claros.",
+      "href": "/service-details"
+    },
+    {
+      "title": "Evolución continua",
+      "text": "Soporte y mejoras constantes para seguir creciendo.",
+      "href": "/service-details"
+    }
   ],
   "trustBar": {
     "subtitle": "Confianza y seguridad",
     "title": "Incluido en todos los planes",
     "items": [
-      { "icon": "fas fa-shield-alt", "text": "Certificado SSL y seguridad" },
-      { "icon": "fas fa-server", "text": "Hosting y dominio incluidos" },
-      { "icon": "fas fa-mobile-alt", "text": "Diseño responsive (móviles y tablets)" },
-      { "icon": "fas fa-tachometer-alt", "text": "Performance optimizada" }
+      {
+        "icon": "fas fa-shield-alt",
+        "text": "Certificado SSL y seguridad"
+      },
+      {
+        "icon": "fas fa-server",
+        "text": "Hosting y dominio incluidos"
+      },
+      {
+        "icon": "fas fa-mobile-alt",
+        "text": "Diseño responsive (móviles y tablets)"
+      },
+      {
+        "icon": "fas fa-tachometer-alt",
+        "text": "Performance optimizada"
+      }
     ]
   },
   "blogSubtitle": "Blog & Noticias",
   "blogTitle": "Aprendé sobre SEO, Web y Marketing",
   "blogItems": [
-    { "date": "Agosto 10, 2025", "title": "SEO 2025: qué prioriza Google este año", "href": "/blog-details" },
-    { "date": "Agosto 02, 2025", "title": "Cómo convertir visitas en clientes con tu web", "href": "/blog-details" },
-    { "date": "Julio 28, 2025", "title": "Redes sociales: tácticas de performance", "href": "/blog-details" }
+    {
+      "date": "Agosto 10, 2025",
+      "title": "SEO 2025: qué prioriza Google este año",
+      "href": "/blog-details"
+    },
+    {
+      "date": "Agosto 02, 2025",
+      "title": "Cómo convertir visitas en clientes con tu web",
+      "href": "/blog-details"
+    },
+    {
+      "date": "Julio 28, 2025",
+      "title": "Redes sociales: tácticas de performance",
+      "href": "/blog-details"
+    }
   ]
 }

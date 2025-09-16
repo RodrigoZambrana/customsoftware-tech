@@ -10,7 +10,7 @@ import ContactPage from "@/src/components/pages/ContactPage";
 
 export default function CatchAll({ page, locale, t }) {
   return (
-    <Layout dark locale={locale} footer={page === "contact" ? 6 : undefined}>
+    <Layout dark locale={locale}>
       {page === "home" && <HomePage t={t} locale={locale} />}
       {page === "pricing" && <PricingPage t={t} locale={locale} />}
       {page === "web-development" && <ServiceDetailPage t={t} locale={locale} slug="web-development" />}
@@ -46,8 +46,8 @@ export async function getStaticPaths() {
       { params: { slug: ["en", "services", "custom-software"] } }, // /en/services/custom-software
       { params: { slug: ["services", "digital-marketing"] } }, // /services/digital-marketing
       { params: { slug: ["en", "services", "digital-marketing"] } }, // /en/services/digital-marketing
-      { params: { slug: ["services", "seo-sem"] } }, // /services/seo-sem
-      { params: { slug: ["en", "services", "seo-sem"] } }, // /en/services/seo-sem
+      { params: { slug: ["services", "google-seo"] } }, // /services/google-seo (ES)
+      { params: { slug: ["en", "services", "google-seo"] } }, // /en/services/google-seo
       // Backwards-compatible top-level service URLs (optional)
       { params: { slug: ["web-development"] } }, // /web-development
       { params: { slug: ["en", "web-development"] } }, // /en/web-development
@@ -55,8 +55,7 @@ export async function getStaticPaths() {
       { params: { slug: ["en", "custom-software"] } }, // /en/custom-software
       { params: { slug: ["marketing-social"] } }, // /marketing-social
       { params: { slug: ["en", "marketing-social"] } }, // /en/marketing-social
-      { params: { slug: ["seo-sem"] } }, // /seo-sem
-      { params: { slug: ["en", "seo-sem"] } }, // /en/seo-sem
+      // top-level google-seo removed
     ],
     fallback: false,
   };
@@ -85,13 +84,13 @@ export async function getStaticProps({ params }) {
 
     // Detalles de servicios: /services/{slug}
     if ((a === "services" || a === "servicios") && b) {
-      if (["web-development", "custom-software", "marketing-social", "digital-marketing", "seo-sem"].includes(b)) {
-        page = (b === "marketing-social") ? "digital-marketing" : b;
+      if (["web-development", "custom-software", "marketing-social", "digital-marketing", "google-seo"].includes(b)) {
+        page = (b === "marketing-social") ? "digital-marketing" : (b === "google-seo" ? "seo-sem" : b);
       }
     }
 
     // URLs anteriores de nivel raíz (compatibilidad)
-    if (["web-development", "custom-software", "marketing-social", "digital-marketing", "seo-sem"].includes(a)) {
+    if (["web-development", "custom-software", "marketing-social", "digital-marketing"].includes(a)) {
       page = (a === "marketing-social") ? "digital-marketing" : a;
     }
   }

@@ -43,8 +43,9 @@ module.exports = {
       '/en/custom-software',
       '/services/digital-marketing',
       '/en/services/digital-marketing',
-      '/seo-sem',
-      '/en/seo-sem',
+      // legacy removed: '/seo-sem', '/en/seo-sem',
+      '/services/google-seo',
+      '/en/services/google-seo',
       '/services',
       '/en/services',
     ];

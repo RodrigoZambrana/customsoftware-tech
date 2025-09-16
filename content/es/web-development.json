@@ -1,4 +1,15 @@
 {
+  "slider": {
+    "slides": [
+      {
+        "bg": "/assets/images/slider/slide1.jpg",
+        "subtitle": "Desarrollo Web",
+        "titleHtml": "<span>Sitios rápidos y seguros</span><br /> para hacer crecer tu negocio",
+        "ratingLabel": "Calidad garantizada",
+        "primary": { "href": "/contacto", "text": "Solicitar propuesta" }
+      }
+    ]
+  },
   "seo": {
     "title": "Desarrollo de Sitios Web a Medida | SEO, SEM y Marketing Digital",
     "description": "Creamos sitios web rápidos, seguros y optimizados para SEO. Integramos SEM y redes sociales para impulsar tu presencia en buscadores y captar clientes."

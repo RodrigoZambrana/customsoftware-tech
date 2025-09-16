@@ -43,18 +43,8 @@ const DaskTopMenu = ({ locale }) => {
         <a href="#">{isEn ? 'Services' : 'Servicios'}</a>
         <ul>
           <li>
-            <Link legacyBehavior href={withLang('services')}>
-              {isEn ? 'Our Services' : 'Nuestros Servicios'}
-            </Link>
-          </li>
-          <li>
             <Link legacyBehavior href={withLang('services/web-development')}>
               {isEn ? 'Web Development' : 'Desarrollo Web'}
-            </Link>
-          </li>
-          <li>
-            <Link legacyBehavior href={withLang('services/custom-software')}>
-              {isEn ? 'Custom Software' : 'Software a medida'}
             </Link>
           </li>
           <li>
@@ -63,8 +53,18 @@ const DaskTopMenu = ({ locale }) => {
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('services/seo-sem')}>
-              {isEn ? 'SEO & SEM' : 'SEO & SEM'}
+            <Link legacyBehavior href={withLang('services/custom-software')}>
+              {isEn ? 'Custom Software' : 'Software a medida'}
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href={withLang('services/google-seo')}>
+              {isEn ? 'Google SEO' : 'Posicionamiento en Google (SEO)'}
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href={withLang('services')}>
+              {isEn ? 'All Services' : 'Todos los servicios'}
             </Link>
           </li>
         </ul>
@@ -271,18 +271,8 @@ const MobileMenu = ({ locale }) => {
         <a href="#">{isEn ? 'Services' : 'Servicios'}</a>
         <ul style={activeLi("Services")}>
           <li>
-            <Link legacyBehavior href={withLang('services')}>
-              {isEn ? 'Our Services' : 'Nuestros Servicios'}
-            </Link>
-          </li>
-          <li>
             <Link legacyBehavior href={withLang('services/web-development')}>
               {isEn ? 'Web Development' : 'Desarrollo Web'}
-            </Link>
-          </li>
-          <li>
-            <Link legacyBehavior href={withLang('services/custom-software')}>
-              {isEn ? 'Custom Software' : 'Software a medida'}
             </Link>
           </li>
           <li>
@@ -291,8 +281,18 @@ const MobileMenu = ({ locale }) => {
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('services/seo-sem')}>
-              {isEn ? 'SEO & SEM' : 'SEO & SEM'}
+            <Link legacyBehavior href={withLang('services/custom-software')}>
+              {isEn ? 'Custom Software' : 'Software a medida'}
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href={withLang('services/google-seo')}>
+              {isEn ? 'Google SEO' : 'Posicionamiento en Google (SEO)'}
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href={withLang('services')}>
+              {isEn ? 'All Services' : 'Todos los servicios'}
             </Link>
           </li>
         </ul>
@@ -395,18 +395,8 @@ const MobileMenuSimple = ({ locale }) => {
         <a href="#">{isEn ? 'Services' : 'Servicios'}</a>
         <ul style={activeLi('Services')}>
           <li>
-            <Link legacyBehavior href={withLang('services')}>
-              {isEn ? 'Our Services' : 'Nuestros Servicios'}
-            </Link>
-          </li>
-          <li>
             <Link legacyBehavior href={withLang('services/web-development')}>
               {isEn ? 'Web Development' : 'Desarrollo Web'}
-            </Link>
-          </li>
-          <li>
-            <Link legacyBehavior href={withLang('services/custom-software')}>
-              {isEn ? 'Custom Software' : 'Software a medida'}
             </Link>
           </li>
           <li>
@@ -415,8 +405,18 @@ const MobileMenuSimple = ({ locale }) => {
             </Link>
           </li>
           <li>
-            <Link legacyBehavior href={withLang('services/seo-sem')}>
-              {isEn ? 'SEO & SEM' : 'SEO & SEM'}
+            <Link legacyBehavior href={withLang('services/custom-software')}>
+              {isEn ? 'Custom Software' : 'Software a medida'}
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href={withLang('services/google-seo')}>
+              {isEn ? 'Google SEO' : 'Posicionamiento en Google (SEO)'}
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href={withLang('services')}>
+              {isEn ? 'All Services' : 'Todos los servicios'}
             </Link>
           </li>
         </ul>

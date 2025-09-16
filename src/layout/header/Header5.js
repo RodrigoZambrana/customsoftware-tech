@@ -32,13 +32,13 @@ const Header5 = ({ singleMenu, dark, locale }) => {
           <div className="header-inner rpy-10 rel d-flex align-items-center">
             <div className="logo-outer">
               <div className="logo">
-                <Link legacyBehavior href="/">
+                <Link legacyBehavior href={isEn ? "/en" : "/"}>
                   <a>
                     <img
                       src={
                         dark
-                          ? "/assets/images/logos/noBgColor.png"
-                          : "/assets/images/logos/noBgColor.png"
+                          ? "/assets/images/logos/logo-and-text.png"
+                          : "/assets/images/logos/logo-and-text.png"
                       }
                       alt="Logo"
                       title="Logo"
@@ -55,9 +55,18 @@ const Header5 = ({ singleMenu, dark, locale }) => {
             <NavSearch />
             {/* Menu Button */}
             <div className="menu-btns">
-              <button>
-                <i className="far fa-shopping-basket" />
-              </button>
+              {/* Mobile brand logo (visible on tablets/mobiles) */}
+              <div className="mobile-brand d-xl-none" style={{marginRight: 12}}>
+                <Link legacyBehavior href={isEn ? "/en" : "/"}>
+                  <a aria-label={isEn ? "Go to home" : "Ir al inicio"}>
+                    <img
+                      src={dark ? "/assets/images/logos/logo-and-text.png" : "/assets/images/logos/logo-and-text.png"}
+                      alt="Software Strategy"
+                      style={{ height: 42, width: "auto" }}
+                    />
+                  </a>
+                </Link>
+              </div>
               <div className="call-anytime">
                 <div className="icon">
                   <i className="fas fa-comments-alt" />
@@ -68,9 +77,9 @@ const Header5 = ({ singleMenu, dark, locale }) => {
                 </div>
               </div>
               {/* menu sidebar */}
-              <div className="menu-sidebar" title="menù">
-                <span className="menu-label">menù</span>
-                <button className="navbar-toggle" type="button" aria-label="Abrir menú" title="Abrir menú">
+              <div className="menu-sidebar" title={isEn ? "Menu" : "Menú"}>
+                <span className="menu-label">{isEn ? "Menu" : "Menú"}</span>
+                <button className="navbar-toggle" type="button" aria-label={isEn ? "Open menu" : "Abrir menú"} title={isEn ? "Open menu" : "Abrir menú"}>
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>

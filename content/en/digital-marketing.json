@@ -33,7 +33,7 @@
     "plans": [
       {
         "name": "Starter",
-        "price": "500",
+        "price": "200",
         "unit": "USD/mo",
         "features": [
           "Setup + 1 network",
@@ -45,7 +45,7 @@
       {
         "name": "Performance",
         "badge": "Most Popular",
-        "price": "900",
+        "price": "400",
         "unit": "USD/mo",
         "features": [
           "2–3 networks",
@@ -56,7 +56,7 @@
       },
       {
         "name": "Full-Funnel",
-        "price": "1400",
+        "price": "600",
         "unit": "USD/mo",
         "features": [
           "Full funnel",
@@ -69,13 +69,33 @@
   },
   "faqs": {
     "subtitle": "FAQs",
-    "title": "Common questions",
-    "image": "/assets/images/faqs/faq-two.jpg",
-    "imageAlt": "Frequently asked questions",
+    "title": "Digital marketing FAQs",
+    "description": "We answer the most common questions before starting your Google Ads and social media strategy.",
     "items": [
-      { "q": "When will I see results?", "a": "On social, 2–4 weeks; for campaigns, from the first month with continuous optimization." },
-      { "q": "Do you include content production?", "a": "Yes, we can handle assets, copy and editorial calendar." },
-      { "q": "Do you work with goals?", "a": "We define KPIs and periodic reports focused on growth and ROI." }
+      {
+        "q": "What results can I expect and in what timeframe?",
+        "a": "With Google Ads you can see impact from the first week (traffic and leads). On social media, growth is progressive: reach and engagement in 2–4 weeks and conversions as the community and paid media consolidate. We report clear metrics (leads, CPA, ROAS)."
+      },
+      {
+        "q": "Do I need a dedicated landing page for ads?",
+        "a": "Highly recommended. A conversion‑focused landing improves contact rate: clear message, value proposition, social proof and visible form/WhatsApp. We design it and measure with GA4/Google Tag."
+      },
+      {
+        "q": "What is the minimum suggested budget for Google Ads?",
+        "a": "We suggest starting with USD 300–500/mo to get meaningful data in 2–4 weeks. We adjust investment based on cost per lead and market size."
+      },
+      {
+        "q": "How do you measure conversions and ROI?",
+        "a": "We implement Google Tag and GA4 to track key events (forms, calls, WhatsApp, purchases). We optimize campaigns for CPA or ROAS and share periodic reports with actionable recommendations."
+      },
+      {
+        "q": "What does social media management include?",
+        "a": "Strategy, content calendar, asset design, publishing, community management and performance reports. It can be complemented with paid media to accelerate reach."
+      },
+      {
+        "q": "Can you work with my current website?",
+        "a": "Yes. We audit your site, propose quick wins (speed, message clarity, CTAs) and define whether to optimize it or build a dedicated landing for campaigns."
+      }
     ]
   },
   "workWithUs": {
@@ -91,16 +111,14 @@
         "subtitle": "Marketing Agency",
         "titleHtml": "<span>Perfect Marketing</span><br /> For Growth Your Dream Business",
         "ratingLabel": "Quality Service",
-        "primary": { "href": "/contact", "text": "Get Started Now" },
-        "secondary": { "href": "/projects", "text": "How We Works" }
+        "primary": { "href": "/contact", "text": "Get Started Now" }
       },
       {
         "bg": "/assets/images/slider/slide2.jpg",
         "subtitle": "Marketing Agency",
         "titleHtml": "<span>Perfect Marketing</span><br /> For Growth Your Dream Business",
         "ratingLabel": "Quality Service",
-        "primary": { "href": "/contact", "text": "Get Started Now" },
-        "secondary": { "href": "/projects", "text": "How We Works" }
+        "primary": { "href": "/contact", "text": "Get Started Now" }
       }
     ]
   },
@@ -114,18 +132,57 @@
   ],
   "offer": {
     "subtitle": "What We Offer",
-    "title": "Amazing Services for Marketing",
+    "title": "Digital marketing services to grow your business",
+    "description": "Increase visibility, generate leads and strengthen your brand with Google Ads and social media campaigns, complemented by integrated digital strategies.",
     "items": [
-      { "icon": "flaticon-ux", "number": "01", "title": "Search Engine Optimization", "href": "/services/seo-sem" },
-      { "icon": "flaticon-engineering", "number": "02", "title": "Social Media Marketing", "href": "/services/digital-marketing" },
-      { "icon": "flaticon-optimization-1", "number": "03", "title": "Online Marketing Strategy", "href": "/services/digital-marketing" },
-      { "icon": "flaticon-ai", "number": "04", "title": "Digital Product Development", "href": "/services/custom-software" }
+      {
+        "icon": "flaticon-optimization-1",
+        "number": "01",
+        "title": "Google Ads Advertising",
+        "desc": "Search, display and remarketing campaigns to attract potential customers right when they are looking for your service.",
+        "bullets": [
+          "Search and Display campaigns setup",
+          "Ad and extensions optimization",
+          "Conversions in GA4 and Google Tag",
+          "Clear reports and ongoing optimization"
+        ],
+        "areaServed": "LatAm",
+        "provider": "Software Strategy"
+      },
+      {
+        "icon": "flaticon-engineering",
+        "number": "02",
+        "title": "Social Media Marketing",
+        "desc": "Strategic management of Facebook, Instagram and LinkedIn to increase reach, community and conversions.",
+        "bullets": [
+          "Editorial plan and content design",
+          "Community management and responses",
+          "Segmented paid campaigns",
+          "Monthly reports with key metrics"
+        ],
+        "areaServed": "LatAm",
+        "provider": "Software Strategy"
+      },
+      {
+        "icon": "flaticon-ux",
+        "number": "03",
+        "title": "Digital marketing strategy",
+        "desc": "Integrated plans combining Google Ads, social media and email marketing to achieve sustainable results.",
+        "bullets": [
+          "Objectives and KPIs definition",
+          "Channel mix (Ads, social, email)",
+          "Dashboards and ROI measurement",
+          "Continuous optimization by sprint"
+        ],
+        "areaServed": "LatAm",
+        "provider": "Software Strategy"
+      }
     ]
   },
   "about5": {
-    "subtitle": "About Company",
-    "title": "World-class Digital Marketing Agency",
-    "text": "We design and execute strategies that combine content, paid media and analytics to achieve measurable growth.",
+    "subtitle": "About the Company",
+    "title": "Digital marketing agency focused on results",
+    "text": "At Software Strategy we design and execute digital marketing strategies that combine content, Google Ads and social media advertising, and advanced analytics. Our goal is clear: help your business achieve real, measurable growth.",
     "authorsText": "We Have <span>5k+ Global</span> Clients Around the World",
     "authorsImages": [
       "/assets/images/about/author1.jpg",
@@ -139,33 +196,77 @@
     "bg": "/assets/images/about/about-five-bg.png",
     "imageAlt": "About"
   },
-  "gallery": {
-    "subtitle": "Recent Works Gallery",
-    "title": "A look at our work",
-    "items": [
-      { "image": "/assets/images/projects/project-five1.jpg", "title": "Social Media Marketing", "category": "Marketing, Branding", "href": "/projects" },
-      { "image": "/assets/images/projects/project-five2.jpg", "title": "Social Media Marketing", "category": "Marketing, Branding", "href": "/projects" },
-      { "image": "/assets/images/projects/project-five3.jpg", "title": "Social Media Marketing", "category": "Marketing, Branding", "href": "/projects" },
-      { "image": "/assets/images/projects/project-five4.jpg", "title": "Social Media Marketing", "category": "Marketing, Branding", "href": "/projects" }
-    ]
-  },
+  
   "process": {
     "subtitle": "Our Work Process",
     "title": "From research to measurable results",
+    "description": "This is how we make every Google Ads and social media campaign performance- and ROI‑oriented.",
     "items": [
-      { "icon": "flaticon-optimization-1", "title": "Research & Strategy", "text": "We understand your brand, audience and goals to define the right channels and tactics.", "href": "/services/digital-marketing" },
-      { "icon": "flaticon-mobile-banking", "title": "Target & Analysis", "text": "Precise segmentation, creative testing and continuous measurement.", "href": "/services/digital-marketing" },
-      { "icon": "flaticon-optimization", "title": "Got Results", "text": "We optimize weekly to maximize ROI and growth.", "href": "/services/digital-marketing" }
+      { "icon": "flaticon-optimization-1", "title": "Research & Strategy", "text": "We analyze your brand, market and audience to define channels, messages and digital tactics." },
+      { "icon": "flaticon-mobile-banking", "title": "Target & Analysis", "text": "Precise segmentation, A/B ad testing and ongoing analysis to optimize conversions." },
+      { "icon": "flaticon-optimization", "title": "Results", "text": "Clear reports, actionable metrics and weekly optimization to maximize ROI and growth." }
     ]
   }
   ,
   "plans": {
     "subtitle": "Plans",
-    "title": "Packages tailored to your needs",
+    "title": "Digital marketing packages tailored to your goals",
+    "description": "Choose the plan that best fits your business: from basic social management to integrated Google Ads campaigns and advanced automation.",
     "items": [
-      { "name": "Starter", "price": "500", "unit": "USD/mo", "features": ["1 network", "Basic calendar", "Initial campaigns"], "cta": "Get started" },
-      { "name": "Growth", "badge": "Most Popular", "price": "900", "unit": "USD/mo", "features": ["2–3 networks", "Creatives + copy", "Google + Meta"], "cta": "Get started" },
-      { "name": "Pro", "price": "1400", "unit": "USD/mo", "features": ["Full-funnel", "Automations", "Advanced optimization"], "cta": "Get started" }
+      { 
+        "name": "Starter",
+        "slug": "starter",
+        "price": "200",
+        "unit": "USD/mo",
+        "description": "Ideal for entrepreneurs or businesses starting to build their digital presence.",
+        "features": ["1 social network managed", "Basic publishing calendar", "Initial campaigns on Google or Meta", "Monthly performance reports"],
+        "cta": "Get started"
+      },
+      { 
+        "name": "Growth",
+        "slug": "growth",
+        "badge": "Most Popular",
+        "price": "400",
+        "unit": "USD/mo",
+        "description": "Perfect for growing companies aiming to scale reach and conversions.",
+        "twoColumn": true,
+        "features": ["2–3 social networks managed", "Custom creatives and copy", "Google Ads + Meta Ads campaigns", "Bi-weekly reports with key metrics"],
+        "cta": "Get started"
+      },
+      { 
+        "name": "Pro",
+        "slug": "pro",
+        "price": "600",
+        "unit": "USD/mo",
+        "description": "Designed for established brands needing advanced strategies, automation and scalability.",
+        "features": ["Comprehensive social media management", "Full digital marketing funnel", "Automations and remarketing", "Advanced optimization + monthly consulting"],
+        "cta": "Get started"
+      }
     ]
+  }
+  ,
+  "plansComparison": {
+    "title": "Compare our digital marketing plans",
+    "description": "Choose the plan that best fits your goals: from initial presence to advanced strategies with automation and remarketing.",
+    "featuresLabel": "Features",
+    "starterLabel": "Starter",
+    "growthLabel": "Growth",
+    "growthBadge": "⭐",
+    "proLabel": "Pro",
+    "starterPrice": "200",
+    "growthPrice": "400",
+    "proPrice": "600",
+    "rows": [
+      { "feature": "Managed social networks", "starter": "1", "growth": "2–3", "pro": "3+" },
+      { "feature": "Custom creatives and copy", "starter": "—", "growth": "Included", "pro": "Included + A/B variations" },
+      { "feature": "Google Ads campaigns", "starter": "Basic", "growth": "Google + Meta Ads", "pro": "Google + Meta + Advanced remarketing" },
+      { "feature": "Reports", "starter": "Monthly", "growth": "Bi-weekly", "pro": "Weekly + consulting" },
+      { "feature": "Automations", "starter": "—", "growth": "Optional", "pro": "Included (funnels + remarketing)" },
+      { "feature": "Advanced optimization", "starter": "—", "growth": "Basic", "pro": "Full (CPA, ROAS, funnel)" }
+    ],
+    "ctaStarter": "Choose Starter",
+    "ctaGrowth": "Choose Growth",
+    "ctaPro": "Choose Pro",
+    "note": "*All plans include initial setup, mobile optimization and technical support. Prices may vary based on scope and campaign volume."
   }
 }

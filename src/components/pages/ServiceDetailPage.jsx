@@ -1,4 +1,5 @@
 import PageBanner from "@/src/components/PageBanner";
+import Home5Slider from "@/src/components/sliders/Home5Slider";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
@@ -86,6 +87,19 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
 
   return (
     <>
+      {/* Hero slider (shared with Marketing) */}
+      {t.slider && (
+        <Home5Slider
+          slides={(t.slider.slides || []).map((s) => ({
+            bg: s.bg,
+            subtitle: s.subtitle,
+            titleHtml: s.titleHtml,
+            ratingLabel: s.ratingLabel,
+            primary: s.primary ? { href: withLang(s.primary.href), text: s.primary.text } : null,
+            secondary: s.secondary ? { href: withLang(s.secondary.href), text: s.secondary.text } : null,
+          }))}
+        />
+      )}
       <NextSeo
         title={seoTitle}
         description={seoDesc}
@@ -347,20 +361,36 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
                 <h2>{t.whatWeDo?.title}</h2>
                 <p className="mt-20">{t.whatWeDo?.text}</p>
                 {Array.isArray(t.whatWeDo?.bullets) && t.whatWeDo.bullets.length > 0 && (
-                  <ul className="list-style-one mt-15">
-                    {t.whatWeDo.bullets.map((b, i) => (
-                      <li key={`wwd-b-${i}`}>{b}</li>
-                    ))}
-                  </ul>
+                  <div className="d-md-flex align-items-start mt-15">
+                    <img
+                      src="/assets/images/projects/project-timeline2.jpg"
+                      alt={isEn ? "Project timeline illustration" : "Ilustración de línea de tiempo de proyecto"}
+                      className="d-block mb-3 mb-md-0 me-md-4"
+                      style={{ width: "100%", maxWidth: 360, height: "auto", borderRadius: 8 }}
+                    />
+                    <ul className="list-style-one mt-0">
+                      {t.whatWeDo.bullets.map((b, i) => (
+                        <li key={`wwd-b-${i}`}>{b}</li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
                 {Array.isArray(t.whatWeDo?.ads) && t.whatWeDo.ads.length > 0 && (
                   <>
                     <h5 className="mt-25">{isEn ? 'Ready for Google Ads' : 'Preparados para Google Ads'}</h5>
-                    <ul className="list-style-one mt-10">
-                      {t.whatWeDo.ads.map((a, i) => (
-                        <li key={`wwd-ads-${i}`}>{a}</li>
-                      ))}
-                    </ul>
+                    <div className="d-md-flex align-items-start">
+                      <ul className="list-style-one mt-10 mb-0 me-md-4">
+                        {t.whatWeDo.ads.map((a, i) => (
+                          <li key={`wwd-ads-${i}`}>{a}</li>
+                        ))}
+                      </ul>
+                      <img
+                        src="/assets/images/projects/project-timeline1.jpg"
+                        alt={isEn ? "Project plan illustration" : "Ilustración de plan de proyecto"}
+                        className="d-block mt-3 mt-md-0 ms-md-2"
+                        style={{ width: "100%", maxWidth: 360, height: "auto", borderRadius: 8 }}
+                      />
+                    </div>
                   </>
                 )}
                 {t.whatWeDo?.ctaHref && (
@@ -373,7 +403,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
               </div>
             </div>
             <div className="col-xl-4 text-xl-end mt-25 rmt-15">
-              <Link legacyBehavior href={withLang("/pricing")}>
+              <Link legacyBehavior href="#paquetes-web">
                 <a className="explore-more">
                   <i className="fas fa-arrow-right" /> <span>{t?.ctaSecondary ?? (isEn ? "View plans" : "Ver planes")}</span>
                 </a>
@@ -415,7 +445,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
       )}
 
       {/* Pricing dentro del servicio */}
-      <section className="pricing-area-three pb-85 rpb-55" style={{ backgroundImage: "url(/assets/images/background/pricing-bg-dot-shape.png)" }} aria-label={isEn ? "Web development packages" : "Paquetes de desarrollo web y marketing"}>
+      <section id="paquetes-web" className="pricing-area-three pb-85 rpb-55" style={{ backgroundImage: "url(/assets/images/background/pricing-bg-dot-shape.png)" }} aria-label={isEn ? "Web development packages" : "Paquetes de desarrollo web y marketing"}>
         <div className="container container-1290">
           <div className="row justify-content-center">
             <div className="col-xl-8 col-lg-10">

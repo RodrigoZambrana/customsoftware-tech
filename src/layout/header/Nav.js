@@ -4,14 +4,15 @@ import Menu from "./Menu";
 
 const Nav = ({ singleMenu, variant, locale }) => {
   const [open, setOpen] = useState(false);
+  const isEn = locale === 'en';
   return (
     <nav className="main-menu navbar-expand-lg">
       <div className="navbar-header py-10">
         <div className="mobile-logo">
-          <Link legacyBehavior href="/">
+          <Link legacyBehavior href={isEn ? "/en" : "/"}>
             <a>
               <img
-                src="/assets/images/logos/noBgColor.png"
+                src="/assets/images/logos/logo-and-text.png"
                 alt="Logo"
                 title="Logo"
               />

@@ -33,7 +33,7 @@
     "plans": [
       {
         "name": "Starter",
-        "price": "500",
+        "price": "200",
         "unit": "USD/mes",
         "features": [
           "Setup + 1 red",
@@ -45,7 +45,7 @@
       {
         "name": "Performance",
         "badge": "Más Popular",
-        "price": "900",
+        "price": "400",
         "unit": "USD/mes",
         "features": [
           "2-3 redes",
@@ -56,7 +56,7 @@
       },
       {
         "name": "Full-Funnel",
-        "price": "1400",
+        "price": "600",
         "unit": "USD/mes",
         "features": [
           "Embudo completo",
@@ -68,14 +68,34 @@
     ]
   },
   "faqs": {
-    "subtitle": "Preguntas Frecuentes",
-    "title": "Dudas habituales",
-    "image": "/assets/images/faqs/faq-two.jpg",
-    "imageAlt": "Sección de preguntas frecuentes",
+    "subtitle": "FAQs",
+    "title": "Preguntas frecuentes sobre marketing digital",
+    "description": "Resolvemos las dudas más comunes antes de comenzar tu estrategia en Google Ads y redes sociales.",
     "items": [
-      { "q": "¿Cuándo veo resultados?", "a": "En redes, de 2 a 4 semanas; en campañas, a partir del primer mes con optimización continua." },
-      { "q": "¿Incluyen generación de contenido?", "a": "Sí, podemos encargarnos de piezas, copys y calendario editorial." },
-      { "q": "¿Trabajan por objetivos?", "a": "Definimos KPIs y reportes periódicos con foco en crecimiento y ROI." }
+      {
+        "q": "¿Qué resultados puedo esperar y en qué plazos?",
+        "a": "En campañas de Google Ads puedes ver impacto desde la primera semana (tráfico y leads). En redes sociales, el crecimiento es progresivo: alcance e interacción en 2–4 semanas y conversiones al consolidar la comunidad y la pauta. Reportamos con métricas claras (leads, CPA, ROAS)."
+      },
+      {
+        "q": "¿Necesito una landing específica para los anuncios?",
+        "a": "Es altamente recomendable. Una landing orientada a conversión mejora la tasa de contacto: mensaje claro, propuesta de valor, prueba social y formulario/WhatsApp visibles. Nosotros la diseñamos y medimos con GA4/Google Tag."
+      },
+      {
+        "q": "¿Cuál es el presupuesto mínimo sugerido para Google Ads?",
+        "a": "Sugerimos iniciar con 300–500 USD/mes para obtener datos significativos en 2–4 semanas. Ajustamos inversión según el costo por lead y el tamaño del mercado."
+      },
+      {
+        "q": "¿Cómo medimos las conversiones y el ROI?",
+        "a": "Implementamos Google Tag y GA4 para registrar eventos clave (formularios, llamadas, WhatsApp, compras). Optimizamos campañas por CPA o ROAS y compartimos reportes periódicos con recomendaciones accionables."
+      },
+      {
+        "q": "¿Qué incluye la gestión de redes sociales?",
+        "a": "Incluye estrategia, calendario de contenidos, diseño de piezas, publicación, gestión de comunidad y reportes de desempeño. Puede complementarse con pauta para acelerar el alcance."
+      },
+      {
+        "q": "¿Pueden trabajar con mi sitio web actual?",
+        "a": "Sí. Auditamos tu sitio actual, proponemos mejoras rápidas (velocidad, claridad del mensaje, llamadas a la acción) y definimos si conviene optimizar o crear una landing dedicada."
+      }
     ]
   },
   "workWithUs": {
@@ -91,16 +111,14 @@
         "subtitle": "Agencia de Marketing",
         "titleHtml": "<span>Marketing Perfecto</span><br /> Para Hacer Crecer tu Negocio",
         "ratingLabel": "Servicio de calidad",
-        "primary": { "href": "/contacto", "text": "Empezar ahora" },
-        "secondary": { "href": "/projects", "text": "Cómo trabajamos" }
+        "primary": { "href": "/contacto", "text": "Empezar ahora" }
       },
       {
         "bg": "/assets/images/slider/slide2.jpg",
         "subtitle": "Agencia de Marketing",
         "titleHtml": "<span>Marketing Perfecto</span><br /> Para Hacer Crecer tu Negocio",
         "ratingLabel": "Servicio de calidad",
-        "primary": { "href": "/contacto", "text": "Empezar ahora" },
-        "secondary": { "href": "/projects", "text": "Cómo trabajamos" }
+        "primary": { "href": "/contacto", "text": "Empezar ahora" }
       }
     ]
   },
@@ -114,18 +132,57 @@
   ],
   "offer": {
     "subtitle": "Qué Ofrecemos",
-    "title": "Servicios destacados de marketing",
+    "title": "Servicios de marketing digital para impulsar tu negocio",
+    "description": "Aumenta tu visibilidad, genera clientes y fortalece tu marca con campañas en Google Ads y redes sociales, complementadas por estrategias digitales integrales.",
     "items": [
-      { "icon": "flaticon-ux", "number": "01", "title": "Posicionamiento en buscadores (SEO)", "href": "/services/seo-sem" },
-      { "icon": "flaticon-engineering", "number": "02", "title": "Marketing en redes sociales", "href": "/services/digital-marketing" },
-      { "icon": "flaticon-optimization-1", "number": "03", "title": "Estrategia de marketing online", "href": "/services/digital-marketing" },
-      { "icon": "flaticon-ai", "number": "04", "title": "Desarrollo de producto digital", "href": "/services/custom-software" }
+      {
+        "icon": "flaticon-optimization-1",
+        "number": "01",
+        "title": "Publicidad en Google Ads",
+        "desc": "Campañas de búsqueda, display y remarketing para atraer clientes potenciales en el momento exacto en que buscan tu servicio.",
+        "bullets": [
+          "Configuración de campañas en Google Search y Display",
+          "Optimización de anuncios y extensiones",
+          "Implementación de conversiones en GA4 y Google Tag",
+          "Reportes claros y optimización continua"
+        ],
+        "areaServed": "LatAm",
+        "provider": "Software Strategy"
+      },
+      {
+        "icon": "flaticon-engineering",
+        "number": "02",
+        "title": "Marketing en redes sociales",
+        "desc": "Gestión estratégica de Facebook, Instagram y LinkedIn para aumentar alcance, comunidad y conversiones.",
+        "bullets": [
+          "Plan editorial y diseño de contenidos",
+          "Gestión de comunidad y respuestas",
+          "Campañas de pauta segmentada",
+          "Reportes mensuales con métricas clave"
+        ],
+        "areaServed": "LatAm",
+        "provider": "Software Strategy"
+      },
+      {
+        "icon": "flaticon-ux",
+        "number": "03",
+        "title": "Estrategia de marketing digital",
+        "desc": "Planes integrales que combinan Google Ads, redes sociales y email marketing para lograr resultados sostenidos.",
+        "bullets": [
+          "Definición de objetivos y KPIs",
+          "Mix de canales (Ads, social, email)",
+          "Dashboards y medición de ROI",
+          "Optimización continua por sprint"
+        ],
+        "areaServed": "LatAm",
+        "provider": "Software Strategy"
+      }
     ]
   },
   "about5": {
     "subtitle": "Sobre la Empresa",
-    "title": "Agencia de marketing digital de clase mundial",
-    "text": "Diseñamos y ejecutamos estrategias que combinan contenido, pauta y analítica para lograr crecimiento medible.",
+    "title": "Agencia de marketing digital con foco en resultados",
+    "text": "En Software Estrategy diseñamos y ejecutamos estrategias de marketing digital que combinan contenido, publicidad en Google Ads y redes sociales, y analítica avanzada. Nuestro objetivo es claro: que tu negocio logre crecimiento real y medible.",
     "authorsText": "Contamos con <span>5k+ clientes</span> en todo el mundo",
     "authorsImages": [
       "/assets/images/about/author1.jpg",
@@ -139,33 +196,77 @@
     "bg": "/assets/images/about/about-five-bg.png",
     "imageAlt": "Sobre nosotros"
   },
-  "gallery": {
-    "subtitle": "Galería de trabajos recientes",
-    "title": "Mirá nuestro trabajo",
-    "items": [
-      { "image": "/assets/images/projects/project-five1.jpg", "title": "Marketing en redes sociales", "category": "Marketing, Branding", "href": "/projects" },
-      { "image": "/assets/images/projects/project-five2.jpg", "title": "Marketing en redes sociales", "category": "Marketing, Branding", "href": "/projects" },
-      { "image": "/assets/images/projects/project-five3.jpg", "title": "Marketing en redes sociales", "category": "Marketing, Branding", "href": "/projects" },
-      { "image": "/assets/images/projects/project-five4.jpg", "title": "Marketing en redes sociales", "category": "Marketing, Branding", "href": "/projects" }
-    ]
-  },
+  
   "process": {
     "subtitle": "Nuestro proceso de trabajo",
     "title": "De la investigación a resultados medibles",
+    "description": "Así logramos que cada campaña en Google Ads y redes sociales esté orientada a performance y ROI.",
     "items": [
-      { "icon": "flaticon-optimization-1", "title": "Investigación y estrategia", "text": "Entendemos tu marca, audiencia y objetivos para definir canales y tácticas.", "href": "/services/digital-marketing" },
-      { "icon": "flaticon-mobile-banking", "title": "Target & análisis", "text": "Segmentación precisa, testeo creativo y medición continua.", "href": "/services/digital-marketing" },
-      { "icon": "flaticon-optimization", "title": "Resultados", "text": "Optimizamos semanalmente para maximizar ROI y crecimiento.", "href": "/services/digital-marketing" }
+      { "icon": "flaticon-optimization-1", "title": "Investigación y estrategia", "text": "Analizamos tu marca, mercado y audiencia para definir canales, mensajes y tácticas digitales." },
+      { "icon": "flaticon-mobile-banking", "title": "Target & análisis", "text": "Segmentación precisa, pruebas A/B de anuncios y análisis constante para optimizar conversiones." },
+      { "icon": "flaticon-optimization", "title": "Resultados", "text": "Reportes claros, métricas accionables y optimización semanal para maximizar ROI y crecimiento." }
     ]
   }
   ,
   "plans": {
     "subtitle": "Planes",
-    "title": "Paquetes a medida de tus objetivos",
+    "title": "Paquetes de marketing digital a medida de tus objetivos",
+    "description": "Elige el plan que mejor se adapta a tu negocio: desde una gestión básica de redes hasta campañas integrales en Google Ads y automatización avanzada.",
     "items": [
-      { "name": "Starter", "price": "500", "unit": "USD/mes", "features": ["1 red", "Calendario básico", "Campañas iniciales"], "cta": "Empezar" },
-      { "name": "Growth", "badge": "Más Popular", "price": "900", "unit": "USD/mes", "features": ["2–3 redes", "Creatividades + copys", "Google + Meta"], "cta": "Empezar" },
-      { "name": "Pro", "price": "1400", "unit": "USD/mes", "features": ["Embudo completo", "Automatizaciones", "Optimización avanzada"], "cta": "Empezar" }
+      { 
+        "name": "Starter",
+        "slug": "starter",
+        "price": "200",
+        "unit": "USD/mes",
+        "description": "Ideal para emprendedores o negocios que quieren comenzar a tener presencia digital.",
+        "features": ["1 red social gestionada", "Calendario básico de publicaciones", "Campañas iniciales en Google o Meta", "Reportes mensuales de desempeño"],
+        "cta": "Empezar"
+      },
+      { 
+        "name": "Growth",
+        "slug": "growth",
+        "badge": "Más Popular",
+        "price": "400",
+        "unit": "USD/mes",
+        "description": "Perfecto para empresas en crecimiento que buscan escalar con mayor alcance y conversiones.",
+        "twoColumn": true,
+        "features": ["2–3 redes sociales gestionadas", "Creatividades y copys personalizados", "Campañas en Google Ads + Meta Ads", "Reportes quincenales con métricas clave"],
+        "cta": "Empezar"
+      },
+      { 
+        "name": "Pro",
+        "slug": "pro",
+        "price": "600",
+        "unit": "USD/mes",
+        "description": "Diseñado para marcas consolidadas que necesitan estrategias avanzadas, automatización y escalabilidad.",
+        "features": ["Gestión integral de redes sociales", "Embudo completo de marketing digital", "Automatizaciones y remarketing", "Optimización avanzada + consultoría mensual"],
+        "cta": "Empezar"
+      }
     ]
+  }
+  ,
+  "plansComparison": {
+    "title": "Compará nuestros planes de marketing digital",
+    "description": "Elige el plan que mejor se adapta a tus objetivos: desde presencia inicial hasta estrategias avanzadas con automatización y remarketing.",
+    "featuresLabel": "Características",
+    "starterLabel": "Starter",
+    "growthLabel": "Growth",
+    "growthBadge": "⭐",
+    "proLabel": "Pro",
+    "starterPrice": "200",
+    "growthPrice": "400",
+    "proPrice": "600",
+    "rows": [
+      { "feature": "Redes sociales gestionadas", "starter": "1", "growth": "2–3", "pro": "3+" },
+      { "feature": "Creatividades y copys personalizados", "starter": "—", "growth": "Incluido", "pro": "Incluido + variaciones A/B" },
+      { "feature": "Campañas en Google Ads", "starter": "Básicas", "growth": "Google + Meta Ads", "pro": "Google + Meta + Remarketing avanzado" },
+      { "feature": "Reportes", "starter": "Mensuales", "growth": "Quincenales", "pro": "Semanales + consultoría" },
+      { "feature": "Automatizaciones", "starter": "—", "growth": "Opcionales", "pro": "Incluidas (embudos + remarketing)" },
+      { "feature": "Optimización avanzada", "starter": "—", "growth": "Básica", "pro": "Completa (CPA, ROAS, funnel)" }
+    ],
+    "ctaStarter": "Elegir Starter",
+    "ctaGrowth": "Elegir Growth",
+    "ctaPro": "Elegir Pro",
+    "note": "*Todos los planes incluyen configuración inicial, optimización para móviles y soporte técnico. Los precios pueden ajustarse según alcance y volumen de campañas."
   }
 }

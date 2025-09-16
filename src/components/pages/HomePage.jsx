@@ -1,5 +1,6 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import Home5Slider from "@/src/components/sliders/Home5Slider";
 import { NextSeo } from "next-seo";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { sliderProps } from "@/src/sliderProps";
@@ -17,6 +18,18 @@ export default function HomePage({ t, locale }) {
 
   return (
     <>
+      {t.slider && (
+        <Home5Slider
+          slides={(t.slider.slides || []).map((s) => ({
+            bg: s.bg,
+            subtitle: s.subtitle,
+            titleHtml: s.titleHtml,
+            ratingLabel: s.ratingLabel,
+            primary: s.primary ? { href: withLang(s.primary.href), text: s.primary.text } : null,
+            secondary: s.secondary ? { href: withLang(s.secondary.href), text: s.secondary.text } : null,
+          }))}
+        />
+      )}
       <NextSeo
         title={t.seoTitle}
         description={t.seoDescription}

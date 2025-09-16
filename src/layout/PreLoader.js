@@ -4,7 +4,7 @@ const PreLoader = () => {
       <div className="custom-loader" />
       <img
         className="loader-logo"
-        src="/assets/images/logos/logo.backup.png"
+        src="/assets/images/logos/logo-only.png"
         alt="Loading"
       />
     </div>

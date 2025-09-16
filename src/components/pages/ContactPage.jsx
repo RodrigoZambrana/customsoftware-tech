@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Layout from "@/src/layout/Layout";
 import { NextSeo } from "next-seo";
 import DefaultSEO from "@/next-seo.config";
 import PageBanner from "@/src/components/PageBanner";
@@ -37,7 +36,7 @@ export default function ContactPage({ t = {}, locale = "es" }) {
   const canonical = `${siteBase}${isEn ? "/en/contact" : "/contact"}`;
 
   return (
-    <Layout dark locale={locale}>
+    <>
       <NextSeo
         title={t?.seo?.title || (isEn ? "Contact" : "Contacto")}
         description={t?.seo?.description || (isEn ? "Get in touch for web development, custom software and marketing services." : "Contactanos por desarrollo web, software a medida y marketing.")}
@@ -189,6 +188,6 @@ export default function ContactPage({ t = {}, locale = "es" }) {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }

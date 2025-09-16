@@ -27,16 +27,6 @@ export default function YgencyAccordionLite({ title, isOpen, onToggle, children 
         aria-controls={`acc-panel-${title}`}
       >
         <span className="accordion-title">{title}</span>
-        <span className="accordion-icon">
-          <i
-            className="fas fa-arrow-right"
-            style={{
-              transition: 'transform 200ms ease',
-              transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)',
-              color: 'var(--ygency-primary-color)'
-            }}
-          />
-        </span>
       </button>
 
       <div

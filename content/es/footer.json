@@ -19,11 +19,11 @@
       { "label": "Contacto",        "href": "/contact" }
     ],
     "quickLinksCol2": [
-      { "label": "UI/UX Design",    "href": "/index" },
-      { "label": "Desarrollo",      "href": "/index2" },
-      { "label": "Marketing",       "href": "/index3" },
-      { "label": "Trabajá con nosotros", "href": "/contact" },
-      { "label": "FAQs",            "href": "/faqs" }
+      { "label": "Desarrollo Web",     "href": "/services/web-development" },
+      { "label": "Posicionamiento en Google",          "href": "/services/google-seo" },
+      { "label": "Marketing Digital",  "href": "/services/digital-marketing" },
+      { "label": "Sobre nosotros",     "href": "/about" },
+      { "label": "FAQs",               "href": "/faqs" }
     ],
     "bottomMenu": [
       { "label": "Nosotros",  "href": "/about" },

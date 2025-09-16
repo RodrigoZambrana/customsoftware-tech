@@ -1,4 +1,15 @@
 {
+  "slider": {
+    "slides": [
+      {
+        "bg": "/assets/images/slider/slide1.jpg",
+        "subtitle": "Web Development",
+        "titleHtml": "<span>Fast, secure websites</span><br /> to grow your business",
+        "ratingLabel": "Quality Service",
+        "primary": { "href": "/contact", "text": "Request proposal" }
+      }
+    ]
+  },
     "seo": {
       "title": "Custom Website Development | SEO, SEM & Digital Marketing",
       "description": "We build fast, secure, SEO-optimized websites. We integrate SEM and social to boost your search presence and acquire customers."
@@ -24,52 +35,82 @@
     },
     "whatWeDo": {
       "subtitle": "How We Work",
-      "title": "Tailor-made solutions for your web project",
-      "text": "We design and develop unique websites adapted to each client. From landing pages to full ecommerce, integrating digital campaigns and social media."
+      "title": "Custom web solutions for growing businesses",
+      "text": "At Software Strategy we design and develop professional, fast and secure websites focused on SEO and conversion. From corporate landing pages to full ecommerce, we align design, development and strategy to deliver real results.",
+      "bullets": [
+        "Responsive and accessible design: optimal UX on mobile, tablet and desktop",
+        "Technical SEO foundation: structure, metadata, performance and indexation",
+        "Conversion‑oriented content: clear benefits, social proof and effective CTAs",
+        "Speed and performance: optimized Core Web Vitals",
+        "Professional UX/UI: simple, clear and trustworthy navigation",
+        "Scalability: architecture ready to grow with your business",
+        "Analytics and events: measurement to drive data‑based decisions"
+      ],
+      "ads": [
+        "Performance‑focused landing pages for campaigns",
+        "Tagging and conversions: events and tracking setup",
+        "Standardized UTMs for attribution and reporting",
+        "A/B testing of messages and CTAs to improve results"
+      ],
+      "ctaText": "Request proposal",
+      "ctaHref": "/contact"
     },
     "pricingSection": {
       "subtitle": "Web Packages",
-      "title": "Options for every kind of business",
+      "title": "Website options for every kind of business",
+      "description": "Professional, SEO‑optimized sites ready to scale and connect with Google Ads and social campaigns.",
       "plans": [
         {
-          "name": "Basic Site",
-          "price": "500",
+          "name": "Package 1 · Basic Site",
+          "slug": "basic-site",
+          "category": "Web development",
+          "description": "Professional one‑page to present services, brand and contact. Ideal to get presence on Google quickly.",
+          "price": "300",
           "unit": "USD one-time",
           "features": [
-            "Landing Page",
-            "Responsive design",
-            "Initial SEO optimization",
-            "Basic support"
+            "Single‑page site: services, contact and about",
+            "Basic, professional web design",
+            "Domain and SSL Certificate",
+            "Mobile optimization (responsive)"
           ],
-        "cta": "Talk to a specialist"
-      },
-      {
-        "name": "Site + Campaigns",
-        "badge": "Most Popular",
+          "cta": "Talk to a specialist"
+        },
+        {
+          "name": "Package 2 · Site + Google Ads",
+          "slug": "site-plus-ads",
+          "category": "Web development & digital advertising",
+          "description": "Conversion‑optimized website with initial search campaigns setup to capture qualified leads.",
+          "badge": "Most Popular",
+          "price": "600",
+          "unit": "USD one-time",
+          "twoColumn": true,
+          "features": [
+            "Website design (up to 5 sections)",
+            "Search campaign optimization (landing & tracking)",
+            "Tag setup: Google Tag, GA4 and Conversions",
+            "Mobile optimization (responsive)"
+          ],
+          "cta": "Talk to a specialist"
+        },
+        {
+          "name": "Package 3 · Site + Ads + Social",
+          "slug": "site-ads-social",
+          "category": "Web development, advertising and social",
+          "description": "End‑to‑end solution: complete website, Google Ads campaigns and ongoing social media management.",
           "price": "900",
-          "unit": "USD",
+          "unit": "USD + monthly social",
           "features": [
-            "Complete Website",
-            "SEO + SEM",
-            "Google & Meta campaigns",
-            "Advanced support"
+            "Complete website (architecture and content)",
+            "Google Ads setup and management (search/remarketing)",
+            "Monthly social media management (Meta/Instagram/LinkedIn)",
+            "Base creatives and editorial calendar",
+            "Ongoing optimization and monthly reports",
+            "Responsive, technical SEO and speed optimized"
           ],
-        "cta": "Talk to a specialist"
-      },
-      {
-        "name": "Site + Campaigns + Social",
-          "price": "1300",
-          "unit": "USD",
-          "features": [
-            "Complete Website",
-            "Advanced SEO",
-            "Google + Meta campaigns",
-            "Social media management",
-            "Premium support"
-          ],
-        "cta": "Talk to a specialist"
-      }
-      ]
+          "cta": "Talk to a specialist"
+        }
+      ],
+      "note": "*Domain and SSL subject to availability. Plans may vary based on scope, language, integrations and campaign volume."
     },
     
       "faqs": {
@@ -90,12 +131,16 @@
             "q": "Do you provide post-launch maintenance?",
             "a": "Yes. We offer support and maintenance plans for updates, security and continuous improvements."
           },
-          {
-            "q": "Can you manage Google and Meta campaigns?",
-            "a": "Yes. We have combined packages (site + campaigns) including setup, tracking and monthly optimization."
-          }
-        ]
-      },
+        {
+          "q": "Can you manage Google and Meta campaigns?",
+          "a": "Yes. We have combined packages (site + campaigns) including setup, tracking and monthly optimization."
+        },
+        {
+          "q": "Do you prepare landing pages and conversions for Google Ads?",
+          "a": "Yes. We design performance‑focused landing pages and configure conversions and UTMs to measure results from day one."
+        }
+      ]
+    },
     
     "workWithUs": {
       "subtitle": "Work With Us",

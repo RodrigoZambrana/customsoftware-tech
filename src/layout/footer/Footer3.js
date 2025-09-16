@@ -15,14 +15,14 @@ const Footer3 = ({ dark }) => {
               <div className="footer-logo mb-20 wow fadeInRight delay-0-2s">
                 <Link legacyBehavior href="/">
                   <a>
-                    <img
-                      src={
-                        dark
-                          ? "/assets/images/logos/logo.png"
-                          : "/assets/images/logos/logo.png"
-                      }
-                      alt="Logo"
-                    />
+                  <img
+                    src={
+                      dark
+                        ? "/assets/images/logos/logo-and-text.png"
+                        : "/assets/images/logos/logo-and-text.png"
+                    }
+                    alt="Logo"
+                  />
                   </a>
                 </Link>
               </div>

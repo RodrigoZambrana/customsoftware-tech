@@ -2,10 +2,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function LanguageSelect() {
-  const selectRef = useRef(null);
+  const rootRef = useRef(null);
   const [pathname, setPathname] = useState("/");
+  const [open, setOpen] = useState(false);
 
-  // Al montar, tomamos el path actual del browser (evita SSR issues con window)
+  // Path actual (evita SSR issues con window)
   useEffect(() => {
     if (typeof window !== "undefined") {
       setPathname(window.location.pathname || "/");
@@ -15,58 +16,58 @@ export default function LanguageSelect() {
   // ¿Estamos en inglés?
   const isEnglish = useMemo(() => pathname.startsWith("/en"), [pathname]);
 
-  // Construcción de URLs destino
-  const toEs = useMemo(() => {
-    const p = pathname.replace(/^\/en(?=\/|$)/, "") || "/";
-    return p;
-  }, [pathname]);
+  // URLs siempre en inglés: solo agregamos o quitamos /en
+  const mapToEs = (p) => p.replace(/^\/en(?=\/|$)/, "") || "/";
+  const mapToEn = (p) => (p === "/" ? "/en" : p.startsWith("/en") ? p : `/en${p}`);
 
-  const toEn = useMemo(() => {
-    const p = pathname === "/" ? "" : pathname; // conserva el resto del path
-    return `/en${p}`;
-  }, [pathname]);
+  // Construcción de URLs destino conservando la página actual
+  const toEs = useMemo(() => mapToEs(pathname), [pathname]);
+  const toEn = useMemo(() => mapToEn(pathname), [pathname]);
 
-  // Listener nativo en captura (gana prioridad frente a plugins que hijackean eventos)
+  const navigate = (lang) => {
+    const href = lang === "en" ? toEn : toEs;
+    try {
+      window.location.assign(href);
+    } catch {
+      window.location.href = href;
+    }
+  };
+
+  // Cerrar al hacer click afuera
   useEffect(() => {
-    const el = selectRef.current;
-    if (!el) return;
-
-    const onChange = (e) => {
-      const val = e.target.value; // "es" | "en"
-      const href = val === "en" ? toEn : toEs;
-
-      try {
-        // Redirección dura para evitar interferencias de plugins
-        window.location.assign(href);
-      } catch {
-        window.location.href = href;
-      }
+    const onDocClick = (e) => {
+      if (!rootRef.current) return;
+      if (!rootRef.current.contains(e.target)) setOpen(false);
     };
+    document.addEventListener("click", onDocClick, true);
+    return () => document.removeEventListener("click", onDocClick, true);
+  }, []);
 
-    // Fase de captura = true
-    el.addEventListener("change", onChange, { capture: true });
-
-    // Limpieza
-    return () => el.removeEventListener("change", onChange, { capture: true });
-  }, [toEn, toEs]);
+  const currentLabel = isEnglish ? "English" : "Español";
 
   return (
-    <div className="lang-select">
+    <div className="lang-select" ref={rootRef}>
+      {/* Select nativo oculto por accesibilidad básica */}
       <select
-        // MUY IMPORTANTE: no permitir que un plugin lo tome
-        data-nice="false"
-        ref={selectRef}
         name="language"
         id="language"
-        value={isEnglish ? "en" : "es"}
-        onChange={() => {
-          /* manejado por listener nativo */
-        }}
         aria-label="Language"
+        value={isEnglish ? "en" : "es"}
+        onChange={(e) => navigate(e.target.value)}
+        style={{ display: "none" }}
       >
         <option value="es">Español</option>
         <option value="en">English</option>
       </select>
+
+      {/* UI al estilo nice-select */}
+      <div className={`nice-select wide${open ? " open" : ""}`} onClick={() => setOpen(!open)} role="listbox" aria-expanded={open}>
+        <ul className="list">
+          <li className={`option${!isEnglish ? " selected" : ""}`} onClick={() => navigate("es")} role="option" aria-selected={!isEnglish}>Español</li>
+          <li className={`option${isEnglish ? " selected" : ""}`} onClick={() => navigate("en")} role="option" aria-selected={isEnglish}>English</li>
+        </ul>
+        <span className="current">{currentLabel}</span>
+      </div>
     </div>
   );
 }

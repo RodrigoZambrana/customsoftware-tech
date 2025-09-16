@@ -19,11 +19,11 @@
     { "label": "Contact",       "href": "/en/contact" }
   ],
   "quickLinksCol2": [
-    { "label": "UI/UX Design",  "href": "/index" },
-    { "label": "Development",   "href": "/index2" },
-    { "label": "Marketing",     "href": "/index3" },
-    { "label": "Careers",       "href": "/en/contact" },
-    { "label": "FAQs",          "href": "/faqs" }
+    { "label": "Web Development",  "href": "/en/services/web-development" },
+    { "label": "Google SEO",        "href": "/en/services/google-seo" },
+    { "label": "Digital Marketing", "href": "/en/services/digital-marketing" },
+    { "label": "About",            "href": "/about" },
+    { "label": "FAQs",             "href": "/faqs" }
   ],
   "bottomMenu": [
     { "label": "About",         "href": "/about" },

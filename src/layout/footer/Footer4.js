@@ -72,8 +72,8 @@ const Footer4 = ({ dark }) => {
                     <img
                       src={
                         dark
-                          ? "/assets/images/logos/logo.png"
-                          : "/assets/images/logos/logo.png"
+                          ? "/assets/images/logos/logo-and-text.png"
+                          : "/assets/images/logos/logo-and-text.png"
                       }
                       alt="Logo"
                     />

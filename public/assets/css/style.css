@@ -832,7 +832,7 @@ a.theme-btn {
 .whatsapp-float {
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 80px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -844,6 +844,45 @@ a.theme-btn {
   font-size: 26px;
   z-index: 99999;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+@media (max-width: 575px) {
+  .whatsapp-float { bottom: 70px; }
+}
+
+/* ---------------------------------------------------- */
+/* Pricing Comparison (improve contrast on dark theme)  */
+/* ---------------------------------------------------- */
+.pricing-comparison-area .table {
+  color: var(--ygency-secondary-color);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.pricing-comparison-area .table th,
+.pricing-comparison-area .table td {
+  border-color: rgba(255, 255, 255, 0.15);
+  vertical-align: middle;
+}
+.pricing-comparison-area thead th,
+.pricing-comparison-area .table-light th {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+.pricing-comparison-area tbody tr:nth-child(odd) td {
+  background: rgba(255, 255, 255, 0.03);
+}
+.pricing-comparison-area tbody tr:nth-child(even) td {
+  background: transparent;
+}
+.pricing-comparison-area .bg-light {
+  background: rgba(var(--ygency-primary-rgb), 0.12) !important;
+  color: #fff !important;
+}
+.pricing-comparison-area .text-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+.pricing-comparison-area .table > :not(caption) > * > * {
+  box-shadow: inset 0 0 0 9999px rgba(0,0,0,0); /* reset bootstrap shading */
 }
 .hidden-bar .slide-panel-menu .primary-menu > li { border-bottom: 1px solid var(--ygency-border-color); }
 .hidden-bar .slide-panel-menu .primary-menu > li:last-child { border-bottom: none; }
@@ -3317,10 +3356,10 @@ h6, .h6 {
     @media only screen and (max-width: 991px) {
       .main-header .logo-outer {
         display: none; } }
-  .main-header .logo {
-    z-index: 9;
-    padding: 2px 0;
-    position: relative; }
+.main-header .logo {
+  z-index: 9;
+  padding: 2px 0;
+  position: relative; }
   .main-header.menu-absolute .header-upper {
     position: absolute; }
   .main-header.fixed-header .header-upper {
@@ -3639,6 +3678,39 @@ h6, .h6 {
   }
 }
 
+/* Language select (nice-select style override) */
+.lang-select { position: relative; }
+.lang-select .nice-select {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 150px;
+  color: var(--ygency-secondary-color);
+  background: transparent;
+  border: 1px solid var(--ygency-border-color);
+  padding: 8px 36px 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.lang-select .nice-select .current { pointer-events: none; }
+.lang-select .nice-select.open .list { display: block; }
+.lang-select .nice-select .list {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  min-width: 100%;
+  background: #222222;
+  border: 1px solid var(--ygency-border-color);
+  z-index: 10000;
+  display: none;
+}
+.lang-select .nice-select .option {
+  color: var(--ygency-secondary-color);
+  padding: 8px 12px;
+}
+.lang-select .nice-select .option.selected { color: var(--ygency-primary-color); }
+.header-top .top-right .lang-select { margin-right: 20px; margin-left: -10px; }
+
 /* Mobile hamburger style for sidebar button */
 @media (max-width: 1199px) {
   .menu-sidebar .navbar-toggle {
@@ -3700,6 +3772,18 @@ h6, .h6 {
   .menu-sidebar { display: flex; align-items: center; gap: 10px; }
   .menu-sidebar .menu-label { order: 1; transform: translateY(2px); }
   .menu-sidebar .navbar-toggle { order: 2; }
+  .menu-btns .mobile-brand img { max-height: 44px; width: auto; display: block; }
+}
+
+/* Force mobile header to span full width with logo on far left and burger on right */
+@media (max-width: 1199px) {
+  .main-header .menu-btns {
+    margin-left: 0; /* override previous push-right */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* Hamburger menu label: visible on tablets & mobiles */
@@ -7411,12 +7495,20 @@ blockquote {
     .pricing-plan-item:hover .badge {
       opacity: 1;
       bottom: 100%; }
-  .pricing-plan-item.style-two {
+.pricing-plan-item.style-two {
     -webkit-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    /* Highlighted plan: subtle border + tinted background */
+    border: 1.5px solid rgba(var(--ygency-primary-rgb), 0.55);
+    background: linear-gradient(180deg, rgba(var(--ygency-primary-rgb), 0.08) 0%, #0A1019 60%);
+    position: relative; }
     @media only screen and (min-width: 576px) {
       .pricing-plan-item.style-two {
         padding: 50px 70px; } }
+  /* Extra emphasis on hover for highlighted plan */
+  .pricing-plan-item.style-two:hover {
+    box-shadow: 0 0 0 2px rgba(var(--ygency-primary-rgb), 0.25), 0 20px 60px -10px rgba(var(--ygency-primary-rgb), 0.25);
+  }
   .pricing-plan-item.style-three {
     -webkit-box-shadow: none;
     box-shadow: none; }

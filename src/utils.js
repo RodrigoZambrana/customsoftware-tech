@@ -69,10 +69,15 @@ export const sidebarClick = () => {
   backDrop?.addEventListener("click", close);
   crossIcon?.addEventListener("click", close);
 
+  // Close sidebar when clicking on any menu link inside the hidden bar
+  const sideLinks = Array.from(document.querySelectorAll(".hidden-bar .slide-panel-content a"));
+  sideLinks.forEach((a) => a.addEventListener("click", close));
+
   return () => {
     buttons.forEach((btn) => btn.removeEventListener("click", open));
     backDrop?.removeEventListener("click", close);
     crossIcon?.removeEventListener("click", close);
+    sideLinks.forEach((a) => a.removeEventListener("click", close));
   };
 };
 

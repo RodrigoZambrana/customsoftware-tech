@@ -1,9 +1,20 @@
 {
-  "seo": {
-    "title": "SEO & SEM | Technical Optimization and Search Campaigns",
-    "description": "Improve organic visibility with technical and content SEO. Run profitable SEM campaigns with tracking and continuous optimization."
+  "slider": {
+    "slides": [
+      {
+        "bg": "/assets/images/slider/slide1.jpg",
+        "subtitle": "SEO & Google Ads",
+        "titleHtml": "<span>More visibility on Google</span><br /> campaigns that convert",
+        "ratingLabel": "ROI-focused",
+        "primary": { "href": "/contact", "text": "Get started now" }
+      }
+    ]
   },
-  "pageBanner": "SEO & SEM (Optimization & Campaigns)",
+  "seo": {
+    "title": "Google SEO | Technical Optimization and Google Ads",
+    "description": "Improve organic visibility with technical and content SEO. Run effective Google Ads campaigns with tracking and continuous optimization."
+  },
+  "pageBanner": "Google SEO (Optimization & Campaigns)",
   "ctaPrimary": "Talk to a specialist",
   "ctaSecondary": "View plans",
   "about": {
@@ -29,39 +40,50 @@
   },
   "pricingSection": {
     "subtitle": "Plans",
-    "title": "Options for your strategy",
+    "title": "Options for your strategy: SEO and Google Ads",
+    "description": "Improve your visibility on search engines (SEO) and attract customers today with Google Ads.",
     "plans": [
       {
-        "name": "SEO Basic",
-        "price": "400",
+        "name": "Basic SEO",
+        "slug": "basic-seo",
+        "price": "300",
         "unit": "USD/mo",
+        "description": "Ideal to start showing up on Google with essential on-site improvements.",
         "features": [
-          "Audit + on-page",
-          "Metadata and performance",
-          "Monthly report"
+          "Site review (basic audit)",
+          "Clear titles and descriptions for Google",
+          "Speed and structure improvements",
+          "Monthly progress report"
         ],
         "cta": "Talk to a specialist"
       },
       {
-        "name": "SEO + SEM",
+        "name": "SEO + Google Ads",
+        "slug": "seo-plus-google-ads",
         "badge": "Most Popular",
-        "price": "900",
+        "price": "500",
         "unit": "USD/mo",
+        "description": "Combine SEO improvements with Google Ads for visible results in a short time.",
+        "twoColumn": true,
         "features": [
-          "Technical SEO + content",
-          "Google Ads campaigns",
-          "Continuous optimization"
+          "On‑site and content optimization",
+          "Google campaigns (search + remarketing)",
+          "Full measurement with GA4/Google Tag",
+          "Bi‑weekly campaign optimization"
         ],
         "cta": "Talk to a specialist"
       },
       {
-        "name": "Advanced SEO + SEM",
-        "price": "1500",
+        "name": "Advanced SEO + Google Ads",
+        "slug": "advanced-seo-plus-google-ads",
+        "price": "800",
         "unit": "USD/mo",
+        "description": "For companies looking to scale with advanced strategies, automation and constant testing.",
         "features": [
-          "Full strategy",
-          "A/B testing",
-          "Automations and BI"
+          "Complete content and link strategy",
+          "A/B testing for ads and pages",
+          "Automations and metric dashboards",
+          "Advanced optimization to improve ROI"
         ],
         "cta": "Talk to a specialist"
       }

@@ -1,4 +1,15 @@
 {
+  "slider": {
+    "slides": [
+      {
+        "bg": "/assets/images/slider/slide2.jpg",
+        "subtitle": "Software a Medida",
+        "titleHtml": "<span>Integraciones y automatización</span><br /> para escalar tu operación",
+        "ratingLabel": "Equipo senior",
+        "primary": { "href": "/contacto", "text": "Solicitar cotización" }
+      }
+    ]
+  },
   "seo": {
     "title": "Software a Medida | Integraciones, APIs y Automatización",
     "description": "Desarrollamos soluciones de software a medida: integraciones, APIs, backoffice y automatización de procesos con foco en escalabilidad y seguridad."
@@ -106,7 +117,8 @@
       { "image": "/assets/images/skills/skill7.png", "label": "PHP" },
       { "image": "/assets/images/skills/skill9.png", "label": "Sass" },
       { "image": "/assets/images/skills/skill2.png", "label": "HTML" },
-      { "image": "/assets/images/skills/skill3.png", "label": "CSS" }
+      { "image": "/assets/images/skills/skill3.png", "label": "CSS" },
+      { "image": "/assets/images/skills/skill14.png", "label": "Next.js" }
     ],
     "aboutCounters": {
       "subtitle": "Nuestra Manera de Trabajar",

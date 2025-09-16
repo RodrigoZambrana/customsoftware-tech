@@ -5,7 +5,7 @@ import PageBanner from "@/src/components/PageBanner";
 const About = () => {
   return (
     <Layout dark>
-      <PageBanner pageName="Sobre Nosotros" homeLabel="Inicio" homeHref="/" />
+      <PageBanner pageName="About Us" homeLabel="Home" homeHref="/en" />
 
       <section className="why-choose-area pt-100 rpt-80 pb-80 rpb-50">
         <div className="container">
@@ -15,29 +15,29 @@ const About = () => {
                 <div className="col-xl-11">
                   <div className="why-choose-left-content mb-30 rmb-55 wow fadeInLeft delay-0-2s">
                     <div className="section-title mb-40">
-                      <span className="sub-title mb-15">Sobre la empresa</span>
-                      <h2>Nuestros servicios y soluciones</h2>
+                      <span className="sub-title mb-15">About the Company</span>
+                      <h2>Our services and solutions</h2>
                     </div>
-                    <h5>Misión</h5>
+                    <h5>Mission</h5>
                     <p>
-                      Diseñamos y desarrollamos experiencias digitales con foco en performance, SEO y conversión. Combinamos tecnología,
-                      diseño y estrategia para generar resultados medibles.
+                      We design and build digital experiences focused on performance, SEO and conversion. We combine technology,
+                      design and strategy to deliver measurable results.
                     </p>
                     <br />
-                    <h5>Cómo trabajamos</h5>
+                    <h5>How we work</h5>
                     <p>
-                      Priorizamos entregas iterativas, métricas claras y decisiones guiadas por datos. Acompañamos con soporte cercano y
-                      evolución continua.
+                      We prioritize iterative deliveries, clear metrics and data‑driven decisions. We support you with close collaboration and
+                      continuous improvement.
                     </p>
                     <div className="mt-35 d-flex gap-3 flex-wrap">
-                      <Link legacyBehavior href="/services">
+                      <Link legacyBehavior href="/en/services">
                         <a className="theme-btn style-two">
-                          Ver servicios <i className="far fa-arrow-right" />
+                          View services <i className="far fa-arrow-right" />
                         </a>
                       </Link>
-                      <Link legacyBehavior href="/contact">
+                      <Link legacyBehavior href="/en/contact">
                         <a className="theme-btn">
-                          Hablemos <i className="far fa-arrow-right" />
+                          Let’s talk <i className="far fa-arrow-right" />
                         </a>
                       </Link>
                     </div>
@@ -51,40 +51,40 @@ const About = () => {
                   <div className="service-item wow fadeInRight delay-0-2s">
                     <div className="icon"><i className="fal fa-laptop-code" /></div>
                     <h5>
-                      <Link legacyBehavior href="/services/web-development">
-                        <a>Desarrollo Web</a>
+                      <Link legacyBehavior href="/en/services/web-development">
+                        <a>Web Development</a>
                       </Link>
                     </h5>
-                    <p>Sitios rápidos, seguros y orientados a conversión. Listos para SEO y campañas.</p>
+                    <p>Fast, secure, conversion‑oriented websites. Ready for SEO and campaigns.</p>
                   </div>
                   <div className="service-item wow fadeInRight delay-0-3s">
                     <div className="icon"><i className="fal fa-bullhorn" /></div>
                     <h5>
-                      <Link legacyBehavior href="/services/digital-marketing">
-                        <a>Marketing Digital</a>
+                      <Link legacyBehavior href="/en/services/digital-marketing">
+                        <a>Digital Marketing</a>
                       </Link>
                     </h5>
-                    <p>Estrategias en Google y redes sociales con medición de resultados.</p>
+                    <p>Strategies on Google and social media with measurable results.</p>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="service-item mt-30 wow fadeInRight delay-0-4s">
                     <div className="icon"><i className="fal fa-search" /></div>
                     <h5>
-                      <Link legacyBehavior href="/services/google-seo">
-                        <a>Posicionamiento en Google (SEO)</a>
+                      <Link legacyBehavior href="/en/services/google-seo">
+                        <a>Google SEO</a>
                       </Link>
                     </h5>
-                    <p>SEO técnico y de contenidos para aumentar visibilidad orgánica.</p>
+                    <p>Technical and content SEO to increase organic visibility.</p>
                   </div>
                   <div className="service-item wow fadeInRight delay-0-5s">
                     <div className="icon"><i className="fal fa-cogs" /></div>
                     <h5>
-                      <Link legacyBehavior href="/services/custom-software">
-                        <a>Software a Medida</a>
+                      <Link legacyBehavior href="/en/services/custom-software">
+                        <a>Custom Software</a>
                       </Link>
                     </h5>
-                    <p>Integraciones, automatización y paneles a medida para escalar tu operación.</p>
+                    <p>Integrations, automation and tailored dashboards to scale operations.</p>
                   </div>
                 </div>
               </div>
@@ -98,20 +98,20 @@ const About = () => {
           <div className="row gap-90">
             <div className="col-lg-4 col-md-6">
               <div className="why-choose-item style-two wow fadeInUp delay-0-2s">
-                <div className="why-choose-header"><i className="flaticon-optimization-1" /><h5>Performance y SEO</h5></div>
-                <p>Core Web Vitals, indexación y estructura para maximizar visibilidad y conversión.</p>
+                <div className="why-choose-header"><i className="flaticon-optimization-1" /><h5>Performance & SEO</h5></div>
+                <p>Core Web Vitals, indexation and structure to maximize visibility and conversion.</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="why-choose-item style-two wow fadeInUp delay-0-3s">
-                <div className="why-choose-header"><i className="flaticon-mobile-banking" /><h5>Medición y datos</h5></div>
-                <p>GA4, eventos y dashboards para decisiones informadas y mejora continua.</p>
+                <div className="why-choose-header"><i className="flaticon-mobile-banking" /><h5>Measurement & data</h5></div>
+                <p>GA4, events and dashboards for informed decisions and continuous improvement.</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="why-choose-item style-two wow fadeInUp delay-0-4s">
-                <div className="why-choose-header"><i className="flaticon-creativity" /><h5>Equipo senior</h5></div>
-                <p>Procesos claros, entregas iterativas y soporte cercano en cada etapa.</p>
+                <div className="why-choose-header"><i className="flaticon-creativity" /><h5>Senior team</h5></div>
+                <p>Clear processes, iterative deliveries and close support at every stage.</p>
               </div>
             </div>
           </div>

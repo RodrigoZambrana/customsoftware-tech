@@ -1,9 +1,20 @@
 {
-  "seo": {
-    "title": "SEO & SEM | Optimización Técnica y Campañas en Buscadores",
-    "description": "Mejoramos tu visibilidad orgánica con SEO técnico y de contenidos. Ejecutamos campañas SEM rentables con seguimiento y optimización continua."
+  "slider": {
+    "slides": [
+      {
+        "bg": "/assets/images/slider/slide1.jpg",
+        "subtitle": "SEO & Google Ads",
+        "titleHtml": "<span>Más visibilidad en Google</span><br /> campañas que convierten",
+        "ratingLabel": "Orientado a ROI",
+        "primary": { "href": "/contacto", "text": "Empezar ahora" }
+      }
+    ]
   },
-  "pageBanner": "SEO & SEM (Optimización y Campañas)",
+  "seo": {
+    "title": "Posicionamiento en Google | Optimización técnica y anuncios",
+    "description": "Mejoramos tu visibilidad orgánica con SEO técnico y de contenidos. Ejecutamos anuncios en Google con seguimiento y optimización continua."
+  },
+  "pageBanner": "Posicionamiento en Google (SEO)",
   "ctaPrimary": "Hablar con un especialista",
   "ctaSecondary": "Ver planes",
   "about": {
@@ -29,39 +40,50 @@
   },
   "pricingSection": {
     "subtitle": "Planes",
-    "title": "Opciones para tu estrategia",
+    "title": "Opciones para tu estrategia: SEO y anuncios en Google",
+    "description": "Mejora tu visibilidad en buscadores (SEO) y atrae clientes hoy con anuncios en Google.",
     "plans": [
       {
         "name": "SEO Básico",
-        "price": "400",
+        "slug": "seo-basico",
+        "price": "300",
         "unit": "USD/mes",
+        "description": "Ideal para comenzar a aparecer en Google con mejoras esenciales dentro del sitio.",
         "features": [
-          "Auditoría + on-page",
-          "Metadatos y performance",
-          "Reporte mensual"
+          "Revisión del sitio (auditoría básica)",
+          "Títulos y descripciones claros para Google",
+          "Mejora de velocidad y estructura",
+          "Reporte mensual de avances"
         ],
         "cta": "Hablar con un especialista"
       },
       {
-        "name": "SEO + SEM",
+        "name": "SEO + Anuncios en Google",
+        "slug": "seo-mas-anuncios-google",
         "badge": "Más Popular",
-        "price": "900",
+        "price": "500",
         "unit": "USD/mes",
+        "description": "Combina mejoras de SEO con anuncios en Google para resultados visibles en poco tiempo.",
+        "twoColumn": true,
         "features": [
-          "SEO técnico + contenidos",
-          "Campañas Google Ads",
-          "Optimización continua"
+          "Optimización del sitio y contenidos",
+          "Campañas en Google (búsqueda + remarketing)",
+          "Medición completa con GA4/Google Tag",
+          "Optimización quincenal de campañas"
         ],
         "cta": "Hablar con un especialista"
       },
       {
-        "name": "SEO Avanzado + SEM",
-        "price": "1500",
+        "name": "SEO Avanzado + Anuncios en Google",
+        "slug": "seo-avanzado-mas-anuncios-google",
+        "price": "800",
         "unit": "USD/mes",
+        "description": "Para empresas que buscan escalar con estrategias avanzadas, automatización y pruebas constantes.",
         "features": [
-          "Estrategia full",
-          "A/B testing",
-          "Automatizaciones y BI"
+          "Estrategia completa de contenidos y enlaces",
+          "Pruebas A/B de anuncios y páginas",
+          "Automatizaciones y tableros de métricas",
+          "Optimización avanzada para mejorar ROI"
         ],
         "cta": "Hablar con un especialista"
       }

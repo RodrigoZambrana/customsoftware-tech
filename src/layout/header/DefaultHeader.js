@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Nav from "./Nav";
 import NavSearch from "./NavSearch";
+import LanguageSelect from "./LanguageSelect";
 
-const DefaultHeader = ({ singleMenu, dark }) => {
+const DefaultHeader = ({ singleMenu, dark, locale = "es" }) => {
+  const isEn = locale === "en";
   return (
     <header className="main-header menu-absolute">
       {/*Header-Upper*/}
@@ -11,13 +13,13 @@ const DefaultHeader = ({ singleMenu, dark }) => {
           <div className="header-inner rpy-10 rel d-flex align-items-center">
             <div className="logo-outer">
               <div className="logo">
-                <Link legacyBehavior href="/">
+                <Link legacyBehavior href={isEn ? "/en" : "/"}>
                   <a>
                     <img
                       src={
                         dark
-                          ? "/assets/images/logos/noBgColor.png"
-                          : "/assets/images/logos/noBgColor.png"
+                          ? "/assets/images/logos/logo-and-text.png"
+                          : "/assets/images/logos/logo-and-text.png"
                       }
                       alt="Logo"
                       title="Logo"
@@ -28,17 +30,33 @@ const DefaultHeader = ({ singleMenu, dark }) => {
             </div>
             <div className="nav-outer ms-lg-auto clearfix">
               {/* Main Menu */}
-              <Nav singleMenu={singleMenu} />
+              <Nav singleMenu={singleMenu} locale={locale} />
               {/* Main Menu End*/}
+            </div>
+            {/* Language */}
+            <div className="d-none d-lg-block">
+              <LanguageSelect />
             </div>
             {/* Nav Search */}
             <NavSearch />
             {/* Menu Button */}
             <div className="menu-btns">
+              {/* Mobile brand logo (visible on tablets/mobiles) */}
+              <div className="mobile-brand d-xl-none" style={{marginRight: 12}}>
+                <Link legacyBehavior href={locale === "en" ? "/en" : "/"}>
+                  <a aria-label={locale === "en" ? "Go to home" : "Ir al inicio"}>
+                    <img
+                      src={dark ? "/assets/images/logos/logo-and-text.png" : "/assets/images/logos/logo-and-text.png"}
+                      alt="Software Strategy"
+                      style={{ height: 42, width: "auto" }}
+                    />
+                  </a>
+                </Link>
+              </div>
               {/* menu sidebar */}
-              <div className="menu-sidebar" title="menù">
-                <span className="menu-label">menù</span>
-                <button className="navbar-toggle" type="button" aria-label="Abrir menú" title="Abrir menú">
+              <div className="menu-sidebar" title={isEn ? "Menu" : "Menú"}>
+                <span className="menu-label">{isEn ? "Menu" : "Menú"}</span>
+                <button className="navbar-toggle" type="button" aria-label={isEn ? "Open menu" : "Abrir menú"} title={isEn ? "Open menu" : "Abrir menú"}>
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>

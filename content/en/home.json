@@ -1,4 +1,22 @@
 {
+  "slider": {
+    "slides": [
+      {
+        "bg": "/assets/images/slider/slide1.jpg",
+        "subtitle": "Digital Agency",
+        "titleHtml": "<span>Grow your brand</span><br /> with websites, SEO and ads",
+        "ratingLabel": "Experience & results",
+        "primary": {
+          "href": "/contact",
+          "text": "Request proposal"
+        },
+        "secondary": {
+          "href": "/en/services",
+          "text": "View services"
+        }
+      }
+    ]
+  },
   "seoTitle": "Professional Websites, SEO & Digital Marketing",
   "seoDescription": "We build fast, secure, SEO-optimized websites. SEM and social strategies to grow your business online.",
   "heroTitleHtml": "Boost your <span>digital brand</span> with a high-impact website",
@@ -28,7 +46,11 @@
       "Metrics analysis and clear reporting to measure ROI",
       "End‑to‑end strategies: from awareness to conversion"
     ],
-    "badges": ["80+ campaigns managed", "Clients in 10+ industries", "Measurable results in 90 days"],
+    "badges": [
+      "80+ campaigns managed",
+      "Clients in 10+ industries",
+      "Measurable results in 90 days"
+    ],
     "ctas": {
       "readMoreLabel": "Discover more",
       "readMoreHref": "/services/digital-marketing",
@@ -42,32 +64,126 @@
     "subtitle": "What we do",
     "title": "Solutions to grow on the internet",
     "items": [
-      { "number": "01", "title": "Web Design & Development", "text": "Fast, responsive, conversion-oriented websites.", "href": "/services/web-development", "cta": "See more" },
-      { "number": "02", "title": "Google Positioning", "text": "SEO to improve organic visibility and Google Ads to drive qualified traffic that converts into customers.", "href": "/services/seo-sem", "cta": "See more" },
-      { "number": "03", "title": "Digital Marketing", "text": "End-to-end strategies focused on measurable results and sustained growth.", "href": "/services/digital-marketing", "cta": "See more" },
-      { "number": "04", "title": "Custom Software", "text": "We build tailored software solutions that adapt to your processes, optimizing resources and scaling efficiently.", "href": "/services/custom-software", "cta": "See more" }
+      {
+        "number": "01",
+        "title": "Web Design & Development",
+        "text": "Fast, responsive, conversion-oriented websites.",
+        "href": "/services/web-development",
+        "cta": "See more"
+      },
+      {
+        "number": "02",
+        "title": "Google SEO",
+        "text": "SEO to improve organic visibility and Google Ads to drive qualified traffic that converts into customers.",
+        "href": "/services/google-seo",
+        "cta": "See more"
+      },
+      {
+        "number": "03",
+        "title": "Digital Marketing",
+        "text": "End-to-end strategies focused on measurable results and sustained growth.",
+        "href": "/services/digital-marketing",
+        "cta": "See more"
+      },
+      {
+        "number": "04",
+        "title": "Custom Software",
+        "text": "We build tailored software solutions that adapt to your processes, optimizing resources and scaling efficiently.",
+        "href": "/services/custom-software",
+        "cta": "See more"
+      }
     ],
     "image": "/assets/images/services/what-we-do.jpg",
     "imageAlt": "Software Strategy services"
   },
   "whatItems": [
-    { "number": "01", "title": "Web Design & Development", "text": "Fast, responsive, conversion-oriented websites.", "href": "/services/web-development", "cta": "See more" },
-    { "number": "02", "title": "Organic positioning & Google Ads campaigns", "text": "SEO and SEM to increase visibility and results: we optimize your site and content for organic rankings, and manage Google Ads to drive qualified traffic and convert into customers.", "href": "/services/seo-sem", "cta": "See more" },
-    { "number": "03", "title": "Digital Marketing", "text": "Performance-focused strategies with clear metrics.", "href": "/services/digital-marketing", "cta": "See more" }
+    {
+      "number": "01",
+      "title": "Web Design & Development",
+      "text": "Fast, responsive, conversion-oriented websites.",
+      "href": "/services/web-development",
+      "cta": "See more"
+    },
+    {
+      "number": "02",
+      "title": "Google SEO",
+      "text": "SEO to increase visibility and results: we optimize your site and content for organic rankings; we manage Google Ads to drive qualified traffic and convert into customers.",
+      "href": "/services/google-seo",
+      "cta": "See more"
+    },
+    {
+      "number": "03",
+      "title": "Digital Marketing",
+      "text": "Performance-focused strategies with clear metrics.",
+      "href": "/services/digital-marketing",
+      "cta": "See more"
+    }
   ],
   "stats": [
-    { "value": 5, "label": "Years experience" },
-    { "value": 50, "label": "Projects delivered" },
-    { "value": 8, "label": "Specialists" },
-    { "value": 100, "label": "% quality focus" }
+    {
+      "value": 8,
+      "label": "Years experience"
+    },
+    {
+      "value": 50,
+      "label": "Projects delivered"
+    },
+    {
+      "value": 8,
+      "label": "Specialists"
+    },
+    {
+      "value": 100,
+      "label": "% quality focus"
+    }
   ],
   "servicesSubtitle": "Services",
   "servicesTitle": "Software solutions for your business",
   "services": [
-    { "title": "Corporate Websites", "text": "A solid, professional presence ready to convert.", "href": "/services/web-development", "bullets": ["Fast and secure", "Professional design"], "ctaSecondaryText": "Request proposal", "ctaSecondaryHref": "/contact" },
-    { "title": "Online Stores", "text": "Agile, secure e-commerce that’s easy to manage.", "href": "/services/web-development", "bullets": ["Integrated payments", "Easy management"], "ctaSecondaryText": "Request proposal", "ctaSecondaryHref": "/contact" },
-    { "title": "Customer Management Software (CRM) & Dashboards", "text": "Centralize customers, deals and follow-ups with tailored CRM and admin dashboards. Metrics, automations and integrations to inform decisions and scale.", "href": "/services/custom-software", "bullets": ["Dashboards & reports", "Automations"], "ctaSecondaryText": "Request proposal", "ctaSecondaryHref": "/contact" },
-    { "title": "Custom Software", "text": "Tailored developments for your operations.", "href": "/services/custom-software", "bullets": ["Tailored", "Scalable"], "ctaSecondaryText": "Request proposal", "ctaSecondaryHref": "/contact" }
+    {
+      "title": "Corporate Websites",
+      "text": "A solid, professional presence ready to convert.",
+      "href": "/services/web-development",
+      "bullets": [
+        "Fast and secure",
+        "Professional design"
+      ],
+      "ctaSecondaryText": "Request proposal",
+      "ctaSecondaryHref": "/contact"
+    },
+    {
+      "title": "Online Stores",
+      "text": "Agile, secure e-commerce that’s easy to manage.",
+      "href": "/services/custom-software",
+      "bullets": [
+        "Integrated payments",
+        "Easy management"
+      ],
+      "ctaSecondaryText": "Request proposal",
+      "ctaSecondaryHref": "/contact"
+    },
+    {
+      "title": "Customer Management Software (CRM) & Dashboards",
+      "text": "Centralize customers, deals and follow-ups with tailored CRM and admin dashboards. Metrics, automations and integrations to inform decisions and scale.",
+      "href": "/services/custom-software",
+      "bullets": [
+        "Dashboards & reports",
+        "Automations"
+      ],
+      "ctaSecondaryText": "Request proposal",
+      "ctaSecondaryHref": "/contact"
+    },
+    {
+      "title": "Custom Software",
+      "text": "Tailored developments for your operations.",
+      "href": "/services/custom-software",
+      "bullets": [
+        "Tailored",
+        "Scalable"
+      ],
+      "ctaSecondaryText": "Request proposal",
+      "ctaSecondaryHref": "/contact"
+    }
   ],
   "pricingSubtitle": "Plans",
   "pricingTitle": "Choose the plan that fits your business",
@@ -77,14 +193,22 @@
     {
       "name": "Website Plans",
       "desc": "Options to build or refresh your site with performance and SEO focus.",
-      "features": ["Responsive design", "Initial SEO", "Support"],
+      "features": [
+        "Responsive design",
+        "Initial SEO",
+        "Support"
+      ],
       "priceNote": "See plans",
       "href": "/services/web-development"
     },
     {
       "name": "Digital Marketing Plans",
       "desc": "Google and social campaigns to grow measurable results.",
-      "features": ["Google Ads", "Meta Ads", "Metrics & optimization"],
+      "features": [
+        "Google Ads",
+        "Meta Ads",
+        "Metrics & optimization"
+      ],
       "priceNote": "See plans",
       "href": "/services/digital-marketing"
     }
@@ -92,25 +216,61 @@
   "whySubtitle": "Why choose us",
   "whyTitle": "Measurable results and close support",
   "whyItems": [
-    { "title": "Tailored solutions", "text": "Each project is designed to your goals and processes.", "href": "/service-details" },
-    { "title": "Transparency & metrics", "text": "Data-driven decisions with clear reports.", "href": "/service-details" },
-    { "title": "Continuous evolution", "text": "Support and improvements to keep growing.", "href": "/service-details" }
+    {
+      "title": "Tailored solutions",
+      "text": "Each project is designed to your goals and processes.",
+      "href": "/service-details"
+    },
+    {
+      "title": "Transparency & metrics",
+      "text": "Data-driven decisions with clear reports.",
+      "href": "/service-details"
+    },
+    {
+      "title": "Continuous evolution",
+      "text": "Support and improvements to keep growing.",
+      "href": "/service-details"
+    }
   ],
   "trustBar": {
     "subtitle": "Trust & reliability",
     "title": "Included in every plan",
     "items": [
-      { "icon": "fas fa-shield-alt", "text": "SSL certificate & security" },
-      { "icon": "fas fa-server", "text": "Hosting and domain included" },
-      { "icon": "fas fa-mobile-alt", "text": "Responsive design (mobile & tablets)" },
-      { "icon": "fas fa-tachometer-alt", "text": "Optimized performance" }
+      {
+        "icon": "fas fa-shield-alt",
+        "text": "SSL certificate & security"
+      },
+      {
+        "icon": "fas fa-server",
+        "text": "Hosting and domain included"
+      },
+      {
+        "icon": "fas fa-mobile-alt",
+        "text": "Responsive design (mobile & tablets)"
+      },
+      {
+        "icon": "fas fa-tachometer-alt",
+        "text": "Optimized performance"
+      }
     ]
   },
   "blogSubtitle": "Blog & News",
   "blogTitle": "Learn about SEO, Web and Marketing",
   "blogItems": [
-    { "date": "August 10, 2025", "title": "SEO 2025: what Google prioritizes this year", "href": "/blog-details" },
-    { "date": "August 02, 2025", "title": "Turn website visits into customers", "href": "/blog-details" },
-    { "date": "July 28, 2025", "title": "Social media: performance tactics", "href": "/blog-details" }
+    {
+      "date": "August 10, 2025",
+      "title": "SEO 2025: what Google prioritizes this year",
+      "href": "/blog-details"
+    },
+    {
+      "date": "August 02, 2025",
+      "title": "Turn website visits into customers",
+      "href": "/blog-details"
+    },
+    {
+      "date": "July 28, 2025",
+      "title": "Social media: performance tactics",
+      "href": "/blog-details"
+    }
   ]
 }
