@@ -36,7 +36,7 @@ export default function FaqsPage({ t, locale = "es" }) {
           title: t?.seo?.title || (isEn ? "FAQs" : "Preguntas Frecuentes"),
           description: t?.seo?.description || "",
           locale: isEn ? "en_US" : "es_ES",
-          siteName: "Software Srategy",
+          siteName: "Software Strategy",
         }}
       />
 
@@ -55,7 +55,7 @@ export default function FaqsPage({ t, locale = "es" }) {
           <div className="row align-items-center gap-100">
             <div className="col-lg-5">
               <div className="faq-iamge-part rmb-55 wow fadeInLeft delay-0-2s">
-                <img src={t.image || "/assets/images/faqs/faq-two.jpg"} alt={t.imageAlt || (isEn ? "FAQs" : "Preguntas Frecuentes")} />
+                <img src={t.image || "/assets/images/faqs/faq-two.jpg"} alt={t.imageAlt || (isEn ? "FAQs" : "Preguntas Frecuentes")} loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7">
@@ -82,8 +82,8 @@ export default function FaqsPage({ t, locale = "es" }) {
         </div>
 
         <div className="faq-shapes">
-          <img className="shape left" src="/assets/images/shapes/ellipse-left.png" alt="Shape" />
-          <img className="shape right" src="/assets/images/shapes/ellipse-right.png" alt="Shape" />
+          <img className="shape left" src="/assets/images/shapes/ellipse-left.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <img className="shape right" src="/assets/images/shapes/ellipse-right.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -95,7 +95,7 @@ export default function FaqsPage({ t, locale = "es" }) {
                 <div className="section-title text-center wow fadeInUp delay-0-2s">
                   <span className="sub-title mb-15">{t.cta.subtitle}</span>
                   <h2>{t.cta.title}</h2>
-                  <a className="explore-more text-start mt-30" href={isEn ? "/en/contact" : "/contact"}>
+                  <a className="explore-more text-start mt-30" href={isEn ? "/en/contact" : "/contact"} data-cta="faqs-cta">
                     <i className="fas fa-arrow-right" /> <span>{t.cta.linkLabel}</span>
                   </a>
                 </div>

@@ -1,0 +1,30 @@
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # If language root with or without trailing slash, serve its HTML (Next export outputs en.html)
+  RewriteRule ^([a-z]{2})/?$ $1.html [L]
+
+  # Redirect legacy paths for digital marketing
+  RewriteRule ^marketing-social/?$ services/digital-marketing.html [R=301,L]
+  RewriteRule ^en/marketing-social/?$ en/services/digital-marketing.html [R=301,L]
+  # Redirect top-level digital-marketing to canonical services path
+  RewriteRule ^digital-marketing/?$ services/digital-marketing.html [R=301,L]
+  RewriteRule ^en/digital-marketing/?$ en/services/digital-marketing.html [R=301,L]
+  # Redirect top-level service URLs to canonical /services/* paths
+  RewriteRule ^web-development/?$ services/web-development.html [R=301,L]
+  RewriteRule ^custom-software/?$ services/custom-software.html [R=301,L]
+  RewriteRule ^en/web-development/?$ en/services/web-development.html [R=301,L]
+  RewriteRule ^en/custom-software/?$ en/services/custom-software.html [R=301,L]
+
+  # If request is a directory (e.g., /en/), serve its index.html
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^(.+)/$ $1/index.html [L]
+
+  # If not a real file or directory, try .html variant (e.g., /en -> /en.html)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)$ $1.html [L]
+</IfModule>

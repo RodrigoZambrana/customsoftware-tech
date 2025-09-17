@@ -2,6 +2,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import Home5Slider from "@/src/components/sliders/Home5Slider";
 import { NextSeo } from "next-seo";
+import DefaultSEO from "@/next-seo.config";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { sliderProps } from "@/src/sliderProps";
 
@@ -13,7 +14,11 @@ export default function HomePage({ t, locale }) {
     if (!href) return "/";
     if (/^(https?:)?\/\//.test(href) || href.startsWith("mailto:") || href.startsWith("tel:")) return href;
     const path = href.startsWith("/") ? href : `/${href}`;
-    return isEn ? `/en${path === "/en" ? "" : path}` : path;
+    if (isEn) {
+      if (path === "/en" || path.startsWith("/en/")) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith("/en/") || path === "/en" ? (path.replace(/^\/en/, "") || "/") : path;
   };
 
   return (
@@ -33,13 +38,25 @@ export default function HomePage({ t, locale }) {
       <NextSeo
         title={t.seoTitle}
         description={t.seoDescription}
-        canonical={isEn ? "https://www.software-strategy.com/en/" : "https://www.software-strategy.com/"}
+        canonical={isEn ? "https://www.software-strategy.com/en" : "https://www.software-strategy.com"}
+        languageAlternates={[
+          { hrefLang: "es", href: "https://www.software-strategy.com" },
+          { hrefLang: "en", href: "https://www.software-strategy.com/en" },
+          { hrefLang: "x-default", href: "https://www.software-strategy.com" },
+        ]}
         openGraph={{
           type: "website",
           locale: isEn ? "en_US" : "es_ES",
-          url: isEn ? "https://www.software-strategy.com/en/" : "https://www.software-strategy.com/",
-          siteName: "Software Srategy",
-          images: [{ url: "https://www.software-strategy.com/og-image.jpg", width: 1200, height: 630, alt: "Software Srategy" }],
+          url: isEn ? "https://www.software-strategy.com/en" : "https://www.software-strategy.com",
+          siteName: "Software Strategy",
+          images: [
+            {
+              url: "https://www.software-strategy.com/og-image.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Software Strategy",
+            },
+          ],
        }}
      />
 
@@ -82,7 +99,7 @@ export default function HomePage({ t, locale }) {
             </div>
             <div className="col-lg-4">
               <div className="hero-right-image mt-20 wow fadeInUp delay-0-4s">
-                <img src="/assets/images/hero/hero-right.png" alt={t.heroRightImageAlt || (isEn ? "Web design and digital marketing" : "Diseño web y marketing digital")} />
+                <img src="/assets/images/hero/hero-right.png" alt={t.heroRightImageAlt || (isEn ? "Web design and digital marketing" : "Diseño web y marketing digital")} loading="eager" />
               </div>
             </div>
           </div>
@@ -93,7 +110,7 @@ export default function HomePage({ t, locale }) {
           </div>
         </div>
         <div className="hero-bg">
-          <img src="/assets/images/hero/hero-bg.png" alt="lines" />
+          <img src="/assets/images/hero/hero-bg.png" alt="" aria-hidden />
         </div>
       </section>
 
@@ -138,7 +155,7 @@ export default function HomePage({ t, locale }) {
           <div className="row justify-content-between">
             <div className="col-xl-5 col-lg-3">
               <div className="about-image rmb-45 wow fadeInUp delay-0-2s">
-                <img src="/assets/images/about/circle-text.svg" alt="Circle Text" />
+                <img src="/assets/images/about/circle-text.svg" alt="Circle Text" loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-xl-7 col-lg-9">
@@ -201,7 +218,7 @@ export default function HomePage({ t, locale }) {
                     <div className="content">
                       <p>{t.aboutText}</p>
                       <Link legacyBehavior href="/about">
-                        <a className="read-more mt-10">
+                        <a className="read-more mt-10" data-cta="about-learn-more">
                           {t.aboutCtaText} <i className="far fa-arrow-right" />
                         </a>
                       </Link>
@@ -247,7 +264,7 @@ export default function HomePage({ t, locale }) {
             </div>
             <div className="col-xl-6">
               <div className="what-we-do-image mb-55 wow fadeInRight delay-0-2s">
-                <img src={t.whatCustom?.image || "/assets/images/services/what-we-do.jpg"} alt={t.whatCustom?.imageAlt || (isEn ? "What We Do" : "Qué hacemos")} />
+                <img src={t.whatCustom?.image || "/assets/images/services/what-we-do.jpg"} alt={t.whatCustom?.imageAlt || (isEn ? "What We Do" : "Qué hacemos")} loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -293,7 +310,7 @@ export default function HomePage({ t, locale }) {
                         <a data-cta="services-grid-title" data-service={card.href}>{card.title}</a>
                       </Link>
                     </h5>
-                    <img src="/assets/images/services/icon1.png" alt="Icon" />
+                    <img src="/assets/images/services/icon1.png" alt="Icon" loading="lazy" decoding="async" />
                   </div>
                   <div className="content">
                     <p>{card.text}</p>
@@ -345,7 +362,7 @@ export default function HomePage({ t, locale }) {
                   </a>
                 </Link>
                 <div className="hand-shape">
-                  <img src="/assets/images/shapes/pricing-banner-hand-shape.png" alt="Pricing Banner Shape" />
+                  <img src="/assets/images/shapes/pricing-banner-hand-shape.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -355,7 +372,7 @@ export default function HomePage({ t, locale }) {
                 <div className="pricing-plan-item style-three" style={{ backgroundImage: "url(/assets/images/shapes/pricing-plan-bg.png)" }}>
                   <div className="icon-title">
                     <div className="icon">
-                      <img src="/assets/images/icons/price.svg" alt="Icon" />
+                      <img src="/assets/images/icons/price.svg" alt="Icon" loading="lazy" decoding="async" />
                     </div>
                     <h5>{plan.name}</h5>
                   </div>
@@ -371,7 +388,7 @@ export default function HomePage({ t, locale }) {
                         <span className="before">$</span>
                         <span className="price">{plan.price}</span>
                       </span>
-                      <img src="/assets/images/shapes/right-arrow.png" alt="Arrow" />
+                      <img src="/assets/images/shapes/right-arrow.png" alt="Arrow" loading="lazy" decoding="async" />
                       {plan.priceNote && (
                         <span className="offer-text">{plan.priceNote}</span>
                       )}
@@ -395,7 +412,7 @@ export default function HomePage({ t, locale }) {
           <div className="row">
             <div className="col-xl-7">
               <div className="why-choose-left-image mb-40 wow fadeInLeft delay-0-2s">
-                <img src="/assets/images/services/why-choose-left.jpg" alt="Why Choose" />
+                <img src="/assets/images/services/why-choose-left.jpg" alt="Why Choose" loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-xl-5">
@@ -444,7 +461,7 @@ export default function HomePage({ t, locale }) {
               <div className={`col-xl-4 col-md-6 wow fadeInUp delay-0-${2 + i * 2}s`} key={b.title}>
                 <div className="blog-item">
                   <div className="image">
-                    <img src={`/assets/images/blog/blog${i + 1}.jpg`} alt="Blog" />
+                    <img src={`/assets/images/blog/blog${i + 1}.jpg`} alt="Blog" loading="lazy" decoding="async" />
                   </div>
                   <ul className="blog-meta">
                     <li>

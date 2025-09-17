@@ -14,9 +14,12 @@ const DefaultFooter = ({ dark, locale, t }) => {
   const withLang = (href) => {
     if (!href) return "/";
     if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) return href;
-    // normaliza: asegura que empiece con "/"
     const path = href.startsWith("/") ? href : `/${href}`;
-    return isEn ? `/en${path === "/en" ? "" : path}` : path;
+    if (isEn) {
+      if (path === "/en" || path.startsWith("/en/")) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith("/en/") || path === "/en" ? (path.replace(/^\/en/, "") || "/") : path;
   };
 
   return (
@@ -31,7 +34,7 @@ const DefaultFooter = ({ dark, locale, t }) => {
             <div className="col-lg-4">
               <div className="footer-logo mb-20 wow fadeInRight delay-0-2s">
                 <Link legacyBehavior href={withLang("/")}>
-                  <a>
+                  <a data-cta="footer-brand">
                     <img
                       src={
                         dark
@@ -47,7 +50,7 @@ const DefaultFooter = ({ dark, locale, t }) => {
             <div className="col-lg-8 text-lg-end">
               <div className="social-style-four mb-20 wow fadeInLeft delay-0-2s">
                 {t.social?.map((s) => (
-                  <a href={s.href} key={s.label} aria-label={s.label}>
+                  <a href={s.href} key={s.label} aria-label={s.label} data-cta="footer-social" data-network={s.label}>
                     <i className={s.icon} /> <span>{s.label}</span>
                   </a>
                 ))}
@@ -66,12 +69,12 @@ const DefaultFooter = ({ dark, locale, t }) => {
               </div>
               <div className="footer-contact-info wow fadeInUp delay-0-3s">
                 {t.contacts?.email && (
-                  <a className="theme-btn style-three" href={`mailto:${t.contacts.email}`}>
+                  <a className="theme-btn style-three" href={`mailto:${t.contacts.email}`} data-cta="footer-email">
                     {t.contacts.email} <i className="far fa-arrow-right" />
                   </a>
                 )}
                 {t.contacts?.phone && (
-                  <a className="theme-btn style-three phone-number" href={`tel:${t.contacts.phoneDial}`}>
+                  <a className="theme-btn style-three phone-number" href={`tel:${t.contacts.phoneDial}`} data-cta="footer-phone">
                     {t.contacts.phoneDisplay} <i className="far fa-arrow-right" />
                   </a>
                 )}
@@ -89,7 +92,7 @@ const DefaultFooter = ({ dark, locale, t }) => {
                   {t.quickLinksCol1?.map((item) => (
                     <li key={item.label}>
                       <Link legacyBehavior href={withLang(item.href)}>
-                        <a>{item.label}</a>
+                        <a data-cta="footer-quick-link" data-link={item.href}>{item.label}</a>
                       </Link>
                     </li>
                   ))}
@@ -100,7 +103,7 @@ const DefaultFooter = ({ dark, locale, t }) => {
                   {t.quickLinksCol2?.map((item) => (
                     <li key={item.label}>
                       <Link legacyBehavior href={withLang(item.href)}>
-                        <a>{item.label}</a>
+                        <a data-cta="footer-quick-link" data-link={item.href}>{item.label}</a>
                       </Link>
                     </li>
                   ))}
@@ -119,7 +122,7 @@ const DefaultFooter = ({ dark, locale, t }) => {
                   {t.bottomMenu?.map((item) => (
                     <li key={item.label}>
                       <Link legacyBehavior href={withLang(item.href)}>
-                        <a>{item.label}</a>
+                        <a data-cta="footer-bottom-link" data-link={item.href}>{item.label}</a>
                       </Link>
                     </li>
                   ))}
@@ -132,7 +135,7 @@ const DefaultFooter = ({ dark, locale, t }) => {
                 <p>
                   {t.copyright.prefix}{" "}
                   <Link legacyBehavior href={withLang("/")}>
-                    <a>{t.brandName}</a>
+                    <a data-cta="footer-brand">{t.brandName}</a>
                   </Link>{" "}
                   {t.copyright.suffix}
                 </p>

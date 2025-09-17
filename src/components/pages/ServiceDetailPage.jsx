@@ -14,7 +14,11 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
     if (!href) return "/";
     if (/^(https?:)?\/\//.test(href) || href.startsWith("mailto:") || href.startsWith("tel:")) return href;
     const path = href.startsWith("/") ? href : `/${href}`;
-    return isEn ? `/en${path === "/en" ? "" : path}` : path;
+    if (isEn) {
+      if (path === "/en" || path.startsWith("/en/")) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith("/en/") || path === "/en" ? (path.replace(/^\/en/, "") || "/") : path;
   };
 
   const planIcons = ["flaticon-abstract", "flaticon-liquid", "flaticon-petals"];
@@ -52,7 +56,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
         itemCondition: "https://schema.org/NewCondition",
         availability: "https://schema.org/InStock",
         url: canonicalUrl,
-        seller: { name: "Software Srategy" },
+        seller: { name: "Software Strategy" },
       }));
 
   // Service JSON-LD (manual, next-seo no expone ServiceJsonLd)
@@ -69,7 +73,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
     inLanguage: isEn ? "en" : "es",
     provider: {
       "@type": "Organization",
-      name: "Software Srategy",
+      name: "Software Strategy",
       url: siteBase,
     },
     ...(minPrice
@@ -114,7 +118,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
           title: seoTitle,
           description: seoDesc,
           locale: ogLocale,
-          siteName: "Software Srategy",
+          siteName: "Software Strategy",
           images: DefaultSEO?.openGraph?.images || [],
         }}
         languageAlternates={[
@@ -139,7 +143,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
         <ProductJsonLd
           productName={t?.pageBanner || (isEn ? "Service" : "Servicio")}
           description={seoDesc}
-          brand={{ name: "Software Srategy" }}
+          brand={{ name: "Software Strategy" }}
           offers={offers}
         />
       )}
@@ -188,7 +192,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
                     </div>
 
                     <Link legacyBehavior href={withLang("/contact")}>
-                      <a className="theme-btn style-two mt-35">
+                      <a className="theme-btn style-two mt-35" data-cta="service-about">
                         {t?.ctaPrimary ?? (isEn ? "Request a quote" : "Pedir cotización")} <i className="far fa-arrow-right" />
                       </a>
                     </Link>
@@ -202,7 +206,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
               <div className="row">
                 <div className="col-12">
                   <div className="image wow zoomIn delay-0-2s text-center">
-                    <img src={t.about?.image || "/assets/images/banner/banner-bg.jpg"} alt={t.about?.imageAlt || (isEn ? "Service" : "Servicio")} style={{ maxWidth: "100%", height: "auto" }} />
+                    <img src={t.about?.image || "/assets/images/banner/banner-bg.jpg"} alt={t.about?.imageAlt || (isEn ? "Service" : "Servicio")} style={{ maxWidth: "100%", height: "auto" }} loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -221,7 +225,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
               <div className="col-lg-7 wow fadeInUp delay-0-2s">
                 <div className="advertise-banner style-one bgc-primary" style={{ backgroundImage: "url(/assets/images/banner/add-banner-bg.png)" }}>
                   <div className="image">
-                    <img src={t.extra.advertise.left?.image || "/assets/images/banner/add-banner.png"} alt="Banner" />
+                    <img src={t.extra.advertise.left?.image || "/assets/images/banner/add-banner.png"} alt="Banner" loading="lazy" decoding="async" />
                   </div>
                   <div className="content mt-20">
                     {t.extra.advertise.left?.number && <span className="number">{t.extra.advertise.left.number}</span>}
@@ -255,56 +259,60 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
             </div>
             <div className="skills-wrap">
               <div className="skill-item">
-                <img src="/assets/images/skills/skill1.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill1.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">Bootstrap</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill2.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill2.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">HTML</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill3.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill3.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">CSS</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill4.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill4.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">javascript</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill5.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill5.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">React</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill6.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill6.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">WordPress</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill7.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill7.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">php</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill8.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill8.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">node.js</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill9.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill9.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">Sass</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill10.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill10.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">Angular</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill11.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill11.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">Shopify</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill12.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill12.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">Elementor</span>
               </div>
               <div className="skill-item">
-                <img src="/assets/images/skills/skill13.png" alt="Skill Icon" />
+                <img src="/assets/images/skills/skill13.png" alt="Skill Icon" loading="lazy" decoding="async" />
                 <span className="text">Vue.js</span>
+              </div>
+                <div className="skill-item">
+                <img src="/assets/images/skills/skill14.png" alt="Skill Icon" loading="lazy" decoding="async" />
+                <span className="text">Java</span>
               </div>
             </div>
           </div>
@@ -342,7 +350,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
               </div>
               <div className="col-lg-5">
                 <div className="image-border-shape wow fadeInRight delay-0-2s">
-                  <img src={t.extra.aboutCounters.image || "/assets/images/about/about-image-shape.png"} alt={t.extra.aboutCounters.imageAlt || "About"} />
+                    <img src={t.extra.aboutCounters.image || "/assets/images/about/about-image-shape.png"} alt={t.extra.aboutCounters.imageAlt || "About"} loading="lazy" decoding="async" />
                   <div className="bottom-border" />
                 </div>
               </div>
@@ -395,7 +403,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
                 )}
                 {t.whatWeDo?.ctaHref && (
                   <Link legacyBehavior href={withLang(t.whatWeDo.ctaHref)}>
-                    <a className="theme-btn mt-25">
+                    <a className="theme-btn mt-25" data-cta="service-what-cta">
                       {t.whatWeDo?.ctaText || (isEn ? 'Request proposal' : 'Solicitar propuesta')} <i className="far fa-arrow-right" />
                     </a>
                   </Link>
@@ -404,7 +412,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
             </div>
             <div className="col-xl-4 text-xl-end mt-25 rmt-15">
               <Link legacyBehavior href="#paquetes-web">
-                <a className="explore-more">
+                <a className="explore-more" data-cta="service-view-plans">
                   <i className="fas fa-arrow-right" /> <span>{t?.ctaSecondary ?? (isEn ? "View plans" : "Ver planes")}</span>
                 </a>
               </Link>
@@ -433,7 +441,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
                     <h4>{it.title}</h4>
                     {it.image && (
                       <div className="image">
-                        <img src={it.image} alt={it.title} />
+                        <img src={it.image} alt={it.title} loading="lazy" decoding="async" />
                       </div>
                     )}
                   </div>
@@ -558,7 +566,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
             {/* Imagen izquierda */}
             <div className="col-lg-5">
               <div className="faq-iamge-part rmb-55 wow fadeInLeft delay-0-2s">
-                <img src={t.faqs?.image || "/assets/images/faqs/faq-two.jpg"} alt={t.faqs?.imageAlt || (isEn ? "FAQs" : "Preguntas frecuentes")} />
+                <img src={t.faqs?.image || "/assets/images/faqs/faq-two.jpg"} alt={t.faqs?.imageAlt || (isEn ? "FAQs" : "Preguntas frecuentes")} loading="lazy" decoding="async" />
               </div>
             </div>
 
@@ -579,8 +587,8 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
 
         {/* Shapes decorativos */}
         <div className="faq-shapes">
-          <img className="shape left" src="/assets/images/shapes/ellipse-left.png" alt="Shape" />
-          <img className="shape right" src="/assets/images/shapes/ellipse-right.png" alt="Shape" />
+          <img className="shape left" src="/assets/images/shapes/ellipse-left.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <img className="shape right" src="/assets/images/shapes/ellipse-right.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
         </div>
       </section>
       {/* FAQ's Area end */}
@@ -594,7 +602,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
                 <span className="sub-title mb-15">{t.workWithUs?.subtitle}</span>
                 <h2>{t.workWithUs?.title}</h2>
                 <Link legacyBehavior href={withLang("/contact")}>
-                  <a className="explore-more text-start mt-30">
+                  <a className="explore-more text-start mt-30" data-cta="service-work-with-us">
                     <i className="fas fa-arrow-right" /> <span>{t.workWithUs?.cta}</span>
                   </a>
                 </Link>

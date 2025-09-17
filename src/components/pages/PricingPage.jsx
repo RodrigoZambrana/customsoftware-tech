@@ -12,7 +12,11 @@ export default function PricingPage({ t, locale = "es" }) {
     if (!href) return "/";
     if (/^(https?:)?\/\//.test(href) || href.startsWith("mailto:") || href.startsWith("tel:")) return href;
     const path = href.startsWith("/") ? href : `/${href}`;
-    return isEn ? `/en${path === "/en" ? "" : path}` : path;
+    if (isEn) {
+      if (path === "/en" || path.startsWith("/en/")) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith("/en/") || path === "/en" ? (path.replace(/^\/en/, "") || "/") : path;
   };
 
   // Iconitos para los 3 planes (mantengo el look & feel del template)
@@ -24,6 +28,11 @@ export default function PricingPage({ t, locale = "es" }) {
         title={t?.seo?.title || (isEn ? "Pricing" : "Precios")}
         description={t?.seo?.description || (isEn ? "Plans and pricing for web development, SEO/SEM and marketing services." : "Planes y precios para desarrollo web, SEO/SEM y marketing.")}
         canonical={`${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}${isEn ? "/en/pricing" : "/pricing"}`}
+        languageAlternates={[
+          { hrefLang: "es", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/pricing` },
+          { hrefLang: "en", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/en/pricing` },
+          { hrefLang: "x-default", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/pricing` },
+        ]}
       />
       {/* Page Banner */}
       <PageBanner pageName={t.pageBanner} />
@@ -51,7 +60,7 @@ export default function PricingPage({ t, locale = "es" }) {
                     <p>{t.whyChoose.visionText}</p>
 
                     <Link legacyBehavior href={withLang("/about")}>
-                      <a className="theme-btn style-two mt-35">
+                      <a className="theme-btn style-two mt-35" data-cta="pricing-why-choose">
                         {t.whyChoose.cta} <i className="far fa-arrow-right" />
                       </a>
                     </Link>
@@ -136,7 +145,7 @@ export default function PricingPage({ t, locale = "es" }) {
 
                   {/* CTA */}
                   <Link legacyBehavior href={withLang("/pricing")}>
-                    <a className="theme-btn w-100">
+                    <a className="theme-btn w-100" data-cta="pricing-plan" data-plan={plan.name}>
                       {plan.cta} <i className="far fa-arrow-right" />
                     </a>
                   </Link>
@@ -157,7 +166,7 @@ export default function PricingPage({ t, locale = "es" }) {
                 <span className="sub-title mb-15">{t.workWithUs.subtitle}</span>
                 <h2>{t.workWithUs.title}</h2>
                 <Link legacyBehavior href={withLang("/contact")}>
-                  <a className="explore-more text-start mt-30">
+                  <a className="explore-more text-start mt-30" data-cta="pricing-work-with-us">
                     <i className="fas fa-arrow-right" /> <span>{t.workWithUs.cta}</span>
                   </a>
                 </Link>

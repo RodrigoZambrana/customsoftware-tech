@@ -57,58 +57,60 @@ const SideBar = ({ locale = "es" }) => {
             <MobileSlideMenu locale={locale} />
           </div>
 
-          {/* Appointment Form (visible on desktop ≥1200px) */}
-          <div className="appointment-form d-none d-xl-block">
-            <div className="title">
-              <h4>{isEn ? "Get Appointment" : "Agendar una cita"}</h4>
-            </div>
-            <form onSubmit={onSubmit}>
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder={isEn ? "Name" : "Nombre"}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
+          {/* Appointment Form (commented out for future implementation) */}
+          {false && (
+            <div className="appointment-form d-none d-xl-block">
+              <div className="title">
+                <h4>{isEn ? "Get Appointment" : "Agendar una cita"}</h4>
               </div>
-              <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder={isEn ? "Email address" : "Correo electrónico"}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <textarea
-                  placeholder={isEn ? "Message" : "Mensaje"}
-                  rows={5}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-              </div>
-              <div className="form-group">
-                <button type="submit" className="theme-btn" disabled={status === "submitting"}>
-                  {status === "submitting"
-                    ? isEn
-                      ? "Sending..."
-                      : "Enviando..."
-                    : isEn
-                    ? "Send"
-                    : "Enviar"}
-                </button>
-              </div>
-              {status === "error" && (
-                <div className="form-group" style={{ color: "#e74c3c" }}>
-                  {error}
+              <form onSubmit={onSubmit}>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder={isEn ? "Name" : "Nombre"}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
                 </div>
-              )}
-            </form>
-          </div>
+                <div className="form-group">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder={isEn ? "Email address" : "Correo electrónico"}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <textarea
+                    placeholder={isEn ? "Message" : "Mensaje"}
+                    rows={5}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                </div>
+                <div className="form-group">
+                  <button type="submit" className="theme-btn" disabled={status === "submitting"}>
+                    {status === "submitting"
+                      ? isEn
+                        ? "Sending..."
+                        : "Enviando..."
+                      : isEn
+                      ? "Send"
+                      : "Enviar"}
+                  </button>
+                </div>
+                {status === "error" && (
+                  <div className="form-group" style={{ color: "#e74c3c" }}>
+                    {error}
+                  </div>
+                )}
+              </form>
+            </div>
+          )}
           {/*Social Icons*/}
           <div className="social-style-one">
             <a href="https://www.facebook.com/software.strategy/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">

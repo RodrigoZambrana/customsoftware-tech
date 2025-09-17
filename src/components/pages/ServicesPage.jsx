@@ -9,7 +9,11 @@ export default function ServicesPage({ t, locale = "es" }) {
     if (!href) return "/";
     if (/^(https?:)?\/\//.test(href) || href.startsWith("mailto:") || href.startsWith("tel:")) return href;
     const path = href.startsWith("/") ? href : `/${href}`;
-    return isEn ? `/en${path === "/en" ? "" : path}` : path;
+    if (isEn) {
+      if (path === "/en" || path.startsWith("/en/")) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith("/en/") || path === "/en" ? (path.replace(/^\/en/, "") || "/") : path;
   };
 
   return (
@@ -18,6 +22,11 @@ export default function ServicesPage({ t, locale = "es" }) {
         title={t?.seo?.title || (isEn ? "Services" : "Servicios")}
         description={t?.seo?.description || (isEn ? "Explore our services: web development, custom software, SEO/SEM and digital marketing." : "Conocé nuestros servicios: desarrollo web, software a medida, SEO/SEM y marketing digital.")}
         canonical={`${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}${isEn ? "/en/services" : "/services"}`}
+        languageAlternates={[
+          { hrefLang: "es", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/services` },
+          { hrefLang: "en", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/en/services` },
+          { hrefLang: "x-default", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/services` },
+        ]}
       />
       {/* Page Banner */}
       <PageBanner pageName={t.pageBanner} />
@@ -32,10 +41,10 @@ export default function ServicesPage({ t, locale = "es" }) {
                 {/* Imagen izquierda si even, derecha si odd */}
                 {even && (
                   <div className="image wow fadeInLeft delay-0-2s">
-                    <img src={svc.image} alt={svc.imageAlt || svc.title} />
+                    <img src={svc.image} alt={svc.imageAlt || svc.title} loading="lazy" decoding="async" />
                     {svc.href && (
                       <Link legacyBehavior href={withLang(svc.href)}>
-                        <a className="project-btn">
+                        <a className="project-btn" aria-label={isEn ? 'View service details' : 'Ver detalle del servicio'}>
                           <i className="far fa-arrow-right" />
                         </a>
                       </Link>
@@ -59,7 +68,7 @@ export default function ServicesPage({ t, locale = "es" }) {
                   <hr />
                   <p>{svc.description}</p>
                   <Link legacyBehavior href={withLang(svc.href || "/contact")}>
-                    <a className="read-more">
+                    <a className="read-more" data-cta="services-read-more" data-service={(svc.href || svc.title || '').toString()}>
                       {t.ctaReadMore} <i className="far fa-arrow-right" />
                     </a>
                   </Link>
@@ -67,10 +76,10 @@ export default function ServicesPage({ t, locale = "es" }) {
 
                 {!even && (
                   <div className="image wow fadeInRight delay-0-2s">
-                    <img src={svc.image} alt={svc.imageAlt || svc.title} />
+                    <img src={svc.image} alt={svc.imageAlt || svc.title} loading="lazy" decoding="async" />
                     {svc.href && (
                       <Link legacyBehavior href={withLang(svc.href)}>
-                        <a className="project-btn">
+                        <a className="project-btn" aria-label={isEn ? 'View service details' : 'Ver detalle del servicio'}>
                           <i className="far fa-arrow-right" />
                         </a>
                       </Link>

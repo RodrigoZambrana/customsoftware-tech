@@ -31,7 +31,7 @@ export async function getStaticPaths() {
   return {
     paths: [
       { params: { slug: [] } }, // /
-      { params: { slug: ["en"] } }, // /en
+      // EN root handled by pages/en/index.jsx
       { params: { slug: ["pricing"] } }, // /pricing
       { params: { slug: ["en", "pricing"] } }, // /en/pricing
       { params: { slug: ["contact"] } }, // /contact (ES)
@@ -48,13 +48,8 @@ export async function getStaticPaths() {
       { params: { slug: ["en", "services", "digital-marketing"] } }, // /en/services/digital-marketing
       { params: { slug: ["services", "google-seo"] } }, // /services/google-seo (ES)
       { params: { slug: ["en", "services", "google-seo"] } }, // /en/services/google-seo
-      // Backwards-compatible top-level service URLs (optional)
-      { params: { slug: ["web-development"] } }, // /web-development
-      { params: { slug: ["en", "web-development"] } }, // /en/web-development
-      { params: { slug: ["custom-software"] } }, // /custom-software
-      { params: { slug: ["en", "custom-software"] } }, // /en/custom-software
-      { params: { slug: ["marketing-social"] } }, // /marketing-social
-      { params: { slug: ["en", "marketing-social"] } }, // /en/marketing-social
+      // No top-level service URLs; use /services/* (redirects handled in .htaccess)
+      // top-level digital-marketing not generated; use /services/digital-marketing
       // top-level google-seo removed
     ],
     fallback: false,
@@ -84,15 +79,12 @@ export async function getStaticProps({ params }) {
 
     // Detalles de servicios: /services/{slug}
     if ((a === "services" || a === "servicios") && b) {
-      if (["web-development", "custom-software", "marketing-social", "digital-marketing", "google-seo"].includes(b)) {
-        page = (b === "marketing-social") ? "digital-marketing" : (b === "google-seo" ? "seo-sem" : b);
+      if (["web-development", "custom-software", "digital-marketing", "google-seo"].includes(b)) {
+        page = (b === "google-seo" ? "seo-sem" : b);
       }
     }
 
-    // URLs anteriores de nivel raíz (compatibilidad)
-    if (["web-development", "custom-software", "marketing-social", "digital-marketing"].includes(a)) {
-      page = (a === "marketing-social") ? "digital-marketing" : a;
-    }
+    // Top-level legacy URLs are redirected at web server; no static routes here.
   }
 
   // JSON de contenido

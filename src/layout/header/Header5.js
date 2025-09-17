@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import LanguageSelect from "./LanguageSelect";
 import Nav from "./Nav"; // navBarOriginal (referencia)
 import NavSearch from "./NavSearch";
@@ -33,8 +34,8 @@ const Header5 = ({ singleMenu, dark, locale }) => {
             <div className="logo-outer">
               <div className="logo">
                 <Link legacyBehavior href={isEn ? "/en" : "/"}>
-                  <a>
-                    <img
+                  <a data-cta="nav-brand">
+                    <Image
                       src={
                         dark
                           ? "/assets/images/logos/logo-and-text.png"
@@ -42,6 +43,10 @@ const Header5 = ({ singleMenu, dark, locale }) => {
                       }
                       alt="Logo"
                       title="Logo"
+                      width={3163}
+                      height={710}
+                      priority
+                      style={{ height: 42, width: "auto" }}
                     />
                   </a>
                 </Link>
@@ -58,10 +63,13 @@ const Header5 = ({ singleMenu, dark, locale }) => {
               {/* Mobile brand logo (visible on tablets/mobiles) */}
               <div className="mobile-brand d-xl-none" style={{marginRight: 12}}>
                 <Link legacyBehavior href={isEn ? "/en" : "/"}>
-                  <a aria-label={isEn ? "Go to home" : "Ir al inicio"}>
-                    <img
+                  <a aria-label={isEn ? "Go to home" : "Ir al inicio"} data-cta="nav-brand-mobile">
+                    <Image
                       src={dark ? "/assets/images/logos/logo-and-text.png" : "/assets/images/logos/logo-and-text.png"}
                       alt="Software Strategy"
+                      width={3163}
+                      height={710}
+                      priority
                       style={{ height: 42, width: "auto" }}
                     />
                   </a>
@@ -77,7 +85,7 @@ const Header5 = ({ singleMenu, dark, locale }) => {
                 </div>
               </div>
               {/* menu sidebar */}
-              <div className="menu-sidebar" title={isEn ? "Menu" : "Menú"}>
+              <div className="menu-sidebar d-xl-none" title={isEn ? "Menu" : "Menú"}>
                 <span className="menu-label">{isEn ? "Menu" : "Menú"}</span>
                 <button className="navbar-toggle" type="button" aria-label={isEn ? "Open menu" : "Abrir menú"} title={isEn ? "Open menu" : "Abrir menú"}>
                   <span className="icon-bar"></span>

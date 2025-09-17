@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import Menu from "./Menu";
 
@@ -10,11 +11,15 @@ const Nav = ({ singleMenu, variant, locale }) => {
       <div className="navbar-header py-10">
         <div className="mobile-logo">
           <Link legacyBehavior href={isEn ? "/en" : "/"}>
-            <a>
-              <img
+            <a data-cta="nav-brand">
+              <Image
                 src="/assets/images/logos/logo-and-text.png"
                 alt="Logo"
                 title="Logo"
+                width={3163}
+                height={710}
+                priority
+                style={{ height: 42, width: "auto" }}
               />
             </a>
           </Link>

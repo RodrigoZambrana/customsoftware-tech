@@ -32,39 +32,45 @@ const DaskTopMenu = ({ locale }) => {
     if (!href) return '/';
     if (/^(https?:)?\/\//.test(href) || href.startsWith('mailto:') || href.startsWith('tel:')) return href;
     const path = href.startsWith('/') ? href : `/${href}`;
-    return isEn ? `/en${path === '/en' ? '' : path}` : path;
+    if (isEn) {
+      if (path === '/en' || path.startsWith('/en/')) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith('/en/') || path === '/en' ? (path.replace(/^\/en/, '') || '/') : path;
   };
   return (
     <ul className="navigation d-none d-lg-flex desktop-menu">
       <li>
-        <Link legacyBehavior href={withLang('/')}>{isEn ? 'Home' : 'Inicio'}</Link>
+        <Link legacyBehavior href={withLang('/')}>
+          <a data-cta="nav-home">{isEn ? 'Home' : 'Inicio'}</a>
+        </Link>
       </li>
       <li className="dropdown">
         <a href="#">{isEn ? 'Services' : 'Servicios'}</a>
         <ul>
           <li>
             <Link legacyBehavior href={withLang('services/web-development')}>
-              {isEn ? 'Web Development' : 'Desarrollo Web'}
+              <a data-cta="nav-services-web-development">{isEn ? 'Web Development' : 'Desarrollo Web'}</a>
             </Link>
           </li>
           <li>
             <Link legacyBehavior href={withLang('services/digital-marketing')}>
-              {isEn ? 'Digital Marketing' : 'Marketing Digital'}
+              <a data-cta="nav-services-digital-marketing">{isEn ? 'Digital Marketing' : 'Marketing Digital'}</a>
             </Link>
           </li>
           <li>
             <Link legacyBehavior href={withLang('services/custom-software')}>
-              {isEn ? 'Custom Software' : 'Software a medida'}
+              <a data-cta="nav-services-custom-software">{isEn ? 'Custom Software' : 'Software a medida'}</a>
             </Link>
           </li>
           <li>
             <Link legacyBehavior href={withLang('services/google-seo')}>
-              {isEn ? 'Google SEO' : 'Posicionamiento en Google (SEO)'}
+              <a data-cta="nav-services-google-seo">{isEn ? 'Google SEO' : 'Posicionamiento en Google (SEO)'}</a>
             </Link>
           </li>
           <li>
             <Link legacyBehavior href={withLang('services')}>
-              {isEn ? 'All Services' : 'Todos los servicios'}
+              <a data-cta="nav-services-all">{isEn ? 'All Services' : 'Todos los servicios'}</a>
             </Link>
           </li>
         </ul>
@@ -73,13 +79,19 @@ const DaskTopMenu = ({ locale }) => {
         </div>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('faqs')}>{isEn ? 'FAQs' : 'FAQs'}</Link>
+        <Link legacyBehavior href={withLang('faqs')}>
+          <a data-cta="nav-faqs">{isEn ? 'FAQs' : 'FAQs'}</a>
+        </Link>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('about')}>{isEn ? 'About Us' : 'Sobre Nosotros'}</Link>
+        <Link legacyBehavior href={withLang('about')}>
+          <a data-cta="nav-about">{isEn ? 'About Us' : 'Sobre Nosotros'}</a>
+        </Link>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('contact')}>{isEn ? 'Contact' : 'Contacto'}</Link>
+        <Link legacyBehavior href={withLang('contact')}>
+          <a data-cta="nav-contact">{isEn ? 'Contact' : 'Contacto'}</a>
+        </Link>
       </li>
     </ul>
   );
@@ -91,7 +103,11 @@ const MobileMenu = ({ locale }) => {
     if (!href) return '/';
     if (/^(https?:)?\/\//.test(href) || href.startsWith('mailto:') || href.startsWith('tel:')) return href;
     const path = href.startsWith('/') ? href : `/${href}`;
-    return isEn ? `/en${path === '/en' ? '' : path}` : path;
+    if (isEn) {
+      if (path === '/en' || path.startsWith('/en/')) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith('/en/') || path === '/en' ? (path.replace(/^\/en/, '') || '/') : path;
   };
   const [activeMenu, setActiveMenu] = useState("");
   const [multiMenu, setMultiMenu] = useState("");
@@ -381,7 +397,11 @@ const MobileMenuSimple = ({ locale }) => {
     if (!href) return '/';
     if (/^(https?:)?\/\//.test(href) || href.startsWith('mailto:') || href.startsWith('tel:')) return href;
     const path = href.startsWith('/') ? href : `/${href}`;
-    return isEn ? `/en${path === '/en' ? '' : path}` : path;
+    if (isEn) {
+      if (path === '/en' || path.startsWith('/en/')) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith('/en/') || path === '/en' ? (path.replace(/^\/en/, '') || '/') : path;
   };
   const [activeMenu, setActiveMenu] = useState('Services');
   const activeMenuSet = (value) => setActiveMenu(activeMenu === value ? '' : value);
@@ -389,34 +409,36 @@ const MobileMenuSimple = ({ locale }) => {
   return (
     <ul className="navigation d-block d-lg-none mobile-menu">
       <li>
-        <Link legacyBehavior href={withLang('/')}>{isEn ? 'Home' : 'Inicio'}</Link>
+        <Link legacyBehavior href={withLang('/')}>
+          <a data-cta="nav-home">{isEn ? 'Home' : 'Inicio'}</a>
+        </Link>
       </li>
       <li className="dropdown">
         <a href="#">{isEn ? 'Services' : 'Servicios'}</a>
         <ul style={activeLi('Services')}>
           <li>
             <Link legacyBehavior href={withLang('services/web-development')}>
-              {isEn ? 'Web Development' : 'Desarrollo Web'}
+              <a data-cta="nav-services-web-development">{isEn ? 'Web Development' : 'Desarrollo Web'}</a>
             </Link>
           </li>
           <li>
             <Link legacyBehavior href={withLang('services/digital-marketing')}>
-              {isEn ? 'Digital Marketing' : 'Marketing Digital'}
+              <a data-cta="nav-services-digital-marketing">{isEn ? 'Digital Marketing' : 'Marketing Digital'}</a>
             </Link>
           </li>
           <li>
             <Link legacyBehavior href={withLang('services/custom-software')}>
-              {isEn ? 'Custom Software' : 'Software a medida'}
+              <a data-cta="nav-services-custom-software">{isEn ? 'Custom Software' : 'Software a medida'}</a>
             </Link>
           </li>
           <li>
             <Link legacyBehavior href={withLang('services/google-seo')}>
-              {isEn ? 'Google SEO' : 'Posicionamiento en Google (SEO)'}
+              <a data-cta="nav-services-google-seo">{isEn ? 'Google SEO' : 'Posicionamiento en Google (SEO)'}</a>
             </Link>
           </li>
           <li>
             <Link legacyBehavior href={withLang('services')}>
-              {isEn ? 'All Services' : 'Todos los servicios'}
+              <a data-cta="nav-services-all">{isEn ? 'All Services' : 'Todos los servicios'}</a>
             </Link>
           </li>
         </ul>
@@ -425,13 +447,19 @@ const MobileMenuSimple = ({ locale }) => {
         </div>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('faqs')}>{isEn ? 'FAQs' : 'FAQs'}</Link>
+        <Link legacyBehavior href={withLang('faqs')}>
+          <a data-cta="nav-faqs">{isEn ? 'FAQs' : 'FAQs'}</a>
+        </Link>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('about')}>{isEn ? 'About Us' : 'Sobre Nosotros'}</Link>
+        <Link legacyBehavior href={withLang('about')}>
+          <a data-cta="nav-about">{isEn ? 'About Us' : 'Sobre Nosotros'}</a>
+        </Link>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('contact')}>{isEn ? 'Contact' : 'Contacto'}</Link>
+        <Link legacyBehavior href={withLang('contact')}>
+          <a data-cta="nav-contact">{isEn ? 'Contact' : 'Contacto'}</a>
+        </Link>
       </li>
     </ul>
   );
@@ -443,21 +471,33 @@ const MinimalDesktop = ({ locale }) => {
     if (!href) return '/';
     if (/^(https?:)?\/\//.test(href) || href.startsWith('mailto:') || href.startsWith('tel:')) return href;
     const path = href.startsWith('/') ? href : `/${href}`;
-    return isEn ? `/en${path === '/en' ? '' : path}` : path;
+    if (isEn) {
+      if (path === '/en' || path.startsWith('/en/')) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith('/en/') || path === '/en' ? (path.replace(/^\/en/, '') || '/') : path;
   };
   return (
     <ul className="navigation d-none d-lg-flex desktop-menu">
       <li>
-        <Link legacyBehavior href={withLang('/')}>{isEn ? 'Home' : 'Inicio'}</Link>
+        <Link legacyBehavior href={withLang('/')}>
+          <a data-cta="nav-home">{isEn ? 'Home' : 'Inicio'}</a>
+        </Link>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('/services')}>{isEn ? 'Services' : 'Servicios'}</Link>
+        <Link legacyBehavior href={withLang('/services')}>
+          <a data-cta="nav-services">{isEn ? 'Services' : 'Servicios'}</a>
+        </Link>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('/contact')}>{isEn ? 'Contact' : 'Contacto'}</Link>
+        <Link legacyBehavior href={withLang('/contact')}>
+          <a data-cta="nav-contact">{isEn ? 'Contact' : 'Contacto'}</a>
+        </Link>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('/faqs')}>{isEn ? 'FAQs' : 'Preguntas'}</Link>
+        <Link legacyBehavior href={withLang('/faqs')}>
+          <a data-cta="nav-faqs">{isEn ? 'FAQs' : 'Preguntas'}</a>
+        </Link>
       </li>
     </ul>
   );
@@ -469,21 +509,33 @@ const MinimalMobile = ({ locale }) => {
     if (!href) return '/';
     if (/^(https?:)?\/\//.test(href) || href.startsWith('mailto:') || href.startsWith('tel:')) return href;
     const path = href.startsWith('/') ? href : `/${href}`;
-    return isEn ? `/en${path === '/en' ? '' : path}` : path;
+    if (isEn) {
+      if (path === '/en' || path.startsWith('/en/')) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith('/en/') || path === '/en' ? (path.replace(/^\/en/, '') || '/') : path;
   };
   return (
     <ul className="navigation d-block d-lg-none mobile-menu">
       <li>
-        <Link legacyBehavior href={withLang('/')}>{isEn ? 'Home' : 'Inicio'}</Link>
+        <Link legacyBehavior href={withLang('/')}>
+          <a data-cta="nav-home">{isEn ? 'Home' : 'Inicio'}</a>
+        </Link>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('/services')}>{isEn ? 'Services' : 'Servicios'}</Link>
+        <Link legacyBehavior href={withLang('/services')}>
+          <a data-cta="nav-services">{isEn ? 'Services' : 'Servicios'}</a>
+        </Link>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('/contact')}>{isEn ? 'Contact' : 'Contacto'}</Link>
+        <Link legacyBehavior href={withLang('/contact')}>
+          <a data-cta="nav-contact">{isEn ? 'Contact' : 'Contacto'}</a>
+        </Link>
       </li>
       <li>
-        <Link legacyBehavior href={withLang('/faqs')}>{isEn ? 'FAQs' : 'Preguntas'}</Link>
+        <Link legacyBehavior href={withLang('/faqs')}>
+          <a data-cta="nav-faqs">{isEn ? 'FAQs' : 'Preguntas'}</a>
+        </Link>
       </li>
     </ul>
   );

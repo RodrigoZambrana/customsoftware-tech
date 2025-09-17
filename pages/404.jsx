@@ -1,4 +1,5 @@
 import Layout from "@/src/layout/Layout";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
@@ -15,6 +16,7 @@ export default function E404({ t, locale = "es" }) {
 
   return (
     <Layout dark locale={locale}>
+      <NextSeo title={isEn ? "Page not found" : "Página no encontrada"} noindex nofollow />
       <section className="error-section pt-220 rpt-120 pb-100 rpb-80 rel z-1" style={{ backgroundImage: "url(/assets/images/hero/hero-two-bg.png)" }}>
         <div className="container container-1290">
           <div className="row align-items-center">
@@ -25,7 +27,7 @@ export default function E404({ t, locale = "es" }) {
                   <h2>{t.subtitle}</h2>
                 </div>
                 <Link legacyBehavior href={withLang("/")}>
-                  <a className="theme-btn style-two">
+                  <a className="theme-btn style-two" data-cta="404-home">
                     {t.cta} <i className="far fa-arrow-right" />
                   </a>
                 </Link>

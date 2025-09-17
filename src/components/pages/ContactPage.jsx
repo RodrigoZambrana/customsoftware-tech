@@ -26,9 +26,33 @@ export default function ContactPage({ t = {}, locale = "es" }) {
       if (!res.ok) throw new Error("Request failed");
       setStatus("success");
       setForm({ name: "", phone_number: "", email: "", message: "" });
+      try {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'form_submit',
+          form_name: 'contact',
+          form_locale: locale,
+          status: 'success',
+        });
+        // Google Ads-friendly conversion event
+        window.dataLayer.push({
+          event: 'conversion_lead',
+          lead_type: 'contact_form',
+          form_locale: locale,
+        });
+      } catch (_) {}
     } catch (err) {
       setStatus("error");
       setError(isEn ? "Could not send. Check configuration or try again." : "No se pudo enviar. Verifica la configuración o inténtalo nuevamente.");
+      try {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'form_submit',
+          form_name: 'contact',
+          form_locale: locale,
+          status: 'error',
+        });
+      } catch (_) {}
     }
   };
 
@@ -41,6 +65,11 @@ export default function ContactPage({ t = {}, locale = "es" }) {
         title={t?.seo?.title || (isEn ? "Contact" : "Contacto")}
         description={t?.seo?.description || (isEn ? "Get in touch for web development, custom software and marketing services." : "Contactanos por desarrollo web, software a medida y marketing.")}
         canonical={canonical}
+        languageAlternates={[
+          { hrefLang: "es", href: `${siteBase}/contact` },
+          { hrefLang: "en", href: `${siteBase}/en/contact` },
+          { hrefLang: "x-default", href: `${siteBase}/contact` },
+        ]}
         openGraph={{ url: canonical, title: t?.seo?.title || (isEn ? "Contact" : "Contacto"), description: t?.seo?.description || "" }}
       />
       <PageBanner pageName={t.pageName || (isEn ? "Contact" : "Contacto")} />
@@ -62,11 +91,11 @@ export default function ContactPage({ t = {}, locale = "es" }) {
                     <div className="our-location-address mb-20">
                       <h5>{t.contactHeading || (isEn ? "Contact" : "Contacto")}</h5>
                       <p>{t.contactDescription || (isEn ? "Write to us or send a WhatsApp:" : "Escríbenos o envíanos un WhatsApp:")}</p>
-                      <a className="mailto" href={`mailto:${t.email || "info@software-strategy.com"}`}>
+                      <a className="mailto" href={`mailto:${t.email || "info@software-strategy.com"}`} data-cta="contact-email">
                         {t.email || "info@software-strategy.com"}
                       </a>
                       <br />
-                      <a className="callto" href={`https://wa.me/${t.whatsappDial || "59891284204"}`} target="_blank" rel="noreferrer">
+                      <a className="callto" href={`https://wa.me/${t.whatsappDial || "59891284204"}`} target="_blank" rel="noreferrer" data-cta="contact-whatsapp">
                         <i className="fab fa-whatsapp" /> {t.whatsappDisplay || "+598 912 842 04"}
                       </a>
                     </div>

@@ -14,7 +14,11 @@ export default function MarketingPage({ t, locale = "es" }) {
     if (!href) return "/";
     if (/^(https?:)?\/\//.test(href) || href.startsWith("mailto:") || href.startsWith("tel:")) return href;
     const path = href.startsWith("/") ? href : `/${href}`;
-    return isEn ? `/en${path === "/en" ? "" : path}` : path;
+    if (isEn) {
+      if (path === "/en" || path.startsWith("/en/")) return path;
+      return `/en${path}`;
+    }
+    return path.startsWith("/en/") || path === "/en" ? (path.replace(/^\/en/, "") || "/") : path;
   };
 
   const siteBase = (DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "");
@@ -27,6 +31,11 @@ export default function MarketingPage({ t, locale = "es" }) {
         title={t?.seo?.title || (isEn ? "Digital Marketing" : "Marketing Digital")}
         description={t?.seo?.description || (isEn ? "Strategies, content and campaigns to grow." : "Estrategias, contenidos y campañas para crecer.")}
         canonical={canonicalUrl}
+        languageAlternates={[
+          { hrefLang: "es", href: `${siteBase}/services/digital-marketing` },
+          { hrefLang: "en", href: `${siteBase}/en/services/digital-marketing` },
+          { hrefLang: "x-default", href: `${siteBase}/services/digital-marketing` },
+        ]}
       />
 
       {/* Slider (from index5) */}
@@ -146,7 +155,7 @@ export default function MarketingPage({ t, locale = "es" }) {
                   {t.about5.authorsText && (
                     <div className="authors-text mt-45 pt-50">
                       {(t.about5.authorsImages || []).map((src, i) => (
-                        <img key={i} src={src} alt="Author" />
+                    <img key={i} src={src} alt="Author" loading="lazy" decoding="async" />
                       ))}
                       <span className="text" dangerouslySetInnerHTML={{ __html: t.about5.authorsText }} />
                     </div>
@@ -156,13 +165,13 @@ export default function MarketingPage({ t, locale = "es" }) {
               <div className="col-xl-5 col-lg-6">
                 <div className="about-five-images rmt-50 wow fadeInRight delay-0-2s">
                   <div className="image-one">
-                    <img src={t.about5.image1 || "/assets/images/about/about-five1.jpg"} alt={t.about5.imageAlt || (isEn ? 'About us' : 'Sobre nosotros')} />
+                    <img src={t.about5.image1 || "/assets/images/about/about-five1.jpg"} alt={t.about5.imageAlt || (isEn ? 'About us' : 'Sobre nosotros')} loading="lazy" decoding="async" />
                   </div>
                   <div className="about-five-shape">
-                    <img src={t.about5.bg || "/assets/images/about/about-five-bg.png"} alt="" aria-hidden="true" />
+                    <img src={t.about5.bg || "/assets/images/about/about-five-bg.png"} alt="" aria-hidden="true" loading="lazy" decoding="async" />
                   </div>
                   <div className="image-two mt-30">
-                    <img src={t.about5.image2 || "/assets/images/about/about-five2.jpg"} alt={t.about5.imageAlt || (isEn ? 'About us' : 'Sobre nosotros')} />
+                    <img src={t.about5.image2 || "/assets/images/about/about-five2.jpg"} alt={t.about5.imageAlt || (isEn ? 'About us' : 'Sobre nosotros')} loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -190,8 +199,8 @@ export default function MarketingPage({ t, locale = "es" }) {
                 <SwiperSlide key={`${g.title}-${i}`}>
                   <div className="project-item style-five wow fadeInUp delay-0-2s">
                     <div className="image">
-                      <img src={g.image} alt="Work Gallery" />
-                      <Link href={withLang(g.detailsHref || g.href || "/project-details")} className="project-btn">
+                      <img src={g.image} alt="Work Gallery" loading="lazy" decoding="async" />
+                      <Link href={withLang(g.detailsHref || g.href || "/project-details")} className="project-btn" aria-label={isEn ? 'View details' : 'Ver detalles'}>
                         <i className="far fa-arrow-right" />
                       </Link>
                     </div>
@@ -265,9 +274,9 @@ export default function MarketingPage({ t, locale = "es" }) {
               <div className="col-xl-10 col-lg-11">
                 <MarketingFaqAccordion items={t.faqs.items} />
                 <div className="text-center mt-40">
-                  <Link href={withLang('/services/digital-marketing')} className="theme-btn" data-cta="faq">
-                    {isEn ? 'See digital marketing services' : 'Ver servicios de marketing digital'} <i className="far fa-arrow-right" />
-                  </Link>
+          <Link href={withLang('/services/digital-marketing')} className="theme-btn" data-cta="faq">
+            {isEn ? 'See digital marketing services' : 'Ver servicios de marketing digital'} <i className="far fa-arrow-right" />
+          </Link>
                 </div>
               </div>
             </div>
@@ -461,7 +470,7 @@ export default function MarketingPage({ t, locale = "es" }) {
             <div className="row no-gap">
               <div className="col-xl-5 align-self-center">
                 <div className="work-with-image wow fadeInUp delay-0-2s">
-                  <img src={t.workWithUs.image || "/assets/images/about/work-with-us.jpg"} alt="About" />
+                  <img src={t.workWithUs.image || "/assets/images/about/work-with-us.jpg"} alt="About" loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className="col-xl-7 wow fadeInUp delay-0-4s">
@@ -471,7 +480,7 @@ export default function MarketingPage({ t, locale = "es" }) {
                     <h2>{t.workWithUs.title}</h2>
                   </div>
                   <p>{t.workWithUs.text || (isEn ? "Let's talk about your project." : "Hablemos de tu proyecto.")}</p>
-                  <Link href={withLang("/contact")} className="theme-btn mt-15">
+                  <Link href={withLang("/contact")} className="theme-btn mt-15" data-cta="work-with-us">
                     {isEn ? "Let’s Work Together" : "Trabajemos Juntos"} <i className="far fa-arrow-right" />
                   </Link>
                 </div>

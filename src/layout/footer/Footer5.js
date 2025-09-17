@@ -82,13 +82,13 @@ const Footer5 = ({ dark }) => {
                     <Link href="/about">About</Link>
                   </li>
                   <li>
-                    <Link href="services">Services</Link>
+                    <Link href="/services">Services</Link>
                   </li>
                   <li>
                     <Link href="/about">Career ?</Link>
                   </li>
                   <li>
-                    <Link href="faqs">Faqs</Link>
+                    <Link href="/faqs">Faqs</Link>
                   </li>
                 </ul>
               </div>

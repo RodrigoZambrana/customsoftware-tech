@@ -1,10 +1,22 @@
 import Layout from "@/src/layout/Layout";
+import { NextSeo } from "next-seo";
+import DefaultSEO from "@/next-seo.config";
 import Link from "next/link";
 import PageBanner from "@/src/components/PageBanner";
 
 const About = () => {
   return (
-    <Layout dark>
+    <Layout dark locale="es">
+      <NextSeo
+        title="Sobre Nosotros"
+        description="Conocé nuestra misión, cómo trabajamos y servicios."
+        canonical={`${(DefaultSEO?.canonical || 'https://www.software-strategy.com/').replace(/\/$/, '')}/about`}
+        languageAlternates={[
+          { hrefLang: 'es', href: `${(DefaultSEO?.canonical || 'https://www.software-strategy.com/').replace(/\/$/, '')}/about` },
+          { hrefLang: 'en', href: `${(DefaultSEO?.canonical || 'https://www.software-strategy.com/').replace(/\/$/, '')}/en/about` },
+          { hrefLang: 'x-default', href: `${(DefaultSEO?.canonical || 'https://www.software-strategy.com/').replace(/\/$/, '')}/about` },
+        ]}
+      />
       <PageBanner pageName="Sobre Nosotros" homeLabel="Inicio" homeHref="/" />
 
       <section className="why-choose-area pt-100 rpt-80 pb-80 rpb-50">
@@ -31,12 +43,12 @@ const About = () => {
                     </p>
                     <div className="mt-35 d-flex gap-3 flex-wrap">
                       <Link legacyBehavior href="/services">
-                        <a className="theme-btn style-two">
+                        <a className="theme-btn style-two" data-cta="about-services">
                           Ver servicios <i className="far fa-arrow-right" />
                         </a>
                       </Link>
                       <Link legacyBehavior href="/contact">
-                        <a className="theme-btn">
+                        <a className="theme-btn" data-cta="about-contact">
                           Hablemos <i className="far fa-arrow-right" />
                         </a>
                       </Link>
@@ -122,4 +134,3 @@ const About = () => {
 };
 
 export default About;
-
