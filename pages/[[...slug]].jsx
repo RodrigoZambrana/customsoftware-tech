@@ -7,6 +7,7 @@ import ServicesPage from "@/src/components/pages/ServicesPage";
 import ServiceDetailPage from "@/src/components/pages/ServiceDetailPage";
 import MarketingPage from "@/src/components/pages/MarketingPage";
 import ContactPage from "@/src/components/pages/ContactPage";
+import { enrichHomeWithServiceSlides, buildPricingGroups } from "@/src/lib/contentUtils";
 
 export default function CatchAll({ page, locale, t }) {
   return (
@@ -95,6 +96,22 @@ export async function getStaticProps({ params }) {
     t = JSON.parse(raw);
   } catch (err) {
     console.warn(`No existe JSON para ${page} (${locale}):`, contentPath);
+  }
+
+  // Enriquecer contenido dinámico mediante utilidades compartidas
+  try {
+    // 1) Home: agregar slides de los servicios al slider inicial
+    if (page === "home") {
+      enrichHomeWithServiceSlides(t, locale);
+    }
+    // 2) Pricing: grupos por servicio (Web y Marketing)
+    if (page === "pricing") {
+      const groups = buildPricingGroups(locale);
+      if (!t.pricingSection) t.pricingSection = {};
+      t.pricingSection.groups = groups;
+    }
+  } catch (e) {
+    console.warn("[getStaticProps] Error al enriquecer contenido:", e?.message || e);
   }
 
   return {

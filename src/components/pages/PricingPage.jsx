@@ -21,6 +21,12 @@ export default function PricingPage({ t, locale = "es" }) {
 
   // Iconitos para los 3 planes (mantengo el look & feel del template)
   const planIcons = ["flaticon-abstract", "flaticon-liquid", "flaticon-petals"];
+  const groups = t?.pricingSection?.groups || [];
+  const groupTitle = (key) => {
+    if (key === 'web') return isEn ? 'Web Development Plans' : 'Planes de Desarrollo Web';
+    if (key === 'marketing') return isEn ? 'Digital Marketing Plans' : 'Planes de Marketing Digital';
+    return isEn ? 'Plans' : 'Planes';
+  };
 
   return (
     <>
@@ -95,7 +101,7 @@ export default function PricingPage({ t, locale = "es" }) {
       </section>
       {/* /Why Choose */}
 
-      {/* Pricing (3 planes) */}
+      {/* Pricing */}
       <section className="pricing-area-three pb-85 rpb-55" style={{ backgroundImage: "url(/assets/images/background/pricing-bg-dot-shape.png)" }}>
         <div className="container container-1290">
           <div className="row justify-content-center">
@@ -107,52 +113,102 @@ export default function PricingPage({ t, locale = "es" }) {
             </div>
           </div>
 
-          <div className="row">
-            {t.pricingSection?.plans?.slice(0, 3).map((plan, i) => (
-              <div className="col-xl-4 col-md-6" key={plan.name}>
-                <div className={`pricing-plan-item wow fadeInUp delay-0-${2 + i * 2}s ${i === 1 ? "style-two" : ""}`}>
-                  {/* Badge opcional (ej: “Popular Package”) */}
-                  {plan.badge && (
-                    <span className="badge">
-                      <i className="fas fa-star-of-life" />
-                      <i className="fas fa-star-of-life" />
-                      {plan.badge}
-                      <i className="fas fa-star-of-life" />
-                      <i className="fas fa-star-of-life" />
-                    </span>
-                  )}
-
-                  {/* Icono + título + precio */}
-                  <div className={i === 1 ? "icon-title-price" : "icon-title"}>
-                    <div className="icon">
-                      <i className={planIcons[i % planIcons.length]} />
-                    </div>
-                    <div className={i === 1 ? "right-part" : ""}>
-                      <h5>{plan.name}</h5>
-                      <span className="price-text">
-                        <span className="before">$</span>
-                        <span className="price">{plan.price}</span> <span className="after">{plan.unit}</span>
-                      </span>
+          {/* Grouped sections if provided */}
+          {groups.length > 0 ? (
+            groups.map((g, gi) => (
+              <div key={`group-${g.key || gi}`}>
+                <div className="row justify-content-center">
+                  <div className="col-xl-8 col-lg-10">
+                    <div className="section-title text-center mb-40 wow fadeInUp delay-0-2s">
+                      <h3>{groupTitle(g.key)}</h3>
                     </div>
                   </div>
-
-                  {/* Features */}
-                  <ul className={`list-style-one ${i === 1 ? "two-column" : ""}`}>
-                    {plan.features.map((f) => (
-                      <li key={f}>{f}</li>
-                    ))}
-                  </ul>
-
-                  {/* CTA */}
-                  <Link legacyBehavior href={withLang("/pricing")}>
-                    <a className="theme-btn w-100" data-cta="pricing-plan" data-plan={plan.name}>
-                      {plan.cta} <i className="far fa-arrow-right" />
-                    </a>
-                  </Link>
+                </div>
+                <div className="row">
+                  {g.plans.map((plan, i) => (
+                    <div className="col-xl-4 col-md-6" key={`${g.key}-${plan.name}`}>
+                      <div className={`pricing-plan-item wow fadeInUp delay-0-${2 + i * 2}s ${plan.twoColumn ? "style-two" : ""}`}>
+                        {plan.badge && (
+                          <span className="badge">
+                            <i className="fas fa-star-of-life" />
+                            <i className="fas fa-star-of-life" />
+                            {plan.badge}
+                            <i className="fas fa-star-of-life" />
+                            <i className="fas fa-star-of-life" />
+                          </span>
+                        )}
+                        <div className={plan.twoColumn ? "icon-title-price" : "icon-title"}>
+                          <div className="icon">
+                            <i className={planIcons[i % planIcons.length]} />
+                          </div>
+                          <div className={plan.twoColumn ? "right-part" : ""}>
+                            <h5>{plan.name}</h5>
+                            {plan.price && (
+                              <span className="price-text">
+                                <span className="before">$</span>
+                                <span className="price">{plan.price}</span>{" "}
+                                <span className="after">{plan.unit}</span>
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                        <ul className={`list-style-one ${plan.twoColumn ? "two-column" : ""}`}>
+                          {plan.features.map((f) => (
+                            <li key={f}>{f}</li>
+                          ))}
+                        </ul>
+                        <Link legacyBehavior href={withLang(plan.href || "/contact")}>
+                          <a className="theme-btn w-100" data-cta="pricing-plan" data-plan={plan.name}>
+                            {plan.cta} <i className="far fa-arrow-right" />
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
+            ))
+          ) : (
+            <div className="row">
+              {t.pricingSection?.plans?.map((plan, i) => (
+                <div className="col-xl-4 col-md-6" key={plan.name}>
+                  <div className={`pricing-plan-item wow fadeInUp delay-0-${2 + i * 2}s ${i === 1 ? "style-two" : ""}`}>
+                    {plan.badge && (
+                      <span className="badge">
+                        <i className="fas fa-star-of-life" />
+                        <i className="fas fa-star-of-life" />
+                        {plan.badge}
+                        <i className="fas fa-star-of-life" />
+                        <i className="fas fa-star-of-life" />
+                      </span>
+                    )}
+                    <div className={i === 1 ? "icon-title-price" : "icon-title"}>
+                      <div className="icon">
+                        <i className={planIcons[i % planIcons.length]} />
+                      </div>
+                      <div className={i === 1 ? "right-part" : ""}>
+                        <h5>{plan.name}</h5>
+                        <span className="price-text">
+                          <span className="before">$</span>
+                          <span className="price">{plan.price}</span> <span className="after">{plan.unit}</span>
+                        </span>
+                      </div>
+                    </div>
+                    <ul className={`list-style-one ${i === 1 ? "two-column" : ""}`}>
+                      {plan.features.map((f) => (
+                        <li key={f}>{f}</li>
+                      ))}
+                    </ul>
+                    <Link legacyBehavior href={withLang(plan.href || "/contact")}>
+                      <a className="theme-btn w-100" data-cta="pricing-plan" data-plan={plan.name}>
+                        {plan.cta} <i className="far fa-arrow-right" />
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
       {/* /Pricing */}

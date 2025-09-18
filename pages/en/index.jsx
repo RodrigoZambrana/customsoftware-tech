@@ -2,6 +2,7 @@ import Layout from "@/src/layout/Layout";
 import HomePage from "@/src/components/pages/HomePage";
 import fs from "fs";
 import path from "path";
+import { enrichHomeWithServiceSlides } from "@/src/lib/contentUtils";
 
 export default function EnHome({ t }) {
   return (
@@ -20,6 +21,7 @@ export async function getStaticProps() {
   } catch (err) {
     console.warn(`[en/home] No se pudo cargar ${filePath}.`);
   }
+  // Append service sliders to home slider (shared util)
+  enrichHomeWithServiceSlides(t, "en");
   return { props: { t } };
 }
-

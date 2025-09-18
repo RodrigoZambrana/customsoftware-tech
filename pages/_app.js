@@ -52,6 +52,11 @@ function App({ Component, pageProps }) {
       const id = el.getAttribute('id') || '';
       const meta = { ...el.dataset };
       delete meta.cta;
+      // Estandariza parámetros económicos
+      const currency = (meta.currency || 'USD').toString();
+      const value = typeof meta.value !== 'undefined' && !isNaN(Number(meta.value))
+        ? Number(meta.value)
+        : 0;
       gtmPush({
         event: 'cta_click',
         cta_id: id,
@@ -60,6 +65,8 @@ function App({ Component, pageProps }) {
         link_text: text,
         page_path: (typeof window !== 'undefined' ? window.location.pathname : ''),
         cta_meta: meta,
+        value,
+        currency,
       });
 
       // Google Ads-friendly events (custom) for easy GTM mappings
@@ -73,20 +80,23 @@ function App({ Component, pageProps }) {
         pushEvent('click_plan', {
           plan_name: plan,
           plan_price: price,
-          currency: price ? 'USD' : undefined,
+          currency,
           link_url: href,
           page_path: (typeof window !== 'undefined' ? window.location.pathname : ''),
+          value: price && !isNaN(Number(price)) ? Number(price) : value,
         });
       }
 
       // WhatsApp click -> whatsapp_click
       const isWhatsapp = href.includes('wa.me') || href.includes('api.whatsapp.com') || cta.includes('whatsapp');
       if (isWhatsapp) {
-        const phone = (href.match(/(\d{6,15})/) || [,''])[1];
+        const phone = (href.match(/(\+?\d{6,15})/) || [,''])[1];
         pushEvent('whatsapp_click', {
           phone,
           link_url: href,
           page_path: (typeof window !== 'undefined' ? window.location.pathname : ''),
+          value,
+          currency,
         });
       }
 
@@ -94,7 +104,10 @@ function App({ Component, pageProps }) {
       if (href.startsWith('mailto:')) {
         pushEvent('email_click', {
           email: href.replace('mailto:', ''),
+          link_url: href,
           page_path: (typeof window !== 'undefined' ? window.location.pathname : ''),
+          value,
+          currency,
         });
       }
 
@@ -102,7 +115,10 @@ function App({ Component, pageProps }) {
       if (href.startsWith('tel:')) {
         pushEvent('phone_click', {
           phone: href.replace('tel:', ''),
+          link_url: href,
           page_path: (typeof window !== 'undefined' ? window.location.pathname : ''),
+          value,
+          currency,
         });
       }
     };
