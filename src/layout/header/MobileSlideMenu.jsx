@@ -44,6 +44,7 @@ export default function MobileSlideMenu({ locale = "es" }) {
             </ul>
             <div className="dropdown-btn"><span className="far fa-plus"></span></div>
           </li>
+          <li><Link legacyBehavior href={withLang("/pricing")}><a data-cta="nav-pricing">{isEn ? "Pricing" : "Precios"}</a></Link></li>
           <li><Link legacyBehavior href={withLang("/faqs")}><a data-cta="nav-faqs">{isEn ? "FAQs" : "FAQs"}</a></Link></li>
           <li><Link legacyBehavior href={withLang("/about")}><a data-cta="nav-about">{isEn ? "About Us" : "Sobre Nosotros"}</a></Link></li>
           <li><Link legacyBehavior href={withLang("/contact")}><a data-cta="nav-contact">{isEn ? "Contact" : "Contacto"}</a></Link></li>
@@ -68,6 +69,7 @@ export default function MobileSlideMenu({ locale = "es" }) {
               <span className="far fa-plus"></span>
             </div>
           </li>
+          <li><Link legacyBehavior href={withLang("/pricing")}><a data-cta="nav-pricing">{isEn ? "Pricing" : "Precios"}</a></Link></li>
           <li><Link legacyBehavior href={withLang("/faqs")}><a data-cta="nav-faqs">{isEn ? "FAQs" : "FAQs"}</a></Link></li>
           <li><Link legacyBehavior href={withLang("/about")}><a data-cta="nav-about">{isEn ? "About Us" : "Sobre Nosotros"}</a></Link></li>
           <li><Link legacyBehavior href={withLang("/contact")}><a data-cta="nav-contact">{isEn ? "Contact" : "Contacto"}</a></Link></li>

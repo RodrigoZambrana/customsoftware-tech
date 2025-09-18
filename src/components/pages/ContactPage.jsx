@@ -13,6 +13,21 @@ export default function ContactPage({ t = {}, locale = "es" }) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    // Temporal: envío deshabilitado hasta definir captcha, autenticación y seguridad.
+    const fallbackEmail = t.email || "info@software-strategy.com";
+    const fallbackWhats = t.whatsappDisplay || (isEn ? "+598 912 842 04" : "+598 912 842 04");
+    setStatus("error");
+    setError(
+      isEn
+        ? `Form submission is temporarily disabled. Please write to ${fallbackEmail} or WhatsApp ${fallbackWhats}.`
+        : `El envío del formulario está temporalmente deshabilitado. Por favor escribinos a ${fallbackEmail} o por WhatsApp ${fallbackWhats}.`
+    );
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'form_submit', form_name: 'contact', form_locale: locale, status: 'disabled' });
+    } catch (_) {}
+    /*
+    // Previous implementation (disabled):
     setError("");
     setStatus("submitting");
     try {
@@ -26,37 +41,19 @@ export default function ContactPage({ t = {}, locale = "es" }) {
       if (!res.ok) throw new Error("Request failed");
       setStatus("success");
       setForm({ name: "", phone_number: "", email: "", message: "" });
-      try {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: 'form_submit',
-          form_name: 'contact',
-          form_locale: locale,
-          status: 'success',
-        });
-        // Google Ads-friendly conversion event
-        window.dataLayer.push({
-          event: 'conversion_lead',
-          lead_type: 'contact_form',
-          form_locale: locale,
-        });
-      } catch (_) {}
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'form_submit', form_name: 'contact', form_locale: locale, status: 'success' });
+      window.dataLayer.push({ event: 'conversion_lead', lead_type: 'contact_form', form_locale: locale });
     } catch (err) {
       setStatus("error");
       setError(isEn ? "Could not send. Check configuration or try again." : "No se pudo enviar. Verifica la configuración o inténtalo nuevamente.");
-      try {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: 'form_submit',
-          form_name: 'contact',
-          form_locale: locale,
-          status: 'error',
-        });
-      } catch (_) {}
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'form_submit', form_name: 'contact', form_locale: locale, status: 'error' });
     }
+    */
   };
 
-  const siteBase = (DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "");
+  const siteBase = (DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "");
   const canonical = `${siteBase}${isEn ? "/en/contact" : "/contact"}`;
 
   return (
@@ -112,6 +109,7 @@ export default function ContactPage({ t = {}, locale = "es" }) {
                 </div>
               </div>
             </div>
+            {false && (
             <div className="col-xl-5 col-lg-6">
               <div className="contact-page-form form-style-one wow fadeInUp delay-0-2s">
                 <div className="section-title mb-35">
@@ -214,6 +212,7 @@ export default function ContactPage({ t = {}, locale = "es" }) {
                 </form>
               </div>
             </div>
+            )}
           </div>
         </div>
       </section>

@@ -38,20 +38,20 @@ export default function HomePage({ t, locale }) {
       <NextSeo
         title={t.seoTitle}
         description={t.seoDescription}
-        canonical={isEn ? "https://www.software-strategy.com/en" : "https://www.software-strategy.com"}
+        canonical={(DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '') + (isEn ? '/en' : '')}
         languageAlternates={[
-          { hrefLang: "es", href: "https://www.software-strategy.com" },
-          { hrefLang: "en", href: "https://www.software-strategy.com/en" },
-          { hrefLang: "x-default", href: "https://www.software-strategy.com" },
+          { hrefLang: "es", href: (DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '') },
+          { hrefLang: "en", href: (DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '') + '/en' },
+          { hrefLang: "x-default", href: (DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '') },
         ]}
         openGraph={{
           type: "website",
           locale: isEn ? "en_US" : "es_ES",
-          url: isEn ? "https://www.software-strategy.com/en" : "https://www.software-strategy.com",
+          url: (DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '') + (isEn ? '/en' : ''),
           siteName: "Software Strategy",
           images: [
             {
-              url: "https://www.software-strategy.com/og-image.jpg",
+              url: (DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '') + '/og-image.jpg',
               width: 1200,
               height: 630,
               alt: "Software Strategy",

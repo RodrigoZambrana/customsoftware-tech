@@ -25,7 +25,7 @@ export default function ServiceDetailPage({ t, locale = "es", slug = "" }) {
 
   // SEO helpers
   const siteBase = useMemo(() => {
-    const c = DefaultSEO?.canonical || "https://www.software-strategy.com/";
+    const c = DefaultSEO?.canonical || "https://software-strategy.com/";
     return c.endsWith("/") ? c : `${c}/`;
   }, []);
 

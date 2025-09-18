@@ -144,11 +144,11 @@ function App({ Component, pageProps }) {
       {/* JSON-LD global de Organization */}
       <OrganizationJsonLd
         type="Organization"
-        id="https://www.software-strategy.com/#organization"
+        id="https://software-strategy.com/#organization"
         legalName="Software Strategy"
         name="Software Strategy"
-        url="https://www.software-strategy.com/"
-        logo="https://www.software-strategy.com/android-chrome-192x192.png"
+        url="https://software-strategy.com/"
+        logo="https://software-strategy.com/android-chrome-192x192.png"
         sameAs={[
           "https://www.facebook.com/software.strategy/",
           "https://www.instagram.com/software.strategy/",

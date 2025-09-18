@@ -21,11 +21,11 @@ export default function ServicesPage({ t, locale = "es" }) {
       <NextSeo
         title={t?.seo?.title || (isEn ? "Services" : "Servicios")}
         description={t?.seo?.description || (isEn ? "Explore our services: web development, custom software, SEO/SEM and digital marketing." : "Conocé nuestros servicios: desarrollo web, software a medida, SEO/SEM y marketing digital.")}
-        canonical={`${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}${isEn ? "/en/services" : "/services"}`}
+        canonical={`${(DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "")}${isEn ? "/en/services" : "/services"}`}
         languageAlternates={[
-          { hrefLang: "es", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/services` },
-          { hrefLang: "en", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/en/services` },
-          { hrefLang: "x-default", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/services` },
+          { hrefLang: "es", href: `${(DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "")}/services` },
+          { hrefLang: "en", href: `${(DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "")}/en/services` },
+          { hrefLang: "x-default", href: `${(DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "")}/services` },
         ]}
       />
       {/* Page Banner */}

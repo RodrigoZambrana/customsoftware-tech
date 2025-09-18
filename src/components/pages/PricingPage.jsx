@@ -33,11 +33,11 @@ export default function PricingPage({ t, locale = "es" }) {
       <NextSeo
         title={t?.seo?.title || (isEn ? "Pricing" : "Precios")}
         description={t?.seo?.description || (isEn ? "Plans and pricing for web development, SEO/SEM and marketing services." : "Planes y precios para desarrollo web, SEO/SEM y marketing.")}
-        canonical={`${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}${isEn ? "/en/pricing" : "/pricing"}`}
+        canonical={`${(DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "")}${isEn ? "/en/pricing" : "/pricing"}`}
         languageAlternates={[
-          { hrefLang: "es", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/pricing` },
-          { hrefLang: "en", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/en/pricing` },
-          { hrefLang: "x-default", href: `${(DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "")}/pricing` },
+          { hrefLang: "es", href: `${(DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "")}/pricing` },
+          { hrefLang: "en", href: `${(DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "")}/en/pricing` },
+          { hrefLang: "x-default", href: `${(DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "")}/pricing` },
         ]}
       />
       {/* Page Banner */}

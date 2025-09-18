@@ -79,6 +79,11 @@ const DaskTopMenu = ({ locale }) => {
         </div>
       </li>
       <li>
+        <Link legacyBehavior href={withLang('pricing')}>
+          <a data-cta="nav-pricing">{isEn ? 'Pricing' : 'Precios'}</a>
+        </Link>
+      </li>
+      <li>
         <Link legacyBehavior href={withLang('faqs')}>
           <a data-cta="nav-faqs">{isEn ? 'FAQs' : 'FAQs'}</a>
         </Link>
@@ -452,6 +457,11 @@ const MobileMenuSimple = ({ locale }) => {
         </Link>
       </li>
       <li>
+        <Link legacyBehavior href={withLang('pricing')}>
+          <a data-cta="nav-pricing">{isEn ? 'Pricing' : 'Precios'}</a>
+        </Link>
+      </li>
+      <li>
         <Link legacyBehavior href={withLang('about')}>
           <a data-cta="nav-about">{isEn ? 'About Us' : 'Sobre Nosotros'}</a>
         </Link>
@@ -490,6 +500,11 @@ const MinimalDesktop = ({ locale }) => {
         </Link>
       </li>
       <li>
+        <Link legacyBehavior href={withLang('/pricing')}>
+          <a data-cta="nav-pricing">{isEn ? 'Pricing' : 'Precios'}</a>
+        </Link>
+      </li>
+      <li>
         <Link legacyBehavior href={withLang('/contact')}>
           <a data-cta="nav-contact">{isEn ? 'Contact' : 'Contacto'}</a>
         </Link>
@@ -525,6 +540,11 @@ const MinimalMobile = ({ locale }) => {
       <li>
         <Link legacyBehavior href={withLang('/services')}>
           <a data-cta="nav-services">{isEn ? 'Services' : 'Servicios'}</a>
+        </Link>
+      </li>
+      <li>
+        <Link legacyBehavior href={withLang('/pricing')}>
+          <a data-cta="nav-pricing">{isEn ? 'Pricing' : 'Precios'}</a>
         </Link>
       </li>
       <li>

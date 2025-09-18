@@ -10,11 +10,11 @@ const About = () => {
       <NextSeo
         title="About Us"
         description="Learn about our mission, how we work and services."
-        canonical={`${(DefaultSEO?.canonical || 'https://www.software-strategy.com/').replace(/\/$/, '')}/en/about`}
+        canonical={`${(DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '')}/en/about`}
         languageAlternates={[
-          { hrefLang: 'es', href: `${(DefaultSEO?.canonical || 'https://www.software-strategy.com/').replace(/\/$/, '')}/about` },
-          { hrefLang: 'en', href: `${(DefaultSEO?.canonical || 'https://www.software-strategy.com/').replace(/\/$/, '')}/en/about` },
-          { hrefLang: 'x-default', href: `${(DefaultSEO?.canonical || 'https://www.software-strategy.com/').replace(/\/$/, '')}/about` },
+          { hrefLang: 'es', href: `${(DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '')}/about` },
+          { hrefLang: 'en', href: `${(DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '')}/en/about` },
+          { hrefLang: 'x-default', href: `${(DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '')}/about` },
         ]}
       />
       <PageBanner pageName="About Us" homeLabel="Home" homeHref="/en" />

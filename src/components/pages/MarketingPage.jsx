@@ -21,7 +21,7 @@ export default function MarketingPage({ t, locale = "es" }) {
     return path.startsWith("/en/") || path === "/en" ? (path.replace(/^\/en/, "") || "/") : path;
   };
 
-  const siteBase = (DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "");
+  const siteBase = (DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "");
   const canonicalPath = isEn ? "/en/services/digital-marketing" : "/services/digital-marketing";
   const canonicalUrl = `${siteBase}${canonicalPath}`;
 
@@ -128,7 +128,7 @@ export default function MarketingPage({ t, locale = "es" }) {
                   description: it.desc || '',
                   areaServed: it.areaServed || (isEn ? 'LatAm' : 'LatAm'),
                   provider: it.provider || 'Software Strategy',
-                  url: `${(DefaultSEO?.canonical || 'https://www.software-strategy.com/').replace(/\/$/, '')}${isEn ? '/en/services/digital-marketing' : '/services/digital-marketing'}`,
+                  url: `${(DefaultSEO?.canonical || 'https://software-strategy.com/').replace(/\/$/, '')}${isEn ? '/en/services/digital-marketing' : '/services/digital-marketing'}`,
                 },
               })),
             }),

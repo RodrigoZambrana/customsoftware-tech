@@ -4,15 +4,15 @@ export default {
   titleTemplate: "%s | Software Strategy",
   description:
     "Software Strategy ofrece desarrollo web, software a medida, SEO/SEM y marketing digital para potenciar tu presencia online.",
-  canonical: "https://www.software-strategy.com/",
+  canonical: "https://software-strategy.com/",
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://www.software-strategy.com/",
+    url: "https://software-strategy.com/",
     siteName: "Software Strategy",
     images: [
       {
-        url: "https://www.software-strategy.com/og-image.jpg",
+        url: "https://software-strategy.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Software Strategy",

@@ -8,7 +8,7 @@ import DefaultSEO from "@/next-seo.config";
 export default function FaqsPage({ t, locale = "es" }) {
   const isEn = locale === "en";
 
-  const siteBase = (DefaultSEO?.canonical || "https://www.software-strategy.com/").replace(/\/$/, "");
+  const siteBase = (DefaultSEO?.canonical || "https://software-strategy.com/").replace(/\/$/, "");
   const path = "/faqs";
   const canonicalUrl = `${siteBase}${isEn ? `/en${path}` : path}`;
 

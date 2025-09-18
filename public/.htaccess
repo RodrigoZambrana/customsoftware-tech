@@ -4,6 +4,16 @@ DirectoryIndex index.html
   RewriteEngine On
   RewriteBase /
 
+  # Canonical domain: force HTTPS and non-www (software-strategy.com)
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} !^software-strategy\.com$ [NC]
+  RewriteRule ^(.*)$ https://software-strategy.com/$1 [L,R=301]
+
+  # Special case: /services/ is a page (services.html) and also a folder for details
+  # Ensure trailing-slash requests hit the page instead of a non-existent index.html
+  RewriteRule ^services/?$ services.html [L]
+  RewriteRule ^en/services/?$ en/services.html [L]
+
   # If language root with or without trailing slash, serve its HTML (Next export outputs en.html)
   RewriteRule ^([a-z]{2})/?$ $1.html [L]
 
